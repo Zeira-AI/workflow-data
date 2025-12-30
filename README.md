@@ -5,7 +5,7 @@ This directory contains JSON-based tool definitions for the workflow builder. To
 ## Directory Structure
 
 ```
-workflow-builder/
+public/
 ├── nodes/
 │   ├── _schema.json          # JSON Schema for validation
 │   ├── _index.json           # Registry of all tools
