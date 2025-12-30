@@ -11,73 +11,67 @@
       "id": "id",
       "name": "id",
       "type": "string",
-      "description": "Product ID"
+      "description": "Ingredient ID"
     },
     {
-      "id": "brand",
-      "name": "brand",
+      "id": "ingredient_name",
+      "name": "ingredient_name",
       "type": "string",
-      "description": "Brand name"
+      "description": "Ingredient common name"
     },
     {
-      "id": "name",
-      "name": "name",
+      "id": "trade_name",
+      "name": "trade_name",
       "type": "string",
-      "description": "Product name"
+      "description": "Trade or commercial name"
     },
     {
-      "id": "rating",
-      "name": "rating",
-      "type": "number",
-      "description": "Product rating"
-    },
-    {
-      "id": "reviewCount",
-      "name": "reviewCount",
-      "type": "number",
-      "description": "Number of reviews"
-    },
-    {
-      "id": "url",
-      "name": "url",
+      "id": "supplier",
+      "name": "supplier",
       "type": "string",
-      "description": "Product URL"
+      "description": "Ingredient supplier"
     },
     {
-      "id": "imageUrl",
-      "name": "imageUrl",
+      "id": "supplier_url",
+      "name": "supplier_url",
       "type": "string",
-      "description": "Product image URL"
+      "description": "Supplier ingredient page URL"
+    },
+    {
+      "id": "inci_name",
+      "name": "inci_name",
+      "type": "string",
+      "description": "INCI name"
+    },
+    {
+      "id": "primary_functions",
+      "name": "primary_functions",
+      "type": "string",
+      "description": "Primary functional roles of the ingredient"
+    },
+    {
+      "id": "application",
+      "name": "application",
+      "type": "string",
+      "description": "Typical application areas (e.g. Hair care, Scalp care)"
     },
     {
       "id": "scores",
       "name": "scores",
       "type": "object",
-      "description": "Relevance, coverage, novelty scores"
+      "description": "Relevance, functional fit, novelty scores"
     },
     {
       "id": "reasoning",
       "name": "reasoning",
       "type": "array",
-      "description": "Reasoning for product selection"
+      "description": "Reasoning for ingredient selection"
     },
     {
       "id": "description",
       "name": "description",
       "type": "string",
-      "description": "Product description"
-    },
-    {
-      "id": "ingredients",
-      "name": "ingredients",
-      "type": "string",
-      "description": "Product ingredients"
-    },
-    {
-      "id": "highlights",
-      "name": "highlights",
-      "type": "array",
-      "description": "Product highlights"
+      "description": "Short ingredient description"
     }
   ],
   "configSchema": [
@@ -85,7 +79,7 @@
       "key": "query",
       "type": "textarea",
       "label": "Search Query",
-      "placeholder": "Enter product search terms...",
+      "placeholder": "Enter ingredient name, function, or INCI...",
       "defaultValue": ""
     }
   ],
