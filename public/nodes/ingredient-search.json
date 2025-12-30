@@ -4,7 +4,7 @@
   "category": "discovery",
   "icon": "search",
   "color": "amber",
-  "description": "Search for products in the search tool",
+  "description": "Search ingredients suitable for formulations targeting hair growth, hair density, and reduced hair loss",
   "defaultInputs": [],
   "defaultOutputs": [
     {
