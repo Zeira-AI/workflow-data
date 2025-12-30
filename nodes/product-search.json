@@ -1,10 +1,10 @@
 {
   "type": "product-search",
-  "label": "Product Search",
+  "label": "Product Search V2",
   "category": "discovery",
   "icon": "search",
   "color": "amber",
-  "description": "Search for products in the database",
+  "description": "Search for products in the search tool",
   "defaultInputs": [],
   "defaultOutputs": [
     {
