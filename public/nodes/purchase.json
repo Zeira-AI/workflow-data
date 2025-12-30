@@ -1,73 +1,64 @@
 {
   "type": "sourcing-feasibility",
-  "label": "Purchase Feasibility",
-  "category": "sourcing",
-  "icon": "truck",
-  "color": "blue",
-  "description": "Check sourcing coverage and availability risks for ingredients or formulas",
+  "label": "Sourcing Feasibility",
+  "category": "analysis",
+  "icon": "shopping-cart",
+  "color": "amber",
+  "description": "Evaluate supplier coverage, availability levels, and single-source risks for ingredients",
   "defaultInputs": [
     {
-      "id": "ingredient_list",
-      "name": "ingredient_list",
+      "id": "ingredients",
+      "name": "Ingredient List",
       "type": "array",
-      "description": "List of ingredients to evaluate sourcing feasibility"
+      "required": true,
+      "description": "List of ingredients or formula components to analyze"
     }
   ],
   "defaultOutputs": [
     {
-      "id": "ingredient_id",
-      "name": "ingredient_id",
-      "type": "string",
-      "description": "Ingredient ID"
-    },
-    {
-      "id": "ingredient_name",
-      "name": "ingredient_name",
-      "type": "string",
-      "description": "Ingredient name"
-    },
-    {
-      "id": "supplier_count",
-      "name": "supplier_count",
-      "type": "number",
-      "description": "Number of known suppliers"
-    },
-    {
-      "id": "availability_level",
-      "name": "availability_level",
-      "type": "string",
-      "description": "Availability level (High / Medium / Low / Unknown)"
-    },
-    {
-      "id": "single_source_risk",
-      "name": "single_source_risk",
-      "type": "boolean",
-      "description": "Indicates single-source supply risk"
-    },
-    {
-      "id": "data_source",
-      "name": "data_source",
+      "id": "sourcingData",
+      "name": "Sourcing Data",
       "type": "array",
-      "description": "Sources used to derive sourcing information"
+      "description": "Detailed sourcing metrics per ingredient"
     },
     {
-      "id": "notes",
-      "name": "notes",
-      "type": "string",
-      "description": "Optional sourcing notes or caveats"
+      "id": "riskSummary",
+      "name": "Risk Summary",
+      "type": "object",
+      "description": "Summary of high-risk items and single-source flags"
     }
   ],
   "configSchema": [
     {
-      "key": "run_mode",
+      "key": "region",
       "type": "select",
-      "label": "Run Mode",
-      "options": ["manual"],
-      "defaultValue": "manual",
-      "description": "Sourcing checks are only triggered manually"
+      "label": "Sourcing Region",
+      "options": [
+        {"value": "global", "label": "Global"},
+        {"value": "na", "label": "North America"},
+        {"value": "eu", "label": "Europe"},
+        {"value": "asia", "label": "Asia"}
+      ],
+      "defaultValue": "global"
+    },
+    {
+      "key": "includeOutdated",
+      "type": "boolean",
+      "label": "Include Cached Data",
+      "description": "Allow use of cached sourcing data if live data is unavailable",
+      "defaultValue": false
+    },
+    {
+      "key": "riskThreshold",
+      "type": "number",
+      "label": "Single-Source Warning Threshold",
+      "placeholder": "2",
+      "defaultValue": 2
     }
   ],
   "defaultConfig": {
-    "run_mode": "manual"
+    "region": "global",
+    "includeOutdated": false,
+    "riskThreshold": 2
   }
 }
