@@ -1,7 +1,7 @@
 {
   "type": "product-search",
-  "label": "Product Search V5",
-  "category": "discovery",
+  "label": "Product Search",
+  "category": "Search",
   "icon": "search",
   "color": "amber",
   "description": "Search for products in the search tool",
