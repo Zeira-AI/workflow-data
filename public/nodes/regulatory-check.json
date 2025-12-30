@@ -1,0 +1,93 @@
+{
+  "type": "regulatory-check",
+  "label": "Regulatory Check",
+  "category": "Compliance",
+  "icon": "shield-check",
+  "color": "red",
+  "description": "Check ingredients or formulas against open regulatory data by market and usage context",
+  "defaultInputs": [
+    {
+      "id": "formula_or_ingredient_list",
+      "name": "Formula or Ingredient List",
+      "type": "object",
+      "required": true,
+      "description": "Formula or ingredient list to be checked against regulatory data"
+    },
+    {
+      "id": "target_market",
+      "name": "Target Market",
+      "type": "string",
+      "required": true,
+      "description": "Target regulatory market (e.g. EU, US, ASEAN)"
+    },
+    {
+      "id": "target_user",
+      "name": "Target User",
+      "type": "object",
+      "required": false,
+      "description": "Target user group (e.g. gender and age range)"
+    },
+    {
+      "id": "application_route",
+      "name": "Application Route",
+      "type": "string",
+      "required": true,
+      "description": "Application route (topical, oral, injectable)"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "ingredient_id",
+      "name": "Ingredient ID",
+      "type": "string",
+      "description": "Ingredient identifier"
+    },
+    {
+      "id": "ingredient_name",
+      "name": "Ingredient Name",
+      "type": "string",
+      "description": "Ingredient name"
+    },
+    {
+      "id": "market",
+      "name": "Market",
+      "type": "string",
+      "description": "Market used for regulatory evaluation"
+    },
+    {
+      "id": "status",
+      "name": "Regulatory Status",
+      "type": "string",
+      "description": "Regulatory result: PASS, FAIL, or UNKNOWN"
+    },
+    {
+      "id": "warnings",
+      "name": "Regulatory Warnings",
+      "type": "array",
+      "description": "List of regulatory warnings or restrictions"
+    },
+    {
+      "id": "references",
+      "name": "Source References",
+      "type": "array",
+      "description": "Regulatory sources or references used"
+    },
+    {
+      "id": "reasoning",
+      "name": "Reasoning",
+      "type": "string",
+      "description": "Short explanation for the regulatory result (may be blurred)"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "allow_csv_download",
+      "type": "boolean",
+      "label": "Allow CSV Download",
+      "defaultValue": true
+    }
+  ],
+  "defaultConfig": {
+    "allow_csv_download": true
+  }
+}
