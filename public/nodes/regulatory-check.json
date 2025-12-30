@@ -49,6 +49,58 @@
       "description": "Downloadable CSV file containing regulatory results"
     }
   ],
-  "configSchema": [],
-  "defaultConfig": {}
+  "configSchema": [
+    {
+      "key": "applicationRoute",
+      "type": "select",
+      "label": "Application Route",
+      "options": [
+        {
+          "value": "topical",
+          "label": "Topical"
+        },
+        {
+          "value": "oral",
+          "label": "Oral"
+        },
+        {
+          "value": "inject",
+          "label": "Injectable"
+        }
+      ],
+      "defaultValue": "topical"
+    },
+    {
+      "key": "targetUserAge",
+      "type": "select",
+      "label": "Target User Age",
+      "options": [
+        {
+          "value": "infant",
+          "label": "Infant (0-3)"
+        },
+        {
+          "value": "child",
+          "label": "Child (3-12)"
+        },
+        {
+          "value": "adult",
+          "label": "Adult"
+        }
+      ],
+      "defaultValue": "adult"
+    },
+    {
+      "key": "blurReasoning",
+      "type": "boolean",
+      "label": "Blur Reasoning Text",
+      "description": "Enable to require user interaction to reveal detailed reasoning",
+      "defaultValue": true
+    }
+  ],
+  "defaultConfig": {
+    "applicationRoute": "topical",
+    "targetUserAge": "adult",
+    "blurReasoning": true
+  }
 }
