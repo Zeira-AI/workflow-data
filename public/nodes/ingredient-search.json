@@ -1,7 +1,7 @@
 {
   "type": "ingredient-search",
   "label": "Ingredient Search",
-  "category": "Search",
+  "category": "search",
   "icon": "search",
   "color": "green",
   "description": "Search ingredients suitable for formulations targeting hair growth, hair density, and reduced hair loss",

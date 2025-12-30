@@ -1,7 +1,7 @@
 {
   "type": "product-search",
   "label": "Product Search",
-  "category": "Search",
+  "category": "search",
   "icon": "search",
   "color": "amber",
   "description": "Search for products in the search tool",
