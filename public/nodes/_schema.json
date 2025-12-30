@@ -17,7 +17,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["discovery", "analysis", "transform", "output", "integration"],
+      "enum": ["discovery", "analysis", "transform", "output", "integration", "search"],
       "description": "Category for organizing nodes in the UI"
     },
     "icon": {
