@@ -1,0 +1,73 @@
+{
+  "type": "sourcing-feasibility",
+  "label": "Purchase Feasibility",
+  "category": "sourcing",
+  "icon": "truck",
+  "color": "blue",
+  "description": "Check sourcing coverage and availability risks for ingredients or formulas",
+  "defaultInputs": [
+    {
+      "id": "ingredient_list",
+      "name": "ingredient_list",
+      "type": "array",
+      "description": "List of ingredients to evaluate sourcing feasibility"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "ingredient_id",
+      "name": "ingredient_id",
+      "type": "string",
+      "description": "Ingredient ID"
+    },
+    {
+      "id": "ingredient_name",
+      "name": "ingredient_name",
+      "type": "string",
+      "description": "Ingredient name"
+    },
+    {
+      "id": "supplier_count",
+      "name": "supplier_count",
+      "type": "number",
+      "description": "Number of known suppliers"
+    },
+    {
+      "id": "availability_level",
+      "name": "availability_level",
+      "type": "string",
+      "description": "Availability level (High / Medium / Low / Unknown)"
+    },
+    {
+      "id": "single_source_risk",
+      "name": "single_source_risk",
+      "type": "boolean",
+      "description": "Indicates single-source supply risk"
+    },
+    {
+      "id": "data_source",
+      "name": "data_source",
+      "type": "array",
+      "description": "Sources used to derive sourcing information"
+    },
+    {
+      "id": "notes",
+      "name": "notes",
+      "type": "string",
+      "description": "Optional sourcing notes or caveats"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "run_mode",
+      "type": "select",
+      "label": "Run Mode",
+      "options": ["manual"],
+      "defaultValue": "manual",
+      "description": "Sourcing checks are only triggered manually"
+    }
+  ],
+  "defaultConfig": {
+    "run_mode": "manual"
+  }
+}
