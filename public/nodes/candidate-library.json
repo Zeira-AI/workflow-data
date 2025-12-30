@@ -1,9 +1,9 @@
 {
   "type": "candidate-library-builder",
-  "label": "Candidate Library Builder",
-  "category": "Library Construction",
-  "icon": "ICON_LIBRARY_BUILD",
-  "color": "COLOR_PRIMARY_BLUE",
+  "label": "Candidate Library",
+  "category": "library",
+  "icon": "book-open-text",
+  "color": "blue",
   "description": "Builds a customized compound library of 30+ candidates based on biological intent and selected sources.",
   "defaultInputs": [
     {
