@@ -27,7 +27,7 @@
     },
     {
       "id": "estimatedPercent",
-      "name": "estimatedPercent",
+      "name": "Estimated Percent",
       "type": "string",
       "description": "Estimated percentage"
     }
