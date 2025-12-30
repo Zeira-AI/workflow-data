@@ -1,0 +1,63 @@
+{
+  "type": "data-source",
+  "label": "Data Source",
+  "category": "integration",
+  "icon": "database",
+  "color": "blue",
+  "description": "Connect to external data sources",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "data",
+      "name": "data",
+      "type": "array",
+      "description": "Retrieved data"
+    },
+    {
+      "id": "metadata",
+      "name": "metadata",
+      "type": "object",
+      "description": "Source metadata"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "sourceType",
+      "type": "select",
+      "label": "Source Type",
+      "options": [
+        {
+          "value": "database",
+          "label": "Database"
+        },
+        {
+          "value": "api",
+          "label": "API Endpoint"
+        },
+        {
+          "value": "file",
+          "label": "File Upload"
+        }
+      ],
+      "defaultValue": "database"
+    },
+    {
+      "key": "connectionString",
+      "type": "text",
+      "label": "Connection String",
+      "placeholder": "Enter connection string or URL"
+    },
+    {
+      "key": "query",
+      "type": "textarea",
+      "label": "Query",
+      "placeholder": "Enter SQL query or API path"
+    }
+  ],
+  "defaultConfig": {
+    "sourceType": "database",
+    "connectionString": "",
+    "query": ""
+  }
+}
+

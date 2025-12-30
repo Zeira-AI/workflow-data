@@ -1,0 +1,85 @@
+{
+  "type": "filter",
+  "label": "Filter",
+  "category": "transform",
+  "icon": "filter",
+  "color": "green",
+  "description": "Filter and transform data",
+  "defaultInputs": [
+    {
+      "id": "data",
+      "name": "data",
+      "type": "array",
+      "required": true,
+      "description": "Data to filter"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "filtered",
+      "name": "filtered",
+      "type": "array",
+      "description": "Filtered results"
+    },
+    {
+      "id": "excluded",
+      "name": "excluded",
+      "type": "array",
+      "description": "Excluded items"
+    },
+    {
+      "id": "stats",
+      "name": "stats",
+      "type": "object",
+      "description": "Filter statistics"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "filterField",
+      "type": "text",
+      "label": "Filter Field",
+      "placeholder": "Field name to filter on"
+    },
+    {
+      "key": "operator",
+      "type": "select",
+      "label": "Operator",
+      "options": [
+        {
+          "value": "equals",
+          "label": "Equals"
+        },
+        {
+          "value": "contains",
+          "label": "Contains"
+        },
+        {
+          "value": "greater_than",
+          "label": "Greater Than"
+        },
+        {
+          "value": "less_than",
+          "label": "Less Than"
+        },
+        {
+          "value": "regex",
+          "label": "Regex Match"
+        }
+      ],
+      "defaultValue": "equals"
+    },
+    {
+      "key": "filterValue",
+      "type": "text",
+      "label": "Filter Value",
+      "placeholder": "Value to match"
+    }
+  ],
+  "defaultConfig": {
+    "filterField": "",
+    "operator": "equals",
+    "filterValue": ""
+  }
+}
+

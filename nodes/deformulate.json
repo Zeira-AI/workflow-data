@@ -1,0 +1,48 @@
+{
+  "type": "deformulate",
+  "label": "Deformulate",
+  "category": "analysis",
+  "icon": "flask",
+  "color": "purple",
+  "description": "Analyze and deformulate product compositions",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "id",
+      "name": "id",
+      "type": "string",
+      "description": "Ingredient ID"
+    },
+    {
+      "id": "inci",
+      "name": "inci",
+      "type": "string",
+      "description": "INCI name"
+    },
+    {
+      "id": "functions",
+      "name": "functions",
+      "type": "array",
+      "description": "Ingredient functions"
+    },
+    {
+      "id": "estimatedPercent",
+      "name": "estimatedPercent",
+      "type": "string",
+      "description": "Estimated percentage"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredients",
+      "type": "textarea",
+      "label": "Ingredient List",
+      "placeholder": "Enter ingredients (comma or newline separated)...",
+      "defaultValue": ""
+    }
+  ],
+  "defaultConfig": {
+    "ingredients": ""
+  }
+}
+

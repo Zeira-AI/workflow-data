@@ -1,0 +1,96 @@
+{
+  "type": "product-search",
+  "label": "Product Search",
+  "category": "discovery",
+  "icon": "search",
+  "color": "amber",
+  "description": "Search for products in the database",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "id",
+      "name": "id",
+      "type": "string",
+      "description": "Product ID"
+    },
+    {
+      "id": "brand",
+      "name": "brand",
+      "type": "string",
+      "description": "Brand name"
+    },
+    {
+      "id": "name",
+      "name": "name",
+      "type": "string",
+      "description": "Product name"
+    },
+    {
+      "id": "rating",
+      "name": "rating",
+      "type": "number",
+      "description": "Product rating"
+    },
+    {
+      "id": "reviewCount",
+      "name": "reviewCount",
+      "type": "number",
+      "description": "Number of reviews"
+    },
+    {
+      "id": "url",
+      "name": "url",
+      "type": "string",
+      "description": "Product URL"
+    },
+    {
+      "id": "imageUrl",
+      "name": "imageUrl",
+      "type": "string",
+      "description": "Product image URL"
+    },
+    {
+      "id": "scores",
+      "name": "scores",
+      "type": "object",
+      "description": "Relevance, coverage, novelty scores"
+    },
+    {
+      "id": "reasoning",
+      "name": "reasoning",
+      "type": "array",
+      "description": "Reasoning for product selection"
+    },
+    {
+      "id": "description",
+      "name": "description",
+      "type": "string",
+      "description": "Product description"
+    },
+    {
+      "id": "ingredients",
+      "name": "ingredients",
+      "type": "string",
+      "description": "Product ingredients"
+    },
+    {
+      "id": "highlights",
+      "name": "highlights",
+      "type": "array",
+      "description": "Product highlights"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "query",
+      "type": "textarea",
+      "label": "Search Query",
+      "placeholder": "Enter product search terms...",
+      "defaultValue": ""
+    }
+  ],
+  "defaultConfig": {
+    "query": ""
+  }
+}
+

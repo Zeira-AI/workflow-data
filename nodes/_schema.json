@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vecura.io/schemas/node-definition.json",
+  "title": "Node Definition Schema",
+  "description": "JSON Schema for workflow builder node definitions",
+  "type": "object",
+  "required": ["type", "label", "category", "icon", "color", "defaultInputs", "defaultOutputs", "configSchema", "defaultConfig"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Unique identifier for the node type",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "label": {
+      "type": "string",
+      "description": "Human-readable label for the node"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["discovery", "analysis", "transform", "output", "integration"],
+      "description": "Category for organizing nodes in the UI"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon key from constants"
+    },
+    "color": {
+      "type": "string",
+      "description": "Color key from constants"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description of the node's purpose"
+    },
+    "defaultInputs": {
+      "type": "array",
+      "description": "Default input ports for the node",
+      "items": {
+        "$ref": "#/definitions/NodeIO"
+      }
+    },
+    "defaultOutputs": {
+      "type": "array",
+      "description": "Default output ports for the node",
+      "items": {
+        "$ref": "#/definitions/NodeIO"
+      }
+    },
+    "configSchema": {
+      "type": "array",
+      "description": "Configuration fields schema",
+      "items": {
+        "$ref": "#/definitions/ConfigField"
+      }
+    },
+    "defaultConfig": {
+      "type": "object",
+      "description": "Default configuration values"
+    }
+  },
+  "definitions": {
+    "NodeIO": {
+      "type": "object",
+      "required": ["id", "name", "type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the I/O port"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name for the I/O port"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["string", "number", "boolean", "object", "array"],
+          "description": "Data type of the I/O port"
+        },
+        "required": {
+          "type": "boolean",
+          "description": "Whether the input is required"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the I/O port"
+        },
+        "mappedFrom": {
+          "type": "string",
+          "description": "Reference to source node output (e.g., 'node1.output.data')"
+        }
+      }
+    },
+    "ConfigField": {
+      "type": "object",
+      "required": ["key", "type", "label"],
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "Configuration field key"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["text", "number", "select", "boolean", "json", "textarea"],
+          "description": "Type of configuration field"
+        },
+        "label": {
+          "type": "string",
+          "description": "Display label for the field"
+        },
+        "placeholder": {
+          "type": "string",
+          "description": "Placeholder text for input fields"
+        },
+        "options": {
+          "type": "array",
+          "description": "Options for select fields",
+          "items": {
+            "type": "object",
+            "required": ["value", "label"],
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "defaultValue": {
+          "description": "Default value for the field"
+        }
+      }
+    }
+  }
+}
+
