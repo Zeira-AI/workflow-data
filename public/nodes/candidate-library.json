@@ -1,0 +1,94 @@
+{
+  "type": "candidate-library-builder",
+  "label": "Candidate Library Builder",
+  "category": "Library Construction",
+  "icon": "ICON_LIBRARY_BUILD",
+  "color": "COLOR_PRIMARY_BLUE",
+  "description": "Builds a customized compound library of 30+ candidates based on biological intent and selected sources.",
+  "defaultInputs": [
+    {
+      "id": "search_keyword",
+      "name": "Search Keyword",
+      "type": "string",
+      "required": true,
+      "description": "e.g., 'Kinase Inhibitors'"
+    },
+    {
+      "id": "biological_effects",
+      "name": "Biological Effects",
+      "type": "string",
+      "required": true,
+      "description": "e.g., 'EGFR mutation targets'"
+    },
+    {
+      "id": "target_proteins",
+      "name": "Target Protein(s)",
+      "type": "string",
+      "required": false,
+      "description": "Optional if Scientific Description is provided"
+    },
+    {
+      "id": "scientific_description",
+      "name": "Scientific Description",
+      "type": "string",
+      "required": false,
+      "description": "Free-text context for rationale generation"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "candidate_library",
+      "name": "Candidate Library Table",
+      "type": "array",
+      "description": "List of 30 compounds with Name, SMILES, Source, and Rationale"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "library_sources",
+      "type": "select",
+      "label": "Primary Source",
+      "options": [
+        { "value": "chembl", "label": "ChEMBL" },
+        { "value": "pubchem", "label": "PubChem" },
+        { "value": "internal_db", "label": "Internal Database" }
+      ]
+    },
+    {
+      "key": "export_config",
+      "type": "json",
+      "label": "Export Settings",
+      "defaultValue": { "format": "csv", "include_rationale": true }
+    }
+  ],
+  "defaultConfig": {
+    "library_sources": "chembl",
+    "export_config": { "format": "csv", "include_rationale": true },
+    "mock_results": [
+      {
+        "compound_name": "Gefitinib",
+        "smiles": "COC1=C(OCCCN2CCOCC2)C=C2C(=C1)N=CN=C2NC3=CC(=C(C=C3)F)Cl",
+        "source": "ChEMBL",
+        "rationale": "High affinity for EGFR mutation targets."
+      },
+      {
+        "compound_name": "Erlotinib",
+        "smiles": "COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC",
+        "source": "PubChem",
+        "rationale": "Proven biological effect on lung cancer pathways."
+      },
+      {
+        "compound_name": "Lapatinib",
+        "smiles": "CS(=O)(=O)CCNCC1=CC=C(O1)C2=CC3=C(C=C2)N=CN=C3NC4=CC(=C(C=C4)OCC5=CC(=CC=C5)F)Cl",
+        "source": "Internal DB",
+        "rationale": "Dual inhibitor for HER2 and EGFR."
+      },
+      {
+        "compound_name": "Vemurafenib",
+        "smiles": "CCS(=O)(=O)NC1=C(F)C=C(C=C1)C(=O)C2=CN(C3=C2C=CN=C3)C4=CC(Cl)=CC=C4",
+        "source": "Internal DB",
+        "rationale": "BRAF V600E mutation specific rationale."
+      }
+    ]
+  }
+}
