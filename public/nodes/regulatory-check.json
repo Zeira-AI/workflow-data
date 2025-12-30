@@ -1,52 +1,44 @@
 {
   "type": "regulatory-check",
   "label": "Regulatory Check",
-  "category": "compliance",
+  "category": "analysis",
   "icon": "shield-check",
   "color": "red",
-  "description": "Checks ingredients or formulas against open regulatory data. Results are read-only and market-specific.",
+  "description": "Check ingredient/formula compliance against global market regulations",
   "defaultInputs": [
     {
-      "id": "ingredients",
-      "name": "Ingredient List",
+      "id": "formula",
+      "name": "Formula/Ingredients",
       "type": "array",
       "required": true,
-      "description": "List of ingredients or formula composition"
+      "description": "List of ingredients and their concentrations"
     },
     {
       "id": "targetMarket",
       "name": "Target Market",
       "type": "string",
       "required": true,
-      "description": "Regulatory market (e.g. EU, US, ASEAN)"
-    },
-    {
-      "id": "targetUser",
-      "name": "Target User",
-      "type": "object",
-      "required": false,
-      "description": "Target user profile (gender and age group)"
-    },
-    {
-      "id": "applicationRoute",
-      "name": "Application Route",
-      "type": "string",
-      "required": true,
-      "description": "Application route (topical, oral, inject)"
+      "description": "Target regulatory region (e.g., EU, US, CN)"
     }
   ],
   "defaultOutputs": [
     {
-      "id": "regulatoryResults",
-      "name": "Regulatory Results",
-      "type": "array",
-      "description": "Per-ingredient regulatory check results"
+      "id": "complianceStatus",
+      "name": "Compliance Status",
+      "type": "string",
+      "description": "Overall status: PASS, FAIL, or UNKNOWN"
     },
     {
-      "id": "csvDownload",
-      "name": "Regulatory CSV",
+      "id": "detailedResults",
+      "name": "Detailed Results",
+      "type": "array",
+      "description": "Per-ingredient regulatory warnings and references"
+    },
+    {
+      "id": "csvExport",
+      "name": "Download Link",
       "type": "string",
-      "description": "Downloadable CSV file containing regulatory results"
+      "description": "URL to download the regulatory report as CSV"
     }
   ],
   "configSchema": [
@@ -55,18 +47,9 @@
       "type": "select",
       "label": "Application Route",
       "options": [
-        {
-          "value": "topical",
-          "label": "Topical"
-        },
-        {
-          "value": "oral",
-          "label": "Oral"
-        },
-        {
-          "value": "inject",
-          "label": "Injectable"
-        }
+        {"value": "topical", "label": "Topical"},
+        {"value": "oral", "label": "Oral"},
+        {"value": "inject", "label": "Injectable"}
       ],
       "defaultValue": "topical"
     },
@@ -75,18 +58,9 @@
       "type": "select",
       "label": "Target User Age",
       "options": [
-        {
-          "value": "infant",
-          "label": "Infant (0-3)"
-        },
-        {
-          "value": "child",
-          "label": "Child (3-12)"
-        },
-        {
-          "value": "adult",
-          "label": "Adult"
-        }
+        {"value": "infant", "label": "Infant (0-3)"},
+        {"value": "child", "label": "Child (3-12)"},
+        {"value": "adult", "label": "Adult"}
       ],
       "defaultValue": "adult"
     },
