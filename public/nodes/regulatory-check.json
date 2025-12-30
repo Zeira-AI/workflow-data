@@ -1,93 +1,54 @@
 {
   "type": "regulatory-check",
   "label": "Regulatory Check",
-  "category": "Compliance",
+  "category": "compliance",
   "icon": "shield-check",
   "color": "red",
-  "description": "Check ingredients or formulas against open regulatory data by market and usage context",
+  "description": "Checks ingredients or formulas against open regulatory data. Results are read-only and market-specific.",
   "defaultInputs": [
     {
-      "id": "formula_or_ingredient_list",
-      "name": "Formula or Ingredient List",
-      "type": "object",
+      "id": "ingredients",
+      "name": "Ingredient List",
+      "type": "array",
       "required": true,
-      "description": "Formula or ingredient list to be checked against regulatory data"
+      "description": "List of ingredients or formula composition"
     },
     {
-      "id": "target_market",
+      "id": "targetMarket",
       "name": "Target Market",
       "type": "string",
       "required": true,
-      "description": "Target regulatory market (e.g. EU, US, ASEAN)"
+      "description": "Regulatory market (e.g. EU, US, ASEAN)"
     },
     {
-      "id": "target_user",
+      "id": "targetUser",
       "name": "Target User",
       "type": "object",
       "required": false,
-      "description": "Target user group (e.g. gender and age range)"
+      "description": "Target user profile (gender and age group)"
     },
     {
-      "id": "application_route",
+      "id": "applicationRoute",
       "name": "Application Route",
       "type": "string",
       "required": true,
-      "description": "Application route (topical, oral, injectable)"
+      "description": "Application route (topical, oral, inject)"
     }
   ],
   "defaultOutputs": [
     {
-      "id": "ingredient_id",
-      "name": "Ingredient ID",
-      "type": "string",
-      "description": "Ingredient identifier"
-    },
-    {
-      "id": "ingredient_name",
-      "name": "Ingredient Name",
-      "type": "string",
-      "description": "Ingredient name"
-    },
-    {
-      "id": "market",
-      "name": "Market",
-      "type": "string",
-      "description": "Market used for regulatory evaluation"
-    },
-    {
-      "id": "status",
-      "name": "Regulatory Status",
-      "type": "string",
-      "description": "Regulatory result: PASS, FAIL, or UNKNOWN"
-    },
-    {
-      "id": "warnings",
-      "name": "Regulatory Warnings",
+      "id": "regulatoryResults",
+      "name": "Regulatory Results",
       "type": "array",
-      "description": "List of regulatory warnings or restrictions"
+      "description": "Per-ingredient regulatory check results"
     },
     {
-      "id": "references",
-      "name": "Source References",
-      "type": "array",
-      "description": "Regulatory sources or references used"
-    },
-    {
-      "id": "reasoning",
-      "name": "Reasoning",
+      "id": "csvDownload",
+      "name": "Regulatory CSV",
       "type": "string",
-      "description": "Short explanation for the regulatory result (may be blurred)"
+      "description": "Downloadable CSV file containing regulatory results"
     }
   ],
-  "configSchema": [
-    {
-      "key": "allow_csv_download",
-      "type": "boolean",
-      "label": "Allow CSV Download",
-      "defaultValue": true
-    }
-  ],
-  "defaultConfig": {
-    "allow_csv_download": true
-  }
+  "configSchema": [],
+  "defaultConfig": {}
 }
