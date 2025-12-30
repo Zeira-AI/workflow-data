@@ -1,0 +1,11 @@
+ingredient_id,ingredient_name,supplier_count,availability_level,single_source_risk,data_source,notes
+1,Niacinamide,12,High,false,"CosIng; Alibaba; BASF Catalog","Widely available from multiple global suppliers"
+2,Panthenol,10,High,false,"DSM; Croda; Spec-Chem","Stable supply with cosmetic-grade variants"
+3,Zinc PCA,6,Medium,false,"Solabia; MakingCosmetics","Limited number of cosmetic-grade suppliers"
+4,Saw Palmetto Extract,3,Medium,true,"Botanical suppliers; EU herbal vendors","Quality varies by origin and harvest season"
+5,Redensyl™,1,Low,true,"Givaudan Active Beauty","Proprietary ingredient with single official supplier"
+6,Peppermint Oil,8,High,false,"IFRA suppliers; Essential oil distributors","Seasonal variation possible but supply is broad"
+7,Salicylic Acid,9,High,false,"Chemical distributors; Pharma suppliers","Supply stable but regulatory-grade required"
+8,Caffeine,11,High,false,"Pharma suppliers; Food-grade vendors","Multiple grades available"
+9,Biotin,5,Medium,false,"Nutraceutical suppliers","Higher demand from supplement industry"
+10,Castor Oil,14,High,false,"Commodity oil suppliers","Supply affected slightly by crop yield"
