@@ -25,7 +25,7 @@
   "configSchema": [
     {
       "key": "smiles_column",
-      "type": "string",
+      "type": "text",
       "label": "SMILES Column Name",
       "defaultValue": "smiles",
       "description": "Select the column containing the SMILES strings"
