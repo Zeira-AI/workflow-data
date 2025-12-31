@@ -1,0 +1,77 @@
+{
+  "type": "report-generator",
+  "label": "Report Generation",
+  "category": "Output",
+  "icon": "icon-report",
+  "color": "blue-600",
+  "description": "Generates a structured document (PDF, CSV, or HTML) based on input data and a selected template.",
+  "defaultInputs": [
+    {
+      "id": "input-data",
+      "name": "Report Data",
+      "type": "object",
+      "required": true,
+      "description": "The raw data objects to be injected into the report template."
+    },
+    {
+      "id": "custom-title",
+      "name": "Dynamic Title",
+      "type": "string",
+      "required": false,
+      "description": "Optional title to override the default report name."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "report-url",
+      "name": "Report URL",
+      "type": "string",
+      "description": "The URL link to the generated file."
+    },
+    {
+      "id": "file-metadata",
+      "name": "File Metadata",
+      "type": "object",
+      "description": "Details about file size, extension, and creation timestamp."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "reportFormat",
+      "type": "select",
+      "label": "Export Format",
+      "options": [
+        { "value": "pdf", "label": "PDF Document" },
+        { "value": "csv", "label": "CSV Spreadsheet" },
+        { "value": "html", "label": "HTML Webpage" }
+      ],
+      "defaultValue": "pdf"
+    },
+    {
+      "key": "templateId",
+      "type": "text",
+      "label": "Template ID",
+      "placeholder": "e.g., invoice-template-v1",
+      "defaultValue": "default-template"
+    },
+    {
+      "key": "includeTimestamp",
+      "type": "boolean",
+      "label": "Include Generation Timestamp",
+      "defaultValue": true
+    },
+    {
+      "key": "customCss",
+      "type": "textarea",
+      "label": "Custom Styling (CSS)",
+      "placeholder": ".report-body { font-family: sans-serif; }",
+      "defaultValue": ""
+    }
+  ],
+  "defaultConfig": {
+    "reportFormat": "pdf",
+    "templateId": "default-template",
+    "includeTimestamp": true,
+    "customCss": ""
+  }
+}

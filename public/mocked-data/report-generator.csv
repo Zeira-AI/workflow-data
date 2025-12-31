@@ -1,0 +1,2 @@
+report_id,report_name,report_type,category,application,reference_url,notes
+RPT-001,"Croda Hair Growth Report","External Report","Hair Growth","Formulation & Claim Validation","https://workflow-data-2sa8.vercel.app/mocked-data/Report Croda Hair Growth","Reference document for hair growth ingredient strategy and experimental planning"
