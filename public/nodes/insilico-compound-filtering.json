@@ -1,0 +1,69 @@
+{
+  "type": "insilico-compound-filtering",
+  "label": "In-silico Compound Filtering",
+  "category": "analysis",
+  "icon": "biotech",
+  "color": "indigo",
+  "description": "Filter and analyze chemical compounds based on biological targets, assay types, and activity potency (p-values).",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "target",
+      "name": "Target",
+      "type": "string",
+      "description": "Biological protein target (e.g., Kir6.2, GSK3β)"
+    },
+    {
+      "id": "assay_type",
+      "name": "Assay Type",
+      "type": "string",
+      "description": "The laboratory method used (e.g., Functional Assay, Enzyme Inhibition)"
+    },
+    {
+      "id": "compound",
+      "name": "Compound",
+      "type": "string",
+      "description": "Name of the chemical compound or molecule"
+    },
+    {
+      "id": "activity_type",
+      "name": "Activity Type",
+      "type": "string",
+      "description": "Measurement metric (IC50 or EC50)"
+    },
+    {
+      "id": "p_value",
+      "name": "p-Value",
+      "type": "number",
+      "description": "Negative log of the activity concentration (higher values indicate higher potency)"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "targetSelection",
+      "type": "select",
+      "label": "Target Protein",
+      "placeholder": "Select target...",
+      "defaultValue": "All"
+    },
+    {
+      "key": "minPotency",
+      "type": "number",
+      "label": "Minimum p-Value Threshold",
+      "placeholder": "e.g. 5.0",
+      "defaultValue": 0
+    },
+    {
+      "key": "assayFilter",
+      "type": "string",
+      "label": "Assay Type Filter",
+      "placeholder": "e.g. Enzyme Inhibition",
+      "defaultValue": ""
+    }
+  ],
+  "defaultConfig": {
+    "targetSelection": "All",
+    "minPotency": 0,
+    "assayFilter": ""
+  }
+}

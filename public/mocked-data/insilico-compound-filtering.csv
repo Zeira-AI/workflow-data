@@ -1,0 +1,21 @@
+target,assay_type,compound,activity_type,p_value
+Kir6.2,Functional Assay,Minoxidil,EC50,5.77
+Kir6.2,Functional Assay,Adenosine,EC50,5.19
+Kir6.2,Functional Assay,Piroctone Olamine,EC50,5.04
+Kir6.2,Functional Assay,Baicalin,EC50,4.84
+Kir6.2,Functional Assay,Caffeine,EC50,<4.0
+GSK3β,Enzyme Inhibition,Baicalin,IC50,7.05
+GSK3β,Enzyme Inhibition,Piroctone Olamine,IC50,6.42
+GSK3β,Enzyme Inhibition,Adenosine,IC50,4.92
+GSK3β,Enzyme Inhibition,Minoxidil,IC50,4.83
+GSK3β,Enzyme Inhibition,Caffeine,IC50,4.33
+PDE1A,Enzyme Inhibition,Baicalin,IC50,6.27
+PDE1A,Enzyme Inhibition,Caffeine,IC50,6.10
+PDE1A,Enzyme Inhibition,Piroctone Olamine,IC50,6.21
+PDE1A,Enzyme Inhibition,Adenosine,IC50,4.69
+PDE1A,Enzyme Inhibition,Minoxidil,IC50,4.64
+TGFBR1,Enzyme Inhibition,Baicalin,IC50,5.77
+TGFBR1,Enzyme Inhibition,Piroctone Olamine,IC50,5.46
+TGFBR1,Enzyme Inhibition,Adenosine,IC50,4.92
+TGFBR1,Enzyme Inhibition,Minoxidil,IC50,4.56
+TGFBR1,Enzyme Inhibition,Caffeine,IC50,<4.0

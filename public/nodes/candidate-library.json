@@ -1,5 +1,5 @@
 {
-  "type": "candidate-library-builder",
+  "type": "candidate-library",
   "label": "Candidate Library",
   "category": "library",
   "icon": "book-open-text",
