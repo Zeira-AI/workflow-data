@@ -2,5 +2,5 @@
   "version": "1.0.0",
   "schemaVersion": "1.0.0",
   "description": "Registry of all available workflow builder tools",
-  "tools": ["product-search", "deformulate", "data-source", "filter", "ingredient-search","purchase","regulatory-check","candidate-library","insilico-compound-filtering"]
+  "tools": ["product-search", "deformulate", "data-source", "filter", "ingredient-search","purchase","regulatory-check","candidate-library","insilico-compound-filtering","singular-compound"]
 }
