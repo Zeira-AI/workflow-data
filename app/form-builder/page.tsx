@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { json } from "@codemirror/lang-json";
 import { ConfigFieldRenderer } from "@/components/config-field-renderer";
@@ -8,6 +8,12 @@ import type { ConfigField } from "@/types";
 
 // Default example schema
 const DEFAULT_SCHEMA = [
+  {
+    key: "email",
+    type: "text",
+    label: "Email",
+    placeholder: "abc@gmail.com",
+  },
   {
     key: "singleFile",
     type: "file",
@@ -70,14 +76,16 @@ export default function FormBuilderPage() {
   const [jsonInput, setJsonInput] = useState(
     JSON.stringify(DEFAULT_SCHEMA, null, 2)
   );
-  const [schema, setSchema] = useState<ConfigField[]>(DEFAULT_SCHEMA);
+  const [schema, setSchema] = useState<ConfigField[]>(
+    () => DEFAULT_SCHEMA as ConfigField[]
+  );
   const [formValues, setFormValues] = useState<Record<string, unknown>>({});
   const [parseError, setParseError] = useState<string | null>(null);
 
-  // Parse JSON input and update schema
-  useEffect(() => {
+  const handleJsonChange = (value: string) => {
+    setJsonInput(value);
     try {
-      const parsed = JSON.parse(jsonInput);
+      const parsed = JSON.parse(value);
       if (Array.isArray(parsed)) {
         setSchema(parsed);
         setParseError(null);
@@ -87,7 +95,7 @@ export default function FormBuilderPage() {
     } catch (error) {
       setParseError((error as Error).message);
     }
-  }, [jsonInput]);
+  };
 
   const handleConfigChange = (key: string, value: unknown) => {
     setFormValues((prev) => ({
@@ -123,7 +131,7 @@ export default function FormBuilderPage() {
               value={jsonInput}
               height="100%"
               extensions={[json()]}
-              onChange={(value) => setJsonInput(value)}
+              onChange={handleJsonChange}
               className="h-full"
               basicSetup={{
                 lineNumbers: true,
