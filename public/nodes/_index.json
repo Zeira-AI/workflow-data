@@ -11,7 +11,7 @@
     "purchase",
     "regulatory-check",
     "candidate-library",
-    "insilico-compound-filtering",
+    "insilico-compound-filter",
     "singular-compound",
     "document-processor",
     "extremes-filter",

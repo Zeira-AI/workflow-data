@@ -1,5 +1,5 @@
 {
-  "type": "insilico-compound-filtering",
+  "type": "insilico-compound-filter",
   "label": "In-silico Compound Filtering",
   "category": "analysis",
   "icon": "funnel",
