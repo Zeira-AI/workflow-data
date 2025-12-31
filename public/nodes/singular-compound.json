@@ -1,0 +1,154 @@
+{
+  "type": "singular-compound",
+  "label": "Singular Compound Wetlab Validate",
+  "category": "wet lab validation",
+  "icon": "science",
+  "color": "blue",
+  "description": "Validation module for single compounds in wetlab environments based on product specifications and study assumptions.",
+  "defaultInputs": [
+    {
+      "id": "input_data",
+      "name": "Input Data",
+      "type": "object",
+      "required": true,
+      "description": "Initial compound or study data"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "validation_report",
+      "name": "Validation Report",
+      "type": "object",
+      "description": "Generated validation results and study roadmap"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "productName",
+      "type": "text",
+      "label": "Product Name",
+      "placeholder": "Enter product name"
+    },
+    {
+      "key": "productType",
+      "type": "select",
+      "label": "Product Type",
+      "options": [
+        { "value": "dietary_supplement", "label": "Dietary Supplement" },
+        { "value": "topical_cosmetic", "label": "Topical Cosmetic" },
+        { "value": "functional_food_beverage", "label": "Functional Food/Beverage" }
+      ]
+    },
+    {
+      "key": "developmentStage",
+      "type": "select",
+      "label": "Development Stage",
+      "options": [
+        { "value": "concept", "label": "Concept/ Idea Stage" },
+        { "value": "prototype", "label": "Prototype/ Formula Development" },
+        { "value": "ready", "label": "Ready for Testing" },
+        { "value": "market_validation", "label": "Market Validation" },
+        { "value": "launched", "label": "Already Launched" }
+      ]
+    },
+    {
+      "key": "targetAudience",
+      "type": "text",
+      "label": "Target Audience",
+      "placeholder": "Input your target user"
+    },
+    {
+      "key": "claims",
+      "type": "textarea",
+      "label": "What type of claims do you want to make?",
+      "placeholder": "e.g., XX% + Claim based on Target Audience"
+    },
+    {
+      "key": "journalImportance",
+      "type": "select",
+      "label": "Importance of Peer-reviewed Journal",
+      "options": [
+        { "value": "1", "label": "1 - Not important at all" },
+        { "value": "2", "label": "2 - Unimportant" },
+        { "value": "3", "label": "3 - Neither important nor unimportant" },
+        { "value": "4", "label": "4 - Important" },
+        { "value": "5", "label": "5 - Very important" }
+      ]
+    },
+    {
+      "key": "clinicallyTestedImportance",
+      "type": "select",
+      "label": "Importance of 'Clinically Tested'",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" }
+      ]
+    },
+    {
+      "key": "clinicallyProvenImportance",
+      "type": "select",
+      "label": "Importance of 'Clinically Proven'",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" }
+      ]
+    },
+    {
+      "key": "targetPopulation",
+      "type": "select",
+      "label": "Target Population",
+      "options": [
+        { "value": "healthy_volunteers", "label": "Healthy volunteers" },
+        { "value": "specific_demographics", "label": "Specific demographics (age, gender, ethnic, skin type)" },
+        { "value": "specific_conditions", "label": "Specific health conditions" },
+        { "value": "other", "label": "Other (Specify)" }
+      ]
+    },
+    {
+      "key": "dataType",
+      "type": "select",
+      "label": "Type of data to collect",
+      "options": [
+        { "value": "self_reported", "label": "Self-reported from questionnaires" },
+        { "value": "objective_data", "label": "Objectives data (e.g: biomarkers, expert grading)" },
+        { "value": "both", "label": "Both" }
+      ]
+    },
+    {
+      "key": "placeboTest",
+      "type": "select",
+      "label": "Do you want to test against a placebo?",
+      "options": [
+        { "value": "yes", "label": "Yes" },
+        { "value": "no", "label": "No" },
+        { "value": "unknown", "label": "Don't know yet" }
+      ]
+    },
+    {
+      "key": "budget",
+      "type": "select",
+      "label": "Budget for the study?",
+      "options": [
+        { "value": "10k", "label": "Around $10k" },
+        { "value": "25k-35k", "label": "Between $25k - $35k" },
+        { "value": "45k-60k", "label": "Between $45k - $60k" },
+        { "value": "61k_plus", "label": "Over $61k" }
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "productType": "dietary_supplement",
+    "developmentStage": "concept",
+    "journalImportance": "3",
+    "clinicallyTestedImportance": "3",
+    "clinicallyProvenImportance": "3",
+    "placeboTest": "unknown",
+    "budget": "10k"
+  }
+}
