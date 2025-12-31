@@ -4,14 +4,14 @@
   "category": "analysis",
   "icon": "filtericon",
   "color": "red",
-  "description": "Filters compounds based on physicochemical thresholds.",
+  "description": "Filters compounds based on SMILES data and physicochemical thresholds.",
   "defaultInputs": [
     {
       "id": "input-mol-data",
       "name": "Input Compounds",
       "type": "array",
       "required": true,
-      "description": "Array containing compound data from CSV"
+      "description": "Array containing compound data and SMILES strings from CSV"
     }
   ],
   "defaultOutputs": [
@@ -23,6 +23,13 @@
     }
   ],
   "configSchema": [
+    {
+      "key": "smiles_column",
+      "type": "string",
+      "label": "SMILES Column Name",
+      "defaultValue": "smiles",
+      "description": "Select the column containing the SMILES strings"
+    },
     {
       "key": "mw_threshold",
       "type": "number",
@@ -37,10 +44,12 @@
     }
   ],
   "defaultConfig": {
+    "smiles_column": "smiles",
     "mw_threshold": 300,
     "logp_threshold": 3.0,
     "mapping": {
       "name": "name",
+      "smiles": "smiles",
       "MW_Da": "MW_Da",
       "logP": "logP"
     }
