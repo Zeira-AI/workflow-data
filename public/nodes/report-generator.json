@@ -1,9 +1,9 @@
 {
   "type": "report-generator",
-  "label": "Report Generation",
+  "label": "Report Generator",
   "category": "Output",
-  "icon": "icon-report",
-  "color": "blue-600",
+  "icon": "book",
+  "color": "blue",
   "description": "Generates a structured document (PDF, CSV, or HTML) based on input data and a selected template.",
   "defaultInputs": [
     {
