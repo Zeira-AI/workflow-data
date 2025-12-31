@@ -4,7 +4,7 @@
   "category": "library",
   "icon": "book-open-text",
   "color": "blue",
-  "description": "Builds a customized compound library of 30+ candidates based on biological intent and selected sources.",
+  "description": "Build a customized compound library of 30+ candidates based on biological intent and selected sources.",
   "defaultInputs": [
     {
       "id": "search_keyword",

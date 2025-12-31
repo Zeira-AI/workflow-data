@@ -1,6 +1,6 @@
 {
   "type": "singular-compound",
-  "label": "Singular Compound Lab Validate",
+  "label": "Ingredient Validation",
   "category": "wet lab validation",
   "icon": "science",
   "color": "blue",

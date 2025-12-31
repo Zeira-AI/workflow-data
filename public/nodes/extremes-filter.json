@@ -1,0 +1,62 @@
+{
+  "type": "extremes-filter",
+  "label": "Extremes Filter",
+  "category": "analysis",
+  "icon": "filtericon",
+  "color": "red",
+  "description": "Filters compounds based on physicochemical thresholds. Excluded items will be flagged and highlighted in red.",
+  "defaultInputs": [
+    {
+      "id": "input-mol-data",
+      "name": "Input Compounds",
+      "type": "array",
+      "required": true,
+      "description": "Array containing compound data from CSV"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "output-filtered",
+      "name": "Filtered Results",
+      "type": "array",
+      "description": "Output data including excluded_red status"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "mw_threshold",
+      "type": "number",
+      "label": "MW Maximum Threshold",
+      "defaultValue": 400
+    },
+    {
+      "key": "logp_threshold",
+      "type": "number",
+      "label": "logP Maximum Threshold",
+      "defaultValue": 4.0
+    },
+    {
+      "key": "color_excluded",
+      "type": "boolean",
+      "label": "Highlight excluded entries in red",
+      "defaultValue": true
+    }
+  ],
+  "defaultConfig": {
+    "mw_threshold": 300,
+    "logp_threshold": 3.0,
+    "color_excluded": true,
+    "style_rules": {
+      "target_column": "excluded_red",
+      "condition": "true",
+      "color": "#ef4444",
+      "apply_to_row": true
+    },
+    "mapping": {
+      "name": "name",
+      "MW_Da": "MW_Da",
+      "logP": "logP",
+      "excluded_red": "excluded_red"
+    }
+  }
+}
