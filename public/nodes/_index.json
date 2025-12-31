@@ -13,6 +13,7 @@
     "candidate-library",
     "insilico-compound-filtering",
     "singular-compound",
-    "document-processor"
+    "document-processor",
+    "extremes-filter"
   ]
 }
