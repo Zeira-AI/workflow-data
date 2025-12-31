@@ -1,7 +1,7 @@
 {
   "type": "target-mapping",
   "label": "Target Mapping",
-  "category": "Analysis",
+  "category": "analysis",
   "icon": "target-icon",
   "color": "blue",
   "description": "Automatically maps input protein names or free-text descriptions to specific assay metrics using an internal reference table.",
