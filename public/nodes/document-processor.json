@@ -25,7 +25,7 @@
       "key": "singleFile",
       "type": "file",
       "label": "Upload Single Document",
-      "accept": ".pdf,.doc,.docx,.txt"
+      "accept": ".pdf,.doc,.docx,.txt,.csv"
     },
     {
       "key": "multipleFiles",
