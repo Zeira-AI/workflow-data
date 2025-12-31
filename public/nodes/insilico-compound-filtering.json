@@ -9,41 +9,41 @@
   "defaultOutputs": [
     {
       "id": "target",
-      "name": "target",
+      "name": "Target",
       "type": "string",
       "description": "Biological protein target"
     },
     {
       "id": "assay_type",
-      "name": "assay_type",
+      "name": "Assay Type",
       "type": "string",
-      "description": "Assay type used"
+      "description": "The laboratory method used"
     },
     {
       "id": "compound",
-      "name": "compound",
+      "name": "Compound",
       "type": "string",
-      "description": "Compound name"
+      "description": "Name of the chemical compound"
     },
     {
       "id": "activity_type",
-      "name": "activity_type",
+      "name": "Activity Type",
       "type": "string",
-      "description": "Activity metric (IC50/EC50)"
+      "description": "Measurement metric (IC50/EC50)"
     },
     {
       "id": "p_value",
-      "name": "p_value",
-      "type": "number",
-      "description": "Negative log concentration"
+      "name": "p-Value",
+      "type": "string",
+      "description": "Negative log of the activity concentration"
     }
   ],
   "configSchema": [
     {
       "key": "query",
       "type": "textarea",
-      "label": "Filter Query",
-      "placeholder": "Enter target or compound name...",
+      "label": "Search Query",
+      "placeholder": "Search by target or compound...",
       "defaultValue": ""
     }
   ],
