@@ -1,0 +1,13 @@
+Target,Why Relevant,Desired modulation,Assay type,Metric
+KATP,DP anagen entry trigger,activation,patch clamp,EC50
+GSK3β,Wnt inhibition release,inhibition,kinase ATP assay,IC50
+PDE1A,↑cAMP follicular signaling,inhibition,cAMP hydrolysis assay,IC50
+TGFBR1,block catagen transition,inhibition,Smad phosphorylation,IC50
+Safety assays,Cytotoxicity & viability,N/A,Dermal Papilla Cell Viability (MTT 72h),% viability
+Hair follicle biology,Ex vivo Hair Shaft Growth,N/A,microdissected follicles 10 days,mm
+Inflammation,IL-8 Suppression,N/A,ELISA / Reporter Assay,% reduction
+Oxidative stress,ROS Reduction,N/A,DCFDA assay H2O2 challenge,% ROS inhibition
+Antimicrobial efficacy,MIC vs Malassezia restricta,N/A,In vitro culture,MIC (µg/mL)
+Skin penetration,Franz Diffusion Model,N/A,Franz cell,cumulative permeation in µg/cm²/24h
+Stability,4-week accelerated stability,N/A,40°C/75%RH,% active remaining
+Gene expression,WNT/β-catenin Gene Panel,N/A,qPCR in DP cells,fold change vs untreated

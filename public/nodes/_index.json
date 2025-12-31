@@ -15,6 +15,7 @@
     "singular-compound",
     "document-processor",
     "extremes-filter",
-    "report-generator"
+    "report-generator",
+    "target-mapping"
   ]
 }
