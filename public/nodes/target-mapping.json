@@ -4,14 +4,14 @@
   "category": "Analysis",
   "icon": "target-icon",
   "color": "blue",
-  "description": "Maps biological targets or free-text descriptions to specific assay metrics.",
+  "description": "Automatically maps input protein names or free-text descriptions to specific assay metrics using an internal reference table.",
   "defaultInputs": [
     {
       "id": "target-input",
       "name": "Target/Protein Input",
       "type": "string",
       "required": true,
-      "description": "Accepts protein names (e.g., GSK3B) or descriptive text."
+      "description": "Accepts protein names (e.g., GSK3B) or descriptive text to be matched."
     }
   ],
   "defaultOutputs": [
@@ -19,43 +19,18 @@
       "id": "mapping-result",
       "name": "Mapping Result",
       "type": "object",
-      "description": "Returns the matched target details, modulation, and metric."
+      "description": "Returns the matched target details (relevance, modulation, assay, metric)."
     }
   ],
   "configSchema": [
     {
-      "key": "inputMode",
-      "type": "select",
-      "label": "Input Mode",
-      "options": [
-        { "value": "predefined", "label": "Select Predefined Target" },
-        { "value": "freetext", "label": "Free Text / Manual Entry" }
-      ],
-      "defaultValue": "predefined"
-    },
-    {
-      "key": "selectedTarget",
-      "type": "select",
-      "label": "Protein Name (Predefined)",
-      "options": [
-        { "value": "KATP", "label": "KATP" },
-        { "value": "GSK3B", "label": "GSK3β" },
-        { "value": "PDE1A", "label": "PDE1A" },
-        { "value": "TGFBR1", "label": "TGFBR1" }
-      ],
-      "defaultValue": "KATP"
-    },
-    {
-      "key": "manualDescription",
-      "type": "textarea",
-      "label": "Free Text Description",
-      "placeholder": "Enter custom target or biological process...",
-      "defaultValue": ""
+      "key": "mappingTable",
+      "type": "json",
+      "label": "Internal Mapping Reference",
+      "description": "The master table used for automated lookup logic."
     }
   ],
   "defaultConfig": {
-    "inputMode": "predefined",
-    "selectedTarget": "KATP",
     "mappingTable": [
       { "target": "KATP", "relevance": "DP anagen entry trigger", "modulation": "activation", "assay": "patch clamp", "metric": "EC50" },
       { "target": "GSK3β", "relevance": "Wnt inhibition release", "modulation": "inhibition", "assay": "kinase ATP assay", "metric": "IC50" },
