@@ -26,7 +26,7 @@
     {
       "key": "smiles_column",
       "type": "text",
-      "label": "SMILES Column Name",
+      "label": "SMILES",
       "defaultValue": "smiles",
       "description": "Select the column containing the SMILES strings"
     },
