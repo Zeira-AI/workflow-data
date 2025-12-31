@@ -2,68 +2,52 @@
   "type": "insilico-compound-filtering",
   "label": "In-silico Compound Filtering",
   "category": "analysis",
-  "icon": "funnel",
+  "icon": "search",
   "color": "indigo",
-  "description": "Filter and analyze chemical compounds based on biological targets, assay types, and activity potency (p-values).",
+  "description": "Filter and analyze chemical compounds based on biological targets, assay types, and activity potency.",
   "defaultInputs": [],
   "defaultOutputs": [
     {
       "id": "target",
-      "name": "Target",
+      "name": "target",
       "type": "string",
-      "description": "Biological protein target (e.g., Kir6.2, GSK3β)"
+      "description": "Biological protein target"
     },
     {
       "id": "assay_type",
-      "name": "Assay Type",
+      "name": "assay_type",
       "type": "string",
-      "description": "The laboratory method used (e.g., Functional Assay, Enzyme Inhibition)"
+      "description": "Assay type used"
     },
     {
       "id": "compound",
-      "name": "Compound",
+      "name": "compound",
       "type": "string",
-      "description": "Name of the chemical compound or molecule"
+      "description": "Compound name"
     },
     {
       "id": "activity_type",
-      "name": "Activity Type",
+      "name": "activity_type",
       "type": "string",
-      "description": "Measurement metric (IC50 or EC50)"
+      "description": "Activity metric (IC50/EC50)"
     },
     {
       "id": "p_value",
-      "name": "p-Value",
+      "name": "p_value",
       "type": "number",
-      "description": "Negative log of the activity concentration"
+      "description": "Negative log concentration"
     }
   ],
   "configSchema": [
     {
-      "key": "targetSelection",
+      "key": "query",
       "type": "textarea",
-      "label": "Target Protein",
-      "placeholder": "Enter target name (e.g. Kir6.2)...",
-      "defaultValue": ""
-    },
-    {
-      "key": "minPotency",
-      "type": "textarea",
-      "label": "Minimum p-Value Threshold",
-      "placeholder": "e.g. 5.0",
-      "defaultValue": ""
-    },
-    {
-      "key": "assayFilter",
-      "type": "textarea",
-      "label": "Assay Type Filter",
-      "placeholder": "e.g. Enzyme Inhibition",
+      "label": "Filter Query",
+      "placeholder": "Enter target or compound name...",
       "defaultValue": ""
     }
   ],
   "defaultConfig": {
-    "targetSelection": "",
-    "minPotency": "",
-    "assayFilter": ""
+    "query": ""
   }
 }
