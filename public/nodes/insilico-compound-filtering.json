@@ -2,7 +2,7 @@
   "type": "insilico-compound-filtering",
   "label": "In-silico Compound Filtering",
   "category": "analysis",
-  "icon": "biotech",
+  "icon": "funnel",
   "color": "indigo",
   "description": "Filter and analyze chemical compounds based on biological targets, assay types, and activity potency (p-values).",
   "defaultInputs": [],
@@ -35,35 +35,35 @@
       "id": "p_value",
       "name": "p-Value",
       "type": "number",
-      "description": "Negative log of the activity concentration (higher values indicate higher potency)"
+      "description": "Negative log of the activity concentration"
     }
   ],
   "configSchema": [
     {
       "key": "targetSelection",
-      "type": "select",
+      "type": "textarea",
       "label": "Target Protein",
-      "placeholder": "Select target...",
-      "defaultValue": "All"
+      "placeholder": "Enter target name (e.g. Kir6.2)...",
+      "defaultValue": ""
     },
     {
       "key": "minPotency",
-      "type": "number",
+      "type": "textarea",
       "label": "Minimum p-Value Threshold",
       "placeholder": "e.g. 5.0",
-      "defaultValue": 0
+      "defaultValue": ""
     },
     {
       "key": "assayFilter",
-      "type": "string",
+      "type": "textarea",
       "label": "Assay Type Filter",
       "placeholder": "e.g. Enzyme Inhibition",
       "defaultValue": ""
     }
   ],
   "defaultConfig": {
-    "targetSelection": "All",
-    "minPotency": 0,
+    "targetSelection": "",
+    "minPotency": "",
     "assayFilter": ""
   }
 }
