@@ -1,0 +1,91 @@
+{
+  "type": "document-processor",
+  "label": "Document Processor",
+  "category": "transform",
+  "icon": "file",
+  "color": "purple",
+  "description": "Upload and process documents with various configuration options",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "documents",
+      "name": "documents",
+      "type": "array",
+      "description": "Processed documents"
+    },
+    {
+      "id": "metadata",
+      "name": "metadata",
+      "type": "object",
+      "description": "Document metadata"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "singleFile",
+      "type": "file",
+      "label": "Upload Single Document",
+      "accept": ".pdf,.doc,.docx,.txt"
+    },
+    {
+      "key": "multipleFiles",
+      "type": "file",
+      "label": "Upload Multiple Files",
+      "multiple": true
+    },
+    {
+      "key": "images",
+      "type": "file",
+      "label": "Upload Images",
+      "multiple": true,
+      "accept": "image/*"
+    },
+    {
+      "key": "processingMode",
+      "type": "select",
+      "label": "Processing Mode",
+      "options": [
+        {
+          "value": "text",
+          "label": "Text Extraction"
+        },
+        {
+          "value": "ocr",
+          "label": "OCR (Image to Text)"
+        },
+        {
+          "value": "metadata",
+          "label": "Metadata Only"
+        }
+      ],
+      "defaultValue": "text"
+    },
+    {
+      "key": "extractTables",
+      "type": "boolean",
+      "label": "Extract Tables"
+    },
+    {
+      "key": "language",
+      "type": "text",
+      "label": "Language Code",
+      "placeholder": "e.g., en, fr, es"
+    },
+    {
+      "key": "options",
+      "type": "json",
+      "label": "Advanced Options",
+      "placeholder": "{ \"maxPages\": 100 }"
+    }
+  ],
+  "defaultConfig": {
+    "singleFile": null,
+    "multipleFiles": [],
+    "images": [],
+    "processingMode": "text",
+    "extractTables": false,
+    "language": "en",
+    "options": {}
+  }
+}
+
