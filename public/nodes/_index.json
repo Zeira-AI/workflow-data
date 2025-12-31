@@ -4,7 +4,7 @@
   "description": "Registry of all available workflow builder tools",
   "tools": [
     "product-search",
-    "deformulate",
+    "formulate",
     "data-source",
     "filter",
     "ingredient-search",

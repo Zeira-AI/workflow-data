@@ -1,6 +1,6 @@
 {
-  "type": "deformulate",
-  "label": "Deformulate",
+  "type": "formulate",
+  "label": "Formulate",
   "category": "analysis",
   "icon": "flask",
   "color": "purple",
