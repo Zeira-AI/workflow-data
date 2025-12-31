@@ -2,7 +2,7 @@
   "type": "insilico-compound-filtering",
   "label": "In-silico Compound Filtering",
   "category": "analysis",
-  "icon": "search",
+  "icon": "funnel",
   "color": "indigo",
   "description": "Filter and analyze chemical compounds based on biological targets, assay types, and activity potency.",
   "defaultInputs": [],
