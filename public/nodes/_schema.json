@@ -17,6 +17,7 @@
     },
     "category": {
       "type": "string",
+      "enum": ["discovery", "analysis", "transform", "output", "integration"],
       "description": "Category for organizing nodes in the UI"
     },
     "icon": {
@@ -99,7 +100,7 @@
         },
         "type": {
           "type": "string",
-          "enum": ["text", "number", "select", "boolean", "json", "textarea"],
+          "enum": ["text", "number", "select", "boolean", "json", "textarea", "file"],
           "description": "Type of configuration field"
         },
         "label": {
@@ -128,6 +129,14 @@
         },
         "defaultValue": {
           "description": "Default value for the field"
+        },
+        "multiple": {
+          "type": "boolean",
+          "description": "For file inputs: allow multiple file selection"
+        },
+        "accept": {
+          "type": "string",
+          "description": "For file inputs: accepted file types (e.g., 'image/*', '.pdf,.doc')"
         }
       }
     }
