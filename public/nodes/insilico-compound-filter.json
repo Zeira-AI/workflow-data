@@ -1,23 +1,23 @@
 {
   "type": "insilico-compound-filter",
-  "label": "In-silico Compound Filtering",
+  "label": "In-silico Compound Filter",
   "category": "analysis",
-  "icon": "funnel",
+  "icon": "biotech",
   "color": "indigo",
-  "description": "Filter and analyze chemical compounds based on biological targets, assay types, and activity potency.",
+  "description": "Evaluates compounds using user-configurable criteria, tools, methods, and thresholds for Toxicity, Bioactivity, and Developability.",
   "defaultInputs": [],
   "defaultOutputs": [
     {
       "id": "target",
       "name": "Target",
       "type": "string",
-      "description": "Biological protein target"
+      "description": "Biological protein target (e.g., Kir6.2, GSK3β)"
     },
     {
       "id": "assay_type",
       "name": "Assay Type",
       "type": "string",
-      "description": "The laboratory method used"
+      "description": "The laboratory method used (e.g., Enzyme Inhibition)"
     },
     {
       "id": "compound",
@@ -29,25 +29,53 @@
       "id": "activity_type",
       "name": "Activity Type",
       "type": "string",
-      "description": "Measurement metric (IC50/EC50)"
+      "description": "Measurement metric (IC50 or EC50)"
     },
     {
       "id": "p_value",
       "name": "p-Value",
       "type": "string",
-      "description": "Negative log of the activity concentration"
+      "description": "Raw metric value (p-Value)"
+    },
+    {
+      "id": "status",
+      "name": "Status",
+      "type": "string",
+      "description": "Indicator: GREEN (Pass), YELLOW (Tolerance), RED (Fail)"
+    },
+    {
+      "id": "confidence_score",
+      "name": "Confidence",
+      "type": "number",
+      "description": "Model confidence score"
     }
   ],
   "configSchema": [
     {
-      "key": "query",
+      "key": "toxicityCriteria",
       "type": "textarea",
-      "label": "Search Query",
-      "placeholder": "Search by target or compound...",
+      "label": "Toxicity Configuration",
+      "placeholder": "Enter Tools/Models, Methods, and Threshold + Comparison logic...",
+      "defaultValue": ""
+    },
+    {
+      "key": "bioactivityCriteria",
+      "type": "textarea",
+      "label": "Bioactivity (Docking) Criteria",
+      "placeholder": "Enter Tools, Docking methods, and Thresholds...",
+      "defaultValue": ""
+    },
+    {
+      "key": "developabilityCriteria",
+      "type": "textarea",
+      "label": "Developability Criteria",
+      "placeholder": "Enter Threshold ranges and Tolerance settings...",
       "defaultValue": ""
     }
   ],
   "defaultConfig": {
-    "query": ""
+    "toxicityCriteria": "",
+    "bioactivityCriteria": "",
+    "developabilityCriteria": ""
   }
 }
