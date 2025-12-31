@@ -2,9 +2,9 @@
   "type": "report-generator",
   "label": "Report Generator",
   "category": "Output",
-  "icon": "book",
+  "icon": "icon-report",
   "color": "blue",
-  "description": "Generates a structured document (PDF, CSV, or HTML) based on input data and a selected template.",
+  "description": "Generates a structured document based on input data and a selected template.",
   "defaultInputs": [
     {
       "id": "input-data",
@@ -53,25 +53,10 @@
       "label": "Template ID",
       "placeholder": "e.g., invoice-template-v1",
       "defaultValue": "default-template"
-    },
-    {
-      "key": "includeTimestamp",
-      "type": "boolean",
-      "label": "Include Generation Timestamp",
-      "defaultValue": true
-    },
-    {
-      "key": "customCss",
-      "type": "textarea",
-      "label": "Custom Styling (CSS)",
-      "placeholder": ".report-body { font-family: sans-serif; }",
-      "defaultValue": ""
     }
   ],
   "defaultConfig": {
     "reportFormat": "pdf",
-    "templateId": "default-template",
-    "includeTimestamp": true,
-    "customCss": ""
+    "templateId": "default-template"
   }
 }
