@@ -18,44 +18,58 @@
       "name": "inci",
       "type": "string",
       "description": "INCI name"
+    },
+    {
+      "id": "functions",
+      "name": "functions",
+      "type": "array",
+      "description": "Ingredient functions"
+    },
+    {
+      "id": "estimatedPercent",
+      "name": "Estimated Percent",
+      "type": "string",
+      "description": "Estimated percentage"
     }
   ],
   "configSchema": [
     {
-      "key": "inputMethod",
+      "key": "inputSource",
       "type": "select",
-      "label": "Input Method",
+      "label": "Input Source",
+      "description": "Choose how you want to provide formula data",
       "options": [
-        { "label": "Free Text / Manual", "value": "text" },
-        { "label": "Upload File", "value": "upload" },
-        { "label": "Reference Link/Name", "value": "reference" }
+        { "label": "Free Text / Manual Entry", "value": "manual" },
+        { "label": "Upload Ingredient List", "value": "file" },
+        { "label": "Reference Product (Link/Name)", "value": "reference" }
       ],
-      "defaultValue": "text"
+      "defaultValue": "manual"
     },
     {
-      "key": "freeTextDescription",
-      "type": "textarea",
-      "label": "Description / Manual Ingredients",
-      "placeholder": "Enter ingredients manually...",
-      "visibleIf": { "inputMethod": "text" }
+      "key": "formulaContent",
+      "type": "string",
+      "label": "Formula/Ingredient Description",
+      "placeholder": "Enter ingredients manually or describe your target formula...",
+      "visibleIf": { "inputSource": "manual" }
     },
     {
-      "key": "ingredientFile",
+      "key": "attachment",
       "type": "file",
-      "label": "Upload Ingredient List",
-      "visibleIf": { "inputMethod": "upload" }
+      "label": "Upload File",
+      "visibleIf": { "inputSource": "file" }
     },
     {
-      "key": "referenceProduct",
-      "type": "text",
-      "label": "Product Link or Name",
-      "placeholder": "Enter link or product name...",
-      "visibleIf": { "inputMethod": "reference" }
+      "key": "referenceData",
+      "type": "string",
+      "label": "Product Reference",
+      "placeholder": "Paste product link or enter product name...",
+      "visibleIf": { "inputSource": "reference" }
     },
     {
       "key": "desiredEffect",
-      "type": "text",
-      "label": "Desired Effect (Required)",
+      "type": "string",
+      "label": "Desired Effect",
+      "placeholder": "e.g. Whitening, Moisturizing, Acne treatment...",
       "required": true
     },
     {
@@ -78,7 +92,10 @@
       "options": [
         { "label": "Asia", "value": "asia" },
         { "label": "Europe", "value": "europe" },
-        { "label": "North America", "value": "north_america" }
+        { "label": "North America", "value": "north_america" },
+        { "label": "South America", "value": "south_america" },
+        { "label": "Africa", "value": "africa" },
+        { "label": "Oceania", "value": "oceania" }
       ]
     },
     {
@@ -106,7 +123,7 @@
     }
   ],
   "defaultConfig": {
-    "inputMethod": "text",
+    "inputSource": "manual",
     "desiredEffect": "",
     "targetUser": "18_30",
     "targetMarket": "asia",
