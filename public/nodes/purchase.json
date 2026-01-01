@@ -11,42 +11,58 @@
       "name": "Ingredient List",
       "type": "array",
       "required": true,
-      "description": "Manual list, uploaded list, or formula components"
-    },
-    {
-      "id": "product_reference",
-      "name": "Similar Product Reference",
-      "type": "object",
-      "description": "Reference by product link or name",
-      "properties": {
-        "link": { "type": "string" },
-        "name": { "type": "string" }
-      }
+      "description": "List of ingredients or formula components to analyze"
     }
   ],
   "defaultOutputs": [
     {
       "id": "sourcingData",
       "name": "Sourcing Data",
-      "type": "array"
+      "type": "array",
+      "description": "Detailed sourcing metrics per ingredient"
     },
     {
       "id": "riskSummary",
       "name": "Risk Summary",
-      "type": "object"
+      "type": "object",
+      "description": "Summary of high-risk items and single-source flags"
     }
   ],
   "configSchema": [
+    {
+      "key": "freeText",
+      "type": "text",
+      "label": "Manual Ingredient Entry",
+      "placeholder": "Enter ingredients manually..."
+    },
+    {
+      "key": "ingredientFile",
+      "type": "file",
+      "label": "Upload Ingredient List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
+    },
+    {
+      "key": "formulaFile",
+      "type": "file",
+      "label": "Upload Formula",
+      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
+    },
+    {
+      "key": "referenceProduct",
+      "type": "text",
+      "label": "Similar Product (Link/Name)",
+      "placeholder": "Paste product link or name here..."
+    },
     {
       "key": "targetUser",
       "type": "select",
       "label": "Target User",
       "options": [
-        {"value": "under_12", "label": "Under 12"},
-        {"value": "under_18", "label": "Under 18"},
-        {"value": "18_30", "label": "18 - 30"},
-        {"value": "middle_aged", "label": "Middle-aged"},
-        {"value": "elderly", "label": "Elderly"}
+        { "label": "Baby", "value": "baby" },
+        { "label": "Under 18", "value": "under_18" },
+        { "label": "18 - 30", "value": "18_30" },
+        { "label": "Middle-aged", "value": "middle_aged" },
+        { "label": "Elderly", "value": "elderly" }
       ],
       "defaultValue": "18_30"
     },
@@ -55,12 +71,12 @@
       "type": "select",
       "label": "Target Market",
       "options": [
-        {"value": "asia", "label": "Asia"},
-        {"value": "europe", "label": "Europe"},
-        {"value": "north_america", "label": "North America"},
-        {"value": "south_america", "label": "South America"},
-        {"value": "africa", "label": "Africa"},
-        {"value": "oceania", "label": "Oceania"}
+        { "label": "Asia", "value": "asia" },
+        { "label": "Europe", "value": "europe" },
+        { "label": "North America", "value": "north_america" },
+        { "label": "South America", "value": "south_america" },
+        { "label": "Africa", "value": "africa" },
+        { "label": "Oceania", "value": "oceania" }
       ],
       "defaultValue": "asia"
     },
@@ -69,9 +85,9 @@
       "type": "select",
       "label": "Application Route",
       "options": [
-        {"value": "oral", "label": "Oral"},
-        {"value": "dental", "label": "Dental"},
-        {"value": "topical", "label": "Topical"}
+        { "label": "Oral", "value": "oral" },
+        { "label": "Dental", "value": "dental" },
+        { "label": "Topical", "value": "topical" }
       ],
       "defaultValue": "topical"
     },
@@ -80,20 +96,31 @@
       "type": "select",
       "label": "Dosage Form",
       "options": [
-        {"value": "gel", "label": "Gel"},
-        {"value": "cream", "label": "Cream"},
-        {"value": "lotion", "label": "Lotion"},
-        {"value": "ointment", "label": "Ointment"},
-        {"value": "shampoo", "label": "Shampoo"},
-        {"value": "foam", "label": "Foam"}
+        { "label": "Gel", "value": "gel" },
+        { "label": "Cream", "value": "cream" },
+        { "label": "Lotion", "value": "lotion" },
+        { "label": "Ointment", "value": "ointment" },
+        { "label": "Shampoo", "value": "shampoo" },
+        { "label": "Foam", "value": "foam" }
       ],
       "defaultValue": "cream"
+    },
+    {
+      "key": "riskThreshold",
+      "type": "number",
+      "label": "Single-Source Warning Threshold",
+      "defaultValue": 2
     }
   ],
   "defaultConfig": {
+    "freeText": "",
+    "ingredientFile": null,
+    "formulaFile": null,
+    "referenceProduct": "",
     "targetUser": "18_30",
     "targetMarket": "asia",
     "applicationRoute": "topical",
-    "dosageForm": "cream"
+    "dosageForm": "cream",
+    "riskThreshold": 2
   }
 }
