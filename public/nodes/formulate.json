@@ -10,28 +10,52 @@
     {
       "id": "ingredients",
       "name": "ingredients",
-      "type": "string",
+      "type": "array",
       "description": "List of formulated ingredients"
     },
     {
       "id": "analysis",
       "name": "analysis",
-      "type": "string",
+      "type": "object",
       "description": "Formula analysis and safety report"
     }
   ],
   "configSchema": [
     {
-      "key": "freeText",
+      "key": "ingredientListText",
       "type": "text",
-      "label": "Manual Ingredients / Description",
-      "placeholder": "Enter ingredients or describe desired formula"
+      "label": "Ingredient List (Text)",
+      "placeholder": "Paste ingredient list here…"
     },
     {
-      "key": "ingredientFile",
+      "key": "ingredientListFile",
       "type": "file",
-      "label": "Upload Ingredient List",
-      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
+      "label": "Upload Ingredient List Document",
+      "accept": ".pdf,.doc,.docx,.txt,.csv"
+    },
+    {
+      "key": "targetRegion",
+      "type": "select",
+      "label": "Target Region",
+      "options": [
+        { "value": "GLOBAL", "label": "Global / Default" },
+        { "value": "EU", "label": "EU" },
+        { "value": "US", "label": "US" },
+        { "value": "UK", "label": "UK" },
+        { "value": "ASEAN", "label": "ASEAN" }
+      ],
+      "defaultValue": "GLOBAL"
+    },
+    {
+      "key": "scaleTier",
+      "type": "select",
+      "label": "Scale Tier",
+      "options": [
+        { "value": "rnd", "label": "R&D (Small Batches)" },
+        { "value": "pilot", "label": "Pilot" },
+        { "value": "production", "label": "Production / Scale" }
+      ],
+      "defaultValue": "pilot"
     },
     {
       "key": "referenceProduct",
@@ -46,66 +70,23 @@
       "placeholder": "e.g., Whitening, Anti-aging..."
     },
     {
-      "key": "targetUser",
-      "type": "select",
-      "label": "Target User",
-      "options": [
-        { "label": "Baby", "value": "baby" },
-        { "label": "Under 18", "value": "under_18" },
-        { "label": "18 - 30", "value": "18_30" },
-        { "label": "Middle-aged", "value": "middle_aged" },
-        { "label": "Elderly", "value": "elderly" }
-      ],
-      "defaultValue": "18_30"
-    },
-    {
-      "key": "targetMarket",
-      "type": "select",
-      "label": "Target Market",
-      "options": [
-        { "label": "Asia", "value": "asia" },
-        { "label": "Europe", "value": "europe" },
-        { "label": "North America", "value": "north_america" },
-        { "label": "South America", "value": "south_america" },
-        { "label": "Africa", "value": "africa" },
-        { "label": "Oceania", "value": "oceania" }
-      ],
-      "defaultValue": "asia"
-    },
-    {
-      "key": "applicationRoute",
-      "type": "select",
-      "label": "Application Route",
-      "options": [
-        { "label": "Oral", "value": "oral" },
-        { "label": "Dental", "value": "dental" },
-        { "label": "Topical", "value": "topical" }
-      ],
-      "defaultValue": "topical"
-    },
-    {
-      "key": "dosageForm",
-      "type": "select",
-      "label": "Dosage Form",
-      "options": [
-        { "label": "Gel", "value": "gel" },
-        { "label": "Cream", "value": "cream" },
-        { "label": "Lotion", "value": "lotion" },
-        { "label": "Ointment", "value": "ointment" },
-        { "label": "Shampoo", "value": "shampoo" },
-        { "label": "Foam", "value": "foam" }
-      ],
-      "defaultValue": "cream"
+      "key": "options",
+      "type": "json",
+      "label": "Advanced Options",
+      "placeholder": "{ \"target user\": \"baby\", \"application route\": \"topical\", \"dosage form\": \"cream\" }"
     }
   ],
   "defaultConfig": {
-    "freeText": "",
-    "ingredientFile": null,
+    "ingredientListText": "",
+    "ingredientListFile": null,
+    "targetRegion": "GLOBAL",
+    "scaleTier": "pilot",
     "referenceProduct": "",
     "desiredEffect": "",
-    "targetUser": "18_30",
-    "targetMarket": "asia",
-    "applicationRoute": "topical",
-    "dosageForm": "cream"
+    "options": {
+      "target user": "",
+      "application route": "topical",
+      "dosage_form": "cream"
+    }
   }
 }
