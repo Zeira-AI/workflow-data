@@ -64,7 +64,7 @@
       "key": "HBA_threshold",
       "type": "number",
       "label": "HBA Threshold",
-      "defaultValue": 4.0
+      "defaultValue": 3.0
     },
     {
       "key": "RotB_threshold",
@@ -83,8 +83,8 @@
       "MW_Da": "MW_Da",
       "logP": "logP",
       "TPSA": "TPSA",
-      "HDB": "HDB",
-      "HDA": "HDA",
+      "HBD": "HDB",
+      "HBA": "HDA",
       "RotB": "RotB"
 
     }
