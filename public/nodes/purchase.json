@@ -7,36 +7,36 @@
   "description": "Evaluate supplier coverage, availability levels, and single-source risks for ingredients",
   "defaultInputs": [
     {
-      "id": "ingredients_text",
-      "name": "Manual Ingredient Input",
+      "id": "ingredients_manual",
+      "name": "Manual Ingredient Entry",
       "type": "string",
-      "description": "Input free text: Nhập ingredient thủ công"
+      "description": "Input ingredients manually as free text"
     },
     {
       "id": "upload_ingredient_list",
       "name": "Upload Ingredient List",
       "type": "file",
-      "description": "Upload file danh sách thành phần"
+      "description": "Upload a file containing the ingredient list"
     },
     {
       "id": "upload_formula",
       "name": "Upload Formula",
       "type": "file",
-      "description": "Upload file công thức"
+      "description": "Upload a detailed formula file"
     },
     {
-      "id": "product_link",
+      "id": "similar_product_link",
       "name": "Similar Product Link",
       "type": "string",
-      "placeholder": "https://...",
-      "description": "Link bán sản phẩm tương tự"
+      "placeholder": "https://example.com/product",
+      "description": "Reference link to a similar product"
     },
     {
-      "id": "product_name_ref",
+      "id": "similar_product_name",
       "name": "Similar Product Name",
       "type": "string",
-      "placeholder": "Product name...",
-      "description": "Tên sản phẩm tương tự"
+      "placeholder": "e.g., Hydrating Face Cream",
+      "description": "Name of the reference product"
     }
   ],
   "defaultOutputs": [
@@ -55,29 +55,30 @@
     {
       "key": "targetUser",
       "type": "select",
-      "label": "Target User",
+      "label": "Target User Group",
       "options": [
         {"value": "baby", "label": "Baby"},
-        {"value": "under_18", "label": "Người dưới 18"},
-        {"value": "18_30", "label": "Người từ 18 - 30"},
-        {"value": "middle_aged", "label": "Người trung niên"},
-        {"value": "elderly", "label": "Người lớn tuổi"}
+        {"value": "under_18", "label": "Under 18"},
+        {"value": "18_30", "label": "18 - 30 Years Old"},
+        {"value": "middle_aged", "label": "Middle-aged"},
+        {"value": "elderly", "label": "Elderly"}
       ],
       "defaultValue": "18_30"
     },
     {
       "key": "targetMarket",
       "type": "select",
-      "label": "Target Market",
+      "label": "Target Market (Continent)",
       "options": [
-        {"value": "asia", "label": "Châu Á"},
-        {"value": "europe", "label": "Châu Âu"},
-        {"value": "north_america", "label": "Châu Bắc Mỹ"},
-        {"value": "south_america", "label": "Châu Nam Mỹ"},
-        {"value": "africa", "label": "Châu Phi"},
-        {"value": "oceania", "label": "Châu Đại Dương"}
+        {"value": "asia", "label": "Asia"},
+        {"value": "europe", "label": "Europe"},
+        {"value": "north_america", "label": "North America"},
+        {"value": "south_america", "label": "South America"},
+        {"value": "africa", "label": "Africa"},
+        {"value": "oceania", "label": "Oceania"},
+        {"value": "global", "label": "Global"}
       ],
-      "defaultValue": "asia"
+      "defaultValue": "global"
     },
     {
       "key": "applicationRoute",
@@ -107,7 +108,7 @@
   ],
   "defaultConfig": {
     "targetUser": "18_30",
-    "targetMarket": "asia",
+    "targetMarket": "global",
     "applicationRoute": "topical",
     "dosageForm": "cream"
   }
