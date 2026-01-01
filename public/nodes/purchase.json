@@ -42,7 +42,7 @@
       "type": "select",
       "label": "Target User",
       "options": [
-        {"value": "baby", "label": "Baby"},
+        {"value": "under_12", "label": "Under 12"},
         {"value": "under_18", "label": "Under 18"},
         {"value": "18_30", "label": "18 - 30"},
         {"value": "middle_aged", "label": "Middle-aged"},
