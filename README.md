@@ -66,8 +66,7 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
       "accept": ".csv,.json",           // Optional: accepted file types
       "multiple": false                 // Optional: allow multiple files
     }
-  ],
-  "defaultConfig": {}                   // Optional: prefer using defaultValue in configSchema instead
+  ]
 }
 ```
 
