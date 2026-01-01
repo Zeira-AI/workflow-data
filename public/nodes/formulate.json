@@ -25,7 +25,7 @@
       "key": "ingredientListText",
       "type": "text",
       "label": "Ingredient List (Text)",
-      "placeholder": "Paste ingredient list here…"
+      "placeholder": "Paste ingredient list here."
     },
     {
       "key": "ingredientListFile",

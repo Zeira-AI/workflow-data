@@ -27,8 +27,14 @@
       "key": "smiles_column",
       "type": "text",
       "label": "SMILES",
-      "defaultValue": "smiles",
+      "placeholder": "Enter SMILES.",
       "description": "Select the column containing the SMILES strings"
+    },
+    {
+      "key": "ingredientListFile",
+      "type": "file",
+      "label": "Upload Ingredient List Document",
+      "accept": ".pdf,.doc,.docx,.txt,.csv"
     },
     {
       "key": "mw_threshold",
@@ -41,6 +47,30 @@
       "type": "number",
       "label": "logP Maximum Threshold",
       "defaultValue": 4.0
+    },
+     {
+      "key": "TPSA_threshold",
+      "type": "number",
+      "label": "TPSA Maximum Threshold",
+      "defaultValue": 60
+    },
+    {
+      "key": "HBD_threshold",
+      "type": "number",
+      "label": "HBD Maximum Threshold",
+      "defaultValue": 4.0
+    },
+    {
+      "key": "HBA_threshold",
+      "type": "number",
+      "label": "HBD Maximum Threshold",
+      "defaultValue": 4.0
+    },
+    {
+      "key": "RotB_threshold",
+      "type": "number",
+      "label": "RotB Maximum Threshold",
+      "defaultValue": 4.0
     }
   ],
   "defaultConfig": {
@@ -51,7 +81,12 @@
       "name": "name",
       "smiles": "smiles",
       "MW_Da": "MW_Da",
-      "logP": "logP"
+      "logP": "logP",
+      "TPSA": "TPSA",
+      "HDB": "HDB",
+      "HDA": "HDA",
+      "RotB": "RotB"
+
     }
   }
 }
