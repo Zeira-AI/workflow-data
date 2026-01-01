@@ -5,76 +5,107 @@
   "icon": "shield-check",
   "color": "red",
   "description": "Check ingredient/formula compliance against global market regulations",
-  "defaultInputs": [
-    {
-      "id": "formula",
-      "name": "Formula/Ingredients",
-      "type": "array",
-      "required": true,
-      "description": "List of ingredients and their concentrations"
-    },
-    {
-      "id": "targetMarket",
-      "name": "Target Market",
-      "type": "string",
-      "required": true,
-      "description": "Target regulatory region (e.g., EU, US, CN)"
-    }
-  ],
+  "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "complianceStatus",
-      "name": "Compliance Status",
+      "id": "ingredients",
+      "name": "ingredients",
       "type": "string",
-      "description": "Overall status: PASS, FAIL, or UNKNOWN"
+      "description": "List of formulated ingredients"
     },
     {
-      "id": "detailedResults",
-      "name": "Detailed Results",
-      "type": "array",
-      "description": "Per-ingredient regulatory warnings and references"
-    },
-    {
-      "id": "csvExport",
-      "name": "Download Link",
+      "id": "analysis",
+      "name": "analysis",
       "type": "string",
-      "description": "URL to download the regulatory report as CSV"
+      "description": "Formula analysis and safety report"
     }
   ],
   "configSchema": [
+    {
+      "key": "freeText",
+      "type": "text",
+      "label": "Manual Ingredients / Description",
+      "placeholder": "Enter ingredients or describe desired formula"
+    },
+    {
+      "key": "ingredientFile",
+      "type": "file",
+      "label": "Upload Ingredient List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
+    },
+    {
+      "key": "referenceProduct",
+      "type": "text",
+      "label": "Similar Product (Link/Name)",
+      "placeholder": "Paste product link or name here..."
+    },
+    {
+      "key": "desiredEffect",
+      "type": "text",
+      "label": "Desired Effect (Required)",
+      "placeholder": "e.g., Whitening, Anti-aging..."
+    },
+    {
+      "key": "targetUser",
+      "type": "select",
+      "label": "Target User",
+      "options": [
+        { "label": "Baby", "value": "baby" },
+        { "label": "Under 18", "value": "under_18" },
+        { "label": "18 - 30", "value": "18_30" },
+        { "label": "Middle-aged", "value": "middle_aged" },
+        { "label": "Elderly", "value": "elderly" }
+      ],
+      "defaultValue": "18_30"
+    },
+    {
+      "key": "targetMarket",
+      "type": "select",
+      "label": "Target Market",
+      "options": [
+        { "label": "Asia", "value": "asia" },
+        { "label": "Europe", "value": "europe" },
+        { "label": "North America", "value": "north_america" },
+        { "label": "South America", "value": "south_america" },
+        { "label": "Africa", "value": "africa" },
+        { "label": "Oceania", "value": "oceania" }
+      ],
+      "defaultValue": "asia"
+    },
     {
       "key": "applicationRoute",
       "type": "select",
       "label": "Application Route",
       "options": [
-        {"value": "topical", "label": "Topical"},
-        {"value": "oral", "label": "Oral"},
-        {"value": "inject", "label": "Injectable"}
+        { "label": "Oral", "value": "oral" },
+        { "label": "Dental", "value": "dental" },
+        { "label": "Topical", "value": "topical" }
       ],
       "defaultValue": "topical"
     },
     {
-      "key": "targetUserAge",
+      "key": "dosageForm",
       "type": "select",
-      "label": "Target User Age",
+      "label": "Dosage Form",
       "options": [
-        {"value": "infant", "label": "Infant (0-3)"},
-        {"value": "child", "label": "Child (3-12)"},
-        {"value": "adult", "label": "Adult"}
+        { "label": "Gel", "value": "gel" },
+        { "label": "Cream", "value": "cream" },
+        { "label": "Lotion", "value": "lotion" },
+        { "label": "Ointment", "value": "ointment" },
+        { "label": "Shampoo", "value": "shampoo" },
+        { "label": "Foam", "value": "foam" }
       ],
-      "defaultValue": "adult"
-    },
-    {
-      "key": "blurReasoning",
-      "type": "boolean",
-      "label": "Blur Reasoning Text",
-      "description": "Enable to require user interaction to reveal detailed reasoning",
-      "defaultValue": true
+      "defaultValue": "cream"
     }
   ],
   "defaultConfig": {
+    "freeText": "",
+    "ingredientFile": null,
+    "referenceProduct": "",
+    "desiredEffect": "",
+    "targetUser": "18_30",
+    "targetMarket": "asia",
     "applicationRoute": "topical",
-    "targetUserAge": "adult",
-    "blurReasoning": true
+    "dosageForm": "cream"
   }
 }
