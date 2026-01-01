@@ -1,2 +1,2 @@
-plan_id,plan_name,plan_type,reference_url,notes
+Plan_id,Plan Name,Plan Type,Reference_URL,Notes
 EXP-001,Experimental Plan (Minimal ver),Experimental Plan PDF,https://workflow-data-2sa8.vercel.app/mocked-data/EXPERIMENTAL%20PLAN%20(Minimal%20ver)%20(1).pdf,"Read-only reference to experimental validation plan"

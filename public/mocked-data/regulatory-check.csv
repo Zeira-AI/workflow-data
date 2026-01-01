@@ -1,4 +1,4 @@
-id,ingredientName,casNumber,concentration,targetMarket,status,applicationRoute,targetUser,warnings,reasoning,sourceReference
+ID,Ingredient Name,CAS Number,Concentration,Target Market,Status,Application Route,Target User,Warnings,Reasoning,Source Reference
 1,Salicylic Acid,69-72-7,2.5%,EU,FAIL,topical,Adult,"Exceeds concentration limit","The maximum allowed concentration for leave-on topical products in the EU is 2.0%. This formula contains 2.5%.","EU Annex III/18"
 2,Titanium Dioxide,13463-67-7,5.0%,EU,PASS,topical,All,None,"Safe for use as a UV filter up to 25%. Current concentration is within safe limits.","EU Annex VI/12"
 3,Retinol,68-26-8,0.3%,EU,PASS,topical,Adult,None,"Complies with the latest SCCS opinion for Vitamin A in body lotions (0.05%) and face products (0.3%).","SCCS/1652/23"
