@@ -4,19 +4,19 @@
   "category": "transform",
   "icon": "file",
   "color": "purple",
-  "description": "Upload and process documents with various configuration options",
+  "description": "Upload and process document with various configuration options",
   "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "documents",
-      "name": "documents",
-      "type": "array",
-      "description": "Processed documents"
+      "id": "document",
+      "name": "document",
+      "type": "text",
+      "description": "Processed document"
     },
     {
       "id": "metadata",
       "name": "metadata",
-      "type": "object",
+      "type": "text",
       "description": "Document metadata"
     }
   ],
