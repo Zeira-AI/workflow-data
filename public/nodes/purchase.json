@@ -15,13 +15,13 @@
     {
       "id": "upload_ingredient_list",
       "name": "Upload Ingredient List",
-      "type": "file",
+      "type": "string",
       "description": "Upload a file containing the ingredient list"
     },
     {
       "id": "upload_formula",
       "name": "Upload Formula",
-      "type": "file",
+      "type": "string",
       "description": "Upload a detailed formula file"
     },
     {
