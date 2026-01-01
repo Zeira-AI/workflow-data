@@ -54,10 +54,10 @@
       ]
     },
     {
-      "key": "export_config",
-      "type": "json",
-      "label": "Export Settings",
-      "defaultValue": { "format": "csv" }
+      "key": "ingredientListFile",
+      "type": "file",
+      "label": "Upload Compound List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv"
     }
   ],
   "defaultConfig": {
