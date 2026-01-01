@@ -4,86 +4,59 @@
   "category": "analysis",
   "icon": "flask",
   "color": "purple",
-  "description": "Analyze and deformulate product compositions",
+  "description": "Analyze and deformulate product compositions based on specific requirements",
   "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "id",
-      "name": "id",
-      "type": "string",
-      "description": "Ingredient ID"
-    },
-    {
-      "id": "inci",
-      "name": "inci",
-      "type": "string",
-      "description": "INCI name"
-    },
-    {
-      "id": "functions",
-      "name": "functions",
+      "id": "ingredients",
+      "name": "ingredients",
       "type": "array",
-      "description": "Ingredient functions"
+      "description": "List of formulated ingredients"
     },
     {
-      "id": "estimatedPercent",
-      "name": "Estimated Percent",
-      "type": "string",
-      "description": "Estimated percentage"
+      "id": "analysis",
+      "name": "analysis",
+      "type": "object",
+      "description": "Formula analysis and safety report"
     }
   ],
   "configSchema": [
     {
-      "key": "inputSource",
-      "type": "select",
-      "label": "Input Source",
-      "description": "Choose how you want to provide formula data",
-      "options": [
-        { "label": "Free Text / Manual Entry", "value": "manual" },
-        { "label": "Upload Ingredient List", "value": "file" },
-        { "label": "Reference Product (Link/Name)", "value": "reference" }
-      ],
-      "defaultValue": "manual"
+      "key": "freeText",
+      "type": "text",
+      "label": "Manual Ingredients / Description",
+      "placeholder": "Enter ingredients manually or describe formula..."
     },
     {
-      "key": "formulaContent",
-      "type": "string",
-      "label": "Formula/Ingredient Description",
-      "placeholder": "Enter ingredients manually or describe your target formula...",
-      "visibleIf": { "inputSource": "manual" }
-    },
-    {
-      "key": "attachment",
+      "key": "ingredientFile",
       "type": "file",
-      "label": "Upload File",
-      "visibleIf": { "inputSource": "file" }
+      "label": "Upload Ingredient List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
     },
     {
-      "key": "referenceData",
-      "type": "string",
-      "label": "Product Reference",
-      "placeholder": "Paste product link or enter product name...",
-      "visibleIf": { "inputSource": "reference" }
+      "key": "referenceProduct",
+      "type": "text",
+      "label": "Similar Product (Link/Name)",
+      "placeholder": "Paste product link or name here..."
     },
     {
       "key": "desiredEffect",
-      "type": "string",
-      "label": "Desired Effect",
-      "placeholder": "e.g. Whitening, Moisturizing, Acne treatment...",
-      "required": true
+      "type": "text",
+      "label": "Desired Effect (Required)",
+      "placeholder": "e.g., Whitening, Anti-aging..."
     },
     {
       "key": "targetUser",
       "type": "select",
       "label": "Target User",
-      "required": true,
       "options": [
         { "label": "Baby", "value": "baby" },
         { "label": "Under 18", "value": "under_18" },
         { "label": "18 - 30", "value": "18_30" },
         { "label": "Middle-aged", "value": "middle_aged" },
         { "label": "Elderly", "value": "elderly" }
-      ]
+      ],
+      "defaultValue": "18_30"
     },
     {
       "key": "targetMarket",
@@ -96,7 +69,8 @@
         { "label": "South America", "value": "south_america" },
         { "label": "Africa", "value": "africa" },
         { "label": "Oceania", "value": "oceania" }
-      ]
+      ],
+      "defaultValue": "asia"
     },
     {
       "key": "applicationRoute",
@@ -106,7 +80,8 @@
         { "label": "Oral", "value": "oral" },
         { "label": "Dental", "value": "dental" },
         { "label": "Topical", "value": "topical" }
-      ]
+      ],
+      "defaultValue": "topical"
     },
     {
       "key": "dosageForm",
@@ -119,11 +94,14 @@
         { "label": "Ointment", "value": "ointment" },
         { "label": "Shampoo", "value": "shampoo" },
         { "label": "Foam", "value": "foam" }
-      ]
+      ],
+      "defaultValue": "cream"
     }
   ],
   "defaultConfig": {
-    "inputSource": "manual",
+    "freeText": "",
+    "ingredientFile": null,
+    "referenceProduct": "",
     "desiredEffect": "",
     "targetUser": "18_30",
     "targetMarket": "asia",
