@@ -7,55 +7,48 @@
   "description": "Evaluate supplier coverage, availability levels, and single-source risks for ingredients",
   "defaultInputs": [
     {
-      "id": "ingredient_input_type",
-      "name": "Input Method",
-      "type": "select",
-      "options": [
-        {"value": "manual", "label": "Manual Free Text"},
-        {"value": "upload_list", "label": "Upload Ingredient List"},
-        {"value": "upload_formula", "label": "Upload Formula"},
-        {"value": "reference", "label": "Refer to Similar Product"}
-      ],
-      "required": true
-    },
-    {
       "id": "ingredients_text",
       "name": "Manual Ingredient Input",
       "type": "string",
-      "description": "Enter ingredients manually (free text)",
-      "condition": "ingredient_input_type === 'manual'"
+      "description": "Input free text: Nhập ingredient thủ công"
     },
     {
-      "id": "uploaded_files",
-      "name": "Ingredient/Formula Files",
+      "id": "upload_ingredient_list",
+      "name": "Upload Ingredient List",
       "type": "file",
-      "description": "Upload your ingredient list or formula file",
-      "condition": "['upload_list', 'upload_formula'].includes(ingredient_input_type)"
+      "description": "Upload file danh sách thành phần"
     },
     {
-      "id": "similar_product_ref",
-      "name": "Similar Product Reference",
-      "type": "object",
-      "description": "Link or Name of the similar product",
-      "condition": "ingredient_input_type === 'reference'",
-      "properties": {
-        "link": { "type": "string", "label": "Product Link" },
-        "name": { "type": "string", "label": "Product Name" }
-      }
+      "id": "upload_formula",
+      "name": "Upload Formula",
+      "type": "file",
+      "description": "Upload file công thức"
+    },
+    {
+      "id": "product_link",
+      "name": "Similar Product Link",
+      "type": "string",
+      "placeholder": "https://...",
+      "description": "Link bán sản phẩm tương tự"
+    },
+    {
+      "id": "product_name_ref",
+      "name": "Similar Product Name",
+      "type": "string",
+      "placeholder": "Product name...",
+      "description": "Tên sản phẩm tương tự"
     }
   ],
   "defaultOutputs": [
     {
       "id": "sourcingData",
       "name": "Sourcing Data",
-      "type": "array",
-      "description": "Detailed sourcing metrics per ingredient"
+      "type": "array"
     },
     {
       "id": "riskSummary",
       "name": "Risk Summary",
-      "type": "object",
-      "description": "Summary of high-risk items and single-source flags"
+      "type": "object"
     }
   ],
   "configSchema": [
@@ -65,27 +58,26 @@
       "label": "Target User",
       "options": [
         {"value": "baby", "label": "Baby"},
-        {"value": "under_18", "label": "Under 18"},
-        {"value": "18_30", "label": "18 - 30"},
-        {"value": "middle_aged", "label": "Middle-aged"},
-        {"value": "elderly", "label": "Elderly"}
+        {"value": "under_18", "label": "Người dưới 18"},
+        {"value": "18_30", "label": "Người từ 18 - 30"},
+        {"value": "middle_aged", "label": "Người trung niên"},
+        {"value": "elderly", "label": "Người lớn tuổi"}
       ],
       "defaultValue": "18_30"
     },
     {
       "key": "targetMarket",
       "type": "select",
-      "label": "Target Market (Continent)",
+      "label": "Target Market",
       "options": [
-        {"value": "global", "label": "Global"},
-        {"value": "asia", "label": "Asia"},
-        {"value": "europe", "label": "Europe"},
-        {"value": "north_america", "label": "North America"},
-        {"value": "south_america", "label": "South America"},
-        {"value": "africa", "label": "Africa"},
-        {"value": "oceania", "label": "Oceania"}
+        {"value": "asia", "label": "Châu Á"},
+        {"value": "europe", "label": "Châu Âu"},
+        {"value": "north_america", "label": "Châu Bắc Mỹ"},
+        {"value": "south_america", "label": "Châu Nam Mỹ"},
+        {"value": "africa", "label": "Châu Phi"},
+        {"value": "oceania", "label": "Châu Đại Dương"}
       ],
-      "defaultValue": "global"
+      "defaultValue": "asia"
     },
     {
       "key": "applicationRoute",
@@ -111,19 +103,12 @@
         {"value": "foam", "label": "Foam"}
       ],
       "defaultValue": "cream"
-    },
-    {
-      "key": "riskThreshold",
-      "type": "number",
-      "label": "Single-Source Warning Threshold",
-      "defaultValue": 2
     }
   ],
   "defaultConfig": {
     "targetUser": "18_30",
-    "targetMarket": "global",
+    "targetMarket": "asia",
     "applicationRoute": "topical",
-    "dosageForm": "cream",
-    "riskThreshold": 2
+    "dosageForm": "cream"
   }
 }
