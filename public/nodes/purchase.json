@@ -7,11 +7,41 @@
   "description": "Evaluate supplier coverage, availability levels, and single-source risks for ingredients",
   "defaultInputs": [
     {
-      "id": "ingredients",
-      "name": "Ingredient List",
-      "type": "array",
-      "required": true,
-      "description": "List of ingredients or formula components to analyze"
+      "id": "ingredient_input_type",
+      "name": "Input Method",
+      "type": "select",
+      "options": [
+        {"value": "manual", "label": "Manual Free Text"},
+        {"value": "upload_list", "label": "Upload Ingredient List"},
+        {"value": "upload_formula", "label": "Upload Formula"},
+        {"value": "reference", "label": "Refer to Similar Product"}
+      ],
+      "required": true
+    },
+    {
+      "id": "ingredients_text",
+      "name": "Manual Ingredient Input",
+      "type": "string",
+      "description": "Enter ingredients manually (free text)",
+      "condition": "ingredient_input_type === 'manual'"
+    },
+    {
+      "id": "uploaded_files",
+      "name": "Ingredient/Formula Files",
+      "type": "file",
+      "description": "Upload your ingredient list or formula file",
+      "condition": "['upload_list', 'upload_formula'].includes(ingredient_input_type)"
+    },
+    {
+      "id": "similar_product_ref",
+      "name": "Similar Product Reference",
+      "type": "object",
+      "description": "Link or Name of the similar product",
+      "condition": "ingredient_input_type === 'reference'",
+      "properties": {
+        "link": { "type": "string", "label": "Product Link" },
+        "name": { "type": "string", "label": "Product Name" }
+      }
     }
   ],
   "defaultOutputs": [
@@ -30,35 +60,70 @@
   ],
   "configSchema": [
     {
-      "key": "region",
+      "key": "targetUser",
       "type": "select",
-      "label": "Sourcing Region",
+      "label": "Target User",
+      "options": [
+        {"value": "baby", "label": "Baby"},
+        {"value": "under_18", "label": "Under 18"},
+        {"value": "18_30", "label": "18 - 30"},
+        {"value": "middle_aged", "label": "Middle-aged"},
+        {"value": "elderly", "label": "Elderly"}
+      ],
+      "defaultValue": "18_30"
+    },
+    {
+      "key": "targetMarket",
+      "type": "select",
+      "label": "Target Market (Continent)",
       "options": [
         {"value": "global", "label": "Global"},
-        {"value": "na", "label": "North America"},
-        {"value": "eu", "label": "Europe"},
-        {"value": "asia", "label": "Asia"}
+        {"value": "asia", "label": "Asia"},
+        {"value": "europe", "label": "Europe"},
+        {"value": "north_america", "label": "North America"},
+        {"value": "south_america", "label": "South America"},
+        {"value": "africa", "label": "Africa"},
+        {"value": "oceania", "label": "Oceania"}
       ],
       "defaultValue": "global"
     },
     {
-      "key": "includeOutdated",
-      "type": "boolean",
-      "label": "Include Cached Data",
-      "description": "Allow use of cached sourcing data if live data is unavailable",
-      "defaultValue": false
+      "key": "applicationRoute",
+      "type": "select",
+      "label": "Application Route",
+      "options": [
+        {"value": "oral", "label": "Oral"},
+        {"value": "dental", "label": "Dental"},
+        {"value": "topical", "label": "Topical"}
+      ],
+      "defaultValue": "topical"
+    },
+    {
+      "key": "dosageForm",
+      "type": "select",
+      "label": "Dosage Form",
+      "options": [
+        {"value": "gel", "label": "Gel"},
+        {"value": "cream", "label": "Cream"},
+        {"value": "lotion", "label": "Lotion"},
+        {"value": "ointment", "label": "Ointment"},
+        {"value": "shampoo", "label": "Shampoo"},
+        {"value": "foam", "label": "Foam"}
+      ],
+      "defaultValue": "cream"
     },
     {
       "key": "riskThreshold",
       "type": "number",
       "label": "Single-Source Warning Threshold",
-      "placeholder": "2",
       "defaultValue": 2
     }
   ],
   "defaultConfig": {
-    "region": "global",
-    "includeOutdated": false,
+    "targetUser": "18_30",
+    "targetMarket": "global",
+    "applicationRoute": "topical",
+    "dosageForm": "cream",
     "riskThreshold": 2
   }
 }
