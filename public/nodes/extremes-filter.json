@@ -63,7 +63,7 @@
     {
       "key": "HBA_threshold",
       "type": "number",
-      "label": "HBD Threshold",
+      "label": "HBA Threshold",
       "defaultValue": 4.0
     },
     {
