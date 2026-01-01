@@ -59,9 +59,9 @@
       "defaultValue": "18_30"
     },
     {
-      "key": "targetMarket",
+      "key": "targetReligion",
       "type": "select",
-      "label": "Target Market",
+      "label": "Target Religion",
       "options": [
         { "label": "Asia", "value": "asia" },
         { "label": "Europe", "value": "europe" },
