@@ -34,15 +34,100 @@
   ],
   "configSchema": [
     {
-      "key": "ingredients",
+      "key": "inputMethod",
+      "type": "tabs",
+      "label": "Input Method",
+      "options": [
+        { "label": "Free Text", "value": "text" },
+        { "label": "Upload List", "value": "upload" },
+        { "label": "Reference Product", "value": "reference" }
+      ],
+      "defaultValue": "text"
+    },
+    {
+      "key": "freeTextDescription",
       "type": "textarea",
-      "label": "Ingredient List",
-      "placeholder": "Enter ingredients (comma or newline separated)...",
-      "defaultValue": ""
+      "label": "Description / Manual Ingredients",
+      "placeholder": "Enter ingredients manually or describe the formula you want to build...",
+      "visibleIf": { "inputMethod": "text" }
+    },
+    {
+      "key": "ingredientFile",
+      "type": "file",
+      "label": "Upload Ingredient List",
+      "visibleIf": { "inputMethod": "upload" }
+    },
+    {
+      "key": "referenceProduct",
+      "type": "text",
+      "label": "Product Link or Name",
+      "placeholder": "e.g., https://store.com/product or Product Name",
+      "visibleIf": { "inputMethod": "reference" }
+    },
+    {
+      "key": "desiredEffect",
+      "type": "text",
+      "label": "Desired Effect",
+      "placeholder": "e.g., Whitening, Anti-aging (Required)",
+      "required": true
+    },
+    {
+      "key": "targetUser",
+      "type": "select",
+      "label": "Target User",
+      "required": true,
+      "options": [
+        { "label": "Baby", "value": "baby" },
+        { "label": "Under 18", "value": "under_18" },
+        { "label": "18 - 30", "value": "18_30" },
+        { "label": "Middle-aged", "value": "middle_aged" },
+        { "label": "Elderly", "value": "elderly" }
+      ]
+    },
+    {
+      "key": "targetMarket",
+      "type": "select",
+      "label": "Target Market",
+      "options": [
+        { "label": "Asia", "value": "asia" },
+        { "label": "Europe", "value": "europe" },
+        { "label": "North America", "value": "north_america" },
+        { "label": "South America", "value": "south_america" },
+        { "label": "Africa", "value": "africa" },
+        { "label": "Oceania", "value": "oceania" }
+      ]
+    },
+    {
+      "key": "applicationRoute",
+      "type": "select",
+      "label": "Application Route",
+      "options": [
+        { "label": "Oral", "value": "oral" },
+        { "label": "Dental", "value": "dental" },
+        { "label": "Topical", "value": "topical" }
+      ]
+    },
+    {
+      "key": "dosageForm",
+      "type": "select",
+      "label": "Dosage Form",
+      "options": [
+        { "label": "Gel", "value": "gel" },
+        { "label": "Cream", "value": "cream" },
+        { "label": "Lotion", "value": "lotion" },
+        { "label": "Ointment", "value": "ointment" },
+        { "label": "Shampoo", "value": "shampoo" },
+        { "label": "Foam", "value": "foam" }
+      ]
     }
   ],
   "defaultConfig": {
-    "ingredients": ""
+    "inputMethod": "text",
+    "freeTextDescription": "",
+    "desiredEffect": "",
+    "targetUser": "18_30",
+    "targetMarket": "asia",
+    "applicationRoute": "topical",
+    "dosageForm": "cream"
   }
 }
-

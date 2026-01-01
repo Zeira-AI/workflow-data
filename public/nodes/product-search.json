@@ -85,7 +85,7 @@
       "key": "query",
       "type": "textarea",
       "label": "Search Query",
-      "placeholder": "Enter product search terms...",
+      "placeholder": "Describe the product idea, key claim, and market, exclusions, target user",
       "defaultValue": ""
     }
   ],

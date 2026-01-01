@@ -79,7 +79,7 @@
       "key": "query",
       "type": "textarea",
       "label": "Search Query",
-      "placeholder": "Enter ingredient name, function, or INCI...",
+      "placeholder": "Search by ingredient function, application, or INCI name",
       "defaultValue": ""
     }
   ],
