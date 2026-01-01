@@ -7,36 +7,21 @@
   "description": "Evaluate supplier coverage, availability levels, and single-source risks for ingredients",
   "defaultInputs": [
     {
-      "id": "ingredients_manual",
-      "name": "Manual Ingredient Entry",
-      "type": "string",
-      "description": "Input ingredients manually as free text"
+      "id": "ingredients",
+      "name": "Ingredient List",
+      "type": "array",
+      "required": true,
+      "description": "Manual list, uploaded list, or formula components"
     },
     {
-      "id": "upload_ingredient_list",
-      "name": "Upload Ingredient List",
-      "type": "string",
-      "description": "Upload a file containing the ingredient list"
-    },
-    {
-      "id": "upload_formula",
-      "name": "Upload Formula",
-      "type": "string",
-      "description": "Upload a detailed formula file"
-    },
-    {
-      "id": "similar_product_link",
-      "name": "Similar Product Link",
-      "type": "string",
-      "placeholder": "https://example.com/product",
-      "description": "Reference link to a similar product"
-    },
-    {
-      "id": "similar_product_name",
-      "name": "Similar Product Name",
-      "type": "string",
-      "placeholder": "e.g., Hydrating Face Cream",
-      "description": "Name of the reference product"
+      "id": "product_reference",
+      "name": "Similar Product Reference",
+      "type": "object",
+      "description": "Reference by product link or name",
+      "properties": {
+        "link": { "type": "string" },
+        "name": { "type": "string" }
+      }
     }
   ],
   "defaultOutputs": [
@@ -55,11 +40,11 @@
     {
       "key": "targetUser",
       "type": "select",
-      "label": "Target User Group",
+      "label": "Target User",
       "options": [
         {"value": "baby", "label": "Baby"},
         {"value": "under_18", "label": "Under 18"},
-        {"value": "18_30", "label": "18 - 30 Years Old"},
+        {"value": "18_30", "label": "18 - 30"},
         {"value": "middle_aged", "label": "Middle-aged"},
         {"value": "elderly", "label": "Elderly"}
       ],
@@ -68,17 +53,16 @@
     {
       "key": "targetMarket",
       "type": "select",
-      "label": "Target Market (Continent)",
+      "label": "Target Market",
       "options": [
         {"value": "asia", "label": "Asia"},
         {"value": "europe", "label": "Europe"},
         {"value": "north_america", "label": "North America"},
         {"value": "south_america", "label": "South America"},
         {"value": "africa", "label": "Africa"},
-        {"value": "oceania", "label": "Oceania"},
-        {"value": "global", "label": "Global"}
+        {"value": "oceania", "label": "Oceania"}
       ],
-      "defaultValue": "global"
+      "defaultValue": "asia"
     },
     {
       "key": "applicationRoute",
@@ -108,7 +92,7 @@
   ],
   "defaultConfig": {
     "targetUser": "18_30",
-    "targetMarket": "global",
+    "targetMarket": "asia",
     "applicationRoute": "topical",
     "dosageForm": "cream"
   }
