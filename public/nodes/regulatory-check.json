@@ -11,13 +11,13 @@
       "id": "ingredients",
       "name": "ingredients",
       "type": "string",
-      "description": "List of formulated ingredients"
+      "description": "List of curated ingredients"
     },
     {
       "id": "analysis",
       "name": "analysis",
       "type": "string",
-      "description": "Formula analysis and safety report"
+      "description": "Formula analysis and regulatory report"
     }
   ],
   "configSchema": [
@@ -42,7 +42,7 @@
     {
       "key": "desiredEffect",
       "type": "text",
-      "label": "Desired Effect (Required)",
+      "label": "Desired Effect",
       "placeholder": "e.g., Whitening, Anti-aging..."
     },
     {

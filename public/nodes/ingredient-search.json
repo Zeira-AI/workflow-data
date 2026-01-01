@@ -78,9 +78,15 @@
     {
       "key": "query",
       "type": "textarea",
-      "label": "Search Query",
+      "label": "Search Ingredient",
       "placeholder": "Search by ingredient function, application, or INCI name",
       "defaultValue": ""
+    },
+    {
+      "key": "ingredientFile",
+      "type": "file",
+      "label": "Upload Ingredient List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
     }
   ],
   "defaultConfig": {
