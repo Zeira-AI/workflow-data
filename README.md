@@ -26,43 +26,50 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
 
 ```json
 {
-  "type": "my-new-tool",
-  "label": "My New Tool",
-  "category": "transform",
-  "icon": "filter",
-  "color": "green",
-  "description": "Brief description of what this tool does",
-  "defaultInputs": [],
-  "defaultOutputs": [
+  "type": "my-new-tool",                // Unique identifier (kebab-case, must match filename)
+  "label": "My New Tool",               // Human-readable display name
+  "category": "transform",              // Category for organizing in UI (any string)
+  "icon": "filter",                     // Icon key from constants
+  "color": "green",                     // Color key (amber, purple, blue, green, etc.)
+  "description": "Brief description",   // Optional: description of the tool's purpose
+  "defaultInputs": [],                  // Placeholder, always empty array for now
+  "defaultOutputs": [                   // Output ports
     {
-      "id": "result",
-      "name": "result",
-      "type": "array",
-      "description": "Output data description"
+      "id": "result",                   // Unique port identifier
+      "name": "result",                 // Display name
+      "type": "array",                  // Data type: string | number | boolean | object | array
+      "description": "Output description"
     }
   ],
-  "configSchema": [
+  "configSchema": [                     // Configuration fields for the tool
     {
-      "key": "myParameter",
-      "type": "text",
-      "label": "My Parameter",
-      "placeholder": "Enter value...",
-      "defaultValue": ""
+      "key": "myParameter",             // Field key (used in config object)
+      "type": "text",                   // Field type: text | number | select | boolean | json | textarea | file
+      "label": "My Parameter",          // Display label
+      "placeholder": "Enter value...",  // Optional: placeholder text
+      "defaultValue": ""                // Optional: default value
+    },
+    {
+      "key": "mode",
+      "type": "select",                 // Dropdown selection
+      "label": "Mode",
+      "options": [                      // Required for select type
+        { "value": "fast", "label": "Fast" },
+        { "value": "accurate", "label": "Accurate" }
+      ],
+      "defaultValue": "fast"
+    },
+    {
+      "key": "uploadFile",
+      "type": "file",                   // File upload input
+      "label": "Upload File",
+      "accept": ".csv,.json",           // Optional: accepted file types
+      "multiple": false                 // Optional: allow multiple files
     }
   ],
-  "defaultConfig": {
-    "myParameter": ""
-  }
+  "defaultConfig": {}                   // Optional: prefer using defaultValue in configSchema instead
 }
 ```
-
-**Key Fields:**
-- **type**: Unique identifier (kebab-case)
-- **category**: `discovery` | `analysis` | `transform` | `output` | `integration`
-- **icon**: Icon name (see constants for available icons)
-- **color**: Color name (amber, purple, blue, green, etc.)
-- **type** (I/O): `string` | `number` | `boolean` | `object` | `array`
-- **type** (config): `text` | `number` | `select` | `boolean` | `json` | `textarea`
 
 ### 2. Register in Index
 
@@ -166,10 +173,9 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 
 ### Common Validation Errors:
 
-- **Missing required fields**: `type`, `label`, `category`, `icon`, `color`, `defaultInputs`, `defaultOutputs`, `configSchema`, `defaultConfig`
-- **Invalid category**: Must be one of: `discovery`, `analysis`, `transform`, `output`, `integration`
+- **Missing required fields**: `type`, `label`, `category`, `icon`, `color`, `defaultInputs`, `defaultOutputs`, `configSchema`
 - **Invalid I/O types**: Must be one of: `string`, `number`, `boolean`, `object`, `array`
-- **Invalid config types**: Must be one of: `text`, `number`, `select`, `boolean`, `json`, `textarea`
+- **Invalid config types**: Must be one of: `text`, `number`, `select`, `boolean`, `json`, `textarea`, `file`
 - **Type mismatch**: The `type` field must match the filename (e.g., `my-tool.json` should have `"type": "my-tool"`)
 - **Missing I/O fields**: Each input/output must have `id`, `name`, and `type`
 - **Missing config fields**: Each config field must have `key`, `type`, and `label`
@@ -190,8 +196,23 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 | `number` | Numeric input | Count, limit, threshold |
 | `select` | Dropdown selection | Requires `options` array |
 | `boolean` | Checkbox | Enable/disable flags |
-| `json` | JSON editor | Complex structured data |
+| `json` | JSON editor | Complex structured data || `file` | File upload input | Documents, images, data files |
 
+## File Field Example
+
+```json
+{
+  "key": "uploadedFile",
+  "type": "file",
+  "label": "Upload Document",
+  "accept": ".pdf,.doc,.docx",
+  "multiple": false
+}
+```
+
+**File field properties:**
+- **accept**: Accepted file types (e.g., `image/*`, `.pdf,.doc`, `application/json`)
+- **multiple**: Allow multiple file selection (`true` or `false`)
 ## Select Field Example
 
 ```json
