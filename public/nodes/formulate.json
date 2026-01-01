@@ -25,7 +25,7 @@
       "key": "freeText",
       "type": "text",
       "label": "Manual Ingredients / Description",
-      "placeholder": "Enter ingredients manually or describe formula..."
+      "placeholder": "Enter ingredients or describe desired formula"
     },
     {
       "key": "ingredientFile",
