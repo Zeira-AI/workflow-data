@@ -5,46 +5,32 @@
   "icon": "shopping-cart",
   "color": "amber",
   "description": "Evaluate supplier coverage, availability levels, and single-source risks for ingredients",
-  "defaultInputs": [
-    {
-      "id": "ingredients",
-      "name": "Ingredient List",
-      "type": "array",
-      "required": true,
-      "description": "List of ingredients or formula components to analyze"
-    }
-  ],
+  "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "sourcingData",
-      "name": "Sourcing Data",
-      "type": "array",
-      "description": "Detailed sourcing metrics per ingredient"
+      "id": "ingredients",
+      "name": "ingredients",
+      "type": "string",
+      "description": "List of formulated ingredients"
     },
     {
-      "id": "riskSummary",
-      "name": "Risk Summary",
-      "type": "object",
-      "description": "Summary of high-risk items and single-source flags"
+      "id": "analysis",
+      "name": "analysis",
+      "type": "string",
+      "description": "Formula analysis and safety report"
     }
   ],
   "configSchema": [
     {
       "key": "freeText",
       "type": "text",
-      "label": "Manual Ingredient Entry",
-      "placeholder": "Enter ingredients manually..."
+      "label": "Manual Ingredients / Description",
+      "placeholder": "Enter ingredients or describe desired formula"
     },
     {
       "key": "ingredientFile",
       "type": "file",
       "label": "Upload Ingredient List",
-      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
-    },
-    {
-      "key": "formulaFile",
-      "type": "file",
-      "label": "Upload Formula",
       "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
     },
     {
@@ -104,23 +90,16 @@
         { "label": "Foam", "value": "foam" }
       ],
       "defaultValue": "cream"
-    },
-    {
-      "key": "riskThreshold",
-      "type": "number",
-      "label": "Single-Source Warning Threshold",
-      "defaultValue": 2
     }
   ],
   "defaultConfig": {
     "freeText": "",
     "ingredientFile": null,
-    "formulaFile": null,
     "referenceProduct": "",
+    "desiredEffect": "",
     "targetUser": "18_30",
     "targetMarket": "asia",
     "applicationRoute": "topical",
-    "dosageForm": "cream",
-    "riskThreshold": 2
+    "dosageForm": "cream"
   }
 }
