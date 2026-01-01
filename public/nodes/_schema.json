@@ -4,7 +4,7 @@
   "title": "Node Definition Schema",
   "description": "JSON Schema for workflow builder node definitions",
   "type": "object",
-  "required": ["type", "label", "category", "icon", "color", "defaultInputs", "defaultOutputs", "configSchema", "defaultConfig"],
+  "required": ["type", "label", "category", "icon", "color", "defaultInputs", "defaultOutputs", "configSchema"],
   "properties": {
     "type": {
       "type": "string",
@@ -54,7 +54,7 @@
     },
     "defaultConfig": {
       "type": "object",
-      "description": "Default configuration values"
+      "description": "Optional: Default configuration values. Prefer using 'defaultValue' in configSchema fields instead."
     }
   },
   "definitions": {
