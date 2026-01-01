@@ -10,13 +10,13 @@
     {
       "id": "ingredients",
       "name": "ingredients",
-      "type": "array",
+      "type": "string",
       "description": "List of formulated ingredients"
     },
     {
       "id": "analysis",
       "name": "analysis",
-      "type": "object",
+      "type": "string",
       "description": "Formula analysis and safety report"
     }
   ],
