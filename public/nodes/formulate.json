@@ -18,29 +18,17 @@
       "name": "inci",
       "type": "string",
       "description": "INCI name"
-    },
-    {
-      "id": "functions",
-      "name": "functions",
-      "type": "array",
-      "description": "Ingredient functions"
-    },
-    {
-      "id": "estimatedPercent",
-      "name": "Estimated Percent",
-      "type": "string",
-      "description": "Estimated percentage"
     }
   ],
   "configSchema": [
     {
       "key": "inputMethod",
-      "type": "tabs",
+      "type": "select",
       "label": "Input Method",
       "options": [
-        { "label": "Free Text", "value": "text" },
-        { "label": "Upload List", "value": "upload" },
-        { "label": "Reference Product", "value": "reference" }
+        { "label": "Free Text / Manual", "value": "text" },
+        { "label": "Upload File", "value": "upload" },
+        { "label": "Reference Link/Name", "value": "reference" }
       ],
       "defaultValue": "text"
     },
@@ -48,7 +36,7 @@
       "key": "freeTextDescription",
       "type": "textarea",
       "label": "Description / Manual Ingredients",
-      "placeholder": "Enter ingredients manually or describe the formula you want to build...",
+      "placeholder": "Enter ingredients manually...",
       "visibleIf": { "inputMethod": "text" }
     },
     {
@@ -61,14 +49,13 @@
       "key": "referenceProduct",
       "type": "text",
       "label": "Product Link or Name",
-      "placeholder": "e.g., https://store.com/product or Product Name",
+      "placeholder": "Enter link or product name...",
       "visibleIf": { "inputMethod": "reference" }
     },
     {
       "key": "desiredEffect",
       "type": "text",
-      "label": "Desired Effect",
-      "placeholder": "e.g., Whitening, Anti-aging (Required)",
+      "label": "Desired Effect (Required)",
       "required": true
     },
     {
@@ -91,10 +78,7 @@
       "options": [
         { "label": "Asia", "value": "asia" },
         { "label": "Europe", "value": "europe" },
-        { "label": "North America", "value": "north_america" },
-        { "label": "South America", "value": "south_america" },
-        { "label": "Africa", "value": "africa" },
-        { "label": "Oceania", "value": "oceania" }
+        { "label": "North America", "value": "north_america" }
       ]
     },
     {
@@ -123,7 +107,6 @@
   ],
   "defaultConfig": {
     "inputMethod": "text",
-    "freeTextDescription": "",
     "desiredEffect": "",
     "targetUser": "18_30",
     "targetMarket": "asia",
