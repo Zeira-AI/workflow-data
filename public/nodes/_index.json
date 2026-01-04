@@ -17,6 +17,7 @@
     "toxicity-prediction",
     "toxicity-filter",
     "report-generator",
-    "target-mapping"
+    "target-mapping",
+    "docking"
   ]
 }

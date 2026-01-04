@@ -1,0 +1,73 @@
+{
+  "type": "docking",
+  "label": "Molecular Docking (AutoDock Vina)",
+  "category": "in-silico-screening",
+  "icon": "dna",
+  "color": "purple",
+  "description": "Perform molecular docking using AutoDock Vina and output binding affinity (ΔG) values for multiple protein targets.",
+  "defaultInputs": [
+    {
+      "id": "compoundList",
+      "name": "Compound List",
+      "type": "array",
+      "required": true,
+      "description": "List of compounds with ligand file references (e.g. name, pdbqt)"
+    },
+    {
+      "id": "targetList",
+      "name": "Protein Target List",
+      "type": "array",
+      "required": true,
+      "description": "List of protein targets including receptor files and grid box definitions"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "dockingTable",
+      "name": "Docking Result Table",
+      "type": "array",
+      "description": "Docking results table with ΔG (kcal/mol) per compound per target"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "engine",
+      "type": "select",
+      "label": "Docking Engine",
+      "options": [
+        {
+          "value": "vina",
+          "label": "AutoDock Vina"
+        }
+      ],
+      "defaultValue": "vina"
+    },
+    {
+      "key": "exhaustiveness",
+      "type": "number",
+      "label": "Exhaustiveness",
+      "placeholder": "Docking exhaustiveness (e.g. 8–20)",
+      "defaultValue": 8
+    },
+    {
+      "key": "numModes",
+      "type": "number",
+      "label": "Number of Binding Modes",
+      "placeholder": "Number of binding poses to generate",
+      "defaultValue": 9
+    },
+    {
+      "key": "gridBox",
+      "type": "json",
+      "label": "Grid Box Definition",
+      "placeholder": "{ \"center_x\":0, \"center_y\":0, \"center_z\":0, \"size_x\":20, \"size_y\":20, \"size_z\":20 }"
+    },
+    {
+      "key": "receptorFiles",
+      "type": "file",
+      "label": "Receptor Files (PDBQT)",
+      "multiple": true,
+      "accept": ".pdbqt"
+    }
+  ]
+}
