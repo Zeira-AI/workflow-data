@@ -1,0 +1,49 @@
+{
+  "type": "toxicity-prediction",
+  "label": "toxicity-prediction",
+  "category": "analysis",
+  "icon": "filtericon",
+  "color": "red",
+  "description": "Predict compounds based on SMILES data.",
+  "defaultInputs": [
+    {
+      "id": "input-mol-data",
+      "name": "Input Compounds",
+      "type": "array",
+      "required": true,
+      "description": "Array containing compound data and SMILES strings from CSV"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "output-filtered",
+      "name": "Filtered Results",
+      "type": "array",
+      "description": "Output data containing filtered compound results"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "smiles_column",
+      "type": "text",
+      "label": "SMILES",
+      "placeholder": "Enter SMILES.",
+      "description": "Select the column containing the SMILES strings"
+    },
+    {
+      "key": "ingredientListFile",
+      "type": "file",
+      "label": "Upload Ingredient List Document",
+      "accept": ".pdf,.doc,.docx,.txt,.csv"
+    }
+  ],
+  "defaultConfig": {
+    "smiles_column": "smiles",
+    "mw_threshold": 300,
+    "logp_threshold": 3.0,
+    "mapping": {
+      "name": "name",
+      "smiles": "smiles"
+    }
+  }
+}

@@ -14,7 +14,8 @@
     "insilico-compound-filter",
     "singular-compound",
     "document-processor",
-    "extremes-filter",
+    "toxicity-prediction",
+    "toxicity-filter",
     "report-generator",
     "target-mapping"
   ]

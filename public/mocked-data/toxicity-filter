@@ -1,0 +1,14 @@
+Compound,Skin Irritation,Sensitization,Ames (Mutagenicity),Dermal Absorption,Status
+Minoxidil,Low,Low,Negative,Moderate,Pass
+Caffeine,Low,Low,Negative,High,Pass
+Adenosine,Very low,Very low,Negative,Low,Pass
+Piroctone Olamine,Low,Low,Negative,Moderate,Pass
+Niacinamide,Very low,Very low,Negative,High,Pass
+Baicalin,Low,Very low,Negative,Low,Pass
+Licochalcone A,Low,Low,Negative,Low,Pass
+Melatonin,Low,Low,Negative,Moderate,Pass
+Menthol,Moderate,Low,Negative,High,Conditional
+EGCG,Moderate,Moderate,Negative,Low,Conditional
+Resveratrol,Moderate,Low,Negative,Low,Conditional
+Capsaicin,High,High,Negative,High,Fail
+Salicylic acid,High,Moderate,Negative,High,Fail

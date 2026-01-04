@@ -1,10 +1,10 @@
 {
-  "type": "extremes-filter",
-  "label": "Extremes Filter",
+  "type": "toxicity-prediction",
+  "label": "toxicity-prediction",
   "category": "analysis",
   "icon": "filtericon",
   "color": "red",
-  "description": "Filters compounds based on SMILES data and physicochemical thresholds.",
+  "description": "Filter compounds based on SMILES data and physicochemical thresholds.",
   "defaultInputs": [
     {
       "id": "input-mol-data",
