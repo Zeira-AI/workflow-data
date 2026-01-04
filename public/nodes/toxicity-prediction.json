@@ -24,6 +24,18 @@
   ],
   "configSchema": [
     {
+      "key": "engine",
+      "type": "select",
+      "label": "Available Tools",
+      "options": [
+        {
+          "value": "rdkit,swissadme",
+          "label": "RDKit,SwissAdme"
+        }
+      ],
+      "defaultValue": "RDKit"
+    },
+    {
       "key": "smiles_column",
       "type": "text",
       "label": "SMILES",
