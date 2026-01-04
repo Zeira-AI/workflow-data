@@ -29,11 +29,15 @@
       "label": "Available Tools",
       "options": [
         {
-          "value": "rdkit,swissadme",
-          "label": "RDKit,SwissAdme"
+          "value": "rdkit",
+          "label": "RDKit"
+        },
+        { 
+          "value": "swissadme",
+          "label": "SwissAdme"
         }
       ],
-      "defaultValue": "RDKit"
+      "defaultValue": "rdkit"
     },
     {
       "key": "smiles_column",
