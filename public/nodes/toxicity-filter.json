@@ -1,6 +1,6 @@
 {
   "type": "toxicity-filter",
-  "label": "toxicity-filter",
+  "label": "Toxicity Filter",
   "category": "analysis",
   "icon": "filtericon",
   "color": "red",
