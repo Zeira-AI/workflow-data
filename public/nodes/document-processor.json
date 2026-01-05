@@ -10,13 +10,13 @@
     {
       "id": "document",
       "name": "document",
-      "type": "text",
+      "type": "string",
       "description": "Processed document"
     },
     {
       "id": "metadata",
       "name": "metadata",
-      "type": "text",
+      "type": "string",
       "description": "Document metadata"
     }
   ],
