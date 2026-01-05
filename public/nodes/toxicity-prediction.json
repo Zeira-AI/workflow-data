@@ -38,7 +38,7 @@
     }
   ],
   "defaultConfig": {
-    "smiles_column": "smiles",
+    "smiles_column": "CCN(CC)CCNC1=NC(=O)NC(=O)N1",
     "mw_threshold": 300,
     "logp_threshold": 3.0,
     "mapping": {
