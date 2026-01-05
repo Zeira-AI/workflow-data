@@ -4,14 +4,14 @@
   "category": "analysis",
   "icon": "target-icon",
   "color": "blue",
-  "description": "Automatically maps input protein names or free-text descriptions to specific assay metrics using an internal reference table.",
+  "description": "Maps protein names or biological descriptions to assay metrics. Supports manual free-text input or automated lookup.",
   "defaultInputs": [
     {
       "id": "target-input",
       "name": "Target/Protein Input",
       "type": "string",
-      "required": true,
-      "description": "Accepts protein names (e.g., GSK3B) or descriptive text to be matched."
+      "required": false,
+      "description": "Accepts protein names or descriptive text from previous nodes."
     }
   ],
   "defaultOutputs": [
@@ -24,13 +24,21 @@
   ],
   "configSchema": [
     {
+      "key": "manualFreetext",
+      "type": "textarea",
+      "label": "Target Input",
+      "placeholder": "Enter target name or biological effect (e.g., GSK3B, hair growth trigger...)",
+      "description": "Use this field to manually type the target if not provided via the input port."
+    },
+    {
       "key": "mappingTable",
       "type": "json",
-      "label": "Internal Mapping Reference",
-      "description": "The master table used for automated lookup logic."
+      "label": "Biological Effects Reference",
+      "description": "The master table used for matching input text to specific biological metrics."
     }
   ],
   "defaultConfig": {
+    "manualFreetext": "",
     "mappingTable": [
       { "target": "KATP", "relevance": "DP anagen entry trigger", "modulation": "activation", "assay": "patch clamp", "metric": "EC50" },
       { "target": "GSK3β", "relevance": "Wnt inhibition release", "modulation": "inhibition", "assay": "kinase ATP assay", "metric": "IC50" },
