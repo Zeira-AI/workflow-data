@@ -1,7 +1,7 @@
 {
   "type": "bioactivity-filter",
   "label": "Bioactivity Filter",
-  "category": "in-silico-screening",
+  "category": "analysis",
   "icon": "activity",
   "color": "green",
   "description": "Filter compound bioactivity (pEC50 / pIC50) across multiple biological targets using ML-based models.",

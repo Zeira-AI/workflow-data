@@ -1,7 +1,7 @@
 {
   "type": "bioactivity-prediction",
   "label": "Bioactivity Prediction",
-  "category": "in-silico-screening",
+  "category": "analysis",
   "icon": "activity",
   "color": "green",
   "description": "Predict compound bioactivity (pEC50 / pIC50) across multiple biological targets using ML-based models.",
