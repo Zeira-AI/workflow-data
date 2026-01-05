@@ -11,7 +11,6 @@
     "purchase",
     "regulatory-check",
     "candidate-library",
-    "insilico-compound-filter",
     "singular-compound",
     "document-processor",
     "toxicity-prediction",
