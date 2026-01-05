@@ -1,7 +1,7 @@
 {
   "type": "docking",
   "label": "Molecular Docking (AutoDock Vina)",
-  "category": "in-silico-screening",
+  "category": "analysis",
   "icon": "dna",
   "color": "purple",
   "description": "Perform molecular docking using AutoDock Vina and output binding affinity (ΔG) values for multiple protein targets.",
