@@ -19,6 +19,8 @@
     "report-generator",
     "target-mapping",
     "docking",
-    "bioactivity-prediction"
+    "bioactivity-prediction",
+    "bioactivity-filter",
+    "developability-prediction"
   ]
 }
