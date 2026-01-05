@@ -24,207 +24,39 @@
   ],
   "configSchema": [
     {
-      "key": "inputFile",
-      "type": "file",
-      "label": "Upload Molecule Table (CSV)",
-      "accept": ".csv"
-    },
-    {
-      "key": "smilesColumn",
-      "type": "text",
-      "label": "SMILES Column Name",
-      "placeholder": "SMILES",
-      "defaultValue": "SMILES"
-    },
-
-    {
-      "key": "mwMin",
-      "type": "number",
-      "label": "MW Min (Da)",
-      "placeholder": "e.g., 0",
-      "defaultValue": 0
-    },
-    {
-      "key": "mwMax",
-      "type": "number",
-      "label": "MW Max (Da)",
-      "placeholder": "e.g., 500",
-      "defaultValue": 500
-    },
-
-    {
-      "key": "clogdMin",
-      "type": "number",
-      "label": "cLogD (pH 7.4) Min",
-      "placeholder": "e.g., 0",
-      "defaultValue": 0
-    },
-    {
-      "key": "clogdMax",
-      "type": "number",
-      "label": "cLogD (pH 7.4) Max",
-      "placeholder": "e.g., 4",
-      "defaultValue": 4
-    },
-
-    {
-      "key": "solubilityMin",
-      "type": "number",
-      "label": "Solubility Min (µM)",
-      "placeholder": "e.g., 10",
-      "defaultValue": 10
-    },
-    {
-      "key": "solubilityMax",
-      "type": "number",
-      "label": "Solubility Max (µM)",
-      "placeholder": "e.g., 100000",
-      "defaultValue": 100000
-    },
-
-    {
-      "key": "pic50Min",
-      "type": "number",
-      "label": "pIC50 Min",
-      "placeholder": "e.g., 6",
-      "defaultValue": 0
-    },
-    {
-      "key": "pic50Max",
-      "type": "number",
-      "label": "pIC50 Max",
-      "placeholder": "e.g., 12",
-      "defaultValue": 12
-    },
-
-    {
-      "key": "lipeMin",
-      "type": "number",
-      "label": "LipE Min",
-      "placeholder": "e.g., 5",
-      "defaultValue": 5
-    },
-    {
-      "key": "lipeMax",
-      "type": "number",
-      "label": "LipE Max",
-      "placeholder": "e.g., 20",
-      "defaultValue": 20
-    },
-
-    {
-      "key": "microsomalStabilityMin",
-      "type": "number",
-      "label": "Microsomal Stability Min (min)",
-      "placeholder": "e.g., 30",
-      "defaultValue": 30
-    },
-    {
-      "key": "microsomalStabilityMax",
-      "type": "number",
-      "label": "Microsomal Stability Max (min)",
-      "placeholder": "e.g., 10000",
-      "defaultValue": 10000
-    },
-
-    {
-      "key": "painsPolicy",
-      "type": "select",
-      "label": "PAINS Filter Policy",
-      "options": [
-        { "value": "exclude_yes", "label": "Exclude PAINS = Yes" },
-        { "value": "include_all", "label": "Include All (ignore PAINS)" },
-        { "value": "only_yes", "label": "Only PAINS = Yes" }
-      ],
-      "defaultValue": "exclude_yes"
-    },
-
-    {
-      "key": "requireNonMissing",
-      "type": "select",
-      "label": "Require Non-missing Fields",
-      "multiple": true,
-      "options": [
-        { "value": "MW", "label": "MW" },
-        { "value": "cLogD_pH7_4", "label": "cLogD_pH7_4" },
-        { "value": "Solubility_uM", "label": "Solubility_uM" },
-        { "value": "pIC50", "label": "pIC50" },
-        { "value": "LipE", "label": "LipE" },
-        { "value": "Microsomal_Stability_min", "label": "Microsomal_Stability_min" },
-        { "value": "PAINS_Alert", "label": "PAINS_Alert" }
-      ],
-      "defaultValue": ["MW", "cLogD_pH7_4", "Solubility_uM"]
-    },
-
-    {
-      "key": "combineMode",
-      "type": "select",
-      "label": "How to Combine Filters",
-      "options": [
-        { "value": "AND", "label": "Match ALL criteria (AND)" },
-        { "value": "OR", "label": "Match ANY criteria (OR)" }
-      ],
-      "defaultValue": "AND"
-    },
-
-    {
-      "key": "outputFormat",
-      "type": "select",
-      "label": "Output Format",
-      "options": [
-        { "value": "csv", "label": "CSV" },
-        { "value": "xlsx", "label": "Excel (.xlsx)" }
-      ],
-      "defaultValue": "csv"
-    },
-
-    {
-      "key": "outputColumns",
-      "type": "select",
-      "label": "Columns to Include in Output",
-      "multiple": true,
-      "options": [
-        { "value": "SMILES", "label": "SMILES" },
-        { "value": "MW", "label": "MW" },
-        { "value": "cLogD_pH7_4", "label": "cLogD_pH7_4" },
-        { "value": "Solubility_uM", "label": "Solubility_uM" },
-        { "value": "pIC50", "label": "pIC50" },
-        { "value": "LipE", "label": "LipE" },
-        { "value": "Microsomal_Stability_min", "label": "Microsomal_Stability_min" },
-        { "value": "PAINS_Alert", "label": "PAINS_Alert" }
-      ],
-      "defaultValue": []
-    },
-
-    {
-      "key": "maxResults",
-      "type": "number",
-      "label": "Max Results",
-      "placeholder": "e.g., 5000",
-      "defaultValue": 5000
-    },
-
-    {
-      "key": "sortBy",
-      "type": "select",
-      "label": "Sort Results By",
-      "options": [
-        { "value": "none", "label": "No sorting" },
-        { "value": "pIC50", "label": "pIC50 (desc)" },
-        { "value": "LipE", "label": "LipE (desc)" },
-        { "value": "Solubility_uM", "label": "Solubility (desc)" },
-        { "value": "Microsomal_Stability_min", "label": "Microsomal Stability (desc)" },
-        { "value": "MW", "label": "MW (asc)" },
-        { "value": "cLogD_pH7_4", "label": "cLogD (asc)" }
-      ],
-      "defaultValue": "none"
-    },
-
-    {
-      "key": "advancedExpression",
-      "type": "text",
-      "label": "Advanced Filter Expression (optional)",
-      "placeholder": "(MW <= 450) AND (LipE >= 5) AND (PAINS_Alert == 'No')"
-    }
-  ]
+    "key": "moleculeText",
+    "type": "text",
+    "label": "Molecule List (Paste)",
+    "placeholder": "CMPD_001,CCN(CC)C(=O)C1=CC=CC=C1,7.2\nCMPD_002,COC1=CC=CC=C1C(=O)NCC,6.5\nCMPD_003,CCOC1=NC=CC=C1",
+    "description": "One molecule per line: moleculeId, SMILES, optional pIC50"
+  },
+  {
+    "key": "moleculeFile",
+    "type": "file",
+    "label": "Upload Molecule File",
+    "accept": ".csv,.txt"
+  },
+  {
+    "key": "targetClass",
+    "type": "select",
+    "label": "Target Class",
+    "options": [
+      { "value": "cns", "label": "CNS" },
+      { "value": "non_cns", "label": "Non-CNS" },
+      { "value": "unknown", "label": "Unknown" }
+    ],
+    "defaultValue": "non_cns"
+  },
+  {
+    "key": "predictionMode",
+    "type": "select",
+    "label": "Prediction Mode",
+    "options": [
+      { "value": "rules", "label": "Rules-based" },
+      { "value": "ml", "label": "Machine Learning" },
+      { "value": "hybrid", "label": "Hybrid" }
+    ],
+    "defaultValue": "hybrid"
+  }
+]
 }
