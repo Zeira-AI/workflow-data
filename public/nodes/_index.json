@@ -18,6 +18,7 @@
     "toxicity-filter",
     "report-generator",
     "target-mapping",
-    "docking"
+    "docking",
+    "bioactivity-prediction"
   ]
 }
