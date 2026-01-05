@@ -39,6 +39,26 @@
         { "value": "functional_food_beverage", "label": "Functional Food/Beverage" }
       ]
     },
+     {
+      "key": "smilesColumn",
+      "type": "text",
+      "label": "SMILES Name",
+      "placeholder": "SMILES",
+      "defaultValue": "SMILES"
+    },
+    {
+    "key": "compoundFiles",
+    "type": "file",
+    "label": "Upload Compound Files",
+    "multiple": true
+  },
+  {
+      "key": "manualFreetext",
+      "type": "textarea",
+      "label": "Target Input",
+      "placeholder": "Enter target name or biological effect (e.g., GSK3B, hair growth trigger...)",
+      "description": "Use this field to manually type the target if not provided via the input port."
+    },
     {
       "key": "developmentStage",
       "type": "select",

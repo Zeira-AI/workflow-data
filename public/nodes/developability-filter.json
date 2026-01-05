@@ -38,7 +38,7 @@
     {
       "key": "smilesColumn",
       "type": "text",
-      "label": "SMILES Column Name",
+      "label": "SMILES Name",
       "placeholder": "SMILES",
       "defaultValue": "SMILES"
     },
