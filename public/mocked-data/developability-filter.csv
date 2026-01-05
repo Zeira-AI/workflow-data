@@ -1,0 +1,6 @@
+SMILES,MW,cLogD_pH7_4,Solubility_uM,pIC50,LipE,Microsomal_Stability_min,PAINS_Alert
+COc1ccc(CCNC(=O)N2CCOCC2)cc1,380,1.9,140,6.5,4.6,95,No
+CCOc1ccc(C(=O)N2CCN(CC2)C)cc1,420,2.8,85,7.2,4.4,65,No
+CN(C)CCOc1nc2ccccc2n1C,455,3.2,22,6.8,3.6,42,No
+COc1cc(CN2CCN(CC2)C)ccc1Cl,395,2.4,60,6.2,3.8,80,No
+COc1ccc(NC(=O)CCN2CCOCC2)cc1,390,2.1,95,6.7,4.2,55,No

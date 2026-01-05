@@ -1,0 +1,221 @@
+{
+  "type": "developability-filter",
+  "label": "Developability Filter",
+  "category": "analysis",
+  "icon": "filter",
+  "color": "purple",
+  "description": "Filter and rank small molecules based on developability-related physicochemical, potency, and ADMET criteria.",
+  "defaultInputs": [
+    {
+      "id": "moleculeTable",
+      "name": "Molecule Table (CSV)",
+      "type": "object",
+      "required": true,
+      "description": "Input molecule table with SMILES and predicted properties"
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "filteredTable",
+      "name": "Filtered Molecule Table",
+      "type": "object",
+      "description": "Filtered and sorted molecule table"
+    },
+    {
+      "id": "summary",
+      "name": "Filter Summary",
+      "type": "object",
+      "description": "Summary statistics of filtering results (counts, reasons for exclusion)"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "inputFile",
+      "type": "file",
+      "label": "Upload Molecule Table (CSV)",
+      "accept": ".csv"
+    },
+    {
+      "key": "smilesColumn",
+      "type": "text",
+      "label": "SMILES Column Name",
+      "placeholder": "SMILES",
+      "defaultValue": "SMILES"
+    },
+
+    {
+      "key": "mwMin",
+      "type": "number",
+      "label": "MW Min (Da)",
+      "defaultValue": 0
+    },
+    {
+      "key": "mwMax",
+      "type": "number",
+      "label": "MW Max (Da)",
+      "defaultValue": 500
+    },
+
+    {
+      "key": "clogdMin",
+      "type": "number",
+      "label": "cLogD (pH 7.4) Min",
+      "defaultValue": 0
+    },
+    {
+      "key": "clogdMax",
+      "type": "number",
+      "label": "cLogD (pH 7.4) Max",
+      "defaultValue": 4
+    },
+
+    {
+      "key": "solubilityMin",
+      "type": "number",
+      "label": "Solubility Min (µM)",
+      "defaultValue": 10
+    },
+    {
+      "key": "solubilityMax",
+      "type": "number",
+      "label": "Solubility Max (µM)",
+      "defaultValue": 100000
+    },
+
+    {
+      "key": "pic50Min",
+      "type": "number",
+      "label": "pIC50 Min",
+      "defaultValue": 0
+    },
+    {
+      "key": "pic50Max",
+      "type": "number",
+      "label": "pIC50 Max",
+      "defaultValue": 12
+    },
+
+    {
+      "key": "lipeMin",
+      "type": "number",
+      "label": "LipE Min",
+      "defaultValue": 5
+    },
+    {
+      "key": "lipeMax",
+      "type": "number",
+      "label": "LipE Max",
+      "defaultValue": 20
+    },
+
+    {
+      "key": "microsomalStabilityMin",
+      "type": "number",
+      "label": "Microsomal Stability Min (min)",
+      "defaultValue": 30
+    },
+    {
+      "key": "microsomalStabilityMax",
+      "type": "number",
+      "label": "Microsomal Stability Max (min)",
+      "defaultValue": 10000
+    },
+
+    {
+      "key": "painsPolicy",
+      "type": "select",
+      "label": "PAINS Filter Policy",
+      "options": [
+        { "value": "exclude_yes", "label": "Exclude PAINS = Yes" },
+        { "value": "include_all", "label": "Include All (ignore PAINS)" },
+        { "value": "only_yes", "label": "Only PAINS = Yes" }
+      ],
+      "defaultValue": "exclude_yes"
+    },
+
+    {
+      "key": "requireNonMissing",
+      "type": "select",
+      "label": "Require Non-missing Fields",
+      "options": [
+        { "value": "MW", "label": "MW" },
+        { "value": "cLogD_pH7_4", "label": "cLogD_pH7_4" },
+        { "value": "Solubility_uM", "label": "Solubility_uM" },
+        { "value": "pIC50", "label": "pIC50" },
+        { "value": "LipE", "label": "LipE" },
+        { "value": "Microsomal_Stability_min", "label": "Microsomal_Stability_min" },
+        { "value": "PAINS_Alert", "label": "PAINS_Alert" }
+      ],
+      "defaultValue": ["MW", "cLogD_pH7_4", "Solubility_uM"]
+    },
+
+    {
+      "key": "combineMode",
+      "type": "select",
+      "label": "How to Combine Filters",
+      "options": [
+        { "value": "AND", "label": "Match ALL criteria (AND)" },
+        { "value": "OR", "label": "Match ANY criteria (OR)" }
+      ],
+      "defaultValue": "AND"
+    },
+
+    {
+      "key": "outputFormat",
+      "type": "select",
+      "label": "Output Format",
+      "options": [
+        { "value": "csv", "label": "CSV" },
+        { "value": "xlsx", "label": "Excel (.xlsx)" }
+      ],
+      "defaultValue": "csv"
+    },
+
+    {
+      "key": "outputColumns",
+      "type": "select",
+      "label": "Columns to Include in Output",
+      "options": [
+        { "value": "SMILES", "label": "SMILES" },
+        { "value": "MW", "label": "MW" },
+        { "value": "cLogD_pH7_4", "label": "cLogD_pH7_4" },
+        { "value": "Solubility_uM", "label": "Solubility_uM" },
+        { "value": "pIC50", "label": "pIC50" },
+        { "value": "LipE", "label": "LipE" },
+        { "value": "Microsomal_Stability_min", "label": "Microsomal_Stability_min" },
+        { "value": "PAINS_Alert", "label": "PAINS_Alert" }
+      ],
+      "defaultValue": []
+    },
+
+    {
+      "key": "maxResults",
+      "type": "number",
+      "label": "Max Results",
+      "defaultValue": 5000
+    },
+
+    {
+      "key": "sortBy",
+      "type": "select",
+      "label": "Sort Results By",
+      "options": [
+        { "value": "none", "label": "No sorting" },
+        { "value": "pIC50", "label": "pIC50 (desc)" },
+        { "value": "LipE", "label": "LipE (desc)" },
+        { "value": "Solubility_uM", "label": "Solubility (desc)" },
+        { "value": "Microsomal_Stability_min", "label": "Microsomal Stability (desc)" },
+        { "value": "MW", "label": "MW (asc)" },
+        { "value": "cLogD_pH7_4", "label": "cLogD (asc)" }
+      ],
+      "defaultValue": "none"
+    },
+
+    {
+      "key": "advancedExpression",
+      "type": "text",
+      "label": "Advanced Filter Expression (optional)",
+      "placeholder": "(MW <= 450) AND (LipE >= 5) AND (PAINS_Alert == 'No')"
+    }
+  ]
+}
