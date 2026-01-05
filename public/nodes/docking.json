@@ -65,7 +65,7 @@
     {
       "key": "receptorFiles",
       "type": "file",
-      "label": "Receptor Files (PDBQT)",
+      "label": "Protein Files (PDBQT)",
       "multiple": true,
       "accept": ".pdbqt"
     }
