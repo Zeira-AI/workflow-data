@@ -1,4 +1,4 @@
-Target,Assay,Compound,pValue
+TargetProtein,AssayType,Compound,pValue
 Kir6.2,EC50,Minoxidil,5.77
 Kir6.2,EC50,Adenosine,5.19
 Kir6.2,EC50,Piroctone Olamine,5.04
