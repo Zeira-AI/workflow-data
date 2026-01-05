@@ -39,13 +39,6 @@
         { "value": "functional_food_beverage", "label": "Functional Food/Beverage" }
       ]
     },
-     {
-      "key": "smilesColumn",
-      "type": "text",
-      "label": "SMILES Name",
-      "placeholder": "SMILES",
-      "defaultValue": "SMILES"
-    },
     {
     "key": "compoundFiles",
     "type": "file",
