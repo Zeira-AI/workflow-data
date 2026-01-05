@@ -29,12 +29,6 @@
       "label": "Target Input",
       "placeholder": "Enter target name or biological effect (e.g., GSK3B, hair growth trigger...)",
       "description": "Use this field to manually type the target if not provided via the input port."
-    },
-    {
-      "key": "mappingTable",
-      "type": "json",
-      "label": "Biological Effects Reference",
-      "description": "The master table used for matching input text to specific biological metrics."
     }
   ],
   "defaultConfig": {
