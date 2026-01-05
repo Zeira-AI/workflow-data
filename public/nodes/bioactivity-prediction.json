@@ -33,7 +33,7 @@
     {
       "key": "modelType",
       "type": "select",
-      "label": "Prediction Model",
+      "label": "Available Tools",
       "options": [
         {
           "value": "dtign",
@@ -43,31 +43,10 @@
       "defaultValue": "dtign"
     },
     {
-      "key": "activityScale",
-      "type": "select",
-      "label": "Activity Scale",
-      "options": [
-        {
-          "value": "pEC50",
-          "label": "pEC50"
-        },
-        {
-          "value": "pIC50",
-          "label": "pIC50"
-        }
-      ]
-    },
-    {
-      "key": "confidenceThreshold",
-      "type": "number",
-      "label": "Confidence Threshold",
-      "placeholder": "Optional confidence cutoff (e.g. 0.7)"
-    },
-    {
-      "key": "includeCensoredValues",
-      "type": "boolean",
-      "label": "Include Censored Values",
-      "defaultValue": true
+      "key": "compoundfiles",
+      "type": "file",
+      "label": "Compound Files",
+      "multiple": true
     }
   ]
 }
