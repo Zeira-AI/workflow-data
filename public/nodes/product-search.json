@@ -38,6 +38,12 @@
       "description": "Number of reviews"
     },
     {
+      "id": "ingredients",
+      "name": "ingredients",
+      "type": "string",
+      "description": "Product ingredients"
+    },
+    {
       "id": "url",
       "name": "url",
       "type": "string",
@@ -56,22 +62,10 @@
       "description": "Relevance, coverage, novelty scores"
     },
     {
-      "id": "reasoning",
-      "name": "reasoning",
-      "type": "array",
-      "description": "Reasoning for product selection"
-    },
-    {
       "id": "description",
       "name": "description",
       "type": "string",
       "description": "Product description"
-    },
-    {
-      "id": "ingredients",
-      "name": "ingredients",
-      "type": "string",
-      "description": "Product ingredients"
     },
     {
       "id": "highlights",
