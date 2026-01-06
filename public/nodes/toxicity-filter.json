@@ -24,17 +24,14 @@
   ],
   "configSchema": [
     {
-      "key": "smiles_column",
-      "type": "text",
-      "label": "SMILES",
-      "placeholder": "Enter SMILES.",
-      "description": "Select the column containing the SMILES strings"
-    },
-    {
-      "key": "ingredientListFile",
-      "type": "file",
-      "label": "Upload Ingredient List Document",
-      "accept": ".pdf,.doc,.docx,.txt,.csv"
+      "key": "admet_models",
+      "type": "select",
+      "label": "Admet Prediction Models",
+      "options": [
+        { "value": "admet_ai", "label": "Admet AI - best for fast predictions" },
+        { "value": "swiss_adme", "label": "SwissADME - best for accurate predictions" },
+        { "value": "toxtree", "label": "ToxTree - best for comprehensive predictions" }
+      ]
     },
     {
       "key": "mw_threshold",

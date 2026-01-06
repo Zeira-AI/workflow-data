@@ -1,0 +1,37 @@
+{
+    "type": "qsar-filter",
+    "label": "QSAR Filter",
+    "category": "analysis",
+    "icon": "filtericon",
+    "color": "red",
+    "description": "Filter compounds based on QSAR data and physicochemical thresholds.",
+    "defaultInputs": [
+        {
+            "id": "input-mol-data",
+            "name": "Input Compounds",
+            "type": "array",
+            "required": true,
+            "description": "Array containing compound data and SMILES strings from CSV"
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "output-filtered",
+            "name": "Filtered Results",
+            "type": "array",
+            "description": "Output data containing filtered compound results"
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "qsar_models",
+            "type": "select",
+            "label": "QSAR Models",
+            "options": [
+                { "value": "chem_prop", "label": "ChemProp - best for fast predictions" },
+                { "value": "opera", "label": "OPERA - Regulatory-grade QSAR predictions" },
+                { "value": "qsprpred", "label": "QSPRpred - Flexible model building & benchmarking tasks" }
+            ]
+        }
+    ]
+}

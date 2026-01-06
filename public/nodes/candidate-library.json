@@ -49,8 +49,17 @@
       "type": "select",
       "label": "Primary Source",
       "options": [
-        { "value": "nyb", "label": "NYB Database" },
-        { "value": "eu_cosing", "label": "EU CoSing" }
+        { "value": "vecurate", "label": "Vecurate" },
+        { "value": "eu_cosing", "label": "EU CoSing" },
+        { "value": "pubchem", "label": "PubChem" },
+        { "value": "chembl", "label": "ChEMBL" },
+        { "value": "drugbank", "label": "DrugBank" },
+        { "value": "drugs_com", "label": "Drugs.com" },
+        { "value": "fda", "label": "FDA" },
+        { "value": "nih", "label": "NIH" },
+        { "value": "unii", "label": "UNII" },
+        { "value": "chemspider", "label": "ChemSpider" },
+        { "value": "cas", "label": "CAS" }
       ]
     },
     {
@@ -61,7 +70,7 @@
     }
   ],
   "defaultConfig": {
-    "library_sources": "nyb",
+    "library_sources": "vecurate",
     "export_config": { "format": "csv" },
     "mock_results": [
       {
