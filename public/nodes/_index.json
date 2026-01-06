@@ -21,6 +21,7 @@
     "bioactivity-prediction",
     "bioactivity-filter",
     "developability-prediction",
-    "developability-filter"
+    "developability-filter",
+    "qsar-filter"
   ]
 }
