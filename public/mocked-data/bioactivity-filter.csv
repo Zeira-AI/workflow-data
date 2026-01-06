@@ -1,17 +1,6 @@
-TargetProtein,AssayType,Compound,pValue
-Kir6.2,EC50,Minoxidil,5.77
-Kir6.2,EC50,Piroctone Olamine,5.04
-Kir6.2,EC50,Baicalin,4.84
-Kir6.2,EC50,Caffeine,<4.0
-GSK3β,IC50,Baicalin,7.05
-GSK3β,IC50,Piroctone Olamine,6.42
-GSK3β,IC50,Minoxidil,4.83
-GSK3β,IC50,Caffeine,4.33
-PDE1A,IC50,Baicalin,6.27
-PDE1A,IC50,Caffeine,6.10
-PDE1A,IC50,Piroctone Olamine,6.21
-PDE1A,IC50,Minoxidil,4.64
-TGFBR1,IC50,Baicalin,5.77
-TGFBR1,IC50,Piroctone Olamine,5.46
-TGFBR1,IC50,Minoxidil,4.56
-TGFBR1,IC50,Caffeine,<4.0
+Compound,Kir6.2 – EC50,GSK3β – IC50,PDE1A – IC50,TGFBR1 – IC50
+Minoxidil,5.77,07.05,6.27,5.77
+Adenosine,5.19,6.42,6.1,5.46
+Piroctone Olamine,05.04,4.92,6.21,4.92
+Baicalin,4.84,4.83,4.69,4.56
+Caffeine,<4.0,4.33,4.64,<4.0

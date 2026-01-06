@@ -37,7 +37,11 @@
       "options": [
         {
           "value": "dtign",
-          "label": "DTIGN"
+          "label": "DTIGN - Best for fast predictions"
+        },
+        {
+          "value": "ligospace",
+          "label": "Ligospace - Best for accurate predictions"
         }
       ],
       "defaultValue": "dtign"

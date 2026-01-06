@@ -13,14 +13,11 @@
     "candidate-library",
     "singular-compound",
     "document-processor",
-    "toxicity-prediction",
     "toxicity-filter",
     "report-generator",
     "target-mapping",
     "docking",
-    "bioactivity-prediction",
     "bioactivity-filter",
-    "developability-prediction",
     "developability-filter",
     "qsar-filter"
   ]
