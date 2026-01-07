@@ -19,6 +19,7 @@
     "docking",
     "bioactivity-filter",
     "developability-filter",
-    "qsar-filter"
+    "qsar-filter",
+    "qsar-filter-2"
   ]
 }
