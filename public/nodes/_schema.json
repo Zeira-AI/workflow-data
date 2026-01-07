@@ -83,6 +83,10 @@
           "type": "string",
           "description": "Description of the I/O port"
         },
+        "tooltip": {
+          "type": "string",
+          "description": "Tooltip text to display on hover (supports markdown)"
+        },
         "mappedFrom": {
           "type": "string",
           "description": "Reference to source node output (e.g., 'node1.output.data')"
@@ -139,7 +143,11 @@
         },
         "description": {
           "type": "string",
-          "description": "Tooltip description for the field (supports markdown)"
+          "description": "Description of the field."
+        },
+        "tooltip": {
+          "type": "string",
+          "description": "Tooltip text to display on hover (supports markdown)"
         },
         "showWhen": {
           "type": "array",
