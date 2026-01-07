@@ -10,68 +10,65 @@
     {
       "id": "id",
       "name": "id",
-      "type": "string",
-      "description": "Ingredient ID"
+      "type": "string"
     },
     {
       "id": "ingredient_name",
-      "name": "ingredient_name",
+      "name": "Ingredient Name",
       "type": "string",
       "description": "Ingredient common name"
     },
     {
       "id": "trade_name",
-      "name": "trade_name",
+      "name": "Trade Name",
       "type": "string",
       "description": "Trade or commercial name"
     },
     {
       "id": "supplier",
-      "name": "supplier",
+      "name": "Supplier",
       "type": "string",
       "description": "Ingredient supplier"
     },
     {
       "id": "supplier_url",
-      "name": "supplier_url",
+      "name": "Supplier URL",
       "type": "string",
       "description": "Supplier ingredient page URL"
     },
     {
       "id": "inci_name",
-      "name": "inci_name",
-      "type": "string",
-      "description": "INCI name"
+      "name": "INCI Name",
+      "type": "string"
     },
     {
       "id": "primary_functions",
-      "name": "primary_functions",
+      "name": "Primary Functions",
       "type": "string",
       "description": "Primary functional roles of the ingredient"
     },
     {
       "id": "application",
-      "name": "application",
+      "name": "Application",
       "type": "string",
       "description": "Typical application areas (e.g. Hair care, Scalp care)"
     },
     {
       "id": "scores",
-      "name": "scores",
-      "type": "object",
+      "name": "Scores",
+      "type": "string",
       "description": "Relevance, functional fit, novelty scores"
     },
     {
       "id": "reasoning",
-      "name": "reasoning",
-      "type": "array",
+      "name": "Reasoning",
+      "type": "string",
       "description": "Reasoning for ingredient selection"
     },
     {
       "id": "description",
-      "name": "description",
-      "type": "string",
-      "description": "Short ingredient description"
+      "name": "Description",
+      "type": "string"
     }
   ],
   "configSchema": [
@@ -80,17 +77,18 @@
       "type": "textarea",
       "label": "Search Ingredient",
       "placeholder": "Search by ingredient function, application, or INCI name",
-      "defaultValue": ""
+      "defaultValue": "",
+      "description": "Enter search terms to find ingredients. You can search by:\n- **Function**: e.g., \"moisturizing\", \"anti-aging\"\n- **Application**: e.g., \"hair care\", \"scalp care\"\n- **INCI name**: e.g., \"Niacinamide\", \"Biotin\""
     },
     {
       "key": "ingredientFile",
       "type": "file",
       "label": "Upload Ingredient List",
-      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
+      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg",
+      "description": "Upload a document or image containing ingredient information. Supports multiple formats including **PDF**, **Word**, **CSV**, and **images** (OCR will be applied)."
     }
   ],
   "defaultConfig": {
     "query": ""
   }
 }
-

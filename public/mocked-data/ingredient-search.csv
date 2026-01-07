@@ -1,4 +1,4 @@
-ingredient_id,ingredient_name,trade_name,supplier,supplier_url,inci_name,primary_functions,application
+id,ingredient_name,trade_name,supplier,supplier_url,inci_name,primary_functions,application
 1,Niacinamide,Vitamin B3,BASF,https://carecreations.basf.com,Niacinamide,"Scalp conditioning; Barrier support","Hair care"
 2,Panthenol,D-Panthenol,DSM,https://www.dsm-firmenich.com,Panthenol,"Hair strengthening; Moisturizing","Hair care"
 3,Biotin,Biotin,Prinova,https://www.prinovaglobal.com,Biotin,"Hair strength support","Hair care"

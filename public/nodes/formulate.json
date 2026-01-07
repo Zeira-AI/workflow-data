@@ -8,16 +8,28 @@
   "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "ingredients",
-      "name": "ingredients",
-      "type": "array",
-      "description": "List of formulated ingredients"
+      "id": "id",
+      "name": "id",
+      "type": "string",
+      "description": "Formulation ID"
     },
     {
-      "id": "analysis",
-      "name": "analysis",
-      "type": "object",
-      "description": "Formula analysis and safety report"
+      "id": "inci",
+      "name": "INCI",
+      "type": "string",
+      "description": "INCI name"
+    },
+    {
+      "id": "functions",
+      "name": "Functions",
+      "type": "string",
+      "description": "Functions of the ingredient in the formulation"
+    },
+    {
+      "id": "estimatedPercent",
+      "name": "Estimated Percent",
+      "type": "string",
+      "description": "Estimated percentage of the ingredient in the formulation"
     }
   ],
   "configSchema": [
