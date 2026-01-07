@@ -46,7 +46,7 @@
     },
     {
       "key": "category",
-      "type": "multiselect",
+      "type": "select",
       "label": "Category",
       "options": [
         { "value": "hair_scalp_health", "label": "Hair & Scalp Health" },
