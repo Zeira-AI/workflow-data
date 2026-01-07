@@ -45,6 +45,7 @@
             "key": "instructions_opera",
             "type": "markdown",
             "label": "OPERA is regulatory-grade QSAR predictions. Select the descriptor set to use for the prediction.",
+            "color": "none",
             "showWhen": [
                 { "field": "qsar_models", "in": ["opera"] }
             ]

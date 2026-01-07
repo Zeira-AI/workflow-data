@@ -36,18 +36,26 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
   "defaultOutputs": [                   // Output ports
     {
       "id": "result",                   // Unique port identifier
-      "name": "result",                 // Display name
+      "name": "Result",                 // Display name
       "type": "array",                  // Data type: string | number | boolean | object | array
-      "description": "Output description"
+      "description": "Output description",
+      "tooltip": "Tooltip text (supports **markdown**)"  // Optional: hover tooltip
     }
   ],
   "configSchema": [                     // Configuration fields for the tool
     {
+      "key": "instructions",            // Markdown for inline help/instructions
+      "type": "markdown",
+      "label": "This tool processes data based on:\n\n- **Speed**: Fast or accurate mode\n- **Input**: File or manual entry",
+      "color": "info"                   // Optional: info | success | warning | error | default | none
+    },
+    {
       "key": "myParameter",             // Field key (used in config object)
-      "type": "text",                   // Field type: text | number | select | boolean | json | textarea | file
+      "type": "text",                   // Field type: text | number | select | boolean | json | textarea | file | markdown
       "label": "My Parameter",          // Display label
       "placeholder": "Enter value...",  // Optional: placeholder text
-      "defaultValue": ""                // Optional: default value
+      "defaultValue": "",               // Optional: default value
+      "tooltip": "Help text shown on hover (supports **markdown**)"  // Optional
     },
     {
       "key": "mode",
@@ -57,14 +65,33 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
         { "value": "fast", "label": "Fast" },
         { "value": "accurate", "label": "Accurate" }
       ],
-      "defaultValue": "fast"
+      "defaultValue": "fast",
+      "tooltip": "Select processing mode:\n- **Fast**: Quick results\n- **Accurate**: Higher precision"
+    },
+    {
+      "key": "threshold",
+      "type": "number",
+      "label": "Threshold",
+      "placeholder": "Enter value (0-100)",
+      "defaultValue": 70,
+      "showWhen": [                     // Conditional visibility (AND logic between conditions)
+        { "field": "mode", "in": ["accurate"] }  // Show only when mode is "accurate"
+      ]
     },
     {
       "key": "uploadFile",
       "type": "file",                   // File upload input
       "label": "Upload File",
       "accept": ".csv,.json",           // Optional: accepted file types
-      "multiple": false                 // Optional: allow multiple files
+      "multiple": false,                // Optional: allow multiple files
+      "tooltip": "Upload a **CSV** or **JSON** file for processing"
+    },
+    {
+      "key": "advancedOption",
+      "type": "boolean",
+      "label": "Enable Advanced Processing",
+      "defaultValue": false,
+      "advanced": true                  // Groups field in collapsible "Advanced Settings" section
     }
   ]
 }
@@ -174,7 +201,7 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 
 - **Missing required fields**: `type`, `label`, `category`, `icon`, `color`, `defaultInputs`, `defaultOutputs`, `configSchema`
 - **Invalid I/O types**: Must be one of: `string`, `number`, `boolean`, `object`, `array`
-- **Invalid config types**: Must be one of: `text`, `number`, `select`, `boolean`, `json`, `textarea`, `file`
+- **Invalid config types**: Must be one of: `text`, `number`, `select`, `boolean`, `json`, `textarea`, `file`, `markdown`
 - **Type mismatch**: The `type` field must match the filename (e.g., `my-tool.json` should have `"type": "my-tool"`)
 - **Missing I/O fields**: Each input/output must have `id`, `name`, and `type`
 - **Missing config fields**: Each config field must have `key`, `type`, and `label`
@@ -195,7 +222,9 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 | `number` | Numeric input | Count, limit, threshold |
 | `select` | Dropdown selection | Requires `options` array |
 | `boolean` | Checkbox | Enable/disable flags |
-| `json` | JSON editor | Complex structured data || `file` | File upload input | Documents, images, data files |
+| `json` | JSON editor | Complex structured data |
+| `file` | File upload input | Documents, images, data files |
+| `markdown` | Inline help/instructions | Info cards, usage hints |
 
 ## File Field Example
 
@@ -212,6 +241,97 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 **File field properties:**
 - **accept**: Accepted file types (e.g., `image/*`, `.pdf,.doc`, `application/json`)
 - **multiple**: Allow multiple file selection (`true` or `false`)
+
+## Markdown Field Example
+
+Use markdown fields to display inline help, instructions, or information cards:
+
+```json
+{
+  "key": "instructions",
+  "type": "markdown",
+  "label": "This tool filters compounds based on:\n\n- **Relevance**: Match to target criteria\n- **Novelty**: Uniqueness score\n- **Safety**: Toxicity predictions",
+  "color": "info"
+}
+```
+
+**Markdown field properties:**
+- **label**: The markdown content to display (supports standard markdown syntax)
+- **color**: Card theme color (`info`, `success`, `warning`, `error`, `default`, `none`)
+
+## Conditional Visibility (showWhen)
+
+Use `showWhen` to show/hide fields based on other field values:
+
+```json
+{
+  "key": "threshold",
+  "type": "number",
+  "label": "Confidence Threshold",
+  "showWhen": [
+    { "field": "mode", "in": ["accurate", "custom"] }
+  ]
+}
+```
+
+**showWhen rules:**
+- Array of conditions with AND logic between conditions
+- Each condition's `in` array uses OR logic
+- `field`: The key of the field to check
+- `in`: Array of values - field value must match one of these
+
+**Multi-condition example (AND logic):**
+```json
+{
+  "key": "toxicity_detail",
+  "type": "textarea",
+  "label": "Toxicity Notes",
+  "showWhen": [
+    { "field": "model", "in": ["chem_prop"] },
+    { "field": "endpoint", "in": ["toxicity"] }
+  ]
+}
+```
+This field shows only when `model` is "chem_prop" AND `endpoint` is "toxicity".
+
+## Advanced Settings
+
+Use `advanced: true` to group fields in a collapsible "Advanced Settings" section:
+
+```json
+{
+  "key": "batchSize",
+  "type": "number",
+  "label": "Batch Size",
+  "defaultValue": 32,
+  "advanced": true
+}
+```
+
+## Tooltips
+
+Add hover tooltips to any field (supports markdown):
+
+```json
+{
+  "key": "query",
+  "type": "textarea",
+  "label": "Search Query",
+  "tooltip": "Enter search terms. You can search by:\n- **Function**: e.g., \"moisturizing\"\n- **Application**: e.g., \"hair care\"\n- **INCI name**: e.g., \"Niacinamide\""
+}
+```
+
+Tooltips can also be added to output ports:
+
+```json
+{
+  "id": "supplier_url",
+  "name": "Supplier URL",
+  "type": "string",
+  "tooltip": "Supplier ingredient page URL"
+}
+```
+
 ## Select Field Example
 
 ```json
