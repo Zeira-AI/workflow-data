@@ -5,22 +5,24 @@
     "icon": "filtericon",
     "color": "red",
     "description": "Filter compounds based on QSAR data and physicochemical thresholds.",
-    "defaultInputs": [],
+    "defaultInputs": [
+        {
+            "id": "input-mol-data",
+            "name": "Input Compounds",
+            "type": "array",
+            "required": true,
+            "description": "Array containing compound data and SMILES strings from CSV"
+        }
+    ],
     "defaultOutputs": [
         {
-            "id": "compound",
-            "name": "Compound",
-            "type": "string",
-            "tooltip": "Compound name"
+            "id": "output-filtered",
+            "name": "Filtered Results",
+            "type": "array",
+            "description": "Output data containing filtered compound results"
         }
     ],
     "configSchema": [
-        {
-            "key": "instructions",
-            "type": "markdown",
-            "label": "This node filters compounds based on:\n\n- **Relevance**: Match to target criteria\n- **Novelty**: Uniqueness score\n- **Safety**: Toxicity predictions\n\nSelect thresholds below to customize filtering.",
-            "color": "info"
-        },
         {
             "key": "qsar_models",
             "type": "select",
@@ -30,25 +32,7 @@
                 { "value": "opera", "label": "OPERA - Regulatory-grade QSAR predictions" },
                 { "value": "qsprpred", "label": "QSPRpred - Flexible model building & benchmarking tasks" }
             ],
-            "tooltip": "Select the QSAR model to use for the prediction. \n- **ChemProp** is best for fast predictions \n- **OPERA** is regulatory-grade QSAR predictions \n- **QSPRpred** is flexible model building & benchmarking tasks"
-        },
-        {
-            "key": "instructions_chem_prop",
-            "type": "markdown",
-            "label": "ChemProp is best for fast predictions. Select the prediction endpoint to use for the prediction.",
-            "color": "default",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["chem_prop"] }
-            ]
-        },
-        {
-            "key": "instructions_opera",
-            "type": "markdown",
-            "label": "OPERA is regulatory-grade QSAR predictions. Select the descriptor set to use for the prediction.",
-            "color": "none",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["opera"] }
-            ]
+            "description": "Select the QSAR model to use for the prediction."
         },
         {
             "key": "prediction_endpoint",

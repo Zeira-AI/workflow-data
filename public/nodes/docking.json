@@ -1,10 +1,10 @@
 {
   "type": "docking",
-  "label": "Molecular Docking (AutoDock Vina)",
+  "label": "Molecular Docking",
   "category": "analysis",
   "icon": "dna",
   "color": "purple",
-  "description": "Perform molecular docking using AutoDock Vina and output binding affinity (ΔG) values for multiple protein targets.",
+  "description": "Perform molecular docking for ligands and proteins.",
   "defaultInputs": [
     {
       "id": "compoundList",
@@ -35,39 +35,99 @@
       "type": "select",
       "label": "Docking Engine",
       "options": [
-        {
-          "value": "vina",
-          "label": "AutoDock Vina"
-        }
+        { "value": "vina", "label": "AutoDock Vina" },
+        { "value": "diffdock", "label": "DiffDock" },
+        { "value": "swissdock", "label": "SwissDock" }
       ],
-      "defaultValue": "vina"
+      "defaultValue": "vina",
+      "description": "Choose a docking engine. Each engine is optimised for a different use-case:\n- **AutoDock Vina** – best for **most accurate classical docking** on CPU.\n- **DiffDock** – best for **fast, ML-based predictions** when speed matters.\n- **SwissDock** – best for **quick exploratory runs** with convenient presets."
     },
     {
-      "key": "exhaustiveness",
+      "key": "vina_exhaustiveness",
       "type": "number",
-      "label": "Exhaustiveness",
+      "label": "Vina Exhaustiveness (Simple)",
       "placeholder": "Docking exhaustiveness (e.g. 8–20)",
-      "defaultValue": 8
+      "defaultValue": 8,
+      "showWhen": [
+        { "field": "engine", "in": ["vina"] }
+      ],
+      "description": "Simple setting for **AutoDock Vina** controlling search thoroughness. Higher values increase accuracy but take longer."
     },
     {
-      "key": "numModes",
+      "key": "vina_numModes",
       "type": "number",
-      "label": "Number of Binding Modes",
+      "label": "Vina Number of Binding Modes (Advanced)",
       "placeholder": "Number of binding poses to generate",
-      "defaultValue": 9
+      "defaultValue": 9,
+      "showWhen": [
+        { "field": "engine", "in": ["vina"] }
+      ],
+      "advanced": true,
+      "description": "Advanced setting for **AutoDock Vina** specifying how many poses to return per ligand."
     },
     {
       "key": "gridBox",
       "type": "json",
-      "label": "Grid Box Definition",
-      "placeholder": "{ \"center_x\":0, \"center_y\":0, \"center_z\":0, \"size_x\":20, \"size_y\":20, \"size_z\":20 }"
+      "label": "Grid Box Definition (Advanced)",
+      "placeholder": "{ \"center_x\":0, \"center_y\":0, \"center_z\":0, \"size_x\":20, \"size_y\":20, \"size_z\":20 }",
+      "showWhen": [
+        { "field": "engine", "in": ["vina", "swissdock"] }
+      ],
+      "advanced": true,
+      "description": "Advanced spatial definition for **Vina** and **SwissDock** runs. Define box centre and size in Å for the binding site."
     },
     {
-      "key": "receptorFiles",
-      "type": "file",
-      "label": "Protein Files (PDBQT)",
-      "multiple": true,
-      "accept": ".pdbqt"
+      "key": "diffdock_samples",
+      "type": "number",
+      "label": "DiffDock Samples (Simple)",
+      "placeholder": "e.g. 32",
+      "defaultValue": 32,
+      "showWhen": [
+        { "field": "engine", "in": ["diffdock"] }
+      ],
+      "description": "Simple setting for **DiffDock** controlling how many poses are sampled per complex. More samples = better coverage but slower."
+    },
+    {
+      "key": "diffdock_confidence_threshold",
+      "type": "number",
+      "label": "DiffDock Confidence Threshold (Advanced)",
+      "placeholder": "0.0 – 1.0",
+      "defaultValue": 0.5,
+      "showWhen": [
+        { "field": "engine", "in": ["diffdock"] }
+      ],
+      "advanced": true,
+      "description": "Advanced cutoff for **DiffDock**. Only poses with confidence above this threshold are retained."
+    },
+    {
+      "key": "swissdock_run_type",
+      "type": "select",
+      "label": "SwissDock Run Type (Simple)",
+      "options": [
+        { "value": "quick", "label": "Quick – fastest, coarse search" },
+        { "value": "balanced", "label": "Balanced – default preset" },
+        { "value": "precise", "label": "Precise – slower, higher accuracy" }
+      ],
+      "defaultValue": "balanced",
+      "showWhen": [
+        { "field": "engine", "in": ["swissdock"] }
+      ],
+      "description": "Simple preset selector for **SwissDock** controlling the trade-off between speed and accuracy."
+    },
+    {
+      "key": "swissdock_precision",
+      "type": "select",
+      "label": "SwissDock Advanced Precision",
+      "options": [
+        { "value": "standard", "label": "Standard grid" },
+        { "value": "fine", "label": "Fine grid (more detailed scoring)" }
+      ],
+      "defaultValue": "standard",
+      "showWhen": [
+        { "field": "engine", "in": ["swissdock"] }
+      ],
+      "advanced": true,
+      "description": "Advanced **SwissDock** control over scoring grid precision."
     }
   ]
 }
