@@ -79,7 +79,8 @@
                 { "value": "extended", "label": "Extended Descriptors" },
                 { "value": "minimal", "label": "Minimal Descriptors" }
             ],
-            "defaultValue": "standard"
+            "defaultValue": "standard",
+            "advanced": true
         },
         {
             "key": "qsprpred_training_mode",
@@ -112,7 +113,8 @@
             "showWhen": [
                 { "field": "qsar_models", "in": ["chem_prop", "opera"] }
             ],
-            "defaultValue": false
+            "defaultValue": false,
+            "advanced": true
         },
         {
             "key": "batch_size",
@@ -123,7 +125,8 @@
                 { "field": "qsar_models", "in": ["chem_prop", "opera"] },
                 { "field": "enable_batch_processing", "in": ["true"] }
             ],
-            "defaultValue": 32
+            "defaultValue": 32,
+            "advanced": true
         }
     ]
 }
