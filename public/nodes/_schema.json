@@ -136,6 +136,35 @@
         "accept": {
           "type": "string",
           "description": "For file inputs: accepted file types (e.g., 'image/*', '.pdf,.doc')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Tooltip description for the field (supports markdown)"
+        },
+        "showWhen": {
+          "type": "array",
+          "description": "Conditions for showing this field. All conditions must be satisfied (AND logic). Each condition's 'in' array uses OR logic.",
+          "items": {
+            "type": "object",
+            "required": ["field", "in"],
+            "properties": {
+              "field": {
+                "type": "string",
+                "description": "The key of the field to check"
+              },
+              "in": {
+                "type": "array",
+                "description": "Array of values - field value must match one of these",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "advanced": {
+          "type": "boolean",
+          "description": "If true, field will be grouped in collapsible 'Advanced Settings' section"
         }
       }
     }
