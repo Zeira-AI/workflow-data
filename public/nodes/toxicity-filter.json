@@ -11,7 +11,7 @@
       "name": "Input Compounds",
       "type": "array",
       "required": true,
-      "description": "Array containing compound data and SMILES strings from CSV"
+      "tooltip": "Table of compounds including at least a SMILES column and basic properties."
     }
   ],
   "defaultOutputs": [
@@ -19,7 +19,7 @@
       "id": "output-filtered",
       "name": "Filtered Results",
       "type": "array",
-      "description": "Output data containing filtered compound results"
+      "tooltip": "Subset of compounds that pass the selected ADMET and property thresholds."
     }
   ],
   "configSchema": [
@@ -31,43 +31,50 @@
         { "value": "admet_ai", "label": "Admet AI - best for fast predictions" },
         { "value": "swiss_adme", "label": "SwissADME - best for accurate predictions" },
         { "value": "toxtree", "label": "ToxTree - best for comprehensive predictions" }
-      ]
+      ],
+      "tooltip": "Choose which ADMET engine to use; models trade off speed vs. detail."
     },
     {
       "key": "mw_threshold",
       "type": "number",
       "label": "MW Threshold",
-      "defaultValue": 400
+      "defaultValue": 400,
+      "tooltip": "Maximum molecular weight (Da) allowed for compounds."
     },
     {
       "key": "logp_threshold",
       "type": "number",
       "label": "logP Threshold",
-      "defaultValue": 4.0
+      "defaultValue": 4.0,
+      "tooltip": "Maximum calculated logP (lipophilicity) allowed."
     },
      {
       "key": "TPSA_threshold",
       "type": "number",
       "label": "TPSA Threshold",
-      "defaultValue": 60
+      "defaultValue": 60,
+      "tooltip": "Maximum topological polar surface area (Å²); higher TPSA often reduces permeability."
     },
     {
       "key": "HBD_threshold",
       "type": "number",
       "label": "HBD Threshold",
-      "defaultValue": 4.0
+      "defaultValue": 4.0,
+      "tooltip": "Maximum number of hydrogen bond donors."
     },
     {
       "key": "HBA_threshold",
       "type": "number",
       "label": "HBA Threshold",
-      "defaultValue": 3.0
+      "defaultValue": 3.0,
+      "tooltip": "Maximum number of hydrogen bond acceptors."
     },
     {
       "key": "RotB_threshold",
       "type": "number",
       "label": "RotB Threshold",
-      "defaultValue": 4.0
+      "defaultValue": 4.0,
+      "tooltip": "Maximum number of rotatable bonds (flexibility proxy)."
     }
   ],
   "defaultConfig": {

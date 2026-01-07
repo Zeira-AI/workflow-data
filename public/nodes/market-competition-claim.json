@@ -39,23 +39,48 @@
       "description": "Select the overarching industry context for the claim-level competition assessment."
     },
     {
-      "key": "category",
+      "key": "category_consumer_health",
       "type": "select",
       "label": "Category",
       "options": [
         { "value": "hair_scalp_health", "label": "Hair & Scalp Health" },
         { "value": "skin_health", "label": "Skin Health" },
         { "value": "digestive_health", "label": "Digestive Health" },
-        { "value": "sleep_stress", "label": "Sleep & Stress" },
+        { "value": "sleep_stress", "label": "Sleep & Stress" }
+      ],
+      "showWhen": [
+        { "field": "industry", "in": ["consumer_health"] }
+      ],
+      "description": "When **Consumer Health** is selected, choose one of its categories."
+    },
+    {
+      "key": "category_pharmaceuticals",
+      "type": "select",
+      "label": "Category",
+      "options": [
         { "value": "dermatology", "label": "Dermatology" },
         { "value": "neurology", "label": "Neurology" },
-        { "value": "cardiometabolic", "label": "Cardiometabolic" },
+        { "value": "cardiometabolic", "label": "Cardiometabolic" }
+      ],
+      "showWhen": [
+        { "field": "industry", "in": ["pharmaceuticals"] }
+      ],
+      "description": "When **Pharmaceuticals** is selected, choose one of its categories."
+    },
+    {
+      "key": "category_supplement",
+      "type": "select",
+      "label": "Category",
+      "options": [
         { "value": "metabolic_support", "label": "Metabolic Support" },
         { "value": "cognitive_health", "label": "Cognitive Health" },
         { "value": "joint_mobility", "label": "Joint & Mobility" },
         { "value": "immune_support", "label": "Immune Support" }
       ],
-      "description": "Choose one or more categories from the attached matrix:\n- **Consumer Health** → Hair & Scalp Health, Skin Health, Digestive Health, Sleep & Stress\n- **Pharmaceuticals** → Dermatology, Neurology, Cardiometabolic\n- **Supplement** → Metabolic Support, Cognitive Health, Joint & Mobility, Immune Support"
+      "showWhen": [
+        { "field": "industry", "in": ["supplement"] }
+      ],
+      "description": "When **Supplement** is selected, choose one of its categories."
     },
     {
       "key": "from_year",

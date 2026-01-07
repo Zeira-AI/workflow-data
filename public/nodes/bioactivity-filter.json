@@ -11,14 +11,14 @@
       "name": "Compound List",
       "type": "array",
       "required": true,
-      "description": "List of compounds to be evaluated for bioactivity"
+      "tooltip": "Input table of compounds (IDs and SMILES) to score."
     },
     {
       "id": "targetList",
       "name": "Target List",
       "type": "array",
       "required": true,
-      "description": "List of biological targets and assay types (EC50 / IC50)"
+      "tooltip": "Targets or assays (EC50 / IC50) that bioactivity should be predicted against."
     }
   ],
   "defaultOutputs": [
@@ -26,7 +26,7 @@
       "id": "bioactivityResults",
       "name": "Bioactivity Prediction Results",
       "type": "array",
-      "description": "Filtered bioactivity values (pEC50 / pIC50) per compound per target"
+      "tooltip": "Predicted pEC50 / pIC50 values and filters for each compound–target pair."
     }
   ],
   "configSchema": [
@@ -44,20 +44,23 @@
           "label": "Ligospace - Best for accurate predictions"
         }
       ],
-      "defaultValue": "Ligospace"
+      "defaultValue": "Ligospace",
+      "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
     },
     {
       "key": "compoundfiles",
       "type": "file",
       "label": "Compound Files",
-      "multiple": true
+      "multiple": true,
+      "tooltip": "Optional upload of structure files (e.g. SDF/CSV) to complement the compound input port."
     },
      {
       "key": "pvalue",
       "type": "number",
-      "label": "pValue",
-      "placeholder": "pValue",
-      "defaultValue": 5
+      "label": "pValue cutoff",
+      "placeholder": "e.g. 5",
+      "defaultValue": 5,
+      "tooltip": "Minimum pEC50 / pIC50 value to consider a compound active."
     }
   ]
 }

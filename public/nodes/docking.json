@@ -11,14 +11,14 @@
       "name": "Compound List",
       "type": "array",
       "required": true,
-      "description": "List of compounds with ligand file references (e.g. name, pdbqt)"
+      "tooltip": "Ligand list including identifiers and file paths for each compound."
     },
     {
       "id": "targetList",
       "name": "Protein Target List",
       "type": "array",
       "required": true,
-      "description": "List of protein targets including receptor files and grid box definitions"
+      "tooltip": "Protein targets with prepared structures and optional grid definitions."
     }
   ],
   "defaultOutputs": [
@@ -26,7 +26,7 @@
       "id": "dockingTable",
       "name": "Docking Result Table",
       "type": "array",
-      "description": "Docking results table with ΔG (kcal/mol) per compound per target"
+      "tooltip": "Per‑compound docking metrics (e.g. predicted ΔG) for each target."
     }
   ],
   "configSchema": [
@@ -40,7 +40,7 @@
         { "value": "swissdock", "label": "SwissDock" }
       ],
       "defaultValue": "vina",
-      "description": "Choose a docking engine. Each engine is optimised for a different use-case:\n- **AutoDock Vina** – best for **most accurate classical docking** on CPU.\n- **DiffDock** – best for **fast, ML-based predictions** when speed matters.\n- **SwissDock** – best for **quick exploratory runs** with convenient presets."
+      "tooltip": "Select a docking backend:\n- **AutoDock Vina** – accurate classical docking.\n- **DiffDock** – fast ML‑based pose prediction.\n- **SwissDock** – convenient web‑style presets for quick exploration."
     },
     {
       "key": "vina_exhaustiveness",
@@ -51,7 +51,7 @@
       "showWhen": [
         { "field": "engine", "in": ["vina"] }
       ],
-      "description": "Simple setting for **AutoDock Vina** controlling search thoroughness. Higher values increase accuracy but take longer."
+      "tooltip": "Controls how exhaustive Vina's search is; higher values improve coverage at the cost of time."
     },
     {
       "key": "vina_numModes",
@@ -63,7 +63,7 @@
         { "field": "engine", "in": ["vina"] }
       ],
       "advanced": true,
-      "description": "Advanced setting for **AutoDock Vina** specifying how many poses to return per ligand."
+      "tooltip": "Advanced: number of binding poses Vina should generate per ligand."
     },
     {
       "key": "gridBox",
@@ -74,7 +74,7 @@
         { "field": "engine", "in": ["vina", "swissdock"] }
       ],
       "advanced": true,
-      "description": "Advanced spatial definition for **Vina** and **SwissDock** runs. Define box centre and size in Å for the binding site."
+      "tooltip": "Advanced: JSON definition of the docking search box centre and dimensions (Å)."
     },
     {
       "key": "diffdock_samples",
@@ -85,7 +85,7 @@
       "showWhen": [
         { "field": "engine", "in": ["diffdock"] }
       ],
-      "description": "Simple setting for **DiffDock** controlling how many poses are sampled per complex. More samples = better coverage but slower."
+      "tooltip": "Number of DiffDock samples per complex; more samples improve diversity but increase runtime."
     },
     {
       "key": "diffdock_confidence_threshold",
@@ -97,7 +97,7 @@
         { "field": "engine", "in": ["diffdock"] }
       ],
       "advanced": true,
-      "description": "Advanced cutoff for **DiffDock**. Only poses with confidence above this threshold are retained."
+      "tooltip": "Advanced: minimum DiffDock confidence score to keep a predicted pose."
     },
     {
       "key": "swissdock_run_type",
@@ -112,7 +112,7 @@
       "showWhen": [
         { "field": "engine", "in": ["swissdock"] }
       ],
-      "description": "Simple preset selector for **SwissDock** controlling the trade-off between speed and accuracy."
+      "tooltip": "Choose SwissDock preset: **Quick** for speed, **Precise** for more intensive searches."
     },
     {
       "key": "swissdock_precision",
@@ -127,7 +127,7 @@
         { "field": "engine", "in": ["swissdock"] }
       ],
       "advanced": true,
-      "description": "Advanced **SwissDock** control over scoring grid precision."
+      "tooltip": "Advanced: switch between standard and fine‑grid scoring for SwissDock."
     }
   ]
 }

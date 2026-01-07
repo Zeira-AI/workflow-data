@@ -11,7 +11,7 @@
       "name": "Target/Protein Input",
       "type": "string",
       "required": false,
-      "description": "Accepts protein names or descriptive text from previous nodes."
+      "tooltip": "Optional input port carrying protein names or biological descriptions from previous steps."
     }
   ],
   "defaultOutputs": [
@@ -19,7 +19,7 @@
       "id": "mapping-result",
       "name": "Mapping Result",
       "type": "object",
-      "description": "Returns the matched target details (relevance, modulation, assay, metric)."
+      "tooltip": "Structured mapping for each target, including relevance, modulation, assay type, and metric."
     }
   ],
   "configSchema": [
@@ -28,7 +28,7 @@
       "type": "textarea",
       "label": "Target Input",
       "placeholder": "Enter target name or biological effect (e.g., GSK3B, hair growth trigger...)",
-      "description": "Use this field to manually type the target if not provided via the input port."
+      "tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
     }
   ],
   "defaultConfig": {

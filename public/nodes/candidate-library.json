@@ -11,28 +11,28 @@
       "name": "Search Keyword",
       "type": "string",
       "required": true,
-      "description": "e.g., 'Natural Flavonoids'"
+      "tooltip": "Short text that anchors the search (e.g. \"natural flavonoids\", \"peptides\")."
     },
     {
       "id": "biological_effects",
       "name": "Biological Effects",
       "type": "string",
       "required": true,
-      "description": "e.g., 'Antioxidant, Anti-inflammatory'"
+      "tooltip": "Comma‑separated desired effects (e.g. \"antioxidant, anti-inflammatory\")."
     },
     {
       "id": "target_proteins",
       "name": "Target Protein(s)",
       "type": "string",
       "required": false,
-      "description": "Optional if Scientific Description is provided"
+      "tooltip": "Optional list of protein targets to focus the search (e.g. GSK3B, PDE1A)."
     },
     {
       "id": "scientific_description",
       "name": "Scientific Description",
       "type": "string",
       "required": false,
-      "description": "Free-text context for rationale generation"
+      "tooltip": "Free‑text background or hypotheses the library should reflect."
     }
   ],
   "defaultOutputs": [
@@ -40,7 +40,7 @@
       "id": "candidate_library",
       "name": "Candidate Library Table",
       "type": "array",
-      "description": "List of compounds with name, nyb_link, eu_cosing, and smiles"
+      "tooltip": "Generated list of candidate compounds including links (NYB, CoSing) and SMILES."
     }
   ],
   "configSchema": [
@@ -60,13 +60,15 @@
         { "value": "unii", "label": "UNII" },
         { "value": "chemspider", "label": "ChemSpider" },
         { "value": "cas", "label": "CAS" }
-      ]
+      ],
+      "tooltip": "Choose the main database to pull candidate structures from."
     },
     {
       "key": "ingredientListFile",
       "type": "file",
-      "label": "Upload Compound List",
-      "accept": ".pdf,.doc,.docx,.txt,.csv"
+      "label": "Or upload Compound List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv",
+      "tooltip": "Upload your own compound list; parsed names/SMILES will be merged into the library."
     }
   ],
   "defaultConfig": {
