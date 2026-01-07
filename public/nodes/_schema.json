@@ -72,7 +72,7 @@
         },
         "type": {
           "type": "string",
-          "enum": ["string", "number", "boolean", "object", "array"],
+          "enum": ["string", "number", "boolean", "object", "array", "structure"],
           "description": "Data type of the I/O port"
         },
         "required": {

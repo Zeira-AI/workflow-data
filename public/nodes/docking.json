@@ -23,10 +23,10 @@
   ],
   "defaultOutputs": [
     {
-      "id": "dockingTable",
-      "name": "Docking Result Table",
-      "type": "array",
-      "tooltip": "Per‑compound docking metrics (e.g. predicted ΔG) for each target."
+      "id": "dockedStructure",
+      "name": "Docked Structure",
+      "type": "structure",
+      "tooltip": "The 3D structure of the docked compound"
     }
   ],
   "configSchema": [
@@ -48,10 +48,8 @@
       "label": "Vina Exhaustiveness (Simple)",
       "placeholder": "Docking exhaustiveness (e.g. 8–20)",
       "defaultValue": 8,
-      "showWhen": [
-        { "field": "engine", "in": ["vina"] }
-      ],
-      "tooltip": "Controls how exhaustive Vina's search is; higher values improve coverage at the cost of time."
+      "showWhen": [{ "field": "engine", "in": ["vina"] }],
+      "description": "Simple setting for **AutoDock Vina** controlling search thoroughness. Higher values increase accuracy but take longer."
     },
     {
       "key": "vina_numModes",
@@ -59,9 +57,7 @@
       "label": "Vina Number of Binding Modes (Advanced)",
       "placeholder": "Number of binding poses to generate",
       "defaultValue": 9,
-      "showWhen": [
-        { "field": "engine", "in": ["vina"] }
-      ],
+      "showWhen": [{ "field": "engine", "in": ["vina"] }],
       "advanced": true,
       "tooltip": "Advanced: number of binding poses Vina should generate per ligand."
     },
@@ -70,9 +66,7 @@
       "type": "json",
       "label": "Grid Box Definition (Advanced)",
       "placeholder": "{ \"center_x\":0, \"center_y\":0, \"center_z\":0, \"size_x\":20, \"size_y\":20, \"size_z\":20 }",
-      "showWhen": [
-        { "field": "engine", "in": ["vina", "swissdock"] }
-      ],
+      "showWhen": [{ "field": "engine", "in": ["vina", "swissdock"] }],
       "advanced": true,
       "tooltip": "Advanced: JSON definition of the docking search box centre and dimensions (Å)."
     },
@@ -82,10 +76,8 @@
       "label": "DiffDock Samples (Simple)",
       "placeholder": "e.g. 32",
       "defaultValue": 32,
-      "showWhen": [
-        { "field": "engine", "in": ["diffdock"] }
-      ],
-      "tooltip": "Number of DiffDock samples per complex; more samples improve diversity but increase runtime."
+      "showWhen": [{ "field": "engine", "in": ["diffdock"] }],
+      "description": "Simple setting for **DiffDock** controlling how many poses are sampled per complex. More samples = better coverage but slower."
     },
     {
       "key": "diffdock_confidence_threshold",
@@ -93,9 +85,7 @@
       "label": "DiffDock Confidence Threshold (Advanced)",
       "placeholder": "0.0 – 1.0",
       "defaultValue": 0.5,
-      "showWhen": [
-        { "field": "engine", "in": ["diffdock"] }
-      ],
+      "showWhen": [{ "field": "engine", "in": ["diffdock"] }],
       "advanced": true,
       "tooltip": "Advanced: minimum DiffDock confidence score to keep a predicted pose."
     },
@@ -109,10 +99,8 @@
         { "value": "precise", "label": "Precise – slower, higher accuracy" }
       ],
       "defaultValue": "balanced",
-      "showWhen": [
-        { "field": "engine", "in": ["swissdock"] }
-      ],
-      "tooltip": "Choose SwissDock preset: **Quick** for speed, **Precise** for more intensive searches."
+      "showWhen": [{ "field": "engine", "in": ["swissdock"] }],
+      "description": "Simple preset selector for **SwissDock** controlling the trade-off between speed and accuracy."
     },
     {
       "key": "swissdock_precision",
@@ -123,9 +111,7 @@
         { "value": "fine", "label": "Fine grid (more detailed scoring)" }
       ],
       "defaultValue": "standard",
-      "showWhen": [
-        { "field": "engine", "in": ["swissdock"] }
-      ],
+      "showWhen": [{ "field": "engine", "in": ["swissdock"] }],
       "advanced": true,
       "tooltip": "Advanced: switch between standard and fine‑grid scoring for SwissDock."
     }
