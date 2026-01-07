@@ -1,6 +1,6 @@
 {
-    "type": "qsar-filter-2",
-    "label": "QSAR Filter v2",
+    "type": "qsar-filter",
+    "label": "QSAR Filter",
     "category": "analysis",
     "icon": "filtericon",
     "color": "red",
