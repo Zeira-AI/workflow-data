@@ -16,10 +16,40 @@
   ],
   "defaultOutputs": [
     {
-      "id": "output-filtered",
-      "name": "Filtered Results",
-      "type": "array",
-      "tooltip": "Subset of compounds that pass the selected ADMET and property thresholds."
+      "id": "compound",
+      "name": "Compound",
+      "type": "string",
+      "tooltip": "Compound name or identifier."
+    },
+    {
+      "id": "skin_irritation",
+      "name": "Skin Irritation",
+      "type": "string",
+      "tooltip": "Predicted level of skin irritation (e.g. Very low, Low, Moderate, High)."
+    },
+    {
+      "id": "sensitization",
+      "name": "Sensitization",
+      "type": "string",
+      "tooltip": "Predicted potential to cause skin sensitization or allergy."
+    },
+    {
+      "id": "ames_mutagenicity",
+      "name": "Ames Mutagenicity",
+      "type": "string",
+      "tooltip": "Predicted Ames test outcome (e.g. Negative or Positive mutagenicity)."
+    },
+    {
+      "id": "dermal_absorption",
+      "name": "Dermal Absorption",
+      "type": "string",
+      "tooltip": "Predicted extent of dermal absorption (e.g. Low, Moderate, High)."
+    },
+    {
+      "id": "status",
+      "name": "Status",
+      "type": "string",
+      "tooltip": "Overall toxicity decision for the compound (Pass, Conditional, or Fail)."
     }
   ],
   "configSchema": [
