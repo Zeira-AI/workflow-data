@@ -1,0 +1,176 @@
+{
+  "type": "compliance",
+  "label": "Compliance Check",
+  "category": "analysis",
+  "icon": "shield-check",
+  "color": "blue",
+  "description": "Check regulatory compliance of ingredients across different markets and regulations.",
+  "outputMockLabel": "12 items",
+  "defaultInputs": [
+    {
+      "id": "ingredient_list",
+      "name": "Ingredient List",
+      "type": "array",
+      "required": false,
+      "tooltip": "List of ingredients from ingredient-search node, including ingredient names, INCI names, and CAS numbers."
+    },
+    {
+      "id": "product_data",
+      "name": "Product Data",
+      "type": "array",
+      "required": false,
+      "tooltip": "Product information from product-search node, including product name, brand, and ingredients."
+    },
+    {
+      "id": "formula_data",
+      "name": "Formula Data",
+      "type": "array",
+      "required": false,
+      "tooltip": "Formulation data from formulate node, including ingredient list with concentrations and percentages."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "ID",
+      "name": "ID",
+      "type": "string",
+      "tooltip": "Unique identifier for each compliance check result."
+    },
+    {
+      "id": "Ingredient Name",
+      "name": "Ingredient Name",
+      "type": "string",
+      "tooltip": "Common or trade name of the ingredient being checked (e.g. \"Salicylic Acid\", \"Retinol\", \"Bakuchiol\")."
+    },
+    {
+      "id": "INCI Name",
+      "name": "INCI Name",
+      "type": "string",
+      "tooltip": "International Nomenclature of Cosmetic Ingredients (INCI) name of the ingredient."
+    },
+    {
+      "id": "CAS Number",
+      "name": "CAS Number",
+      "type": "string",
+      "tooltip": "Chemical Abstracts Service (CAS) registry number for the ingredient (e.g. \"69-72-7\", \"68-26-8\")."
+    },
+    {
+      "id": "Concentration",
+      "name": "Concentration",
+      "type": "string",
+      "tooltip": "Concentration of the ingredient in the formulation (e.g. \"2.5%\", \"0.3%\", \"0.8%\")."
+    },
+    {
+      "id": "Market",
+      "name": "Market",
+      "type": "string",
+      "tooltip": "Target market/region for compliance check (e.g. \"EU\", \"US\", \"CN\", \"JP\")."
+    },
+    {
+      "id": "Regulatory Status",
+      "name": "Regulatory Status",
+      "type": "string",
+      "tooltip": "Compliance status: \"PASS\" (compliant), \"FAIL\" (non-compliant), \"CONDITIONAL\" (allowed with restrictions), or \"UNKNOWN\" (requires assessment)."
+    },
+    {
+      "id": "Restriction Type",
+      "name": "Restriction Type",
+      "type": "string",
+      "tooltip": "Type of regulatory restriction: \"Restricted\" (allowed with limits), \"Prohibited\" (not allowed), or \"Not Listed\" (no specific regulation)."
+    },
+    {
+      "id": "Max Allowed Concentration",
+      "name": "Max Allowed Concentration",
+      "type": "string",
+      "tooltip": "Maximum allowed concentration for the ingredient in the specified market (e.g. \"2.0%\", \"1.0%\"). May be \"N/A\" if not listed."
+    },
+    {
+      "id": "Reason",
+      "name": "Reason",
+      "type": "string",
+      "tooltip": "Explanation for the regulatory status, including specific compliance issues or approval conditions."
+    },
+    {
+      "id": "Regulation Source",
+      "name": "Regulation Source",
+      "type": "string",
+      "tooltip": "Source regulation or standard governing this ingredient (e.g. \"EU Cosmetics Regulation Annex III\", \"FDA OTC Acne Monograph\")."
+    },
+    {
+      "id": "Last Regulation Update",
+      "name": "Last Regulation Update",
+      "type": "string",
+      "tooltip": "Date of the last update to the regulation (format: YYYY-MM, e.g. \"2023-09\", \"2024-01\")."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredientList",
+      "type": ["text", "file"],
+      "label": "Ingredient List",
+      "placeholder": "Select or enter ingredient list...",
+      "suggestedField": ["ingredient_name", "INCI_name", "inci", "name"],
+      "tooltip": "List of ingredients to check for compliance. Can be selected from ingredient-search output or entered manually. Supports text input or file upload (TXT, CSV).",
+      "accept": ".txt,.csv"
+    },
+    {
+      "key": "referenceProduct",
+      "type": "text",
+      "label": "Similar Product (Link/Name)",
+      "placeholder": "Paste product link or name here...",
+      "suggestedField": ["product", "name", "brand"],
+      "tooltip": "Reference product name or URL from product-search to use as a compliance benchmark or to extract ingredient information."
+    },
+    {
+      "key": "market",
+      "type": "select",
+      "label": "Market",
+      "options": [
+        { "value": "EU", "label": "EU" },
+        { "value": "US", "label": "US" },
+        { "value": "UK", "label": "UK" },
+        { "value": "CN", "label": "China" },
+        { "value": "JP", "label": "Japan" },
+        { "value": "ASEAN", "label": "ASEAN" },
+        { "value": "GLOBAL", "label": "Global / Multiple Markets" }
+      ],
+      "defaultValue": "GLOBAL",
+      "tooltip": "Select the target market or region for compliance checking. Different markets have varying regulatory requirements."
+    },
+    {
+      "key": "desiredEffect",
+      "type": "text",
+      "label": "Desired Effect",
+      "placeholder": "e.g., Whitening, Anti-aging, Hair growth...",
+      "tooltip": "Intended cosmetic effect or benefit of the product. This helps determine appropriate regulatory category and restrictions."
+    },
+    {
+      "key": "targetUserAge",
+      "type": "select",
+      "label": "Target User (Age)",
+      "options": [
+        { "value": "adult", "label": "Adult (18+)" },
+        { "value": "teen", "label": "Teen (13-17)" },
+        { "value": "child", "label": "Child (3-12)" },
+        { "value": "baby", "label": "Baby (0-2)" },
+        { "value": "all_ages", "label": "All Ages" }
+      ],
+      "defaultValue": "adult",
+      "tooltip": "Target user age group. Some ingredients have stricter restrictions for products intended for children or babies."
+    },
+    {
+      "key": "formula",
+      "type": ["text", "file"],
+      "label": "Formula (Optional)",
+      "placeholder": "Enter formula or upload formula file...",
+      "suggestedField": ["formula", "formulation", "inci", "estimatedPercent"],
+      "tooltip": "Optional: Complete formula with ingredient concentrations from formulate node. Helps check concentration-based restrictions. Supports text input or file upload.",
+      "accept": ".txt,.csv"
+    }
+  ],
+  "defaultConfig": {
+    "market": "GLOBAL",
+    "targetUserAge": "adult"
+  }
+}
+

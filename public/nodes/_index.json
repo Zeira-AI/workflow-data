@@ -23,6 +23,7 @@
     "market-trend-timeline",
     "market-industry-trend",
     "market-competition-claim",
-    "claim-validation"
+    "claim-validation",
+    "compliance"
   ]
 }

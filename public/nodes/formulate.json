@@ -47,6 +47,7 @@
       "key": "referenceProduct",
       "type": "text",
       "label": "Similar Product (Link/Name)",
+      "suggestedField": ["product", "name"],
       "placeholder": "Paste product link or name here..."
     },
     {

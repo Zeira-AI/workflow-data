@@ -25,6 +25,7 @@
       "key": "freeText",
       "type": "text",
       "label": "Manual Ingredients / Description",
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci"],
       "placeholder": "Enter ingredients or describe desired formula"
     },
     {

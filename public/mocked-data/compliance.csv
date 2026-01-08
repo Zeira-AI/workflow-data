@@ -1,0 +1,13 @@
+﻿ID;Ingredient Name;INCI Name;CAS Number;Concentration;Market;Regulatory Status;Restriction Type;Max Allowed Concentration;Reason;Regulation Source;Last Regulation Update
+1;Salicylic Acid;Salicylic Acid;69-72-7;2.5%;EU;FAIL;Restricted;2.0%;Exceeds max concentration for leave-on products;EU Cosmetics Regulation Annex III / Entry 98;2023-09
+2;Salicylic Acid;Salicylic Acid;69-72-7;2.5%;US;PASS;Restricted;3.0%;Allowed under FDA OTC acne monograph;FDA OTC Acne Monograph;2022-06
+3;Retinol;Retinol;68-26-8;0.3%;EU;PASS;Restricted;0.3%;Complies with SCCS opinion for face products;SCCS/1652/23;2023-03
+4;Retinol;Retinol;68-26-8;0.3%;CN;FAIL;Restricted;0.1%;Exceeds CSAR recommended limit for leave-on cosmetics;China CSAR Technical Guidelines;2023-01
+5;Phenoxyethanol;Phenoxyethanol;122-99-6;0.8%;EU;PASS;Restricted;1.0%;Within allowed preservative limit;EU Cosmetics Regulation Annex V / Entry 29;2024-02
+6;Phenoxyethanol;Phenoxyethanol;122-99-6;0.8%;JP;PASS;Restricted;1.0%;Permitted preservative under Japanese Standards;MHLW Standards for Cosmetics;2022-11
+7;Hydroquinone;Hydroquinone;123-31-9;1.0%;EU;FAIL;Prohibited;0.0%;Prohibited in cosmetic products;EU Cosmetics Regulation Annex II;2023-09
+8;Hydroquinone;Hydroquinone;123-31-9;1.0%;US;CONDITIONAL;Restricted;2.0%;Only allowed in OTC drug products, not cosmetics;FDA Drug vs Cosmetic Classification;2022-08
+9;Zinc Oxide (Nano);Zinc Oxide (nano);1314-13-2;10.0%;EU;PASS;Restricted;25.0%;"Approved UV filter; nano labeling required";EU Cosmetics Regulation Annex VI / Entry 30a;2024-01
+10;Zinc Oxide (Nano);Zinc Oxide (nano);1314-13-2;10.0%;CN;PASS;Restricted;25.0%;Approved UV filter under CSAR with labeling rules;China CSAR Annex;2023-05
+11;Bakuchiol;Bakuchiol;10309-37-2;0.5%;EU;UNKNOWN;Not Listed;N/A;"Not explicitly listed in annexes; safety assessment required";ECHA / SCCS database;2024-01
+12;Bakuchiol;Bakuchiol;10309-37-2;0.5%;US;UNKNOWN;Not Listed;N/A;"No specific FDA cosmetic restriction; requires substantiation";FDA Cosmetic Ingredient Database;2023-12
