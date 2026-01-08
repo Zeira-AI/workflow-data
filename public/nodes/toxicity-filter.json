@@ -62,8 +62,9 @@
     {
       "key": "ingredientListText",
       "type": "text",
-      "label": "Ingredient List (Text)",
-      "placeholder": "Paste ingredient list here."
+      "label": "Compound List",
+      "placeholder": "Press / to select the column containing the compound list from previous step",
+      "tooltip": "Compounds for ADMET prediction"
     },
     {
       "key": "admet_models",

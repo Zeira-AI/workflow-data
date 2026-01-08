@@ -25,7 +25,7 @@
     {
       "id": "docked_structure",
       "name": "Docked Structure",
-      "type": "string",
+      "type": "structure",
       "tooltip": "3D structure file (PDB format) of the docked compound-target complex."
     },
     {
@@ -52,15 +52,15 @@
       "key": "smiles_column",
       "type": "text",
       "label": "SMILES",
-      "placeholder": "Enter SMILES.",
-      "tooltip": "Select the column containing the SMILES strings"
+      "placeholder": "Press / to select the column containing the SMILES strings from previous step",
+      "tooltip": "Smiles strings of the compounds to be docked"
     },
     {
       "key": "protein_column",
       "type": "text",
       "label": "Protein 3D structure",
-      "placeholder": "Enter Protein 3D structure.",
-      "tooltip": "Select the column containing the Protein strings"
+      "placeholder": "Press / to select the column containing the Protein 3D structure strings from previous step",
+      "tooltip": "3D structure of the proteins to be docked"
     },
     {
       "key": "engine",

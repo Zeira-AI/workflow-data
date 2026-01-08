@@ -51,8 +51,15 @@
           "key": "smiles_column",
           "type": "text",
           "label": "SMILES",
-          "placeholder": "Enter SMILES.",
-          "tooltip": "Select the column containing the SMILES strings"
+          "placeholder": "Press / to select the column containing the SMILES strings from previous step",
+          "tooltip": "Smiles strings of the compounds for QSAR predicted"
+        },
+        {
+          "key": "target_column",
+          "type": "text",
+          "label": "Target",
+          "placeholder": "Enter Target.",
+          "tooltip": "Targets for QSAR predicted"
         },
         {
             "key": "qsar_models",
@@ -76,7 +83,8 @@
                 { "value": "toxicity", "label": "Toxicity" },
                 { "value": "solubility", "label": "Solubility" },
                 { "value": "bioavailability", "label": "Bioavailability" },
-                { "value": "permeability", "label": "Permeability" }
+                { "value": "permeability", "label": "Permeability" },
+                { "value": "bioactivity", "label": "Bioactivity" }
       ],
       "tooltip": "For ChemProp, choose which property you want to predict for each compound."
         },
