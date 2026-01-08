@@ -22,6 +22,7 @@
     "qsar-filter",
     "market-trend-timeline",
     "market-industry-trend",
-    "market-competition-claim"
+    "market-competition-claim",
+    "claim-validation"
   ]
 }
