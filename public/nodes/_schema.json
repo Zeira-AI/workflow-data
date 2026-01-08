@@ -109,13 +109,13 @@
           "oneOf": [
             {
               "type": "string",
-              "enum": ["text", "number", "select", "multiselect", "boolean", "json", "textarea", "file", "markdown"]
+              "enum": ["text", "number", "select", "multiselect", "boolean", "json", "textarea", "file", "markdown", "filter"]
             },
             {
               "type": "array",
               "items": {
                 "type": "string",
-                "enum": ["text", "number", "select", "multiselect", "boolean", "json", "textarea", "file", "markdown"]
+                "enum": ["text", "number", "select", "multiselect", "boolean", "json", "textarea", "file", "markdown", "filter"]
               },
               "minItems": 1
             }

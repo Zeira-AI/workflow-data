@@ -4,7 +4,7 @@
   "category": "transform",
   "icon": "filter",
   "color": "green",
-  "description": "Filter and transform data",
+  "description": "Filter data based on conditions. All conditions are combined with AND logic.",
   "defaultInputs": [
     {
       "id": "data",
@@ -14,72 +14,13 @@
       "description": "Data to filter"
     }
   ],
-  "defaultOutputs": [
-    {
-      "id": "filtered",
-      "name": "filtered",
-      "type": "array",
-      "description": "Filtered results"
-    },
-    {
-      "id": "excluded",
-      "name": "excluded",
-      "type": "array",
-      "description": "Excluded items"
-    },
-    {
-      "id": "stats",
-      "name": "stats",
-      "type": "object",
-      "description": "Filter statistics"
-    }
-  ],
+  "defaultOutputs": [],
   "configSchema": [
     {
-      "key": "filterField",
-      "type": "text",
-      "label": "Filter Field",
-      "placeholder": "Field name to filter on"
-    },
-    {
-      "key": "operator",
-      "type": "select",
-      "label": "Operator",
-      "options": [
-        {
-          "value": "equals",
-          "label": "Equals"
-        },
-        {
-          "value": "contains",
-          "label": "Contains"
-        },
-        {
-          "value": "greater_than",
-          "label": "Greater Than"
-        },
-        {
-          "value": "less_than",
-          "label": "Less Than"
-        },
-        {
-          "value": "regex",
-          "label": "Regex Match"
-        }
-      ],
-      "defaultValue": "equals"
-    },
-    {
-      "key": "filterValue",
-      "type": "text",
-      "label": "Filter Value",
-      "placeholder": "Value to match"
+      "key": "filterRules",
+      "type": "filter",
+      "label": "Filter Conditions",
+      "description": "Define conditions to filter data. All conditions are combined with AND logic."
     }
-  ],
-  "defaultConfig": {
-    "filterField": "",
-    "operator": "equals",
-    "filterValue": ""
-  }
+  ]
 }
-
