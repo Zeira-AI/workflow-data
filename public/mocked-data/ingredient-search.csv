@@ -1,14 +1,14 @@
-ID,Ingredient Name,INCI Name,CAS Number,Supplier Count
-1,Glycerin,Glycerin,56-81-5,15
-2,Hyaluronic Acid,Sodium Hyaluronate,9004-61-9,8
-3,Prickly Pear Seed Oil,Opuntia Ficus-Indica Seed Oil,90082-21-6,2
-4,Bakuchiol,Bakuchiol,10309-37-2,3
-5,Ceramide NP,Ceramide NP,100403-19-8,4
-6,Ethoxylated Sorbitan,Polysorbate 80,9005-65-6,12
-7,Copper Tripeptide-1,Copper Tripeptide-1,89030-95-5,1
-8,Niacinamide,Niacinamide,98-92-0,20
-9,Squalane (Olive derived),Squalane,111-01-3,5
-10,Tetrahexyldecyl Ascorbate,Tetrahexyldecyl Ascorbate,183476-82-6,0
+ID,ingredient_name,INCI_name,CAS_number,supplier_count, sources
+1,Glycerin,Glycerin,56-81-5,15, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Glycerin_Supplier_List.pdf
+2,Hyaluronic Acid,Sodium Hyaluronate,9004-61-9,8, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Hyaluronic_Acid_Supplier_List.pdf
+3,Prickly Pear Seed Oil,Opuntia Ficus-Indica Seed Oil,90082-21-6,2, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Prickly_Pear_Seed_Oil_Supplier_List.pdf
+4,Bakuchiol,Bakuchiol,10309-37-2,3, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Bakuchiol_Supplier_List.pdf
+5,Ceramide NP,Ceramide NP,100403-19-8,4, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Ceramide_NP_Supplier_List.pdf
+6,Ethoxylated Sorbitan,Polysorbate 80,9005-65-6,12, https://workflow-data-2sa8.vercel.app/mocked-data/ingredient-search/Polysorbate_Supplier_List.pdf
+7,Copper Tripeptide-1,Copper Tripeptide-1,89030-95-5,1, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Copper_Tripeptide-1_Supplier_List.pdf
+8,Niacinamide,Niacinamide,98-92-0,20, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Niacinamide_Supplier_List.pdf
+9,Squalane (Olive derived),Squalane,111-01-3,5, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Squalane_Supplier_List.pdf
+10,Tetrahexyldecyl Ascorbate,Tetrahexyldecyl Ascorbate,183476-82-6,0, https://workflow-data-2sa8.vercel.app/mocked-data/mocked-data/ingredient-search/Tetrahexyldecyl_Ascorbate_Supplier_List.pdf
 11,Retinol (Liposomal),Retinol,68-26-8,4
 12,Ferulic Acid,Ferulic Acid,1135-24-6,6
 13,Gold Peptide Complex,Gold Peptide Complex,N/A,1

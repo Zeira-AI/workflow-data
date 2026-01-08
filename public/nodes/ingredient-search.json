@@ -8,66 +8,40 @@
   "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "id",
-      "name": "id",
-      "type": "string"
+      "id": "ID",
+      "name": "ID",
+      "type": "string",
+      "tooltip": "Unique identifier for each ingredient search result."
     },
     {
       "id": "ingredient_name",
       "name": "Ingredient Name",
-      "type": "string"
-    },
-    {
-      "id": "trade_name",
-      "name": "Trade Name",
       "type": "string",
-      "tooltip": "Trade or commercial name"
+      "tooltip": "Common or trade name of the ingredient (e.g. \"Glycerin\", \"Hyaluronic Acid\", \"Bakuchiol\")."
     },
     {
-      "id": "supplier",
-      "name": "Supplier",
-      "type": "string",
-      "tooltip": "Ingredient supplier"
-    },
-    {
-      "id": "supplier_url",
-      "name": "Supplier URL",
-      "type": "string",
-      "tooltip": "Supplier ingredient page URL"
-    },
-    {
-      "id": "inci_name",
+      "id": "INCI_name",
       "name": "INCI Name",
-      "type": "string"
-    },
-    {
-      "id": "primary_functions",
-      "name": "Primary Functions",
       "type": "string",
-      "tooltip": "Primary functional roles of the ingredient"
+      "tooltip": "International Nomenclature of Cosmetic Ingredients (INCI) name, the standardized name used in cosmetic labeling."
     },
     {
-      "id": "application",
-      "name": "Application",
+      "id": "CAS_number",
+      "name": "CAS Number",
       "type": "string",
-      "tooltip": "Typical application areas (e.g. Hair care, Scalp care)"
+      "tooltip": "Chemical Abstracts Service (CAS) registry number, a unique identifier for the chemical substance (e.g. \"56-81-5\", \"9004-61-9\"). May be \"N/A\" for complex mixtures."
     },
     {
-      "id": "scores",
-      "name": "Scores",
+      "id": "supplier_count",
+      "name": "Supplier Count",
+      "type": "number",
+      "tooltip": "Number of available suppliers for this ingredient in the database."
+    },
+    {
+      "id": "sources",
+      "name": "Sources",
       "type": "string",
-      "tooltip": "Relevance, functional fit, novelty scores"
-    },
-    {
-      "id": "reasoning",
-      "name": "Reasoning",
-      "type": "string",
-      "tooltip": "Reasoning for ingredient selection"
-    },
-    {
-      "id": "description",
-      "name": "Description",
-      "type": "string"
+      "tooltip": "URL link to the supplier list document (PDF) containing detailed supplier information for the ingredient. May be empty if no supplier list is available."
     }
   ],
   "configSchema": [
