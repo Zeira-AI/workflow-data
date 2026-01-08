@@ -5,6 +5,7 @@
   "icon": "dna",
   "color": "purple",
   "description": "Perform molecular docking for ligands and proteins.",
+  "outputMockLabel": "10 compounds",
   "defaultInputs": [
     {
       "id": "compoundList",
