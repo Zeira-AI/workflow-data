@@ -5,6 +5,7 @@
   "icon": "target-icon",
   "color": "blue",
   "description": "Maps protein names or biological descriptions to assay metrics. Supports manual free-text input or automated lookup.",
+  "outputMockLabel": "12 targets",
   "defaultInputs": [
     {
       "id": "target-input",

@@ -5,6 +5,7 @@
     "icon": "filtericon",
     "color": "red",
     "description": "Filter compounds based on QSAR data and physicochemical thresholds.",
+    "outputMockLabel": "10 compounds",
   "defaultInputs": [
     {
       "id": "input-mol-data",
@@ -51,14 +52,16 @@
           "key": "smiles_column",
           "type": "text",
           "label": "SMILES",
-          "tooltip": "Smiles strings of the compounds for QSAR predicted"
+          "tooltip": "Smiles strings of the compounds for QSAR predicted",
+          "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
         },
         {
           "key": "target_column",
           "type": "text",
           "label": "Target",
           "placeholder": "Enter Target.",
-          "tooltip": "Targets for QSAR predicted"
+          "tooltip": "Targets for QSAR predicted",
+          "suggestedField": ["target", "protein_name"]
         },
         {
             "key": "qsar_models",

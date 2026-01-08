@@ -5,6 +5,7 @@
   "icon": "activity",
   "color": "green",
   "description": "Filter compound bioactivity (pEC50 / pIC50) across multiple biological targets using ML-based models.",
+  "outputMockLabel": "5 compounds",
   "defaultInputs": [
     {
       "id": "compoundList",
@@ -34,7 +35,8 @@
       "key": "dockingListText",
       "type": "text",
       "label": "Compound-Target Docking List",
-      "tooltip": "Input the compound-target docking for bioactivity prediction"
+      "tooltip": "Input the compound-target docking for bioactivity prediction",
+      "suggestedField": ["docked_structure"]
     },
     {
       "key": "modelType",

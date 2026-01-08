@@ -5,7 +5,7 @@
   "icon": "dna",
   "color": "purple",
   "description": "Perform molecular docking for ligands and proteins.",
-  "outputMockLabel": "10 compounds",
+  "outputMockLabel": "5 compounds",
   "defaultInputs": [
     {
       "id": "compoundList",
@@ -53,13 +53,15 @@
       "key": "smiles_column",
       "type": "text",
       "label": "SMILES",
-      "tooltip": "Smiles strings of the compounds to be docked"
+      "tooltip": "Smiles strings of the compounds to be docked",
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
     },
     {
       "key": "protein_column",
       "type": "text",
       "label": "Protein 3D structure",
-      "tooltip": "3D structure of the proteins to be docked"
+      "tooltip": "3D structure of the proteins to be docked",
+      "suggestedField": ["target", "protein_name"]
     },
     {
       "key": "engine",

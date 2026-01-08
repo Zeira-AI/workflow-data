@@ -5,6 +5,7 @@
   "icon": "book-open-text",
   "color": "blue",
   "description": "Build a customized compound library of 30+ candidates based on biological intent and selected sources.",
+  "outputMockLabel": "25 compounds",
   "defaultInputs": [
     {
       "id": "search_keyword",

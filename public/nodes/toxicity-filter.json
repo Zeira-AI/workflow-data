@@ -5,6 +5,7 @@
   "icon": "filtericon",
   "color": "red",
   "description": "Filter compounds based on SMILES data and physicochemical thresholds.",
+  "outputMockLabel": "13 compounds",
   "defaultInputs": [
     {
       "id": "input-mol-data",
@@ -63,7 +64,8 @@
       "key": "ingredientListText",
       "type": "text",
       "label": "Compound List",
-      "tooltip": "Compounds for ADMET prediction"
+      "tooltip": "Compounds for ADMET prediction",
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
     },
     {
       "key": "admet_models",
