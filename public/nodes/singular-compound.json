@@ -31,9 +31,8 @@
   "configSchema": [
     {
       "key": "industry",
-      "type": "multiselect",
+      "type": "select",
       "label": "Industry",
-      "tooltip": "Choose one or more validation goals.",
       "options": [
         { "value": "cosmetics", "label": "Cosmetics / Personal Care" },
         { "value": "functional_food", "label": "Functional Food / Beverage" },
