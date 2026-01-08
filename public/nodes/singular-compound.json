@@ -70,9 +70,9 @@
     },
     {
       "key": "validationObjective",
-      "type": "select",
-      "label": "Validation Objective",
-      "placeholder": "Select the primary validation goal",
+      "type": "multiselect",
+      "label": "Validation Objective(s)",
+      "placeholder": "Select one or more validation goals",
       "options": [
         { "value": "stability", "label": "Stability / Shelf-life" },
         { "value": "microbial", "label": "Microbiological / Preservative Effectiveness" },
@@ -81,7 +81,8 @@
         { "value": "compatibility", "label": "Packaging / Container Compatibility" },
         { "value": "process", "label": "Process / Scale-up / Manufacturability" },
         { "value": "regulatory", "label": "Regulatory Substantiation" }
-      ]
+      ],
+      "multiple": true
     },
     {
       "key": "targetClaims",
@@ -91,7 +92,7 @@
     },
     {
       "key": "regulatoryClassification",
-      "type": "select",
+      "type": "multiselect",
       "label": "Regulatory Classification",
       "options": [
         { "value": "cosmetic", "label": "Cosmetic" },
@@ -101,11 +102,12 @@
         { "value": "rx", "label": "Prescription Drug" },
         { "value": "medical_device", "label": "Medical Device" },
         { "value": "unknown", "label": "Not Sure / TBD" }
-      ]
+      ],
+      "multiple": true
     },
     {
       "key": "complianceLevel",
-      "type": "select",
+      "type": "multiselect",
       "label": "Compliance Level",
       "options": [
         { "value": "rd", "label": "R&D / Exploratory" },
@@ -113,7 +115,8 @@
         { "value": "gmp", "label": "GMP-aligned" },
         { "value": "glp", "label": "GLP (non-clinical)" }
       ],
-      "defaultValue": "rd"
+      "defaultValue": ["rd"],
+      "multiple": true
     },
     {
       "key": "formulaReference",
@@ -129,7 +132,7 @@
     },
     {
       "key": "physicalForm",
-      "type": "select",
+      "type": "multiselect",
       "label": "Physical Form",
       "options": [
         { "value": "solution", "label": "Solution" },
@@ -140,7 +143,8 @@
         { "value": "tablet", "label": "Tablet" },
         { "value": "capsule", "label": "Capsule" },
         { "value": "other", "label": "Other" }
-      ]
+      ],
+      "multiple": true
     },
     {
       "key": "criticalQualityAttributes",
@@ -168,7 +172,7 @@
     },
     {
       "key": "testTypes",
-      "type": "select",
+      "type": "multiselect",
       "label": "Required Test Types",
       "options": [
         { "value": "stability_real_time", "label": "Real-time Stability" },
@@ -254,9 +258,9 @@
   "defaultConfig": {
     "industry": "functional_food",
     "productType": "oral_liquid",
-    "validationObjective": "stability",
-    "regulatoryClassification": "food",
-    "complianceLevel": "rd",
+    "validationObjective": ["stability"],
+    "regulatoryClassification": ["food"],
+    "complianceLevel": ["rd"],
     "labPreference": "either"
   }
 }
