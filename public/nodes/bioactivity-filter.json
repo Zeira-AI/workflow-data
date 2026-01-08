@@ -34,7 +34,6 @@
       "key": "dockingListText",
       "type": "text",
       "label": "Compound-Target Docking List",
-      "placeholder": "Press / to select the column containing the Compound-Target Docking list from previous step",
       "tooltip": "Input the compound-target docking for bioactivity prediction"
     },
     {

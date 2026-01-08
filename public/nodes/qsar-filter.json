@@ -51,7 +51,6 @@
           "key": "smiles_column",
           "type": "text",
           "label": "SMILES",
-          "placeholder": "Press / to select the column containing the SMILES strings from previous step",
           "tooltip": "Smiles strings of the compounds for QSAR predicted"
         },
         {

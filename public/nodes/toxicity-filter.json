@@ -63,7 +63,6 @@
       "key": "ingredientListText",
       "type": "text",
       "label": "Compound List",
-      "placeholder": "Press / to select the column containing the compound list from previous step",
       "tooltip": "Compounds for ADMET prediction"
     },
     {
