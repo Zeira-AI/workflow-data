@@ -11,19 +11,19 @@
       "id": "sub_category",
       "name": "Sub-category",
       "type": "string",
-      "tooltip": "Specific market micro-space within the selected category (e.g. \"Hair growth + caffeine / niacinamide\")."
+      "tooltip": "Specific market micro-space within the selected category (e.g. \"Hair growth + caffeine / niacinamide\", \"Hair growth + scalp barrier repair\")."
     },
     {
-      "id": "trend_stage",
-      "name": "Trend Stage",
+      "id": "competitive_intensity",
+      "name": "Competitive Intensity",
       "type": "string",
-      "tooltip": "Competitive intensity / maturity of the sub-category, visualized as colored dots (e.g. 🔴 Overcrowded, 🟡 Emerging, 🟢 Underserved)."
+      "tooltip": "Market saturation level of the sub-category, visualized with colored indicators: 🔴 Overcrowded (high competition), 🟡 Emerging (moderate competition), 🟢 Underserved (low competition/white space)."
     },
     {
       "id": "key_brands",
       "name": "Key Brands",
       "type": "string",
-      "description": "Representative brands active in the sub-category, useful for benchmarking and inspiration."
+      "tooltip": "Representative brands or companies active in this sub-category (e.g. \"L'Oréal, The Ordinary, Alpecin\") or \"Very few\" if the space is underserved. Useful for benchmarking and competitive analysis."
     }
   ],
   "configSchema": [

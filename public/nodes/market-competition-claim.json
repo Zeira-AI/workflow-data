@@ -11,19 +11,19 @@
       "id": "claim",
       "name": "Claim",
       "type": "string",
-      "description": "Front-of-pack or marketing claim (e.g. \"Anti-hair fall / reduces hair loss\", \"Promotes hair growth\")."
+      "tooltip": "Front-of-pack or marketing claim text (e.g. \"Anti-hair fall / reduces hair loss\", \"Promotes hair growth\", \"Hair growth + scalp barrier repair\")."
     },
     {
       "id": "sku_count",
       "name": "# SKU in the Market",
       "type": "string",
-      "description": "Approximate number of SKUs in the market carrying this claim (e.g. \"150+\", \"8\")."
+      "tooltip": "Approximate number of SKUs (stock keeping units) in the market carrying this claim. May be exact (e.g. \"8\") or approximate with \"+\" suffix (e.g. \"150+\")."
     },
     {
       "id": "evaluation",
       "name": "Evaluation",
       "type": "string",
-      "description": "Qualitative assessment of competitive intensity, often visualized with colored dots (e.g. 🔴 Saturated, 🟡 Medium, 🟢 White space)."
+      "tooltip": "Competitive intensity assessment for the claim, visualized with colored indicators: 🔴 Saturated (high competition), 🟡 Medium (moderate competition), 🟢 White space (low competition/opportunity)."
     }
   ],
   "configSchema": [
@@ -36,7 +36,7 @@
         { "value": "pharmaceuticals", "label": "Pharmaceuticals" },
         { "value": "supplement", "label": "Supplement" }
       ],
-      "description": "Select the overarching industry context for the claim-level competition assessment."
+      "tooltip": "Select the overarching industry context for the claim-level competition assessment."
     },
     {
       "key": "category_consumer_health",
@@ -51,7 +51,7 @@
       "showWhen": [
         { "field": "industry", "in": ["consumer_health"] }
       ],
-      "description": "When **Consumer Health** is selected, choose one of its categories."
+      "tooltip": "When **Consumer Health** is selected, choose one of its categories."
     },
     {
       "key": "category_pharmaceuticals",
@@ -65,7 +65,7 @@
       "showWhen": [
         { "field": "industry", "in": ["pharmaceuticals"] }
       ],
-      "description": "When **Pharmaceuticals** is selected, choose one of its categories."
+      "tooltip": "When **Pharmaceuticals** is selected, choose one of its categories."
     },
     {
       "key": "category_supplement",
@@ -80,21 +80,21 @@
       "showWhen": [
         { "field": "industry", "in": ["supplement"] }
       ],
-      "description": "When **Supplement** is selected, choose one of its categories."
+      "tooltip": "When **Supplement** is selected, choose one of its categories."
     },
     {
       "key": "from_year",
       "type": "number",
       "label": "From Year",
       "placeholder": "e.g. 2015",
-      "description": "Start of the time horizon for counting SKUs and assessing competition (inclusive)."
+      "tooltip": "Start of the time horizon for counting SKUs and assessing competition (inclusive)."
     },
     {
       "key": "to_year",
       "type": "number",
       "label": "To Year",
       "placeholder": "e.g. 2025",
-      "description": "End of the time horizon for counting SKUs and assessing competition (inclusive)."
+      "tooltip": "End of the time horizon for counting SKUs and assessing competition (inclusive)."
     },
     {
       "key": "religion",
@@ -108,7 +108,7 @@
         { "value": "africa", "label": "Africa" },
         { "value": "oceania", "label": "Oceania" }
       ],
-      "description": "Optional regional filter for claim-level competition. Leave empty for a global view."
+      "tooltip": "Optional regional filter for claim-level competition. Leave empty for a global view."
     }
   ]
 }

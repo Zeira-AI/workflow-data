@@ -11,25 +11,25 @@
       "id": "trend_id",
       "name": "Trend ID",
       "type": "string",
-      "tooltip": "Unique identifier for each detected market trend."
+      "tooltip": "Unique numeric identifier for each detected market trend (row number)."
     },
     {
       "id": "trend_name",
       "name": "Trend Name",
       "type": "string",
-      "tooltip": "Human-readable name or label for the market trend."
+      "tooltip": "Human-readable name or label describing the market trend (e.g. \"Anti-hair fall (classic claims)\", \"Hair growth + peptides\")."
     },
     {
       "id": "yearly_signal",
       "name": "Yearly Signal",
       "type": "array",
-      "tooltip": "Array capturing the trend signal per year within the selected time horizon (e.g. interest, volume, score)."
+      "tooltip": "Per-year trend signal strength indicators (🟢 Strong, 🟡 Moderate, ⚪ Weak/Early) for each year in the selected time horizon."
     },
     {
       "id": "evaluation",
       "name": "Evaluation",
       "type": "string",
-      "tooltip": "Summary evaluation of the trend (e.g. Emerging, Growing, Mature, Declining) based on yearly signals and benchmarks."
+      "tooltip": "Overall trend maturity assessment based on yearly signals (e.g. Mature, Growing, Strong, Emerging, Stable, Early signal)."
     }
   ],
   "configSchema": [
