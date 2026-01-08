@@ -44,30 +44,6 @@
       "accept": ".txt,.csv,.smi"
     },
     {
-      "key": "targetRegion",
-      "type": "select",
-      "label": "Target Region",
-      "options": [
-        { "value": "GLOBAL", "label": "Global / Default" },
-        { "value": "EU", "label": "EU" },
-        { "value": "US", "label": "US" },
-        { "value": "UK", "label": "UK" },
-        { "value": "ASEAN", "label": "ASEAN" }
-      ],
-      "defaultValue": "GLOBAL"
-    },
-    {
-      "key": "scaleTier",
-      "type": "select",
-      "label": "Scale Tier",
-      "options": [
-        { "value": "rnd", "label": "R&D (Small Batches)" },
-        { "value": "pilot", "label": "Pilot" },
-        { "value": "production", "label": "Production / Scale" }
-      ],
-      "defaultValue": "pilot"
-    },
-    {
       "key": "referenceProduct",
       "type": "text",
       "label": "Similar Product (Link/Name)",
