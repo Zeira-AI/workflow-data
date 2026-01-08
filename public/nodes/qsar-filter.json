@@ -22,6 +22,12 @@
       "tooltip": "Compound name or identifier (e.g. \"Minoxidil\", \"Adenosine\", \"Baicalin\")."
     },
     {
+      "id": "smiles",
+      "name": "SMILES",
+      "type": "string",
+      "tooltip": "SMILES string representing the compound's chemical structure."
+    },
+    {
       "id": "target",
       "name": "Target",
       "type": "string",
@@ -41,6 +47,13 @@
     }
   ],
     "configSchema": [
+        {
+          "key": "smiles_column",
+          "type": "text",
+          "label": "SMILES",
+          "placeholder": "Enter SMILES.",
+          "tooltip": "Select the column containing the SMILES strings"
+        },
         {
             "key": "qsar_models",
             "type": "select",

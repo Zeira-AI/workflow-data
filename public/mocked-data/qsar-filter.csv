@@ -1,41 +1,41 @@
-compound,target,assay,predicted_bioactivity
-Minoxidil,Kir6.2,EC50,1.7
-Adenosine,Kir6.2,EC50,6.4
-Piroctone Olamine,Kir6.2,EC50,9.1
-Baicalin,Kir6.2,EC50,14.5
-Caffeine,Kir6.2,EC50,>100 (inactive)
-Licochalcone A,Kir6.2,EC50,>100 (inactive)
-Melatonin,Kir6.2,EC50,>100 (inactive)
-Menthol,Kir6.2,EC50,>100 (inactive)
-EGCG,Kir6.2,EC50,>100 (inactive)
-Resveratrol,Kir6.2,EC50,>100 (inactive)
-Minoxidil,GSK3β,IC50,14.8
-Adenosine,GSK3β,IC50,11.9
-Piroctone Olamine,GSK3β,IC50,3.8
-Baicalin,GSK3β,IC50,0.9
-Caffeine,GSK3β,IC50,46.5
-Licochalcone A,GSK3β,IC50,>100 (inactive)
-Melatonin,GSK3β,IC50,>100 (inactive)
-Menthol,GSK3β,IC50,>100 (inactive)
-EGCG,GSK3β,IC50,>100 (inactive)
-Resveratrol,GSK3β,IC50,>100 (inactive)
-Minoxidil,PDE1A,IC50,23.0
-Adenosine,PDE1A,IC50,20.1
-Piroctone Olamine,PDE1A,IC50,6.2
-Baicalin,PDE1A,IC50,5.4
-Caffeine,PDE1A,IC50,8.1
-Licochalcone A,PDE1A,IC50,>100 (inactive)
-Melatonin,PDE1A,IC50,>100 (inactive)
-Menthol,PDE1A,IC50,>100 (inactive)
-EGCG,PDE1A,IC50,>100 (inactive)
-Resveratrol,PDE1A,IC50,>100 (inactive)
-Minoxidil,TGFBR1,IC50,27.5
-Adenosine,TGFBR1,IC50,12.0
-Piroctone Olamine,TGFBR1,IC50,3.5
-Baicalin,TGFBR1,IC50,1.7
-Caffeine,TGFBR1,IC50,55.8
-Licochalcone A,TGFBR1,IC50,>100 (inactive)
-Melatonin,TGFBR1,IC50,>100 (inactive)
-Menthol,TGFBR1,IC50,>100 (inactive)
-EGCG,TGFBR1,IC50,>100 (inactive)
-Resveratrol,TGFBR1,IC50,>100 (inactive)
+Compound,Smiles,Target,Assay,Predicted bioactivity
+Minoxidil,"""CCN(CC)CCNC1=NC(=O)NC(=O)N1""",Kir6.2,EC50,1.7
+Adenosine,"""Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1""",Kir6.2,EC50,6.4
+Piroctone Olamine,"""CC(C)(C)C1=CC=C(C=C1)C(=O)C2=NC3=CC=CC=C3O2""",Kir6.2,EC50,9.1
+Baicalin,"""CC1=C(C=C2C(=C1O)OC(=O)C3=C(O2)C=C(C=C3)O)OC4C(C(C(C(O4)CO)O)O)O""",Kir6.2,EC50,14.5
+Caffeine,"""Cn1cnc2c1c(=O)n(C)c(=O)n2C""",Kir6.2,EC50,>100 (inactive)
+Licochalcone A,"""CC1=CC(=CC=C1O)/C=C/C(=O)C2=CC=C(C=C2)OC""",Kir6.2,EC50,>100 (inactive)
+Melatonin,"""CC(=O)NCCC1=CN2C=CC(OC)=CC2=C1""",Kir6.2,EC50,>100 (inactive)
+Menthol,"""CC1CCC(C(C1)O)C""",Kir6.2,EC50,>100 (inactive)
+EGCG,"""C1C(C(C2=C(C1O)C(=CC(=C2O)O)O)O)OC(=O)C3=CC(=C(C(=C3O)O)O)O""",Kir6.2,EC50,>100 (inactive)
+Resveratrol,"""C1=CC(=CC=C1/C=C/C2=CC(=CC=C2)O)O""",Kir6.2,EC50,>100 (inactive)
+Minoxidil,"""CCN(CC)CCNC1=NC(=O)NC(=O)N1""",GSK3β,IC50,14.8
+Adenosine,"""Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1""",GSK3β,IC50,11.9
+Piroctone Olamine,"""CC(C)(C)C1=CC=C(C=C1)C(=O)C2=NC3=CC=CC=C3O2""",GSK3β,IC50,3.8
+Baicalin,"""CC1=C(C=C2C(=C1O)OC(=O)C3=C(O2)C=C(C=C3)O)OC4C(C(C(C(O4)CO)O)O)O""",GSK3β,IC50,0.9
+Caffeine,"""Cn1cnc2c1c(=O)n(C)c(=O)n2C""",GSK3β,IC50,46.5
+Licochalcone A,"""CC1=CC(=CC=C1O)/C=C/C(=O)C2=CC=C(C=C2)OC""",GSK3β,IC50,>100 (inactive)
+Melatonin,"""CC(=O)NCCC1=CN2C=CC(OC)=CC2=C1""",GSK3β,IC50,>100 (inactive)
+Menthol,"""CC1CCC(C(C1)O)C""",GSK3β,IC50,>100 (inactive)
+EGCG,"""C1C(C(C2=C(C1O)C(=CC(=C2O)O)O)O)OC(=O)C3=CC(=C(C(=C3O)O)O)O""",GSK3β,IC50,>100 (inactive)
+Resveratrol,"""C1=CC(=CC=C1/C=C/C2=CC(=CC=C2)O)O""",GSK3β,IC50,>100 (inactive)
+Minoxidil,"""CCN(CC)CCNC1=NC(=O)NC(=O)N1""",PDE1A,IC50,23.0
+Adenosine,"""Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1""",PDE1A,IC50,20.1
+Piroctone Olamine,"""CC(C)(C)C1=CC=C(C=C1)C(=O)C2=NC3=CC=CC=C3O2""",PDE1A,IC50,6.2
+Baicalin,"""CC1=C(C=C2C(=C1O)OC(=O)C3=C(O2)C=C(C=C3)O)OC4C(C(C(C(O4)CO)O)O)O""",PDE1A,IC50,5.4
+Caffeine,"""Cn1cnc2c1c(=O)n(C)c(=O)n2C""",PDE1A,IC50,8.1
+Licochalcone A,"""CC1=CC(=CC=C1O)/C=C/C(=O)C2=CC=C(C=C2)OC""",PDE1A,IC50,>100 (inactive)
+Melatonin,"""CC(=O)NCCC1=CN2C=CC(OC)=CC2=C1""",PDE1A,IC50,>100 (inactive)
+Menthol,"""CC1CCC(C(C1)O)C""",PDE1A,IC50,>100 (inactive)
+EGCG,"""C1C(C(C2=C(C1O)C(=CC(=C2O)O)O)O)OC(=O)C3=CC(=C(C(=C3O)O)O)O""",PDE1A,IC50,>100 (inactive)
+Resveratrol,"""C1=CC(=CC=C1/C=C/C2=CC(=CC=C2)O)O""",PDE1A,IC50,>100 (inactive)
+Minoxidil,"""CCN(CC)CCNC1=NC(=O)NC(=O)N1""",TGFBR1,IC50,27.5
+Adenosine,"""Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1""",TGFBR1,IC50,12.0
+Piroctone Olamine,"""CC(C)(C)C1=CC=C(C=C1)C(=O)C2=NC3=CC=CC=C3O2""",TGFBR1,IC50,3.5
+Baicalin,"""CC1=C(C=C2C(=C1O)OC(=O)C3=C(O2)C=C(C=C3)O)OC4C(C(C(C(O4)CO)O)O)O""",TGFBR1,IC50,1.7
+Caffeine,"""Cn1cnc2c1c(=O)n(C)c(=O)n2C""",TGFBR1,IC50,55.8
+Licochalcone A,"""CC1=CC(=CC=C1O)/C=C/C(=O)C2=CC=C(C=C2)OC""",TGFBR1,IC50,>100 (inactive)
+Melatonin,"""CC(=O)NCCC1=CN2C=CC(OC)=CC2=C1""",TGFBR1,IC50,>100 (inactive)
+Menthol,"""CC1CCC(C(C1)O)C""",TGFBR1,IC50,>100 (inactive)
+EGCG,"""C1C(C(C2=C(C1O)C(=CC(=C2O)O)O)O)OC(=O)C3=CC(=C(C(=C3O)O)O)O""",TGFBR1,IC50,>100 (inactive)
+Resveratrol,"""C1=CC(=CC=C1/C=C/C2=CC(=CC=C2)O)O""",TGFBR1,IC50,>100 (inactive)

@@ -1,14 +1,14 @@
-compound, skin_irritation, sensitization, ames_mutagenicity, dermal_absorption, status
-Minoxidil, Low, Low, Negative, Moderate, Pass
-Caffeine, Low, Low, Negative, High, Pass
-Adenosine, Very low, Very low, Negative, Low, Pass
-Piroctone Olamine, Low, Low, Negative, Moderate, Pass
-Niacinamide, Very low, Very low, Negative, High, Pass
-Baicalin, Low, Very low, Negative, Low, Pass
-Licochalcone A, Low, Low, Negative, Low, Pass
-Melatonin, Low, Low, Negative, Moderate, Pass
-Menthol, Moderate, Low, Negative, High, Conditional
-EGCG, Moderate, Moderate, Negative, Low, Conditional
-Resveratrol, Moderate, Low, Negative, Low, Conditional
-Capsaicin, High, High, Negative, High, Fail
-Salicylic acid, High, Moderate, Negative, High, Fail
+compound, smiles, skin_irritation, sensitization, ames_mutagenicity, dermal_absorption, status
+Minoxidil, "CCN(CC)CCNC1=NC(=O)NC(=O)N1", Low, Low, Negative, Moderate, Pass
+Caffeine, "Cn1cnc2c1c(=O)n(C)c(=O)n2C", Low, Low, Negative, High, Pass
+Adenosine, "Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1", Very low, Very low, Negative, Low, Pass
+Piroctone Olamine, "CC(C)(C)C1=CC=C(C=C1)C(=O)C2=NC3=CC=CC=C3O2", Low, Low, Negative, Moderate, Pass
+Niacinamide, "NC(=O)C1=CN=CC=C1", Very low, Very low, Negative, High, Pass
+Baicalin, "CC1=C(C=C2C(=C1O)OC(=O)C3=C(O2)C=C(C=C3)O)OC4C(C(C(C(O4)CO)O)O)O", Low, Very low, Negative, Low, Pass
+Licochalcone A, "CC1=CC(=CC=C1O)/C=C/C(=O)C2=CC=C(C=C2)OC", Low, Low, Negative, Low, Pass
+Melatonin, "CC(=O)NCCC1=CN2C=CC(OC)=CC2=C1", Low, Low, Negative, Moderate, Pass
+Menthol, "CC1CCC(C(C1)O)C", Moderate, Low, Negative, High, Conditional
+EGCG, "C1C(C(C2=C(C1O)C(=CC(=C2O)O)O)O)OC(=O)C3=CC(=C(C(=C3O)O)O)O", Moderate, Moderate, Negative, Low, Conditional
+Resveratrol, "C1=CC(=CC=C1/C=C/C2=CC(=CC=C2)O)O", Moderate, Low, Negative, Low, Conditional
+Capsaicin, "CC(C)NCC(=O)NC1=CC(=CC=C1OCC=C)OC", High, High, Negative, High, Fail
+Salicylic acid, "C1=CC=C(C(=C1)O)C(=O)O", High, Moderate, Negative, High, Fail

@@ -49,6 +49,20 @@
   ],
   "configSchema": [
     {
+      "key": "smiles_column",
+      "type": "text",
+      "label": "SMILES",
+      "placeholder": "Enter SMILES.",
+      "tooltip": "Select the column containing the SMILES strings"
+    },
+    {
+      "key": "protein_column",
+      "type": "text",
+      "label": "Protein 3D structure",
+      "placeholder": "Enter Protein 3D structure.",
+      "tooltip": "Select the column containing the Protein strings"
+    },
+    {
       "key": "engine",
       "type": "select",
       "label": "Docking Engine",

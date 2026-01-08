@@ -31,6 +31,12 @@
   ],
   "configSchema": [
     {
+      "key": "dockingListText",
+      "type": "text",
+      "label": "Compound-Target Docking List (Text)",
+      "placeholder": "Paste compound list here."
+    },
+    {
       "key": "modelType",
       "type": "select",
       "label": "Available Tools",
