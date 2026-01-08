@@ -5,6 +5,7 @@
   "icon": "flask",
   "color": "purple",
   "description": "Analyze and deformulate product compositions based on specific requirements",
+  "outputMockLabel": "1013 items",
   "defaultInputs": [],
   "defaultOutputs": [
     {
@@ -37,7 +38,8 @@
       "key": "ingredientListText",
       "type": "text",
       "label": "Ingredient List (Text)",
-      "placeholder": "Paste ingredient list here."
+      "placeholder": "Paste ingredient list here.",
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
     },
     {
       "key": "ingredientListFile",

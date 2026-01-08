@@ -31,6 +31,10 @@
       "type": "string",
       "description": "Optional description of the node's purpose"
     },
+    "outputMockLabel": {
+      "type": "string",
+      "description": "Optional: mock label for output count display (e.g., '24 items', '20 compounds')"
+    },
     "defaultInputs": {
       "type": "array",
       "description": "Default input ports for the node",
