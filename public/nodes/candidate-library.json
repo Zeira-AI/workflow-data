@@ -65,8 +65,8 @@
   "configSchema": [
     {
       "key": "library_sources",
-      "type": "select",
-      "label": "Primary Source",
+      "type": "multiselect",
+      "label": "Primary Sources",
       "options": [
         { "value": "vecurate", "label": "Vecurate" },
         { "value": "vecurate_excerpt", "label": "Vecurate Excerpt (25 compounds)" },
@@ -81,7 +81,8 @@
         { "value": "chemspider", "label": "ChemSpider" },
         { "value": "cas", "label": "CAS" }
       ],
-      "tooltip": "Choose the main database to pull candidate structures from."
+      "tooltip": "Choose one or more databases to pull candidate structures from.",
+      "defaultValue": ["vecurate"]
     },
     {
       "key": "ingredientListFile",
@@ -90,71 +91,5 @@
       "accept": ".pdf,.doc,.docx,.txt,.csv",
       "tooltip": "Upload your own compound list; parsed names/SMILES will be merged into the library."
     }
-  ],
-  "defaultConfig": {
-    "library_sources": "vecurate",
-    "export_config": { "format": "csv" },
-    "mock_results": [
-      {
-        "name": "Quercetin",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0006621",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/58944",
-        "smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O"
-      },
-      {
-        "name": "Kaempferol",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0006691",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/57815",
-        "smiles": "C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O"
-      },
-      {
-        "name": "Apigenin",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0006636",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/85203",
-        "smiles": "C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O"
-      },
-      {
-        "name": "Luteolin",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0006637",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/83796",
-        "smiles": "C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O)O"
-      },
-      {
-        "name": "Naringenin",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0004510",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/86440",
-        "smiles": "C1[C@H](OC2=CC(=CC(=C2C1=O)O)O)C3=CC=C(C=C3)O"
-      },
-      {
-        "name": "Hesperidin",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0000740",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/34252",
-        "smiles": "C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC(=C(C=C5)OC)O)O)O)O)O)O)O)O"
-      },
-      {
-        "name": "Rutin",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0006686",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/37564",
-        "smiles": "C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O"
-      },
-      {
-        "name": "Ferulic acid",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0005068",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/33935",
-        "smiles": "COC1=C(C=CC(=C1)/C=C/C(=O)O)O"
-      },
-      {
-        "name": "p-Coumaric acid",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0005825",
-        "eu_cosing": null,
-        "smiles": "C1=CC(=CC=C1/C=C/C(=O)O)O"
-      },
-      {
-        "name": "Caffeic acid",
-        "nyb_link": "http://101.97.84.189:8082/natural-compound/NYB0006006",
-        "eu_cosing": "https://ec.europa.eu/growth/tools-databases/cosing/details/55168",
-        "smiles": "C1=CC(=C(C=C1/C=C/C(=O)O)O)O"
-      }
-    ]
-  }
+  ]
 }
