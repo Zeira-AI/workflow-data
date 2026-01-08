@@ -62,10 +62,11 @@
   "configSchema": [
     {
       "key": "ingredientListText",
-      "type": "text",
+      "type": ["text", "file"],
       "label": "Compound List",
       "tooltip": "Compounds for ADMET prediction",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "accept": ".csv,.txt,.smi"
     },
     {
       "key": "admet_models",

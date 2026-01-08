@@ -50,18 +50,20 @@
     "configSchema": [
         {
           "key": "smiles_column",
-          "type": "text",
+          "type": ["text", "file"],
           "label": "SMILES",
           "tooltip": "Smiles strings of the compounds for QSAR predicted",
-          "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
+          "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+          "accept": ".csv,.txt,.smi"
         },
         {
           "key": "target_column",
-          "type": "text",
+          "type": ["text", "file"],
           "label": "Target",
           "placeholder": "Enter Target.",
           "tooltip": "Targets for QSAR predicted",
-          "suggestedField": ["target", "protein_name"]
+          "suggestedField": ["target", "protein_name"],
+          "accept": ".csv,.pdb"
         },
         {
             "key": "qsar_models",

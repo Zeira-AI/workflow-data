@@ -51,17 +51,19 @@
   "configSchema": [
     {
       "key": "smiles_column",
-      "type": "text",
+      "type": ["text", "file"],
       "label": "SMILES",
       "tooltip": "Smiles strings of the compounds to be docked",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "accept": ".csv,.txt,.smi"
     },
     {
       "key": "protein_column",
-      "type": "text",
+      "type": ["text", "file"],
       "label": "Protein 3D structure",
       "tooltip": "3D structure of the proteins to be docked",
-      "suggestedField": ["target", "protein_name"]
+      "suggestedField": ["target", "protein_name"],
+      "accept": ".csv,.pdb"
     },
     {
       "key": "engine",
