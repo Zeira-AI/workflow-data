@@ -66,10 +66,12 @@
   "configSchema": [
     {
       "key": "available_evidence",
-      "type": "text",
+      "type": ["text", "file"],
       "label": "Available Evidence",
+      "placeholder": "Upload evidence documents supporting the claims...",
       "required": true,
-      "tooltip": "Upload evidence documents supporting the claims (e.g. in vitro studies, ex vivo penetration studies, human biomarker studies). Supported formats: PDF, Word, TXT, CSV."
+      "tooltip": "Upload evidence documents supporting the claims (e.g. in vitro studies, ex vivo penetration studies, human biomarker studies). Supported formats: PDF, Word, TXT, CSV.",
+      "accept": ".pdf,.doc,.docx,.txt,.csv"
     },
     {
       "key": "proposed_claim",

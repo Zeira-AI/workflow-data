@@ -115,11 +115,12 @@
     },
     {
       "key": "referenceProduct",
-      "type": "text",
+      "type": ["text", "file"],
       "label": "Similar Product (Link/Name)",
       "placeholder": "Paste product link or name here...",
       "suggestedField": ["product", "name", "brand"],
-      "tooltip": "Reference product name or URL from product-search to use as a compliance benchmark or to extract ingredient information."
+      "tooltip": "Reference product name or URL from product-search to use as a compliance benchmark or to extract ingredient information.",
+      "accept": ".txt,.csv"
     },
     {
       "key": "market",
