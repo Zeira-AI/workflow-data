@@ -37,10 +37,28 @@
   ],
   "defaultOutputs": [
     {
-      "id": "candidate_library",
-      "name": "Candidate Library Table",
-      "type": "array",
-      "tooltip": "Generated list of candidate compounds including links (NYB, CoSing) and SMILES."
+      "id": "name",
+      "name": "Name",
+      "type": "string",
+      "tooltip": "Compound name or identifier (e.g. \"Quercetin\", \"Kaempferol\", \"Minoxidil\")."
+    },
+    {
+      "id": "vecurate_link",
+      "name": "Vecurate Link",
+      "type": "string",
+      "tooltip": "URL link to the compound entry in the Vecurate database"
+    },
+    {
+      "id": "eu_cosing",
+      "name": "EU CoSing",
+      "type": "string",
+      "tooltip": "URL link to the compound entry in the EU CosIng database for cosmetic ingredient regulation"
+    },
+    {
+      "id": "smiles",
+      "name": "SMILES",
+      "type": "string",
+      "tooltip": "SMILES string representing the compound's chemical structure."
     }
   ],
   "configSchema": [
@@ -50,6 +68,7 @@
       "label": "Primary Source",
       "options": [
         { "value": "vecurate", "label": "Vecurate" },
+        { "value": "vecurate_excerpt", "label": "Vecurate Excerpt (25 compounds)" },
         { "value": "eu_cosing", "label": "EU CoSing" },
         { "value": "pubchem", "label": "PubChem" },
         { "value": "chembl", "label": "ChEMBL" },

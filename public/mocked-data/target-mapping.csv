@@ -1,4 +1,4 @@
-Target,Why Relevant,Desired modulation,Assay type,Metric
+target,why_relevant,desired_modulation,assay_type,metric
 KATP,DP anagen entry trigger,activation,patch clamp,EC50
 GSK3β,Wnt inhibition release,inhibition,kinase ATP assay,IC50
 PDE1A,↑cAMP follicular signaling,inhibition,cAMP hydrolysis assay,IC50

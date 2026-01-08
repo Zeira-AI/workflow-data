@@ -16,10 +16,34 @@
   ],
   "defaultOutputs": [
     {
-      "id": "mapping-result",
-      "name": "Mapping Result",
-      "type": "object",
-      "tooltip": "Structured mapping for each target, including relevance, modulation, assay type, and metric."
+      "id": "target",
+      "name": "Target",
+      "type": "string",
+      "tooltip": "Protein target name or biological process (e.g. \"KATP\", \"GSK3β\", \"Safety assays\", \"Hair follicle biology\")."
+    },
+    {
+      "id": "why_relevant",
+      "name": "Why Relevant",
+      "type": "string",
+      "tooltip": "Biological rationale explaining why this target is relevant to the intended effect (e.g. \"DP anagen entry trigger\", \"Wnt inhibition release\")."
+    },
+    {
+      "id": "desired_modulation",
+      "name": "Desired Modulation",
+      "type": "string",
+      "tooltip": "Required modulation type: \"activation\" or \"inhibition\" for protein targets, or \"N/A\" for non-protein assays (e.g. safety, biology, stability)."
+    },
+    {
+      "id": "assay_type",
+      "name": "Assay Type",
+      "type": "string",
+      "tooltip": "Specific assay method used to measure the target or biological effect (e.g. \"patch clamp\", \"kinase ATP assay\", \"Dermal Papilla Cell Viability (MTT 72h)\")."
+    },
+    {
+      "id": "metric",
+      "name": "Metric",
+      "type": "string",
+      "tooltip": "Measurement unit or metric for the assay result (e.g. \"EC50\", \"IC50\", \"% viability\", \"mm\", \"MIC (µg/mL)\")."
     }
   ],
   "configSchema": [

@@ -23,10 +23,28 @@
   ],
   "defaultOutputs": [
     {
-      "id": "dockedStructure",
+      "id": "docked_structure",
       "name": "Docked Structure",
-      "type": "structure",
-      "tooltip": "The 3D structure of the docked compound"
+      "type": "string",
+      "tooltip": "3D structure file (PDB format) of the docked compound-target complex."
+    },
+    {
+      "id": "compound",
+      "name": "Compound",
+      "type": "string",
+      "tooltip": "Compound name or identifier."
+    },
+    {
+      "id": "target",
+      "name": "Target",
+      "type": "string",
+      "tooltip": "Biological target protein or pathway."
+    },
+    {
+      "id": "delta_g",
+      "name": "ΔG (kcal/mol)",
+      "type": "string",
+      "tooltip": "Predicted binding free energy in kcal/mol. More negative values indicate stronger binding affinity (e.g. \"-6.3\", \"-9.2\")."
     }
   ],
   "configSchema": [

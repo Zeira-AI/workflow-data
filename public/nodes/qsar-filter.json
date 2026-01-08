@@ -16,10 +16,28 @@
   ],
   "defaultOutputs": [
     {
-      "id": "output-filtered",
-      "name": "Filtered Results",
-      "type": "array",
-      "tooltip": "QSAR predictions and pass/fail flags for each compound."
+      "id": "compound",
+      "name": "Compound",
+      "type": "string",
+      "tooltip": "Compound name or identifier (e.g. \"Minoxidil\", \"Adenosine\", \"Baicalin\")."
+    },
+    {
+      "id": "target",
+      "name": "Target",
+      "type": "string",
+      "tooltip": "Biological target protein or pathway."
+    },
+    {
+      "id": "assay",
+      "name": "Assay",
+      "type": "string",
+      "tooltip": "Assay type used for bioactivity measurement (e.g. \"EC50\" for activation, \"IC50\" for inhibition)."
+    },
+    {
+      "id": "predicted_bioactivity",
+      "name": "Predicted Bioactivity",
+      "type": "string",
+      "tooltip": "QSAR-predicted bioactivity value in µM (e.g. \"1.7\", \"14.5\") or \">100 (inactive)\" if predicted to be inactive."
     }
   ],
     "configSchema": [

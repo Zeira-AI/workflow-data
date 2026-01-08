@@ -1,11 +1,41 @@
-compound,Kir6.2 - EC50,GSK3β - IC50,PDE1A - IC50,TGFBR1 - IC50
-Minoxidil,1.7,14.8,23.0,27.5
-Adenosine,6.4,11.9,20.1,12.0
-Piroctone Olamine,9.1,3.8,6.2,3.5
-Baicalin,14.5,0.9,5.4,1.7
-Caffeine,>100 (inactive),46.5,8.1,55.8
-Licochalcone A,>100 (inactive),>100 (inactive),>100 (inactive),>100 (inactive)
-Melatonin,>100 (inactive),>100 (inactive),>100 (inactive),>100 (inactive)
-Menthol,>100 (inactive),>100 (inactive),>100 (inactive),>100 (inactive)
-EGCG,>100 (inactive),>100 (inactive),>100 (inactive),>100 (inactive)
-Resveratrol,>100 (inactive),>100 (inactive),>100 (inactive),>100 (inactive)
+compound,target,assay,predicted_bioactivity
+Minoxidil,Kir6.2,EC50,1.7
+Adenosine,Kir6.2,EC50,6.4
+Piroctone Olamine,Kir6.2,EC50,9.1
+Baicalin,Kir6.2,EC50,14.5
+Caffeine,Kir6.2,EC50,>100 (inactive)
+Licochalcone A,Kir6.2,EC50,>100 (inactive)
+Melatonin,Kir6.2,EC50,>100 (inactive)
+Menthol,Kir6.2,EC50,>100 (inactive)
+EGCG,Kir6.2,EC50,>100 (inactive)
+Resveratrol,Kir6.2,EC50,>100 (inactive)
+Minoxidil,GSK3β,IC50,14.8
+Adenosine,GSK3β,IC50,11.9
+Piroctone Olamine,GSK3β,IC50,3.8
+Baicalin,GSK3β,IC50,0.9
+Caffeine,GSK3β,IC50,46.5
+Licochalcone A,GSK3β,IC50,>100 (inactive)
+Melatonin,GSK3β,IC50,>100 (inactive)
+Menthol,GSK3β,IC50,>100 (inactive)
+EGCG,GSK3β,IC50,>100 (inactive)
+Resveratrol,GSK3β,IC50,>100 (inactive)
+Minoxidil,PDE1A,IC50,23.0
+Adenosine,PDE1A,IC50,20.1
+Piroctone Olamine,PDE1A,IC50,6.2
+Baicalin,PDE1A,IC50,5.4
+Caffeine,PDE1A,IC50,8.1
+Licochalcone A,PDE1A,IC50,>100 (inactive)
+Melatonin,PDE1A,IC50,>100 (inactive)
+Menthol,PDE1A,IC50,>100 (inactive)
+EGCG,PDE1A,IC50,>100 (inactive)
+Resveratrol,PDE1A,IC50,>100 (inactive)
+Minoxidil,TGFBR1,IC50,27.5
+Adenosine,TGFBR1,IC50,12.0
+Piroctone Olamine,TGFBR1,IC50,3.5
+Baicalin,TGFBR1,IC50,1.7
+Caffeine,TGFBR1,IC50,55.8
+Licochalcone A,TGFBR1,IC50,>100 (inactive)
+Melatonin,TGFBR1,IC50,>100 (inactive)
+Menthol,TGFBR1,IC50,>100 (inactive)
+EGCG,TGFBR1,IC50,>100 (inactive)
+Resveratrol,TGFBR1,IC50,>100 (inactive)

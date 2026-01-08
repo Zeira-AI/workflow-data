@@ -1,4 +1,4 @@
-name,nyb_link,eu_cosing,smiles
+name,vecurate_link,eu_cosing,smiles
 Quercetin,http://101.97.84.189:8082/natural-compound/NYB0006621,https://ec.europa.eu/growth/tools-databases/cosing/details/58944,"C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O"
 Kaempferol,http://101.97.84.189:8082/natural-compound/NYB0006691,https://ec.europa.eu/growth/tools-databases/cosing/details/57815,"C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O"
 Apigenin,http://101.97.84.189:8082/natural-compound/NYB0006636,https://ec.europa.eu/growth/tools-databases/cosing/details/85203,"C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O"
