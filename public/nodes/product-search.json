@@ -5,86 +5,110 @@
   "icon": "search",
   "color": "amber",
   "description": "Search for products in the search tool",
+  "outputMockLabel": "8 items",
   "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "id",
-      "name": "id",
+      "id": "ID",
+      "name": "ID",
       "type": "string",
-      "description": "Product ID"
+      "tooltip": "Unique product identifier."
     },
     {
       "id": "brand",
-      "name": "brand",
+      "name": "Brand",
       "type": "string",
-      "description": "Brand name"
+      "tooltip": "Brand name of the product (e.g. \"Curlsmith\", \"The Ordinary\", \"Divi\")."
     },
     {
-      "id": "name",
-      "name": "name",
+      "id": "product",
+      "name": "Product",
       "type": "string",
-      "description": "Product name"
-    },
-    {
-      "id": "rating",
-      "name": "rating",
-      "type": "number",
-      "description": "Product rating"
-    },
-    {
-      "id": "reviewCount",
-      "name": "reviewCount",
-      "type": "number",
-      "description": "Number of reviews"
+      "tooltip": "Product name or title (e.g. \"Full Lengths Density Elixir\", \"Multi-Peptide Serum for Hair Density\")."
     },
     {
       "id": "ingredients",
-      "name": "ingredients",
+      "name": "Ingredients",
       "type": "string",
-      "description": "Product ingredients"
-    },
-    {
-      "id": "url",
-      "name": "url",
-      "type": "string",
-      "description": "Product URL"
-    },
-    {
-      "id": "imageUrl",
-      "name": "imageUrl",
-      "type": "string",
-      "description": "Product image URL"
-    },
-    {
-      "id": "scores",
-      "name": "scores",
-      "type": "object",
-      "description": "Relevance, coverage, novelty scores"
+      "tooltip": "Comma-separated list of ingredients in the product formulation."
     },
     {
       "id": "description",
-      "name": "description",
+      "name": "Description",
       "type": "string",
-      "description": "Product description"
+      "tooltip": "Product description explaining its purpose, benefits, and usage."
     },
     {
-      "id": "highlights",
-      "name": "highlights",
-      "type": "array",
-      "description": "Product highlights"
+      "id": "url",
+      "name": "URL",
+      "type": "string",
+      "tooltip": "Product page URL link."
+    },
+    {
+      "id": "price_usd",
+      "name": "Price (USD)",
+      "type": "number",
+      "tooltip": "Product price in US dollars."
+    },
+    {
+      "id": "size_ml",
+      "name": "Size (ml)",
+      "type": "number",
+      "tooltip": "Product size/volume in milliliters."
+    },
+    {
+      "id": "format",
+      "name": "Format",
+      "type": "string",
+      "tooltip": "Product format or delivery method (e.g. \"Dropper serum\", \"Nozzle serum\", \"Spray / mist\")."
+    },
+    {
+      "id": "estimated_cost_per_use_usd",
+      "name": "Estimated Cost per Use (USD)",
+      "type": "number",
+      "tooltip": "Calculated cost per single use in US dollars."
+    },
+    {
+      "id": "rating",
+      "name": "Rating",
+      "type": "number",
+      "tooltip": "Product rating score (typically on a scale of 1-5)."
+    },
+    {
+      "id": "review_count",
+      "name": "Review Count",
+      "type": "number",
+      "tooltip": "Total number of customer reviews for the product."
     }
   ],
   "configSchema": [
     {
       "key": "query",
-      "type": "textarea",
-      "label": "Search Product",
-      "placeholder": "Describe the product idea, key claims, market, and target user",
-      "defaultValue": ""
+      "type": "text",
+      "label": "Search Query",
+      "placeholder": "Enter product name, compounds, effects, or other search terms...",
+      "tooltip": "Text search query for products. You can search by product name, key compounds, desired effects, or other product attributes."
+    },
+    {
+      "key": "region",
+      "type": "select",
+      "label": "Region",
+      "options": [
+        { "value": "global", "label": "Global" },
+        { "value": "north_america", "label": "North America" },
+        { "value": "south_america", "label": "South America" },
+        { "value": "europe", "label": "Europe" },
+        { "value": "asia", "label": "Asia" },
+        { "value": "africa", "label": "Africa" },
+        { "value": "oceania", "label": "Oceania" }
+      ],
+      "defaultValue": "global",
+      "tooltip": "Select the continent/region to filter product search results."
     }
   ],
   "defaultConfig": {
-    "query": ""
+    "query": "",
+    "region": "global"
   }
 }
 

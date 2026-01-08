@@ -1,0 +1,17 @@
+ID;Proposed Claim;Claim Type;Market;Validation Status;Claim Issue;Market-Specific Compliance Issue;Conditional Usage Rules;Suggestion
+1;Promotes hair growth;Marketing;EU;INVALID;Drug-like wording;"""Hair growth"" implies biological stimulation, not allowed for cosmetics";Not allowed;Rewrite to appearance-based wording only
+2;Promotes hair growth;Marketing;US;CONDITIONALLY VALID;Drug boundary risk;Can be interpreted as an OTC drug claim if wording is too strong;Allowed only with softened cosmetic wording;"Change to ""supports the appearance of fuller-looking hair"""
+3;Promotes hair growth;Marketing;Japan;INVALID;Drug-like efficacy;Interpreted as quasi-drug efficacy claim;Not allowed;Replace with appearance-based claim
+4;Promotes hair growth;Marketing;China;INVALID;Therapeutic implication;Considered treatment of hair loss under advertising law;Not allowed;"Do not use; rephrase to cosmetic-safe wording"
+5;Reduces hair fall;Marketing;EU;CONDITIONALLY VALID;Evidence gap;No human study directly measuring hair shedding;Allowed only if clinical evidence is added;Add ≥8-week human shedding-count study
+6;Reduces hair fall;Marketing;US;CONDITIONALLY VALID;Endpoint mismatch;Biomarkers do not directly prove reduced hair fall;Allowed with conservative wording;Add human hair fall or consumer study
+7;Reduces hair fall;Marketing;Japan;INVALID;Therapeutic interpretation;Treated as hair loss prevention claim;Not allowed;"Use ""reduces visible shedding"" only"
+8;Reduces hair fall;Marketing;China;INVALID;Medical implication;Considered treatment of hair loss;Not allowed;Do not use
+9;Strengthens scalp barrier;Marketing;EU;VALID;None;Barrier claims supported by biomarker data;No restriction;No action needed
+10;Strengthens scalp barrier;Marketing;US;VALID;None;General cosmetic skin benefit;No restriction;No action needed
+11;Strengthens scalp barrier;Marketing;Japan;VALID;None;Acceptable scalp condition improvement;No restriction;No action needed
+12;Strengthens scalp barrier;Marketing;China;VALID;None;Cosmetic-safe functional claim;No restriction;No action needed
+13;Clinically proven hair regrowth;Marketing;EU;INVALID;Medical + evidence issue;Requires drug-level regrowth clinical trials;Not allowed;Remove claim entirely
+14;Clinically proven hair regrowth;Marketing;US;INVALID;Unsupported clinical claim;Biomarker study does not prove regrowth;Not allowed;Do not use
+15;Clinically proven hair regrowth;Marketing;Japan;INVALID;Drug / quasi-drug claim;Classified as medicinal efficacy;Not allowed;Do not use
+16;Clinically proven hair regrowth;Marketing;China;INVALID;Medical advertising violation;Prohibited therapeutic claim;Not allowed;Do not use
