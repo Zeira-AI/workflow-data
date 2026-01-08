@@ -51,7 +51,7 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
     },
     {
       "key": "myParameter",             // Field key (used in config object)
-      "type": "text",                   // Field type: text | number | select | boolean | json | textarea | file | markdown
+      "type": "text",                   // Field type: text | number | select | multiselect | boolean | json | textarea | file | markdown
       "label": "My Parameter",          // Display label
       "placeholder": "Enter value...",  // Optional: placeholder text
       "defaultValue": "",               // Optional: default value
@@ -201,7 +201,7 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 
 - **Missing required fields**: `type`, `label`, `category`, `icon`, `color`, `defaultInputs`, `defaultOutputs`, `configSchema`
 - **Invalid I/O types**: Must be one of: `string`, `number`, `boolean`, `object`, `array`
-- **Invalid config types**: Must be one of: `text`, `number`, `select`, `boolean`, `json`, `textarea`, `file`, `markdown`
+- **Invalid config types**: Must be one of: `text`, `number`, `select`, `multiselect`, `boolean`, `json`, `textarea`, `file`, `markdown`
 - **Type mismatch**: The `type` field must match the filename (e.g., `my-tool.json` should have `"type": "my-tool"`)
 - **Missing I/O fields**: Each input/output must have `id`, `name`, and `type`
 - **Missing config fields**: Each config field must have `key`, `type`, and `label`
@@ -220,7 +220,8 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 | `text` | Single-line text input | Name, URL, email |
 | `textarea` | Multi-line text input | Query, description, notes |
 | `number` | Numeric input | Count, limit, threshold |
-| `select` | Dropdown selection | Requires `options` array |
+| `select` | Single dropdown selection | Requires `options` array |
+| `multiselect` | Multiple dropdown selection | Requires `options` array |
 | `boolean` | Checkbox | Enable/disable flags |
 | `json` | JSON editor | Complex structured data |
 | `file` | File upload input | Documents, images, data files |
@@ -370,6 +371,37 @@ Tooltips can also be added to output ports:
   "defaultValue": "equals"
 }
 ```
+
+## Multi-Select Field Example
+
+Use multiselect for choosing multiple options from a dropdown with checkboxes:
+
+```json
+{
+  "key": "library_sources",
+  "type": "multiselect",
+  "label": "Primary Sources",
+  "options": [
+    { "value": "vecurate", "label": "Vecurate" },
+    { "value": "pubchem", "label": "PubChem" },
+    { "value": "chembl", "label": "ChEMBL" },
+    { "value": "drugbank", "label": "DrugBank" }
+  ],
+  "defaultValue": ["vecurate"],
+  "tooltip": "Choose one or more databases to pull candidate structures from."
+}
+```
+
+**Multi-select field properties:**
+- **options**: Array of `{ value, label }` objects (required)
+- **defaultValue**: Array of strings (e.g., `["vecurate"]`) instead of single string
+- Value is stored as `string[]` in the config
+
+**UI Features:**
+- Searchable dropdown with checkboxes
+- Selected items displayed as removable badge tags
+- Click badge X to remove individual selections
+- Checkbox indicators in dropdown for selected items
 
 ## Tips
 
