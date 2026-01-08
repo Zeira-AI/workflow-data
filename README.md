@@ -226,6 +226,29 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 | `file` | File upload input | Documents, images, data files |
 | `markdown` | Inline help/instructions | Info cards, usage hints |
 
+## Multi-Type Fields
+
+Use an array of types to let users switch between input modes:
+
+```json
+{
+  "key": "ingredientList",
+  "type": ["text", "file"],
+  "label": "Ingredient List",
+  "placeholder": "Enter or upload ingredients...",
+  "suggestedField": ["smiles", "name"],
+  "accept": ".txt,.csv,.smi"
+}
+```
+
+This renders a switcher allowing users to choose between:
+- **Text mode**: Manual input with field mapping support
+- **File mode**: File upload with drag-and-drop
+
+**Notes:**
+- Properties like `accept`, `placeholder`, `suggestedField` apply to their respective types
+- Switching modes clears incompatible values (e.g., text ↔ file)
+
 ## File Field Example
 
 ```json

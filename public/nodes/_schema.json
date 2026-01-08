@@ -106,9 +106,21 @@
           "description": "Configuration field key"
         },
         "type": {
-          "type": "string",
-          "enum": ["text", "number", "select", "boolean", "json", "textarea", "file", "markdown"],
-          "description": "Type of configuration field"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": ["text", "number", "select", "boolean", "json", "textarea", "file", "markdown"]
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["text", "number", "select", "boolean", "json", "textarea", "file", "markdown"]
+              },
+              "minItems": 1
+            }
+          ],
+          "description": "Type of configuration field. Can be a single type or array of types for multi-mode fields"
         },
         "label": {
           "type": "string",
@@ -181,6 +193,13 @@
         "color": {
           "type": "string",
           "description": "For markdown fields: color theme for the card container (e.g., 'info', 'success', 'warning', 'error', 'default')"
+        },
+        "suggestedField": {
+          "type": "array",
+          "description": "Suggested output field IDs from upstream nodes that can be mapped to this field",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }

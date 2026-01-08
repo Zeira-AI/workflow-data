@@ -35,17 +35,13 @@
   ],
   "configSchema": [
     {
-      "key": "ingredientListText",
-      "type": "text",
-      "label": "Ingredient List (Text)",
-      "placeholder": "Paste ingredient list here.",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"]
-    },
-    {
-      "key": "ingredientListFile",
-      "type": "file",
-      "label": "Upload Ingredient List Document",
-      "accept": ".pdf,.doc,.docx,.txt,.csv"
+      "key": "ingredientList",
+      "type": ["text", "file"],
+      "label": "Ingredient List",
+      "placeholder": "Select or upload a list of ingredients...",
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "tooltip": "Select or upload a list of ingredients.\nSupported formats: **TXT**, **CSV**, **SMILES**.",
+      "accept": ".txt,.csv,.smi"
     },
     {
       "key": "targetRegion",
@@ -89,18 +85,5 @@
       "label": "Advanced Options",
       "placeholder": "{ \"target user\": \"baby\", \"application route\": \"topical\", \"dosage form\": \"cream\" }"
     }
-  ],
-  "defaultConfig": {
-    "ingredientListText": "",
-    "ingredientListFile": null,
-    "targetRegion": "GLOBAL",
-    "scaleTier": "pilot",
-    "referenceProduct": "",
-    "desiredEffect": "",
-    "options": {
-      "target user": "",
-      "application route": "topical",
-      "dosage_form": "cream"
-    }
-  }
+  ]
 }
