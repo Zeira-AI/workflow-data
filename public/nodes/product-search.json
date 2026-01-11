@@ -5,6 +5,10 @@
   "icon": "search",
   "color": "amber",
   "description": "Search for products in the search tool",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
   "outputMockLabel": "8 items",
   "defaultInputs": [],
   "defaultOutputs": [
@@ -94,13 +98,34 @@
       "type": "select",
       "label": "Region",
       "options": [
-        { "value": "global", "label": "Global" },
-        { "value": "north_america", "label": "North America" },
-        { "value": "south_america", "label": "South America" },
-        { "value": "europe", "label": "Europe" },
-        { "value": "asia", "label": "Asia" },
-        { "value": "africa", "label": "Africa" },
-        { "value": "oceania", "label": "Oceania" }
+        {
+          "value": "global",
+          "label": "Global"
+        },
+        {
+          "value": "north_america",
+          "label": "North America"
+        },
+        {
+          "value": "south_america",
+          "label": "South America"
+        },
+        {
+          "value": "europe",
+          "label": "Europe"
+        },
+        {
+          "value": "asia",
+          "label": "Asia"
+        },
+        {
+          "value": "africa",
+          "label": "Africa"
+        },
+        {
+          "value": "oceania",
+          "label": "Oceania"
+        }
       ],
       "defaultValue": "global",
       "tooltip": "Select the continent/region to filter product search results."
@@ -111,4 +136,3 @@
     "region": "global"
   }
 }
-

@@ -5,6 +5,10 @@
   "icon": "filtericon",
   "color": "red",
   "description": "Predict compounds based on SMILES data.",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [
     {
       "id": "input-mol-data",

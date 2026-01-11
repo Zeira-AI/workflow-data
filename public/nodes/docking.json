@@ -5,6 +5,10 @@
   "icon": "dna",
   "color": "purple",
   "description": "Perform molecular docking for ligands and proteins.",
+  "pricing": {
+    "credits": 1200,
+    "executionTime": 1
+  },
   "outputMockLabel": "5 compounds",
   "defaultInputs": [
     {
@@ -51,18 +55,32 @@
   "configSchema": [
     {
       "key": "smiles_column",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "SMILES",
       "tooltip": "Smiles strings of the compounds to be docked",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci_name"
+      ],
       "accept": ".csv,.txt,.smi"
     },
     {
       "key": "protein_column",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Protein 3D structure",
       "tooltip": "3D structure of the proteins to be docked",
-      "suggestedField": ["target", "protein_name"],
+      "suggestedField": [
+        "target",
+        "protein_name"
+      ],
       "accept": ".csv,.pdb"
     },
     {
@@ -70,9 +88,18 @@
       "type": "select",
       "label": "Docking Engine",
       "options": [
-        { "value": "vina", "label": "AutoDock Vina" },
-        { "value": "diffdock", "label": "DiffDock" },
-        { "value": "swissdock", "label": "SwissDock" }
+        {
+          "value": "vina",
+          "label": "AutoDock Vina"
+        },
+        {
+          "value": "diffdock",
+          "label": "DiffDock"
+        },
+        {
+          "value": "swissdock",
+          "label": "SwissDock"
+        }
       ],
       "defaultValue": "vina",
       "tooltip": "Select a docking backend:\n- **AutoDock Vina** – accurate classical docking.\n- **DiffDock** – fast ML‑based pose prediction.\n- **SwissDock** – convenient web‑style presets for quick exploration."
@@ -83,7 +110,14 @@
       "label": "Vina Exhaustiveness (Simple)",
       "placeholder": "Docking exhaustiveness (e.g. 8–20)",
       "defaultValue": 8,
-      "showWhen": [{ "field": "engine", "in": ["vina"] }],
+      "showWhen": [
+        {
+          "field": "engine",
+          "in": [
+            "vina"
+          ]
+        }
+      ],
       "description": "Simple setting for **AutoDock Vina** controlling search thoroughness. Higher values increase accuracy but take longer."
     },
     {
@@ -92,7 +126,14 @@
       "label": "Vina Number of Binding Modes (Advanced)",
       "placeholder": "Number of binding poses to generate",
       "defaultValue": 9,
-      "showWhen": [{ "field": "engine", "in": ["vina"] }],
+      "showWhen": [
+        {
+          "field": "engine",
+          "in": [
+            "vina"
+          ]
+        }
+      ],
       "advanced": true,
       "tooltip": "Advanced: number of binding poses Vina should generate per ligand."
     },
@@ -101,7 +142,15 @@
       "type": "json",
       "label": "Grid Box Definition (Advanced)",
       "placeholder": "{ \"center_x\":0, \"center_y\":0, \"center_z\":0, \"size_x\":20, \"size_y\":20, \"size_z\":20 }",
-      "showWhen": [{ "field": "engine", "in": ["vina", "swissdock"] }],
+      "showWhen": [
+        {
+          "field": "engine",
+          "in": [
+            "vina",
+            "swissdock"
+          ]
+        }
+      ],
       "advanced": true,
       "tooltip": "Advanced: JSON definition of the docking search box centre and dimensions (Å)."
     },
@@ -111,7 +160,14 @@
       "label": "DiffDock Samples (Simple)",
       "placeholder": "e.g. 32",
       "defaultValue": 32,
-      "showWhen": [{ "field": "engine", "in": ["diffdock"] }],
+      "showWhen": [
+        {
+          "field": "engine",
+          "in": [
+            "diffdock"
+          ]
+        }
+      ],
       "description": "Simple setting for **DiffDock** controlling how many poses are sampled per complex. More samples = better coverage but slower."
     },
     {
@@ -120,7 +176,14 @@
       "label": "DiffDock Confidence Threshold (Advanced)",
       "placeholder": "0.0 – 1.0",
       "defaultValue": 0.5,
-      "showWhen": [{ "field": "engine", "in": ["diffdock"] }],
+      "showWhen": [
+        {
+          "field": "engine",
+          "in": [
+            "diffdock"
+          ]
+        }
+      ],
       "advanced": true,
       "tooltip": "Advanced: minimum DiffDock confidence score to keep a predicted pose."
     },
@@ -129,12 +192,28 @@
       "type": "select",
       "label": "SwissDock Run Type (Simple)",
       "options": [
-        { "value": "quick", "label": "Quick – fastest, coarse search" },
-        { "value": "balanced", "label": "Balanced – default preset" },
-        { "value": "precise", "label": "Precise – slower, higher accuracy" }
+        {
+          "value": "quick",
+          "label": "Quick – fastest, coarse search"
+        },
+        {
+          "value": "balanced",
+          "label": "Balanced – default preset"
+        },
+        {
+          "value": "precise",
+          "label": "Precise – slower, higher accuracy"
+        }
       ],
       "defaultValue": "balanced",
-      "showWhen": [{ "field": "engine", "in": ["swissdock"] }],
+      "showWhen": [
+        {
+          "field": "engine",
+          "in": [
+            "swissdock"
+          ]
+        }
+      ],
       "description": "Simple preset selector for **SwissDock** controlling the trade-off between speed and accuracy."
     },
     {
@@ -142,11 +221,24 @@
       "type": "select",
       "label": "SwissDock Advanced Precision",
       "options": [
-        { "value": "standard", "label": "Standard grid" },
-        { "value": "fine", "label": "Fine grid (more detailed scoring)" }
+        {
+          "value": "standard",
+          "label": "Standard grid"
+        },
+        {
+          "value": "fine",
+          "label": "Fine grid (more detailed scoring)"
+        }
       ],
       "defaultValue": "standard",
-      "showWhen": [{ "field": "engine", "in": ["swissdock"] }],
+      "showWhen": [
+        {
+          "field": "engine",
+          "in": [
+            "swissdock"
+          ]
+        }
+      ],
       "advanced": true,
       "tooltip": "Advanced: switch between standard and fine‑grid scoring for SwissDock."
     }

@@ -5,6 +5,10 @@
   "icon": "shield-check",
   "color": "red",
   "description": "Check ingredient/formula compliance against global market regulations",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [],
   "defaultOutputs": [
     {
@@ -25,7 +29,12 @@
       "key": "freeText",
       "type": "text",
       "label": "Manual Ingredients / Description",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci"],
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci"
+      ],
       "placeholder": "Enter ingredients or describe desired formula"
     },
     {
@@ -51,11 +60,26 @@
       "type": "select",
       "label": "Target User",
       "options": [
-        { "label": "Baby", "value": "baby" },
-        { "label": "Under 18", "value": "under_18" },
-        { "label": "18 - 30", "value": "18_30" },
-        { "label": "Middle-aged", "value": "middle_aged" },
-        { "label": "Elderly", "value": "elderly" }
+        {
+          "label": "Baby",
+          "value": "baby"
+        },
+        {
+          "label": "Under 18",
+          "value": "under_18"
+        },
+        {
+          "label": "18 - 30",
+          "value": "18_30"
+        },
+        {
+          "label": "Middle-aged",
+          "value": "middle_aged"
+        },
+        {
+          "label": "Elderly",
+          "value": "elderly"
+        }
       ],
       "defaultValue": "18_30"
     },
@@ -64,12 +88,30 @@
       "type": "select",
       "label": "Target Religion",
       "options": [
-        { "label": "Asia", "value": "asia" },
-        { "label": "Europe", "value": "europe" },
-        { "label": "North America", "value": "north_america" },
-        { "label": "South America", "value": "south_america" },
-        { "label": "Africa", "value": "africa" },
-        { "label": "Oceania", "value": "oceania" }
+        {
+          "label": "Asia",
+          "value": "asia"
+        },
+        {
+          "label": "Europe",
+          "value": "europe"
+        },
+        {
+          "label": "North America",
+          "value": "north_america"
+        },
+        {
+          "label": "South America",
+          "value": "south_america"
+        },
+        {
+          "label": "Africa",
+          "value": "africa"
+        },
+        {
+          "label": "Oceania",
+          "value": "oceania"
+        }
       ],
       "defaultValue": "asia"
     },
@@ -78,9 +120,18 @@
       "type": "select",
       "label": "Application Route",
       "options": [
-        { "label": "Oral", "value": "oral" },
-        { "label": "Dental", "value": "dental" },
-        { "label": "Topical", "value": "topical" }
+        {
+          "label": "Oral",
+          "value": "oral"
+        },
+        {
+          "label": "Dental",
+          "value": "dental"
+        },
+        {
+          "label": "Topical",
+          "value": "topical"
+        }
       ],
       "defaultValue": "topical"
     },
@@ -89,12 +140,30 @@
       "type": "select",
       "label": "Dosage Form",
       "options": [
-        { "label": "Gel", "value": "gel" },
-        { "label": "Cream", "value": "cream" },
-        { "label": "Lotion", "value": "lotion" },
-        { "label": "Ointment", "value": "ointment" },
-        { "label": "Shampoo", "value": "shampoo" },
-        { "label": "Foam", "value": "foam" }
+        {
+          "label": "Gel",
+          "value": "gel"
+        },
+        {
+          "label": "Cream",
+          "value": "cream"
+        },
+        {
+          "label": "Lotion",
+          "value": "lotion"
+        },
+        {
+          "label": "Ointment",
+          "value": "ointment"
+        },
+        {
+          "label": "Shampoo",
+          "value": "shampoo"
+        },
+        {
+          "label": "Foam",
+          "value": "foam"
+        }
       ],
       "defaultValue": "cream"
     }

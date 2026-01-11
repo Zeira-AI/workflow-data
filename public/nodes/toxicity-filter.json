@@ -5,6 +5,10 @@
   "icon": "filtericon",
   "color": "red",
   "description": "Filter compounds based on SMILES data and physicochemical thresholds.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
   "outputMockLabel": "13 compounds",
   "defaultInputs": [
     {
@@ -62,10 +66,18 @@
   "configSchema": [
     {
       "key": "ingredientListText",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Compound List",
       "tooltip": "Compounds for ADMET prediction",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci_name"
+      ],
       "accept": ".csv,.txt,.smi"
     },
     {
@@ -73,9 +85,18 @@
       "type": "select",
       "label": "Admet Prediction Models",
       "options": [
-        { "value": "admet_ai", "label": "Admet AI - best for fast predictions" },
-        { "value": "swiss_adme", "label": "SwissADME - best for accurate predictions" },
-        { "value": "toxtree", "label": "ToxTree - best for comprehensive predictions" }
+        {
+          "value": "admet_ai",
+          "label": "Admet AI - best for fast predictions"
+        },
+        {
+          "value": "swiss_adme",
+          "label": "SwissADME - best for accurate predictions"
+        },
+        {
+          "value": "toxtree",
+          "label": "ToxTree - best for comprehensive predictions"
+        }
       ],
       "tooltip": "Choose which ADMET engine to use; models trade off speed vs. detail."
     },
@@ -93,7 +114,7 @@
       "defaultValue": 4.0,
       "tooltip": "Maximum calculated logP (lipophilicity) allowed."
     },
-     {
+    {
       "key": "TPSA_threshold",
       "type": "number",
       "label": "TPSA Threshold",
@@ -135,7 +156,6 @@
       "HBD": "HDB",
       "HBA": "HDA",
       "RotB": "RotB"
-
     }
   }
 }

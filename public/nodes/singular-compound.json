@@ -5,6 +5,10 @@
   "icon": "science",
   "color": "blue",
   "description": "General wet lab validation planning module for cosmetics, functional food/beverage, supplements, pharma, and adjacent categories. Produces a study roadmap based on product specs, compliance expectations, methods, budget, and timeline constraints.",
+  "pricing": {
+    "credits": 5000,
+    "executionTime": 1
+  },
   "defaultInputs": [
     {
       "id": "input_data",
@@ -34,11 +38,26 @@
       "type": "select",
       "label": "Industry",
       "options": [
-        { "value": "cosmetics", "label": "Cosmetics / Personal Care" },
-        { "value": "functional_food", "label": "Functional Food / Beverage" },
-        { "value": "pharma", "label": "Pharmaceutical" },
-        { "value": "supplement", "label": "Dietary Supplement" },
-        { "value": "other", "label": "Other" }
+        {
+          "value": "cosmetics",
+          "label": "Cosmetics / Personal Care"
+        },
+        {
+          "value": "functional_food",
+          "label": "Functional Food / Beverage"
+        },
+        {
+          "value": "pharma",
+          "label": "Pharmaceutical"
+        },
+        {
+          "value": "supplement",
+          "label": "Dietary Supplement"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
       ]
     },
     {
@@ -52,14 +71,38 @@
       "type": "select",
       "label": "Product Type",
       "options": [
-        { "value": "topical", "label": "Topical" },
-        { "value": "oral_solid", "label": "Oral Solid (tablet/capsule/powder)" },
-        { "value": "oral_liquid", "label": "Oral Liquid (drink/syrup/suspension)" },
-        { "value": "injectable", "label": "Injectable / Parenteral" },
-        { "value": "ocular", "label": "Ocular" },
-        { "value": "nasal", "label": "Nasal" },
-        { "value": "inhalation", "label": "Inhalation" },
-        { "value": "other", "label": "Other" }
+        {
+          "value": "topical",
+          "label": "Topical"
+        },
+        {
+          "value": "oral_solid",
+          "label": "Oral Solid (tablet/capsule/powder)"
+        },
+        {
+          "value": "oral_liquid",
+          "label": "Oral Liquid (drink/syrup/suspension)"
+        },
+        {
+          "value": "injectable",
+          "label": "Injectable / Parenteral"
+        },
+        {
+          "value": "ocular",
+          "label": "Ocular"
+        },
+        {
+          "value": "nasal",
+          "label": "Nasal"
+        },
+        {
+          "value": "inhalation",
+          "label": "Inhalation"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
       ]
     },
     {
@@ -74,13 +117,34 @@
       "label": "Validation Objective(s)",
       "placeholder": "Select one or more validation goals",
       "options": [
-        { "value": "stability", "label": "Stability / Shelf-life" },
-        { "value": "microbial", "label": "Microbiological / Preservative Effectiveness" },
-        { "value": "performance", "label": "Performance / Efficacy (lab-based)" },
-        { "value": "safety", "label": "Safety Screening" },
-        { "value": "compatibility", "label": "Packaging / Container Compatibility" },
-        { "value": "process", "label": "Process / Scale-up / Manufacturability" },
-        { "value": "regulatory", "label": "Regulatory Substantiation" }
+        {
+          "value": "stability",
+          "label": "Stability / Shelf-life"
+        },
+        {
+          "value": "microbial",
+          "label": "Microbiological / Preservative Effectiveness"
+        },
+        {
+          "value": "performance",
+          "label": "Performance / Efficacy (lab-based)"
+        },
+        {
+          "value": "safety",
+          "label": "Safety Screening"
+        },
+        {
+          "value": "compatibility",
+          "label": "Packaging / Container Compatibility"
+        },
+        {
+          "value": "process",
+          "label": "Process / Scale-up / Manufacturability"
+        },
+        {
+          "value": "regulatory",
+          "label": "Regulatory Substantiation"
+        }
       ],
       "multiple": true
     },
@@ -95,13 +159,34 @@
       "type": "multiselect",
       "label": "Regulatory Classification",
       "options": [
-        { "value": "cosmetic", "label": "Cosmetic" },
-        { "value": "food", "label": "Food / Beverage" },
-        { "value": "supplement", "label": "Dietary Supplement" },
-        { "value": "otc", "label": "OTC / Non-Prescription Drug" },
-        { "value": "rx", "label": "Prescription Drug" },
-        { "value": "medical_device", "label": "Medical Device" },
-        { "value": "unknown", "label": "Not Sure / TBD" }
+        {
+          "value": "cosmetic",
+          "label": "Cosmetic"
+        },
+        {
+          "value": "food",
+          "label": "Food / Beverage"
+        },
+        {
+          "value": "supplement",
+          "label": "Dietary Supplement"
+        },
+        {
+          "value": "otc",
+          "label": "OTC / Non-Prescription Drug"
+        },
+        {
+          "value": "rx",
+          "label": "Prescription Drug"
+        },
+        {
+          "value": "medical_device",
+          "label": "Medical Device"
+        },
+        {
+          "value": "unknown",
+          "label": "Not Sure / TBD"
+        }
       ],
       "multiple": true
     },
@@ -110,12 +195,26 @@
       "type": "multiselect",
       "label": "Compliance Level",
       "options": [
-        { "value": "rd", "label": "R&D / Exploratory" },
-        { "value": "qc", "label": "QC / Release Support" },
-        { "value": "gmp", "label": "GMP-aligned" },
-        { "value": "glp", "label": "GLP (non-clinical)" }
+        {
+          "value": "rd",
+          "label": "R&D / Exploratory"
+        },
+        {
+          "value": "qc",
+          "label": "QC / Release Support"
+        },
+        {
+          "value": "gmp",
+          "label": "GMP-aligned"
+        },
+        {
+          "value": "glp",
+          "label": "GLP (non-clinical)"
+        }
       ],
-      "defaultValue": ["rd"],
+      "defaultValue": [
+        "rd"
+      ],
       "multiple": true
     },
     {
@@ -135,14 +234,38 @@
       "type": "multiselect",
       "label": "Physical Form",
       "options": [
-        { "value": "solution", "label": "Solution" },
-        { "value": "suspension", "label": "Suspension" },
-        { "value": "emulsion", "label": "Emulsion" },
-        { "value": "gel", "label": "Gel" },
-        { "value": "powder", "label": "Powder" },
-        { "value": "tablet", "label": "Tablet" },
-        { "value": "capsule", "label": "Capsule" },
-        { "value": "other", "label": "Other" }
+        {
+          "value": "solution",
+          "label": "Solution"
+        },
+        {
+          "value": "suspension",
+          "label": "Suspension"
+        },
+        {
+          "value": "emulsion",
+          "label": "Emulsion"
+        },
+        {
+          "value": "gel",
+          "label": "Gel"
+        },
+        {
+          "value": "powder",
+          "label": "Powder"
+        },
+        {
+          "value": "tablet",
+          "label": "Tablet"
+        },
+        {
+          "value": "capsule",
+          "label": "Capsule"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
       ],
       "multiple": true
     },
@@ -175,17 +298,50 @@
       "type": "multiselect",
       "label": "Required Test Types",
       "options": [
-        { "value": "stability_real_time", "label": "Real-time Stability" },
-        { "value": "stability_accelerated", "label": "Accelerated Stability" },
-        { "value": "freeze_thaw", "label": "Freeze–Thaw / Thermal Cycling" },
-        { "value": "micro_limits", "label": "Microbial Limits / Bioburden" },
-        { "value": "preservative_effectiveness", "label": "Preservative Effectiveness / Challenge Test" },
-        { "value": "assay_potency", "label": "Assay / Potency" },
-        { "value": "dissolution", "label": "Dissolution / Disintegration" },
-        { "value": "organoleptic", "label": "Organoleptic (taste/odor/appearance)" },
-        { "value": "compatibility_leachables", "label": "Extractables & Leachables" },
-        { "value": "performance_invitro", "label": "Performance (in vitro / bench test)" },
-        { "value": "contaminants", "label": "Contaminants (heavy metals, pesticides, etc.)" }
+        {
+          "value": "stability_real_time",
+          "label": "Real-time Stability"
+        },
+        {
+          "value": "stability_accelerated",
+          "label": "Accelerated Stability"
+        },
+        {
+          "value": "freeze_thaw",
+          "label": "Freeze–Thaw / Thermal Cycling"
+        },
+        {
+          "value": "micro_limits",
+          "label": "Microbial Limits / Bioburden"
+        },
+        {
+          "value": "preservative_effectiveness",
+          "label": "Preservative Effectiveness / Challenge Test"
+        },
+        {
+          "value": "assay_potency",
+          "label": "Assay / Potency"
+        },
+        {
+          "value": "dissolution",
+          "label": "Dissolution / Disintegration"
+        },
+        {
+          "value": "organoleptic",
+          "label": "Organoleptic (taste/odor/appearance)"
+        },
+        {
+          "value": "compatibility_leachables",
+          "label": "Extractables & Leachables"
+        },
+        {
+          "value": "performance_invitro",
+          "label": "Performance (in vitro / bench test)"
+        },
+        {
+          "value": "contaminants",
+          "label": "Contaminants (heavy metals, pesticides, etc.)"
+        }
       ],
       "multiple": true
     },
@@ -242,9 +398,18 @@
       "type": "select",
       "label": "Lab Preference",
       "options": [
-        { "value": "internal", "label": "Internal Lab" },
-        { "value": "external", "label": "External Lab / CRO" },
-        { "value": "either", "label": "Either" }
+        {
+          "value": "internal",
+          "label": "Internal Lab"
+        },
+        {
+          "value": "external",
+          "label": "External Lab / CRO"
+        },
+        {
+          "value": "either",
+          "label": "Either"
+        }
       ],
       "defaultValue": "either"
     },
@@ -258,9 +423,15 @@
   "defaultConfig": {
     "industry": "functional_food",
     "productType": "oral_liquid",
-    "validationObjective": ["stability"],
-    "regulatoryClassification": ["food"],
-    "complianceLevel": ["rd"],
+    "validationObjective": [
+      "stability"
+    ],
+    "regulatoryClassification": [
+      "food"
+    ],
+    "complianceLevel": [
+      "rd"
+    ],
     "labPreference": "either"
   }
 }

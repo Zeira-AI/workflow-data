@@ -5,6 +5,10 @@
   "icon": "file",
   "color": "purple",
   "description": "Upload and process document with various configuration options",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [],
   "defaultOutputs": [
     {
@@ -88,4 +92,3 @@
     "options": {}
   }
 }
-

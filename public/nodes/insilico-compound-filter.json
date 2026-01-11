@@ -5,6 +5,10 @@
   "icon": "biotech",
   "color": "indigo",
   "description": "Evaluates compounds using user-configurable criteria, tools, methods, and thresholds for Toxicity, Bioactivity, and Developability.",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [],
   "defaultOutputs": [
     {
