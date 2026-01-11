@@ -5,6 +5,10 @@
   "icon": "icon-report",
   "color": "blue",
   "description": "Generates a structured document based on input data and a selected template.",
+  "pricing": {
+    "credits": 100,
+    "executionTime": 1
+  },
   "defaultInputs": [
     {
       "id": "input-data",
@@ -41,9 +45,18 @@
       "type": "select",
       "label": "Export Format",
       "options": [
-        { "value": "pdf", "label": "PDF Document" },
-        { "value": "csv", "label": "CSV Spreadsheet" },
-        { "value": "html", "label": "HTML Webpage" }
+        {
+          "value": "pdf",
+          "label": "PDF Document"
+        },
+        {
+          "value": "csv",
+          "label": "CSV Spreadsheet"
+        },
+        {
+          "value": "html",
+          "label": "HTML Webpage"
+        }
       ],
       "defaultValue": "pdf"
     },

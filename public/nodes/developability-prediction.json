@@ -5,6 +5,10 @@
   "icon": "filter",
   "color": "blue",
   "description": "Filter and rank compounds based on developability criteria such as MW, cLogD, solubility, potency, LipE, metabolic stability, and PAINS alerts.",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [
     {
       "id": "moleculeTable",
@@ -24,39 +28,57 @@
   ],
   "configSchema": [
     {
-    "key": "moleculeText",
-    "type": "text",
-    "label": "Molecule List (Paste)",
-    "placeholder": "CMPD_001,CCN(CC)C(=O)C1=CC=CC=C1,7.2\nCMPD_002,COC1=CC=CC=C1C(=O)NCC,6.5\nCMPD_003,CCOC1=NC=CC=C1",
-    "description": "One molecule per line: moleculeId, SMILES, optional pIC50"
-  },
-  {
-    "key": "moleculeFile",
-    "type": "file",
-    "label": "Upload Molecule File",
-    "accept": ".csv,.txt"
-  },
-  {
-    "key": "targetClass",
-    "type": "select",
-    "label": "Target Class",
-    "options": [
-      { "value": "cns", "label": "CNS" },
-      { "value": "non_cns", "label": "Non-CNS" },
-      { "value": "unknown", "label": "Unknown" }
-    ],
-    "defaultValue": "non_cns"
-  },
-  {
-    "key": "predictionMode",
-    "type": "select",
-    "label": "Prediction Mode",
-    "options": [
-      { "value": "rules", "label": "Rules-based" },
-      { "value": "ml", "label": "Machine Learning" },
-      { "value": "hybrid", "label": "Hybrid" }
-    ],
-    "defaultValue": "hybrid"
-  }
-]
+      "key": "moleculeText",
+      "type": "text",
+      "label": "Molecule List (Paste)",
+      "placeholder": "CMPD_001,CCN(CC)C(=O)C1=CC=CC=C1,7.2\nCMPD_002,COC1=CC=CC=C1C(=O)NCC,6.5\nCMPD_003,CCOC1=NC=CC=C1",
+      "description": "One molecule per line: moleculeId, SMILES, optional pIC50"
+    },
+    {
+      "key": "moleculeFile",
+      "type": "file",
+      "label": "Upload Molecule File",
+      "accept": ".csv,.txt"
+    },
+    {
+      "key": "targetClass",
+      "type": "select",
+      "label": "Target Class",
+      "options": [
+        {
+          "value": "cns",
+          "label": "CNS"
+        },
+        {
+          "value": "non_cns",
+          "label": "Non-CNS"
+        },
+        {
+          "value": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "defaultValue": "non_cns"
+    },
+    {
+      "key": "predictionMode",
+      "type": "select",
+      "label": "Prediction Mode",
+      "options": [
+        {
+          "value": "rules",
+          "label": "Rules-based"
+        },
+        {
+          "value": "ml",
+          "label": "Machine Learning"
+        },
+        {
+          "value": "hybrid",
+          "label": "Hybrid"
+        }
+      ],
+      "defaultValue": "hybrid"
+    }
+  ]
 }

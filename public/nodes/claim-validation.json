@@ -5,6 +5,10 @@
   "icon": "check-circle",
   "color": "green",
   "description": "Validate marketing and scientific claims against regulatory requirements across different markets.",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
   "outputMockLabel": "16 items",
   "defaultInputs": [],
   "defaultOutputs": [
@@ -66,7 +70,10 @@
   "configSchema": [
     {
       "key": "available_evidence",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Available Evidence",
       "placeholder": "Upload evidence documents supporting the claims...",
       "required": true,
@@ -75,10 +82,16 @@
     },
     {
       "key": "proposed_claim",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Proposed Claim",
       "placeholder": "Enter claim text or upload a claim list...",
-      "suggestedField": ["claim", "proposed_claim"],
+      "suggestedField": [
+        "claim",
+        "proposed_claim"
+      ],
       "tooltip": "Enter the marketing or scientific claim text directly (e.g. \"Promotes hair growth by strengthening scalp barrier\") or upload a file containing multiple claims.",
       "accept": ".txt,.csv"
     },
@@ -87,8 +100,14 @@
       "type": "multiselect",
       "label": "Claim Type",
       "options": [
-        { "value": "marketing", "label": "Marketing claim" },
-        { "value": "scientific", "label": "Scientific claim" }
+        {
+          "value": "marketing",
+          "label": "Marketing claim"
+        },
+        {
+          "value": "scientific",
+          "label": "Scientific claim"
+        }
       ],
       "tooltip": "Select one or more claim types to validate. Marketing claims are consumer-facing, while scientific claims are technical/evidence-based."
     },
@@ -97,10 +116,22 @@
       "type": "select",
       "label": "Region",
       "options": [
-        { "value": "US", "label": "US" },
-        { "value": "EU", "label": "EU" },
-        { "value": "Japan", "label": "Japan" },
-        { "value": "China", "label": "China" }
+        {
+          "value": "US",
+          "label": "US"
+        },
+        {
+          "value": "EU",
+          "label": "EU"
+        },
+        {
+          "value": "Japan",
+          "label": "Japan"
+        },
+        {
+          "value": "China",
+          "label": "China"
+        }
       ],
       "tooltip": "Select the target market/region for claim validation. Different regions have varying regulatory requirements for cosmetic and therapeutic claims."
     }
@@ -110,4 +141,3 @@
     "region": "US"
   }
 }
-

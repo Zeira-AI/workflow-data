@@ -5,6 +5,10 @@
   "icon": "flask",
   "color": "purple",
   "description": "Analyze and deformulate product compositions based on specific requirements",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
   "outputMockLabel": "1013 items",
   "defaultInputs": [],
   "defaultOutputs": [
@@ -36,10 +40,18 @@
   "configSchema": [
     {
       "key": "ingredientList",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Ingredient List",
       "placeholder": "Select or upload a list of ingredients...",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci_name"
+      ],
       "tooltip": "Select or upload a list of ingredients.\nSupported formats: **TXT**, **CSV**, **SMILES**.",
       "accept": ".txt,.csv,.smi"
     },
@@ -47,7 +59,10 @@
       "key": "referenceProduct",
       "type": "text",
       "label": "Similar Product (Link/Name)",
-      "suggestedField": ["product", "name"],
+      "suggestedField": [
+        "product",
+        "name"
+      ],
       "placeholder": "Paste product link or name here..."
     },
     {
