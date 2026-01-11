@@ -4,7 +4,16 @@
   "title": "Node Definition Schema",
   "description": "JSON Schema for workflow builder node definitions",
   "type": "object",
-  "required": ["type", "label", "category", "icon", "color", "defaultInputs", "defaultOutputs", "configSchema"],
+  "required": [
+    "type",
+    "label",
+    "category",
+    "icon",
+    "color",
+    "defaultInputs",
+    "defaultOutputs",
+    "configSchema"
+  ],
   "properties": {
     "type": {
       "type": "string",
@@ -59,12 +68,36 @@
     "defaultConfig": {
       "type": "object",
       "description": "Optional: Default configuration values. Prefer using 'defaultValue' in configSchema fields instead."
+    },
+    "pricing": {
+      "type": "object",
+      "description": "Pricing information for the tool execution",
+      "required": [
+        "credits",
+        "executionTime"
+      ],
+      "properties": {
+        "credits": {
+          "type": "integer",
+          "description": "Cost in credits per execution",
+          "minimum": 0
+        },
+        "executionTime": {
+          "type": "integer",
+          "description": "Execution time units",
+          "minimum": 1
+        }
+      }
     }
   },
   "definitions": {
     "NodeIO": {
       "type": "object",
-      "required": ["id", "name", "type"],
+      "required": [
+        "id",
+        "name",
+        "type"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -76,7 +109,14 @@
         },
         "type": {
           "type": "string",
-          "enum": ["string", "number", "boolean", "object", "array", "structure"],
+          "enum": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "structure"
+          ],
           "description": "Data type of the I/O port"
         },
         "required": {
@@ -99,7 +139,11 @@
     },
     "ConfigField": {
       "type": "object",
-      "required": ["key", "type", "label"],
+      "required": [
+        "key",
+        "type",
+        "label"
+      ],
       "properties": {
         "key": {
           "type": "string",
@@ -109,13 +153,35 @@
           "oneOf": [
             {
               "type": "string",
-              "enum": ["text", "number", "select", "multiselect", "boolean", "json", "textarea", "file", "markdown", "filter"]
+              "enum": [
+                "text",
+                "number",
+                "select",
+                "multiselect",
+                "boolean",
+                "json",
+                "textarea",
+                "file",
+                "markdown",
+                "filter"
+              ]
             },
             {
               "type": "array",
               "items": {
                 "type": "string",
-                "enum": ["text", "number", "select", "multiselect", "boolean", "json", "textarea", "file", "markdown", "filter"]
+                "enum": [
+                  "text",
+                  "number",
+                  "select",
+                  "multiselect",
+                  "boolean",
+                  "json",
+                  "textarea",
+                  "file",
+                  "markdown",
+                  "filter"
+                ]
               },
               "minItems": 1
             }
@@ -135,7 +201,10 @@
           "description": "Options for select fields",
           "items": {
             "type": "object",
-            "required": ["value", "label"],
+            "required": [
+              "value",
+              "label"
+            ],
             "properties": {
               "value": {
                 "type": "string"
@@ -170,7 +239,10 @@
           "description": "Conditions for showing this field. All conditions must be satisfied (AND logic). Each condition's 'in' array uses OR logic.",
           "items": {
             "type": "object",
-            "required": ["field", "in"],
+            "required": [
+              "field",
+              "in"
+            ],
             "properties": {
               "field": {
                 "type": "string",
@@ -205,4 +277,3 @@
     }
   }
 }
-

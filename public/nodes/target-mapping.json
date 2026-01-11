@@ -5,6 +5,10 @@
   "icon": "target-icon",
   "color": "blue",
   "description": "Maps protein names or biological descriptions to assay metrics. Supports manual free-text input or automated lookup.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
   "outputMockLabel": "12 targets",
   "defaultInputs": [
     {
@@ -59,18 +63,90 @@
   "defaultConfig": {
     "manualFreetext": "",
     "mappingTable": [
-      { "target": "KATP", "relevance": "DP anagen entry trigger", "modulation": "activation", "assay": "patch clamp", "metric": "EC50" },
-      { "target": "GSK3β", "relevance": "Wnt inhibition release", "modulation": "inhibition", "assay": "kinase ATP assay", "metric": "IC50" },
-      { "target": "PDE1A", "relevance": "↑cAMP follicular signaling", "modulation": "inhibition", "assay": "cAMP hydrolysis assay", "metric": "IC50" },
-      { "target": "TGFBR1", "relevance": "block catagen transition", "modulation": "inhibition", "assay": "Smad phosphorylation", "metric": "IC50" },
-      { "target": "Safety assays", "relevance": "Cytotoxicity & viability", "modulation": "N/A", "assay": "Dermal Papilla Cell Viability (MTT 72h)", "metric": "% viability" },
-      { "target": "Hair follicle biology", "relevance": "Ex vivo Hair Shaft Growth", "modulation": "N/A", "assay": "microdissected follicles 10 days", "metric": "mm" },
-      { "target": "Inflammation", "relevance": "IL-8 Suppression", "modulation": "N/A", "assay": "ELISA / Reporter Assay", "metric": "% reduction" },
-      { "target": "Oxidative stress", "relevance": "ROS Reduction", "modulation": "N/A", "assay": "DCFDA assay H2O2 challenge", "metric": "% ROS inhibition" },
-      { "target": "Antimicrobial efficacy", "relevance": "MIC vs Malassezia restricta", "modulation": "N/A", "assay": "In vitro culture", "metric": "MIC (µg/mL)" },
-      { "target": "Skin penetration", "relevance": "Franz Diffusion Model", "modulation": "N/A", "assay": "Franz cell", "metric": "cumulative permeation in µg/cm²/24h" },
-      { "target": "Stability", "relevance": "4-week accelerated stability", "modulation": "N/A", "assay": "40°C/75%RH", "metric": "% active remaining" },
-      { "target": "Gene expression", "relevance": "WNT/β-catenin Gene Panel", "modulation": "N/A", "assay": "qPCR in DP cells", "metric": "fold change vs untreated" }
+      {
+        "target": "KATP",
+        "relevance": "DP anagen entry trigger",
+        "modulation": "activation",
+        "assay": "patch clamp",
+        "metric": "EC50"
+      },
+      {
+        "target": "GSK3β",
+        "relevance": "Wnt inhibition release",
+        "modulation": "inhibition",
+        "assay": "kinase ATP assay",
+        "metric": "IC50"
+      },
+      {
+        "target": "PDE1A",
+        "relevance": "↑cAMP follicular signaling",
+        "modulation": "inhibition",
+        "assay": "cAMP hydrolysis assay",
+        "metric": "IC50"
+      },
+      {
+        "target": "TGFBR1",
+        "relevance": "block catagen transition",
+        "modulation": "inhibition",
+        "assay": "Smad phosphorylation",
+        "metric": "IC50"
+      },
+      {
+        "target": "Safety assays",
+        "relevance": "Cytotoxicity & viability",
+        "modulation": "N/A",
+        "assay": "Dermal Papilla Cell Viability (MTT 72h)",
+        "metric": "% viability"
+      },
+      {
+        "target": "Hair follicle biology",
+        "relevance": "Ex vivo Hair Shaft Growth",
+        "modulation": "N/A",
+        "assay": "microdissected follicles 10 days",
+        "metric": "mm"
+      },
+      {
+        "target": "Inflammation",
+        "relevance": "IL-8 Suppression",
+        "modulation": "N/A",
+        "assay": "ELISA / Reporter Assay",
+        "metric": "% reduction"
+      },
+      {
+        "target": "Oxidative stress",
+        "relevance": "ROS Reduction",
+        "modulation": "N/A",
+        "assay": "DCFDA assay H2O2 challenge",
+        "metric": "% ROS inhibition"
+      },
+      {
+        "target": "Antimicrobial efficacy",
+        "relevance": "MIC vs Malassezia restricta",
+        "modulation": "N/A",
+        "assay": "In vitro culture",
+        "metric": "MIC (µg/mL)"
+      },
+      {
+        "target": "Skin penetration",
+        "relevance": "Franz Diffusion Model",
+        "modulation": "N/A",
+        "assay": "Franz cell",
+        "metric": "cumulative permeation in µg/cm²/24h"
+      },
+      {
+        "target": "Stability",
+        "relevance": "4-week accelerated stability",
+        "modulation": "N/A",
+        "assay": "40°C/75%RH",
+        "metric": "% active remaining"
+      },
+      {
+        "target": "Gene expression",
+        "relevance": "WNT/β-catenin Gene Panel",
+        "modulation": "N/A",
+        "assay": "qPCR in DP cells",
+        "metric": "fold change vs untreated"
+      }
     ]
   }
 }

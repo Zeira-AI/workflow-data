@@ -5,6 +5,10 @@
   "icon": "shield-check",
   "color": "blue",
   "description": "Check regulatory compliance of ingredients across different markets and regulations.",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
   "outputMockLabel": "12 items",
   "defaultInputs": [
     {
@@ -106,19 +110,34 @@
   "configSchema": [
     {
       "key": "ingredientList",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Ingredient List",
       "placeholder": "Select or enter ingredient list...",
-      "suggestedField": ["ingredient_name", "INCI_name", "inci", "name"],
+      "suggestedField": [
+        "ingredient_name",
+        "INCI_name",
+        "inci",
+        "name"
+      ],
       "tooltip": "List of ingredients to check for compliance. Can be selected from ingredient-search output or entered manually. Supports text input or file upload (TXT, CSV).",
       "accept": ".txt,.csv"
     },
     {
       "key": "referenceProduct",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Similar Product (Link/Name)",
       "placeholder": "Paste product link or name here...",
-      "suggestedField": ["product", "name", "brand"],
+      "suggestedField": [
+        "product",
+        "name",
+        "brand"
+      ],
       "tooltip": "Reference product name or URL from product-search to use as a compliance benchmark or to extract ingredient information.",
       "accept": ".txt,.csv"
     },
@@ -127,13 +146,34 @@
       "type": "select",
       "label": "Market",
       "options": [
-        { "value": "EU", "label": "EU" },
-        { "value": "US", "label": "US" },
-        { "value": "UK", "label": "UK" },
-        { "value": "CN", "label": "China" },
-        { "value": "JP", "label": "Japan" },
-        { "value": "ASEAN", "label": "ASEAN" },
-        { "value": "GLOBAL", "label": "Global / Multiple Markets" }
+        {
+          "value": "EU",
+          "label": "EU"
+        },
+        {
+          "value": "US",
+          "label": "US"
+        },
+        {
+          "value": "UK",
+          "label": "UK"
+        },
+        {
+          "value": "CN",
+          "label": "China"
+        },
+        {
+          "value": "JP",
+          "label": "Japan"
+        },
+        {
+          "value": "ASEAN",
+          "label": "ASEAN"
+        },
+        {
+          "value": "GLOBAL",
+          "label": "Global / Multiple Markets"
+        }
       ],
       "defaultValue": "GLOBAL",
       "tooltip": "Select the target market or region for compliance checking. Different markets have varying regulatory requirements."
@@ -150,21 +190,44 @@
       "type": "select",
       "label": "Target User (Age)",
       "options": [
-        { "value": "adult", "label": "Adult (18+)" },
-        { "value": "teen", "label": "Teen (13-17)" },
-        { "value": "child", "label": "Child (3-12)" },
-        { "value": "baby", "label": "Baby (0-2)" },
-        { "value": "all_ages", "label": "All Ages" }
+        {
+          "value": "adult",
+          "label": "Adult (18+)"
+        },
+        {
+          "value": "teen",
+          "label": "Teen (13-17)"
+        },
+        {
+          "value": "child",
+          "label": "Child (3-12)"
+        },
+        {
+          "value": "baby",
+          "label": "Baby (0-2)"
+        },
+        {
+          "value": "all_ages",
+          "label": "All Ages"
+        }
       ],
       "defaultValue": "adult",
       "tooltip": "Target user age group. Some ingredients have stricter restrictions for products intended for children or babies."
     },
     {
       "key": "formula",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Formula (Optional)",
       "placeholder": "Enter formula or upload formula file...",
-      "suggestedField": ["formula", "formulation", "inci", "estimatedPercent"],
+      "suggestedField": [
+        "formula",
+        "formulation",
+        "inci",
+        "estimatedPercent"
+      ],
       "tooltip": "Optional: Complete formula with ingredient concentrations from formulate node. Helps check concentration-based restrictions. Supports text input or file upload.",
       "accept": ".txt,.csv"
     }
@@ -174,4 +237,3 @@
     "targetUserAge": "adult"
   }
 }
-

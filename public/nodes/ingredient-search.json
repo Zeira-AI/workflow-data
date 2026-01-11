@@ -5,6 +5,10 @@
   "icon": "search",
   "color": "green",
   "description": "Search ingredients suitable for your applications",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
   "defaultInputs": [],
   "defaultOutputs": [
     {

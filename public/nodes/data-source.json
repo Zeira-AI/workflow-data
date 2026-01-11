@@ -5,6 +5,10 @@
   "icon": "database",
   "color": "blue",
   "description": "Connect to external data sources",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [],
   "defaultOutputs": [
     {
@@ -60,4 +64,3 @@
     "query": ""
   }
 }
-

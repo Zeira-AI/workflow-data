@@ -1,11 +1,15 @@
 {
-    "type": "qsar-filter",
-    "label": "QSAR Filter",
-    "category": "analysis",
-    "icon": "filtericon",
-    "color": "red",
-    "description": "Filter compounds based on QSAR data and physicochemical thresholds.",
-    "outputMockLabel": "10 compounds",
+  "type": "qsar-filter",
+  "label": "QSAR Filter",
+  "category": "analysis",
+  "icon": "filtericon",
+  "color": "red",
+  "description": "Filter compounds based on QSAR data and physicochemical thresholds.",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
+  "outputMockLabel": "10 compounds",
   "defaultInputs": [
     {
       "id": "input-mol-data",
@@ -47,138 +51,247 @@
       "tooltip": "QSAR-predicted bioactivity value in µM (e.g. \"1.7\", \"14.5\") or \">100 (inactive)\" if predicted to be inactive."
     }
   ],
-    "configSchema": [
+  "configSchema": [
+    {
+      "key": "smiles_column",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "SMILES",
+      "tooltip": "Smiles strings of the compounds for QSAR predicted",
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci_name"
+      ],
+      "accept": ".csv,.txt,.smi"
+    },
+    {
+      "key": "target_column",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Target",
+      "placeholder": "Enter Target.",
+      "tooltip": "Targets for QSAR predicted",
+      "suggestedField": [
+        "target",
+        "protein_name"
+      ],
+      "accept": ".csv,.pdb"
+    },
+    {
+      "key": "qsar_models",
+      "type": "select",
+      "label": "QSAR Models",
+      "options": [
         {
-          "key": "smiles_column",
-          "type": ["text", "file"],
-          "label": "SMILES",
-          "tooltip": "Smiles strings of the compounds for QSAR predicted",
-          "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
-          "accept": ".csv,.txt,.smi"
+          "value": "chem_prop",
+          "label": "ChemProp - best for fast predictions"
         },
         {
-          "key": "target_column",
-          "type": ["text", "file"],
-          "label": "Target",
-          "placeholder": "Enter Target.",
-          "tooltip": "Targets for QSAR predicted",
-          "suggestedField": ["target", "protein_name"],
-          "accept": ".csv,.pdb"
+          "value": "opera",
+          "label": "OPERA - Regulatory-grade QSAR predictions"
         },
         {
-            "key": "qsar_models",
-            "type": "select",
-            "label": "QSAR Models",
-            "options": [
-                { "value": "chem_prop", "label": "ChemProp - best for fast predictions" },
-                { "value": "opera", "label": "OPERA - Regulatory-grade QSAR predictions" },
-                { "value": "qsprpred", "label": "QSPRpred - Flexible model building & benchmarking tasks" }
+          "value": "qsprpred",
+          "label": "QSPRpred - Flexible model building & benchmarking tasks"
+        }
       ],
       "tooltip": "Pick the QSAR engine:\n- **ChemProp** – fast, general small‑molecule predictions.\n- **OPERA** – curated, regulatory‑grade endpoints.\n- **QSPRpred** – train custom models for benchmarking and internal data."
+    },
+    {
+      "key": "prediction_endpoint",
+      "type": "select",
+      "label": "Prediction Endpoint",
+      "showWhen": [
+        {
+          "field": "qsar_models",
+          "in": [
+            "chem_prop"
+          ]
+        }
+      ],
+      "options": [
+        {
+          "value": "toxicity",
+          "label": "Toxicity"
         },
         {
-            "key": "prediction_endpoint",
-            "type": "select",
-            "label": "Prediction Endpoint",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["chem_prop"] }
-            ],
-            "options": [
-                { "value": "toxicity", "label": "Toxicity" },
-                { "value": "solubility", "label": "Solubility" },
-                { "value": "bioavailability", "label": "Bioavailability" },
-                { "value": "permeability", "label": "Permeability" },
-                { "value": "bioactivity", "label": "Bioactivity" }
+          "value": "solubility",
+          "label": "Solubility"
+        },
+        {
+          "value": "bioavailability",
+          "label": "Bioavailability"
+        },
+        {
+          "value": "permeability",
+          "label": "Permeability"
+        },
+        {
+          "value": "bioactivity",
+          "label": "Bioactivity"
+        }
       ],
       "tooltip": "For ChemProp, choose which property you want to predict for each compound."
-        },
+    },
+    {
+      "key": "confidence_threshold",
+      "type": "number",
+      "label": "Confidence Threshold (%)",
+      "placeholder": "Enter threshold (0-100)",
+      "showWhen": [
         {
-            "key": "confidence_threshold",
-            "type": "number",
-            "label": "Confidence Threshold (%)",
-            "placeholder": "Enter threshold (0-100)",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["chem_prop", "opera"] }
-            ],
+          "field": "qsar_models",
+          "in": [
+            "chem_prop",
+            "opera"
+          ]
+        }
+      ],
       "defaultValue": 70,
       "tooltip": "Minimum prediction confidence; lower values keep more compounds but with less certainty."
+    },
+    {
+      "key": "toxicity_detail",
+      "type": "textarea",
+      "label": "Toxicity Analysis Notes",
+      "placeholder": "Enter specific toxicity parameters or notes...",
+      "showWhen": [
+        {
+          "field": "qsar_models",
+          "in": [
+            "chem_prop"
+          ]
         },
         {
-            "key": "toxicity_detail",
-            "type": "textarea",
-            "label": "Toxicity Analysis Notes",
-            "placeholder": "Enter specific toxicity parameters or notes...",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["chem_prop"] },
-                { "field": "prediction_endpoint", "in": ["toxicity"] }
+          "field": "prediction_endpoint",
+          "in": [
+            "toxicity"
+          ]
+        }
       ],
       "tooltip": "Optional notes about toxicity scenarios, dose ranges, or study assumptions."
+    },
+    {
+      "key": "opera_descriptor_set",
+      "type": "select",
+      "label": "OPERA Descriptor Set",
+      "showWhen": [
+        {
+          "field": "qsar_models",
+          "in": [
+            "opera"
+          ]
+        }
+      ],
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard Descriptors"
         },
         {
-            "key": "opera_descriptor_set",
-            "type": "select",
-            "label": "OPERA Descriptor Set",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["opera"] }
-            ],
-            "options": [
-                { "value": "standard", "label": "Standard Descriptors" },
-                { "value": "extended", "label": "Extended Descriptors" },
-                { "value": "minimal", "label": "Minimal Descriptors" }
+          "value": "extended",
+          "label": "Extended Descriptors"
+        },
+        {
+          "value": "minimal",
+          "label": "Minimal Descriptors"
+        }
       ],
       "defaultValue": "standard",
       "advanced": true,
       "tooltip": "Advanced: choose how rich the descriptor set should be for OPERA models."
+    },
+    {
+      "key": "qsprpred_training_mode",
+      "type": "select",
+      "label": "Training Mode",
+      "showWhen": [
+        {
+          "field": "qsar_models",
+          "in": [
+            "qsprpred"
+          ]
+        }
+      ],
+      "options": [
+        {
+          "value": "quick",
+          "label": "Quick Training"
         },
         {
-            "key": "qsprpred_training_mode",
-            "type": "select",
-            "label": "Training Mode",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["qsprpred"] }
-            ],
-            "options": [
-                { "value": "quick", "label": "Quick Training" },
-                { "value": "standard", "label": "Standard Training" },
-                { "value": "extensive", "label": "Extensive Training" }
+          "value": "standard",
+          "label": "Standard Training"
+        },
+        {
+          "value": "extensive",
+          "label": "Extensive Training"
+        }
       ],
       "defaultValue": "standard",
       "tooltip": "Controls QSPRpred training effort: **Quick** for prototyping, **Extensive** for best performance."
-        },
+    },
+    {
+      "key": "qsprpred_validation_split",
+      "type": "number",
+      "label": "Validation Split (%)",
+      "placeholder": "Enter percentage (10-50)",
+      "showWhen": [
         {
-            "key": "qsprpred_validation_split",
-            "type": "number",
-            "label": "Validation Split (%)",
-            "placeholder": "Enter percentage (10-50)",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["qsprpred"] }
-            ],
+          "field": "qsar_models",
+          "in": [
+            "qsprpred"
+          ]
+        }
+      ],
       "defaultValue": 20,
       "tooltip": "Share of data reserved for validation when training QSPRpred models."
-        },
+    },
+    {
+      "key": "enable_batch_processing",
+      "type": "boolean",
+      "label": "Enable Batch Processing",
+      "showWhen": [
         {
-            "key": "enable_batch_processing",
-            "type": "boolean",
-            "label": "Enable Batch Processing",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["chem_prop", "opera"] }
-            ],
+          "field": "qsar_models",
+          "in": [
+            "chem_prop",
+            "opera"
+          ]
+        }
+      ],
       "defaultValue": false,
       "advanced": true,
       "tooltip": "Advanced: toggle larger batch predictions for ChemProp/OPERA to speed up big libraries."
+    },
+    {
+      "key": "batch_size",
+      "type": "number",
+      "label": "Batch Size",
+      "placeholder": "Enter batch size",
+      "showWhen": [
+        {
+          "field": "qsar_models",
+          "in": [
+            "chem_prop",
+            "opera"
+          ]
         },
         {
-            "key": "batch_size",
-            "type": "number",
-            "label": "Batch Size",
-            "placeholder": "Enter batch size",
-            "showWhen": [
-                { "field": "qsar_models", "in": ["chem_prop", "opera"] },
-                { "field": "enable_batch_processing", "in": ["true"] }
-            ],
+          "field": "enable_batch_processing",
+          "in": [
+            "true"
+          ]
+        }
+      ],
       "defaultValue": 32,
       "advanced": true,
       "tooltip": "Advanced: number of molecules processed per batch when batch processing is enabled."
-        }
-    ]
+    }
+  ]
 }

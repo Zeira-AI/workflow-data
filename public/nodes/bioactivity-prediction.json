@@ -5,6 +5,10 @@
   "icon": "activity",
   "color": "green",
   "description": "Predict compound bioactivity (pEC50 / pIC50) across multiple biological targets using ML-based models.",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [
     {
       "id": "compoundList",

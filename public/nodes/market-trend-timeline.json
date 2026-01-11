@@ -5,6 +5,10 @@
   "icon": "timeline",
   "color": "blue",
   "description": "Explore market trend signals over time for selected industries, categories, benchmarks, and regions.",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
   "defaultInputs": [],
   "defaultOutputs": [
     {
@@ -38,9 +42,18 @@
       "type": "select",
       "label": "Industry",
       "options": [
-        { "value": "consumer_health", "label": "Consumer Health" },
-        { "value": "pharmaceuticals", "label": "Pharmaceuticals" },
-        { "value": "supplement", "label": "Supplement" }
+        {
+          "value": "consumer_health",
+          "label": "Consumer Health"
+        },
+        {
+          "value": "pharmaceuticals",
+          "label": "Pharmaceuticals"
+        },
+        {
+          "value": "supplement",
+          "label": "Supplement"
+        }
       ],
       "tooltip": "Choose the primary industry lens for the trend analysis."
     },
@@ -49,13 +62,30 @@
       "type": "select",
       "label": "Category",
       "options": [
-        { "value": "hair_scalp_health", "label": "Hair & Scalp Health" },
-        { "value": "skin_health", "label": "Skin Health" },
-        { "value": "digestive_health", "label": "Digestive Health" },
-        { "value": "sleep_stress", "label": "Sleep & Stress" }
+        {
+          "value": "hair_scalp_health",
+          "label": "Hair & Scalp Health"
+        },
+        {
+          "value": "skin_health",
+          "label": "Skin Health"
+        },
+        {
+          "value": "digestive_health",
+          "label": "Digestive Health"
+        },
+        {
+          "value": "sleep_stress",
+          "label": "Sleep & Stress"
+        }
       ],
       "showWhen": [
-        { "field": "industry", "in": ["consumer_health"] }
+        {
+          "field": "industry",
+          "in": [
+            "consumer_health"
+          ]
+        }
       ],
       "tooltip": "When **Consumer Health** is selected, choose one of its categories."
     },
@@ -64,12 +94,26 @@
       "type": "select",
       "label": "Category",
       "options": [
-        { "value": "dermatology", "label": "Dermatology" },
-        { "value": "neurology", "label": "Neurology" },
-        { "value": "cardiometabolic", "label": "Cardiometabolic" }
+        {
+          "value": "dermatology",
+          "label": "Dermatology"
+        },
+        {
+          "value": "neurology",
+          "label": "Neurology"
+        },
+        {
+          "value": "cardiometabolic",
+          "label": "Cardiometabolic"
+        }
       ],
       "showWhen": [
-        { "field": "industry", "in": ["pharmaceuticals"] }
+        {
+          "field": "industry",
+          "in": [
+            "pharmaceuticals"
+          ]
+        }
       ],
       "tooltip": "When **Pharmaceuticals** is selected, choose one of its categories."
     },
@@ -78,13 +122,30 @@
       "type": "select",
       "label": "Category",
       "options": [
-        { "value": "metabolic_support", "label": "Metabolic Support" },
-        { "value": "cognitive_health", "label": "Cognitive Health" },
-        { "value": "joint_mobility", "label": "Joint & Mobility" },
-        { "value": "immune_support", "label": "Immune Support" }
+        {
+          "value": "metabolic_support",
+          "label": "Metabolic Support"
+        },
+        {
+          "value": "cognitive_health",
+          "label": "Cognitive Health"
+        },
+        {
+          "value": "joint_mobility",
+          "label": "Joint & Mobility"
+        },
+        {
+          "value": "immune_support",
+          "label": "Immune Support"
+        }
       ],
       "showWhen": [
-        { "field": "industry", "in": ["supplement"] }
+        {
+          "field": "industry",
+          "in": [
+            "supplement"
+          ]
+        }
       ],
       "tooltip": "When **Supplement** is selected, choose one of its categories."
     },
@@ -107,16 +168,32 @@
       "type": "select",
       "label": "Region (Optional)",
       "options": [
-        { "value": "global", "label": "Global" },
-        { "value": "asia", "label": "Asia" },
-        { "value": "eu", "label": "EU" },
-        { "value": "us", "label": "US" },
-        { "value": "africa", "label": "Africa" },
-        { "value": "oceania", "label": "Oceania" }
+        {
+          "value": "global",
+          "label": "Global"
+        },
+        {
+          "value": "asia",
+          "label": "Asia"
+        },
+        {
+          "value": "eu",
+          "label": "EU"
+        },
+        {
+          "value": "us",
+          "label": "US"
+        },
+        {
+          "value": "africa",
+          "label": "Africa"
+        },
+        {
+          "value": "oceania",
+          "label": "Oceania"
+        }
       ],
       "tooltip": "Optional geographic focus for the trend analysis. Leave empty for global view."
     }
   ]
 }
-
-

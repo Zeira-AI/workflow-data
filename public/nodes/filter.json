@@ -5,6 +5,10 @@
   "icon": "filter",
   "color": "green",
   "description": "Filter data based on conditions. All conditions are combined with AND logic.",
+  "pricing": {
+    "credits": 100,
+    "executionTime": 1
+  },
   "defaultInputs": [
     {
       "id": "data",

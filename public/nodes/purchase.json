@@ -5,6 +5,10 @@
   "icon": "shopping-cart",
   "color": "amber",
   "description": "Evaluate supplier coverage, availability levels, and single-source risks for ingredients",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
   "defaultInputs": [],
   "defaultOutputs": [
     {
@@ -44,11 +48,26 @@
       "type": "select",
       "label": "Target User",
       "options": [
-        { "label": "Baby", "value": "baby" },
-        { "label": "Under 18", "value": "under_18" },
-        { "label": "18 - 30", "value": "18_30" },
-        { "label": "Middle-aged", "value": "middle_aged" },
-        { "label": "Elderly", "value": "elderly" }
+        {
+          "label": "Baby",
+          "value": "baby"
+        },
+        {
+          "label": "Under 18",
+          "value": "under_18"
+        },
+        {
+          "label": "18 - 30",
+          "value": "18_30"
+        },
+        {
+          "label": "Middle-aged",
+          "value": "middle_aged"
+        },
+        {
+          "label": "Elderly",
+          "value": "elderly"
+        }
       ],
       "defaultValue": "18_30"
     },
@@ -57,12 +76,30 @@
       "type": "select",
       "label": "Target Market",
       "options": [
-        { "label": "Asia", "value": "asia" },
-        { "label": "Europe", "value": "europe" },
-        { "label": "North America", "value": "north_america" },
-        { "label": "South America", "value": "south_america" },
-        { "label": "Africa", "value": "africa" },
-        { "label": "Oceania", "value": "oceania" }
+        {
+          "label": "Asia",
+          "value": "asia"
+        },
+        {
+          "label": "Europe",
+          "value": "europe"
+        },
+        {
+          "label": "North America",
+          "value": "north_america"
+        },
+        {
+          "label": "South America",
+          "value": "south_america"
+        },
+        {
+          "label": "Africa",
+          "value": "africa"
+        },
+        {
+          "label": "Oceania",
+          "value": "oceania"
+        }
       ],
       "defaultValue": "asia"
     },
@@ -71,9 +108,18 @@
       "type": "select",
       "label": "Application Route",
       "options": [
-        { "label": "Oral", "value": "oral" },
-        { "label": "Dental", "value": "dental" },
-        { "label": "Topical", "value": "topical" }
+        {
+          "label": "Oral",
+          "value": "oral"
+        },
+        {
+          "label": "Dental",
+          "value": "dental"
+        },
+        {
+          "label": "Topical",
+          "value": "topical"
+        }
       ],
       "defaultValue": "topical"
     },
@@ -82,12 +128,30 @@
       "type": "select",
       "label": "Dosage Form",
       "options": [
-        { "label": "Gel", "value": "gel" },
-        { "label": "Cream", "value": "cream" },
-        { "label": "Lotion", "value": "lotion" },
-        { "label": "Ointment", "value": "ointment" },
-        { "label": "Shampoo", "value": "shampoo" },
-        { "label": "Foam", "value": "foam" }
+        {
+          "label": "Gel",
+          "value": "gel"
+        },
+        {
+          "label": "Cream",
+          "value": "cream"
+        },
+        {
+          "label": "Lotion",
+          "value": "lotion"
+        },
+        {
+          "label": "Ointment",
+          "value": "ointment"
+        },
+        {
+          "label": "Shampoo",
+          "value": "shampoo"
+        },
+        {
+          "label": "Foam",
+          "value": "foam"
+        }
       ],
       "defaultValue": "cream"
     }

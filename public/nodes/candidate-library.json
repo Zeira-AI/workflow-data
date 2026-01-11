@@ -5,6 +5,10 @@
   "icon": "book-open-text",
   "color": "blue",
   "description": "Build a customized compound library of 30+ candidates based on biological intent and selected sources.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
   "outputMockLabel": "25 compounds",
   "defaultInputs": [
     {
@@ -68,21 +72,59 @@
       "type": "multiselect",
       "label": "Primary Sources",
       "options": [
-        { "value": "vecurate", "label": "Vecurate" },
-        { "value": "vecurate_excerpt", "label": "Vecurate Excerpt (25 compounds)" },
-        { "value": "eu_cosing", "label": "EU CoSing" },
-        { "value": "pubchem", "label": "PubChem" },
-        { "value": "chembl", "label": "ChEMBL" },
-        { "value": "drugbank", "label": "DrugBank" },
-        { "value": "drugs_com", "label": "Drugs.com" },
-        { "value": "fda", "label": "FDA" },
-        { "value": "nih", "label": "NIH" },
-        { "value": "unii", "label": "UNII" },
-        { "value": "chemspider", "label": "ChemSpider" },
-        { "value": "cas", "label": "CAS" }
+        {
+          "value": "vecurate",
+          "label": "Vecurate"
+        },
+        {
+          "value": "vecurate_excerpt",
+          "label": "Vecurate Excerpt (25 compounds)"
+        },
+        {
+          "value": "eu_cosing",
+          "label": "EU CoSing"
+        },
+        {
+          "value": "pubchem",
+          "label": "PubChem"
+        },
+        {
+          "value": "chembl",
+          "label": "ChEMBL"
+        },
+        {
+          "value": "drugbank",
+          "label": "DrugBank"
+        },
+        {
+          "value": "drugs_com",
+          "label": "Drugs.com"
+        },
+        {
+          "value": "fda",
+          "label": "FDA"
+        },
+        {
+          "value": "nih",
+          "label": "NIH"
+        },
+        {
+          "value": "unii",
+          "label": "UNII"
+        },
+        {
+          "value": "chemspider",
+          "label": "ChemSpider"
+        },
+        {
+          "value": "cas",
+          "label": "CAS"
+        }
       ],
       "tooltip": "Choose one or more databases to pull candidate structures from.",
-      "defaultValue": ["vecurate"]
+      "defaultValue": [
+        "vecurate"
+      ]
     },
     {
       "key": "ingredientListFile",
