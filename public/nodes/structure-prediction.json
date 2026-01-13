@@ -5,7 +5,7 @@
   "icon": "dna",
   "color": "teal",
   "description": "A structural bioinformatics module combining de novo structure prediction, pocket detection, and structural feature extraction to enable structure-aware modeling and ligand design.",
-  "outputMockLabel": "4 structures",
+  "outputMockLabel": "2 structures",
   "defaultInputs": [
     {
       "id": "fasta",
@@ -23,7 +23,7 @@
       "tooltip": "3D structure file (PDB format) of the predicted protein structure or structure with pocket coordinates."
     },
     {
-      "id": "Protein name",
+      "id": "Protein_name",
       "name": "Protein name",
       "type": "string",
       "tooltip": "Protein identifier or name."
@@ -41,7 +41,7 @@
       "tooltip": "Predicted TM-score from AlphaFold, indicating confidence in the predicted structure (0-1 scale)."
     },
     {
-      "id": "Pocket score",
+      "id": "Pocket_score",
       "name": "Pocket score",
       "type": "number",
       "tooltip": "Pocket detection score from pocket identification tool (if pocket generation was enabled)."

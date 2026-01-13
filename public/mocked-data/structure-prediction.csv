@@ -1,4 +1,4 @@
-structure,Protein name,Fasta,pTM,Pocket score
+structure,Protein_name,Fasta,pTM,Pocket_score
 /mocked-data/structure-prediction/AF-Q9P1Q5-F1-model_v6.pdb,OR1A1,">sp|Q9P1Q5|OR1A1_HUMAN Olfactory receptor 1A1 OS=Homo sapiens OX=9606 GN=OR1A1 PE=2 SV=2
 MRENNQSSTLEFILLGVTGQQEQEDFFYILFLFIYPITLIGNLLIVLAICSDVRLHNPMY
 FLLANLSLVDIFFSSVTIPKMLANHLLGSKSISFGGCLTQMYFMIALGNTDSYILAAMAY
