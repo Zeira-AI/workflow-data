@@ -16,8 +16,8 @@
       "name": "Input Data",
       "type": "array",
       "required": false,
-      "description": "Connect data from upstream node (e.g., Candidate Library output)",
-      "tooltip": "Connect output from upstream node (e.g., Candidate Library). Alternatively, use the 'Input Data' field in configuration to paste CSV or upload file manually."
+      "description": "Connect data from upstream node (e.g., Candidate Library output: Compound, SMILES, Odor)",
+      "tooltip": "Connect output from upstream node (e.g., Candidate Library with Compound, SMILES, Odor fields). Alternatively, use the 'Input Data' field in configuration to paste CSV or upload file manually."
     }
   ],
   "defaultOutputs": [
@@ -99,88 +99,28 @@
           "label": "Compound"
         },
         {
-          "value": "Compound_name",
-          "label": "Compound Name"
-        },
-        {
-          "value": "name",
-          "label": "Name"
-        },
-        {
           "value": "SMILES",
           "label": "SMILES"
         },
         {
-          "value": "smiles",
-          "label": "smiles"
-        },
-        {
-          "value": "MW",
-          "label": "MW (Molecular Weight)"
-        },
-        {
-          "value": "HBD",
-          "label": "HBD (Hydrogen Bond Donors)"
-        },
-        {
-          "value": "HBA",
-          "label": "HBA (Hydrogen Bond Acceptors)"
-        },
-        {
-          "value": "cLogP",
-          "label": "cLogP"
-        },
-        {
-          "value": "Rings",
-          "label": "Rings"
-        },
-        {
-          "value": "Heavy_Atoms",
-          "label": "Heavy Atoms"
-        },
-        {
-          "value": "RotB",
-          "label": "Rotatable Bonds"
-        },
-        {
-          "value": "TPSA",
-          "label": "TPSA"
-        },
-        {
-          "value": "BP",
-          "label": "BP (Boiling Point)"
-        },
-        {
-          "value": "data",
-          "label": "Data (all fields)"
+          "value": "Odor",
+          "label": "Odor"
         }
       ],
-      "tooltip": "Select which fields from the upstream node to use as input. You can select multiple fields (e.g., Compound Name and SMILES). Leave empty if using manual input or file upload.",
-      "defaultValue": []
+      "tooltip": "Select which fields from the upstream node (e.g., Candidate Library) to use as input. You can select multiple fields (e.g., Compound and SMILES). The filter will calculate properties and apply filtering rules.",
+      "defaultValue": ["Compound", "SMILES"]
     },
     {
       "key": "inputData",
       "type": ["text", "file"],
       "label": "Input Data (manual input or file upload)",
-      "placeholder": "Paste CSV data with SMILES/compound data or upload CSV file...",
+      "placeholder": "Paste CSV data with Compound,SMILES,Odor or upload CSV file...",
       "suggestedField": [
         "Compound",
-        "Compound_name",
-        "name",
         "SMILES",
-        "smiles",
-        "MW",
-        "HBD",
-        "HBA",
-        "cLogP",
-        "Rings",
-        "Heavy_Atoms",
-        "RotB",
-        "TPSA",
-        "BP",
-        "data"
+        "Odor"
       ],
-      "tooltip": "Input compound data to filter. Can be pasted as CSV text, uploaded as CSV file, or connected from upstream node. If connecting from upstream, use 'Select Input Fields' above instead.",
+      "tooltip": "Manually input compound data to filter. Expected format: Compound,SMILES,Odor. Can be pasted as CSV text or uploaded as CSV file. If connecting from upstream node (e.g., Candidate Library), use 'Select Input Fields' above instead.",
       "accept": ".csv,.txt,.smi"
     },
     {
