@@ -100,7 +100,7 @@
       "label": "MW Minimum (Da)",
       "placeholder": "100",
       "defaultValue": 100,
-      "showWhen": [{ "field": "enable_mw_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_mw_filter", "in": ["true"] }],
       "tooltip": "Minimum molecular weight in Daltons."
     },
     {
@@ -109,7 +109,7 @@
       "label": "MW Maximum (Da)",
       "placeholder": "300",
       "defaultValue": 300,
-      "showWhen": [{ "field": "enable_mw_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_mw_filter", "in": ["true"] }],
       "tooltip": "Maximum molecular weight in Daltons."
     },
     {
@@ -125,7 +125,7 @@
       "label": "HBD Maximum",
       "placeholder": "2",
       "defaultValue": 2,
-      "showWhen": [{ "field": "enable_hbd_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_hbd_filter", "in": ["true"] }],
       "tooltip": "Maximum number of hydrogen bond donors."
     },
     {
@@ -141,7 +141,7 @@
       "label": "HBA Maximum",
       "placeholder": "4",
       "defaultValue": 4,
-      "showWhen": [{ "field": "enable_hba_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_hba_filter", "in": ["true"] }],
       "tooltip": "Maximum number of hydrogen bond acceptors."
     },
     {
@@ -157,7 +157,7 @@
       "label": "cLogP Minimum",
       "placeholder": "1.5",
       "defaultValue": 1.5,
-      "showWhen": [{ "field": "enable_clogp_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_clogp_filter", "in": ["true"] }],
       "tooltip": "Minimum calculated LogP value."
     },
     {
@@ -166,7 +166,7 @@
       "label": "cLogP Maximum",
       "placeholder": "4.5",
       "defaultValue": 4.5,
-      "showWhen": [{ "field": "enable_clogp_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_clogp_filter", "in": ["true"] }],
       "tooltip": "Maximum calculated LogP value."
     },
     {
@@ -182,7 +182,7 @@
       "label": "Rings Maximum",
       "placeholder": "3",
       "defaultValue": 3,
-      "showWhen": [{ "field": "enable_rings_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_rings_filter", "in": ["true"] }],
       "tooltip": "Maximum number of rings."
     },
     {
@@ -198,7 +198,7 @@
       "label": "Heavy Atoms Maximum",
       "placeholder": "28",
       "defaultValue": 28,
-      "showWhen": [{ "field": "enable_heavy_atoms_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_heavy_atoms_filter", "in": ["true"] }],
       "tooltip": "Maximum number of heavy (non-hydrogen) atoms."
     },
     {
@@ -214,7 +214,7 @@
       "label": "Rotatable Bonds Maximum",
       "placeholder": "8",
       "defaultValue": 8,
-      "showWhen": [{ "field": "enable_rotb_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_rotb_filter", "in": ["true"] }],
       "tooltip": "Maximum number of rotatable bonds."
     },
     {
@@ -230,7 +230,7 @@
       "label": "TPSA Maximum (Å²)",
       "placeholder": "70",
       "defaultValue": 70,
-      "showWhen": [{ "field": "enable_tpsa_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_tpsa_filter", "in": ["true"] }],
       "tooltip": "Maximum Topological Polar Surface Area in square Angstroms."
     },
     {
@@ -246,7 +246,7 @@
       "label": "BP Maximum (°C)",
       "placeholder": "300",
       "defaultValue": 300,
-      "showWhen": [{ "field": "enable_bp_filter", "in": [true] }],
+      "showWhen": [{ "field": "enable_bp_filter", "in": ["true"] }],
       "tooltip": "Maximum boiling point in degrees Celsius."
     },
     {
