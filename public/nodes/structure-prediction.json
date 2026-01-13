@@ -1,0 +1,130 @@
+{
+  "type": "structure-prediction",
+  "label": "Structure Prediction",
+  "category": "analysis",
+  "icon": "dna",
+  "color": "teal",
+  "description": "A structural bioinformatics module combining de novo structure prediction, pocket detection, and structural feature extraction to enable structure-aware modeling and ligand design.",
+  "outputMockLabel": "4 structures",
+  "defaultInputs": [
+    {
+      "id": "fasta",
+      "name": "FASTA Sequence",
+      "type": "array",
+      "required": true,
+      "tooltip": "Protein sequence(s) in FASTA format for structure prediction."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "structure",
+      "name": "Structure",
+      "type": "structure",
+      "tooltip": "3D structure file (PDB format) of the predicted protein structure or structure with pocket coordinates."
+    },
+    {
+      "id": "Protein name",
+      "name": "Protein name",
+      "type": "string",
+      "tooltip": "Protein identifier or name."
+    },
+    {
+      "id": "Fasta",
+      "name": "Fasta",
+      "type": "string",
+      "tooltip": "Input FASTA sequence used for structure prediction."
+    },
+    {
+      "id": "pTM",
+      "name": "pTM",
+      "type": "number",
+      "tooltip": "Predicted TM-score from AlphaFold, indicating confidence in the predicted structure (0-1 scale)."
+    },
+    {
+      "id": "Pocket score",
+      "name": "Pocket score",
+      "type": "number",
+      "tooltip": "Pocket detection score from pocket identification tool (if pocket generation was enabled)."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "fasta",
+      "type": ["text", "file"],
+      "label": "FASTA Sequence",
+      "tooltip": "Protein sequence in FASTA format for AlphaFold structure prediction.",
+      "suggestedField": ["sequence", "fasta", "protein_sequence"],
+      "accept": ".fasta,.fa,.txt",
+      "description": "Input FASTA sequence(s) for structure prediction. Can be provided as text or uploaded file."
+    },
+    {
+      "key": "alphafold_model_preset",
+      "type": "select",
+      "label": "AlphaFold Model Preset",
+      "options": [
+        { "value": "monomer", "label": "Monomer – single protein chain" },
+        { "value": "monomer_casp14", "label": "Monomer (CASP14) – higher accuracy" },
+        { "value": "multimer", "label": "Multimer – protein complexes" }
+      ],
+      "defaultValue": "monomer",
+      "description": "Model preset for AlphaFold prediction. Choose based on whether you're predicting a single chain or a complex."
+    },
+    {
+      "key": "alphafold_num_recycles",
+      "type": "number",
+      "label": "Number of Recycles (Advanced)",
+      "placeholder": "e.g. 3",
+      "defaultValue": 3,
+      "advanced": true,
+      "tooltip": "Advanced: number of recycling iterations. More recycles can improve accuracy but increase computation time."
+    },
+    {
+      "key": "generate_pocket",
+      "type": "select",
+      "label": "Generate Pocket?",
+      "options": [
+        { "value": "no", "label": "No" },
+        { "value": "yes", "label": "Yes" }
+      ],
+      "defaultValue": "no",
+      "description": "Enable pocket identification on the predicted structure after AlphaFold prediction."
+    },
+    {
+      "key": "pocket_tool",
+      "type": "select",
+      "label": "Pocket Detection Tool",
+      "options": [
+        { "value": "fpocket", "label": "Fpocket" }
+      ],
+      "defaultValue": "fpocket",
+      "showWhen": [{ "field": "generate_pocket", "in": ["yes"] }],
+      "description": "Select a tool for pocket identification. The tool will analyze the AlphaFold-predicted structure."
+    },
+    {
+      "key": "fpocket_min_radius",
+      "type": "number",
+      "label": "Minimum Pocket Radius (Advanced)",
+      "placeholder": "e.g. 2.8",
+      "defaultValue": 2.8,
+      "showWhen": [
+        { "field": "generate_pocket", "in": ["yes"] },
+        { "field": "pocket_tool", "in": ["fpocket"] }
+      ],
+      "advanced": true,
+      "tooltip": "Advanced: minimum radius (Å) for pocket detection. Smaller values detect more pockets."
+    },
+    {
+      "key": "fpocket_max_radius",
+      "type": "number",
+      "label": "Maximum Pocket Radius (Advanced)",
+      "placeholder": "e.g. 6.0",
+      "defaultValue": 6.0,
+      "showWhen": [
+        { "field": "generate_pocket", "in": ["yes"] },
+        { "field": "pocket_tool", "in": ["fpocket"] }
+      ],
+      "advanced": true,
+      "tooltip": "Advanced: maximum radius (Å) for pocket detection. Larger values detect larger pockets."
+    }
+  ]
+}

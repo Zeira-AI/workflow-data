@@ -17,6 +17,7 @@
     "report-generator",
     "target-mapping",
     "docking",
+    "structure-prediction",
     "bioactivity-filter",
     "developability-filter",
     "qsar-filter",
