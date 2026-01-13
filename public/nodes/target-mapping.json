@@ -55,8 +55,8 @@
     {
       "id": "Crystalized_structure_available?",
       "name": "Crystalized_structure_available?",
-      "type": "string",
-      "tooltip": "If structure is available: PDB ID or structure file URL (treated as structure type/link). If not available: \"N/A\" as text string."
+      "type": "structure",
+      "tooltip": "If value is \"N/A\": displays as text. If value is a PDB ID or structure URL: displays as 3D structure viewer."
     },
     {
       "id": "ChemBL_ID",
@@ -79,8 +79,8 @@
     "mappingTable": [
       { "Protein_target": "OR1A1", "Biological_system": "Olfactory", "Desired _modulation": "Activation", "Corresponding_assay": "Cell-based olfactory receptor assay (HEK293, cAMP or Ca2+ readout)", "Metric_used": "EC50", "Rationale": "OR1A1 responds to soft, pleasant odorants. Moderate activation supports smooth, familiar odor perception linked to reduced emotional arousal.", "Crystalized_structure_available?": "N/A", "ChemBL_ID": "N/A" },
       { "Protein_target": "OR2J3", "Biological_system": "Olfactory", "Desired _modulation": "Activation", "Corresponding_assay": "Heterologous OR expression assay with reporter gene", "Metric_used": "EC50", "Rationale": "OR2J3 is associated with fresh/green odor notes. Balanced activation contributes to emotional lightness without overstimulation.", "Crystalized_structure_available?": "N/A", "ChemBL_ID": "N/A" },
-      { "Protein_target": "TRPM8", "Biological_system": "Trigeminal", "Desired _modulation": "Activation", "Corresponding_assay": "Calcium influx assay (TRPM8-expressing cells)", "Metric_used": "EC50", "Rationale": "Gentle TRPM8 engagement produces cooling and freshness that can bias autonomic tone toward relaxation when intensity is controlled.", "Crystalized_structure_available?": "YES", "ChemBL_ID": "CHEMBL1075319" },
-      { "Protein_target": "TRPV3", "Biological_system": "Trigeminal", "Desired _modulation": "Sub-threshold modulation", "Corresponding_assay": "Calcium influx inhibition assay", "Metric_used": "IC50", "Rationale": "TRPV3 contributes to warmth and comfort cues. Mild modulation supports safety and coziness rather than alertness.", "Crystalized_structure_available?": "YES", "ChemBL_ID": "CHEMBL5522" }
+      { "Protein_target": "TRPM8", "Biological_system": "Trigeminal", "Desired _modulation": "Activation", "Corresponding_assay": "Calcium influx assay (TRPM8-expressing cells)", "Metric_used": "EC50", "Rationale": "Gentle TRPM8 engagement produces cooling and freshness that can bias autonomic tone toward relaxation when intensity is controlled.", "Crystalized_structure_available?": "https://www.rcsb.org/structure/8BDC", "ChemBL_ID": "CHEMBL1075319" },
+      { "Protein_target": "TRPV3", "Biological_system": "Trigeminal", "Desired _modulation": "Sub-threshold modulation", "Corresponding_assay": "Calcium influx inhibition assay", "Metric_used": "IC50", "Rationale": "TRPV3 contributes to warmth and comfort cues. Mild modulation supports safety and coziness rather than alertness.", "Crystalized_structure_available?": "https://www.rcsb.org/structure/6H9J", "ChemBL_ID": "CHEMBL5522" }
     ]
   }
 }
