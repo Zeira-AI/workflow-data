@@ -13,11 +13,11 @@
   "defaultInputs": [
     {
       "id": "data",
-      "name": "data",
+      "name": "Input Data",
       "type": "array",
       "required": false,
-      "description": "Data to filter from upstream node",
-      "tooltip": "Input data array from upstream node (e.g., from Candidate Library). Leave empty to use mock data for preview."
+      "description": "Connect data from upstream node (e.g., Candidate Library output)",
+      "tooltip": "Connect output from upstream node (e.g., Candidate Library). Alternatively, use the 'Input Data' field in configuration to paste CSV or upload file manually."
     }
   ],
   "defaultOutputs": [
@@ -89,6 +89,22 @@
     }
   ],
   "configSchema": [
+    {
+      "key": "inputData",
+      "type": ["text", "file"],
+      "label": "Input Data",
+      "placeholder": "Paste CSV data with SMILES/compound data or upload CSV file...",
+      "suggestedField": [
+        "Compound",
+        "Compound_name",
+        "name",
+        "SMILES",
+        "smiles",
+        "data"
+      ],
+      "tooltip": "Input compound data to filter. Can be pasted as CSV text, uploaded as CSV file, or connected from upstream node (e.g., Candidate Library).",
+      "accept": ".csv,.txt,.smi"
+    },
     {
       "key": "enable_mw_filter",
       "type": "boolean",
