@@ -28,7 +28,7 @@
       "tooltip": "Name of the compound."
     },
     {
-      "id": "MW (Da)",
+      "id": "MW_(Da)",
       "name": "MW (Da)",
       "type": "number",
       "tooltip": "Molecular weight in Daltons."
@@ -82,7 +82,7 @@
       "tooltip": "Boiling point in degrees Celsius."
     },
     {
-      "id": "Rule status",
+      "id": "Rule_status",
       "name": "Rule status",
       "type": "string",
       "tooltip": "Filter rule status: PASS or FAIL with reason."
