@@ -28,8 +28,8 @@
       "tooltip": "Name of the compound."
     },
     {
-      "id": "MW_(Da)",
-      "name": "MW (Da)",
+      "id": "MW",
+      "name": "MW",
       "type": "number",
       "tooltip": "Molecular weight in Daltons."
     },
@@ -90,9 +90,78 @@
   ],
   "configSchema": [
     {
+      "key": "inputFields",
+      "type": "multiselect",
+      "label": "Select Input Fields (from upstream node)",
+      "options": [
+        {
+          "value": "Compound",
+          "label": "Compound"
+        },
+        {
+          "value": "Compound_name",
+          "label": "Compound Name"
+        },
+        {
+          "value": "name",
+          "label": "Name"
+        },
+        {
+          "value": "SMILES",
+          "label": "SMILES"
+        },
+        {
+          "value": "smiles",
+          "label": "smiles"
+        },
+        {
+          "value": "MW",
+          "label": "MW (Molecular Weight)"
+        },
+        {
+          "value": "HBD",
+          "label": "HBD (Hydrogen Bond Donors)"
+        },
+        {
+          "value": "HBA",
+          "label": "HBA (Hydrogen Bond Acceptors)"
+        },
+        {
+          "value": "cLogP",
+          "label": "cLogP"
+        },
+        {
+          "value": "Rings",
+          "label": "Rings"
+        },
+        {
+          "value": "Heavy_Atoms",
+          "label": "Heavy Atoms"
+        },
+        {
+          "value": "RotB",
+          "label": "Rotatable Bonds"
+        },
+        {
+          "value": "TPSA",
+          "label": "TPSA"
+        },
+        {
+          "value": "BP",
+          "label": "BP (Boiling Point)"
+        },
+        {
+          "value": "data",
+          "label": "Data (all fields)"
+        }
+      ],
+      "tooltip": "Select which fields from the upstream node to use as input. You can select multiple fields (e.g., Compound Name and SMILES). Leave empty if using manual input or file upload.",
+      "defaultValue": []
+    },
+    {
       "key": "inputData",
       "type": ["text", "file"],
-      "label": "Input Data",
+      "label": "Input Data (manual input or file upload)",
       "placeholder": "Paste CSV data with SMILES/compound data or upload CSV file...",
       "suggestedField": [
         "Compound",
@@ -100,9 +169,18 @@
         "name",
         "SMILES",
         "smiles",
+        "MW",
+        "HBD",
+        "HBA",
+        "cLogP",
+        "Rings",
+        "Heavy_Atoms",
+        "RotB",
+        "TPSA",
+        "BP",
         "data"
       ],
-      "tooltip": "Input compound data to filter. Can be pasted as CSV text, uploaded as CSV file, or connected from upstream node (e.g., Candidate Library).",
+      "tooltip": "Input compound data to filter. Can be pasted as CSV text, uploaded as CSV file, or connected from upstream node. If connecting from upstream, use 'Select Input Fields' above instead.",
       "accept": ".csv,.txt,.smi"
     },
     {
