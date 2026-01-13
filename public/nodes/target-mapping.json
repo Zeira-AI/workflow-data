@@ -17,52 +17,52 @@
   ],
   "defaultOutputs": [
     {
-      "id": "target",
-      "name": "target",
+      "id": "Protein_target",
+      "name": "Protein_target",
       "type": "string",
       "tooltip": "Protein target name or biological process (e.g. \"OR1A1\", \"OR2J3\", \"TRPM8\", \"TRPV3\")."
     },
     {
-      "id": "why_relevant",
-      "name": "why_relevant",
+      "id": "Biological_system",
+      "name": "Biological_system",
       "type": "string",
-      "tooltip": "Biological rationale explaining why this target is relevant to the intended effect (e.g. \"Olfactory receptor activation\", \"Cooling sensation receptor\")."
+      "tooltip": "Biological system or rationale explaining why this target is relevant to the intended effect (e.g. \"Olfactory\", \"Trigeminal\")."
     },
     {
-      "id": "desired_modulation",
-      "name": "desired_modulation",
+      "id": "Desired _modulation",
+      "name": "Desired _modulation",
       "type": "string",
       "tooltip": "Required modulation type: \"activation\" or \"inhibition\" for protein targets, or \"N/A\" for non-protein assays (e.g. safety, biology, stability)."
     },
     {
-      "id": "assay_type",
-      "name": "assay_type",
+      "id": "Corresponding_assay",
+      "name": "Corresponding_assay",
       "type": "string",
       "tooltip": "Specific assay method used to measure the target or biological effect (e.g. \"calcium imaging\", \"patch clamp\", \"kinase ATP assay\")."
     },
     {
-      "id": "metric",
-      "name": "metric",
+      "id": "Metric_used",
+      "name": "Metric_used",
       "type": "string",
       "tooltip": "Measurement unit or metric for the assay result (e.g. \"EC50\", \"IC50\", \"% viability\", \"mm\", \"MIC (µg/mL)\")."
     },
     {
-      "id": "rationale",
-      "name": "rationale",
+      "id": "Rationale",
+      "name": "Rationale",
       "type": "string",
       "tooltip": "Overall rationale explaining the target selection strategy and modulation profile for the specified effect and use pathway."
     },
     {
-      "id": "chembl_id",
-      "name": "chembl_id",
-      "type": "string",
-      "tooltip": "ChEMBL database identifier for the protein target (e.g., \"CHEMBL1234\"). May be \"N/A\" for non-protein targets or assays."
+      "id": "Crystalized_structure_available?",
+      "name": "Crystalized_structure_available?",
+      "type": "structure",
+      "tooltip": "PDB ID or structure file URL for crystallized protein structures. May be \"N/A\" or \"YES\" if no structure is available."
     },
     {
-      "id": "crystallized_structure",
-      "name": "crystallized_structure",
-      "type": "structure",
-      "tooltip": "PDB ID or structure file URL for crystallized protein structures. May be \"N/A\" if no structure is available."
+      "id": "ChemBL_ID",
+      "name": "ChemBL_ID",
+      "type": "string",
+      "tooltip": "ChEMBL database identifier for the protein target (e.g., \"CHEMBL1234\"). May be \"N/A\" for non-protein targets or assays."
     }
   ],
   "configSchema": [
