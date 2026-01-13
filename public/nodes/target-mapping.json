@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "target-icon",
   "color": "blue",
-  "description": "Maps protein names or biological descriptions to assay metrics. Supports manual free-text input or automated lookup. Rationale: These proteins represent primary sensory interaction points where fragrance molecules are detected and encoded. The desired modulation profile favors smooth, low-arousal sensory signals that support a calming experience.",
+  "description": "This module translates a desired biological or functional effect into a set of protein targets that are plausibly associated with that effect, based on biological knowledge and evidence integration.",
   "outputMockLabel": "4 targets",
   "defaultInputs": [
     {
