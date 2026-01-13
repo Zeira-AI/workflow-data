@@ -4,7 +4,7 @@
   "category": "library",
   "icon": "book-open-text",
   "color": "blue",
-  "description": "Build a customized compound library of 30+ candidates based on biological intent and selected sources.",
+  "description": "Build a customized compound library of compound candidates based on biological intent and selected sources.",
   "pricing": {
     "credits": 800,
     "executionTime": 1
@@ -71,16 +71,12 @@
           "label": "Vecurate"
         },
         {
-          "value": "good_scents_pubchem",
-          "label": "The Good Scents Company + Pubchem"
+          "value": "good_scents",
+          "label": "The Good Scents Company"
         },
         {
           "value": "odordb",
           "label": "OdorDB"
-        },
-        {
-          "value": "vecurate_excerpt",
-          "label": "Vecurate Excerpt (25 compounds)"
         },
         {
           "value": "eu_cosing",

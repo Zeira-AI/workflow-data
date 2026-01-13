@@ -3,10 +3,10 @@ Linalool,CC(=C)CCC(C)(C)OCC=C,"Floral, lavender"
 Geraniol,CC(=CCCC(=CCO)C)C,"Rose, sweet"
 Nerol,CC(=CCCC(=CCO)C)C,Fresh rose
 Citronellol,CC(C)CCC(C)CO,Citrus floral
-?-Terpineol,CC1=CCC(CC1)C(C)(C)O,Lilac
+α-Terpineol,CC1=CCC(CC1)C(C)(C)O,Lilac
 Limonene,CC1=CCC(CC1)C(=C)C,Citrus
-?-Pinene,CC1=CCC2CC1C2(C)C,Pine
-?-Pinene,CC1=CCC2CC1C2(C)C,Woody green
+β-Pinene,CC1=CCC2CC1C2(C)C,Pine
+γ-Pinene,CC1=CCC2CC1C2(C)C,Woody green
 Myrcene,CC(=CCC=C(C)C)C=C,Green balsamic
 Ocimene,CC(=CCC=C(C)C)C=C,Sweet herbal
 Phenethyl alcohol,OCCc1ccccc1,"Rose, honey"
@@ -17,13 +17,13 @@ Carvacrol,CC(C)C1=CC=C(C=C1)O,Warm herbal
 Menthol,CC(C)C1CCC(C)OCC1,"Minty, cooling"
 Borneol,CC1(C)C2CCC1(C)C(O)C2,Camphoraceous
 Fenchol,CC1(C)C2CCC1(C)C(O)C2,Earthy mint
-?-Nonalactone,CCCCCC1OC(=O)CC1,Coconut
-?-Decalactone,CCCCCCC1OC(=O)CC1,Peach
+γ-Nonalactone,CCCCCC1OC(=O)CC1,Coconut
+γ-Decalactone,CCCCCCC1OC(=O)CC1,Peach
 Hexyl acetate,CCCCCCOC(=O)C,Fruity
 Isoamyl acetate,CC(C)CCOC(=O)C,Banana
 cis-3-Hexenol,CCC/C=C\CO,Green leaf
 cis-3-Hexenyl acetate,CCC/C=C\COC(C)=O,Fresh green
-?-Ionone,CC(=O)C1=CC=CCC1=C(C)C,Violet
+β-Ionone,CC(=O)C1=CC=CCC1=C(C)C,Violet
 Damascone,CC(=O)CCC=C1CC=CC=C1,Rose fruity
 Nerolidol,CC(=CCCC(=CCCC(=CCO)C)C)C,Woody floral
 Farnesol,CC(=CCCC(=CCCC(=CCO)C)C)C,Sweet floral
