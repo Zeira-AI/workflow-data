@@ -55,8 +55,8 @@
     {
       "id": "Crystalized_structure_available?",
       "name": "Crystalized_structure_available?",
-      "type": "structure",
-      "tooltip": "PDB ID or structure file URL for crystallized protein structures. May be \"N/A\" or \"YES\" if no structure is available."
+      "type": "string",
+      "tooltip": "If structure is available: PDB ID or structure file URL (treated as structure type/link). If not available: \"N/A\" as text string."
     },
     {
       "id": "ChemBL_ID",
