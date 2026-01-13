@@ -90,37 +90,11 @@
   ],
   "configSchema": [
     {
-      "key": "inputFields",
-      "type": "multiselect",
-      "label": "Select Input Fields (from upstream node)",
-      "options": [
-        {
-          "value": "Compound",
-          "label": "Compound"
-        },
-        {
-          "value": "SMILES",
-          "label": "SMILES"
-        },
-        {
-          "value": "Odor",
-          "label": "Odor"
-        }
-      ],
-      "tooltip": "Select which fields from the upstream node (e.g., Candidate Library) to use as input. You can select multiple fields (e.g., Compound and SMILES). The filter will calculate properties and apply filtering rules.",
-      "defaultValue": ["Compound", "SMILES"]
-    },
-    {
       "key": "inputData",
       "type": ["text", "file"],
-      "label": "Input Data (manual input or file upload)",
-      "placeholder": "Paste CSV data with Compound,SMILES,Odor or upload CSV file...",
-      "suggestedField": [
-        "Compound",
-        "SMILES",
-        "Odor"
-      ],
-      "tooltip": "Manually input compound data to filter. Expected format: Compound,SMILES,Odor. Can be pasted as CSV text or uploaded as CSV file. If connecting from upstream node (e.g., Candidate Library), use 'Select Input Fields' above instead.",
+      "label": "Input Data",
+      "placeholder": "Paste CSV data or upload CSV file. After uploading, select which columns to use (e.g., Compound, SMILES)...",
+      "tooltip": "Input compound data to filter. Paste CSV text or upload CSV file. The system will detect CSV columns and allow you to select which fields to use (e.g., Compound, SMILES, Odor). Expected format: CSV with columns like Compound, SMILES, Odor.",
       "accept": ".csv,.txt,.smi"
     },
     {
