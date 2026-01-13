@@ -4,7 +4,7 @@
   "category": "transform",
   "icon": "filter",
   "color": "green",
-  "description": "Filter data based on conditions. All conditions are combined with AND logic.",
+  "description": "Filter data based on conditions. All conditions are combined with AND logic. Enable filter toggles to apply filtering rules. If no filters are enabled, all data passes through unchanged.",
   "outputMockLabel": "41 compounds",
   "pricing": {
     "credits": 100,
@@ -255,8 +255,8 @@
       "key": "enable_reactive_groups_filter",
       "type": "boolean",
       "label": "Exclude Reactive Functional Groups",
-      "defaultValue": false,
-      "tooltip": "Exclude compounds with reactive functional groups (Epoxide, Isocyanate, Acid chloride, Thiols, Michael acceptor)."
+      "defaultValue": true,
+      "tooltip": "Exclude compounds with reactive functional groups (Epoxide, Isocyanate, Acid chloride, Thiols, Michael acceptor). Recommended to keep enabled for safety."
     },
     {
       "key": "filterRules",
