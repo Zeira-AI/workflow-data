@@ -1,13 +1,5 @@
-target,why_relevant,desired_modulation,assay_type,metric
-KATP,DP anagen entry trigger,activation,patch clamp,EC50
-GSK3β,Wnt inhibition release,inhibition,kinase ATP assay,IC50
-PDE1A,↑cAMP follicular signaling,inhibition,cAMP hydrolysis assay,IC50
-TGFBR1,block catagen transition,inhibition,Smad phosphorylation,IC50
-Safety assays,Cytotoxicity & viability,N/A,Dermal Papilla Cell Viability (MTT 72h),% viability
-Hair follicle biology,Ex vivo Hair Shaft Growth,N/A,microdissected follicles 10 days,mm
-Inflammation,IL-8 Suppression,N/A,ELISA / Reporter Assay,% reduction
-Oxidative stress,ROS Reduction,N/A,DCFDA assay H2O2 challenge,% ROS inhibition
-Antimicrobial efficacy,MIC vs Malassezia restricta,N/A,In vitro culture,MIC (µg/mL)
-Skin penetration,Franz Diffusion Model,N/A,Franz cell,cumulative permeation in µg/cm²/24h
-Stability,4-week accelerated stability,N/A,40°C/75%RH,% active remaining
-Gene expression,WNT/β-catenin Gene Panel,N/A,qPCR in DP cells,fold change vs untreated
+Protein target,Biological system,Desired modulation,Corresponding assay,Metric used,Rationale for calming association,Crystalized structure available?,ChemBL ID
+OR1A1,Olfactory,Mild�moderate activation,"Cell-based olfactory receptor assay (HEK293, cAMP or Ca�? readout)",EC50,"OR1A1 responds to soft, pleasant odorants. Moderate activation supports smooth, familiar odor perception linked to reduced emotional arousal.",N/A,N/A
+OR2J3,Olfactory,Balanced activation (avoid saturation),Heterologous OR expression assay with reporter gene,EC50,OR2J3 is associated with fresh/green odor notes. Balanced activation contributes to emotional lightness without overstimulation.,N/A,N/A
+TRPM8,Trigeminal,Low-level activation,Calcium influx assay (TRPM8-expressing cells),EC50,Gentle TRPM8 engagement produces cooling and freshness that can bias autonomic tone toward relaxation when intensity is controlled.,YES,CHEMBL1075319
+TRPV3,Trigeminal,Sub-threshold modulation,Calcium influx inhibition assay,IC50,TRPV3 contributes to warmth and comfort cues. Mild modulation supports safety and coziness rather than alertness.,YES,CHEMBL5522
