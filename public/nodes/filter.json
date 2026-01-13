@@ -22,8 +22,8 @@
   ],
   "defaultOutputs": [
     {
-      "id": "Compound name",
-      "name": "Compound name",
+      "id": "Compound_name",
+      "name": "Compound_name",
       "type": "string",
       "tooltip": "Name of the compound."
     },
@@ -58,8 +58,8 @@
       "tooltip": "Number of rings in the molecule."
     },
     {
-      "id": "Heavy Atoms",
-      "name": "Heavy Atoms",
+      "id": "Heavy_Atoms",
+      "name": "Heavy_Atoms",
       "type": "number",
       "tooltip": "Number of heavy (non-hydrogen) atoms."
     },
@@ -70,14 +70,14 @@
       "tooltip": "Number of rotatable bonds."
     },
     {
-      "id": "TPSA (Å²)",
-      "name": "TPSA (Å²)",
+      "id": "TPSA",
+      "name": "TPSA",
       "type": "number",
       "tooltip": "Topological Polar Surface Area in square Angstroms."
     },
     {
-      "id": "BP (°C)",
-      "name": "BP (°C)",
+      "id": "BP",
+      "name": "BP",
       "type": "number",
       "tooltip": "Boiling point in degrees Celsius."
     },
