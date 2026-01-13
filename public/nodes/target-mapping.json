@@ -55,8 +55,13 @@
     {
       "id": "Crystalized_structure_available?",
       "name": "Crystalized_structure_available?",
-      "type": "structure",
-      "tooltip": "If value is \"N/A\": displays as text. If value is a PDB ID or structure URL: displays as 3D structure viewer."
+      "type": "string",
+      "tooltip": "If value is \"N/A\", displays as text. If value is a PDB ID or structure URL, displays as 3D structure viewer.",
+      "renderAs": {
+        "when": "N/A",
+        "as": "string",
+        "otherwise": "structure"
+      }
     },
     {
       "id": "ChemBL_ID",
