@@ -9,7 +9,7 @@
     "credits": 800,
     "executionTime": 1
   },
-  "outputMockLabel": "25 compounds",
+  "outputMockLabel": "100000 compounds",
   "defaultInputs": [
     {
       "id": "search_keyword",
@@ -42,28 +42,22 @@
   ],
   "defaultOutputs": [
     {
-      "id": "name",
-      "name": "Name",
+      "id": "Compound",
+      "name": "Compound",
       "type": "string",
-      "tooltip": "Compound name or identifier (e.g. \"Quercetin\", \"Kaempferol\", \"Minoxidil\")."
+      "tooltip": "Compound name or identifier (e.g. \"Linalool\", \"Geraniol\", \"Nerol\")."
     },
     {
-      "id": "vecurate_link",
-      "name": "Vecurate Link",
-      "type": "string",
-      "tooltip": "URL link to the compound entry in the Vecurate database"
-    },
-    {
-      "id": "eu_cosing",
-      "name": "EU CoSing",
-      "type": "string",
-      "tooltip": "URL link to the compound entry in the EU CosIng database for cosmetic ingredient regulation"
-    },
-    {
-      "id": "smiles",
+      "id": "SMILES",
       "name": "SMILES",
       "type": "string",
       "tooltip": "SMILES string representing the compound's chemical structure."
+    },
+    {
+      "id": "Odor",
+      "name": "Odor",
+      "type": "string",
+      "tooltip": "Odor description or fragrance profile of the compound (e.g. \"Floral, lavender\", \"Rose, sweet\", \"Citrus\")."
     }
   ],
   "configSchema": [
@@ -75,6 +69,14 @@
         {
           "value": "vecurate",
           "label": "Vecurate"
+        },
+        {
+          "value": "good_scents_pubchem",
+          "label": "The Good Scents Company + Pubchem"
+        },
+        {
+          "value": "odordb",
+          "label": "OdorDB"
         },
         {
           "value": "vecurate_excerpt",
