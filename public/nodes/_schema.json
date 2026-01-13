@@ -115,7 +115,8 @@
             "boolean",
             "object",
             "array",
-            "structure"
+            "structure",
+            "image"
           ],
           "description": "Data type of the I/O port"
         },

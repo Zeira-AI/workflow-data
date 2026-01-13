@@ -67,6 +67,12 @@
       "tooltip": "Product format or delivery method (e.g. \"Dropper serum\", \"Nozzle serum\", \"Spray / mist\")."
     },
     {
+      "id": "image_url",
+      "name": "Product Image",
+      "type": "image",
+      "tooltip": "Product image URL."
+    },
+    {
       "id": "rating",
       "name": "Rating",
       "type": "number",
