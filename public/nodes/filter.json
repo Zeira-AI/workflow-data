@@ -18,13 +18,250 @@
       "description": "Data to filter"
     }
   ],
-  "defaultOutputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Compound name",
+      "name": "Compound name",
+      "type": "string",
+      "tooltip": "Name of the compound."
+    },
+    {
+      "id": "MW (Da)",
+      "name": "MW (Da)",
+      "type": "number",
+      "tooltip": "Molecular weight in Daltons."
+    },
+    {
+      "id": "HBD",
+      "name": "HBD",
+      "type": "number",
+      "tooltip": "Number of hydrogen bond donors."
+    },
+    {
+      "id": "HBA",
+      "name": "HBA",
+      "type": "number",
+      "tooltip": "Number of hydrogen bond acceptors."
+    },
+    {
+      "id": "cLogP",
+      "name": "cLogP",
+      "type": "number",
+      "tooltip": "Calculated octanol-water partition coefficient."
+    },
+    {
+      "id": "Rings",
+      "name": "Rings",
+      "type": "number",
+      "tooltip": "Number of rings in the molecule."
+    },
+    {
+      "id": "Heavy Atoms",
+      "name": "Heavy Atoms",
+      "type": "number",
+      "tooltip": "Number of heavy (non-hydrogen) atoms."
+    },
+    {
+      "id": "RotB",
+      "name": "RotB",
+      "type": "number",
+      "tooltip": "Number of rotatable bonds."
+    },
+    {
+      "id": "TPSA (Å²)",
+      "name": "TPSA (Å²)",
+      "type": "number",
+      "tooltip": "Topological Polar Surface Area in square Angstroms."
+    },
+    {
+      "id": "BP (°C)",
+      "name": "BP (°C)",
+      "type": "number",
+      "tooltip": "Boiling point in degrees Celsius."
+    },
+    {
+      "id": "Rule status",
+      "name": "Rule status",
+      "type": "string",
+      "tooltip": "Filter rule status: PASS or FAIL with reason."
+    }
+  ],
   "configSchema": [
+    {
+      "key": "enable_mw_filter",
+      "type": "boolean",
+      "label": "Enable MW Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by molecular weight (100-300 Da)."
+    },
+    {
+      "key": "mw_min",
+      "type": "number",
+      "label": "MW Minimum (Da)",
+      "placeholder": "100",
+      "defaultValue": 100,
+      "showWhen": [{ "field": "enable_mw_filter", "in": [true] }],
+      "tooltip": "Minimum molecular weight in Daltons."
+    },
+    {
+      "key": "mw_max",
+      "type": "number",
+      "label": "MW Maximum (Da)",
+      "placeholder": "300",
+      "defaultValue": 300,
+      "showWhen": [{ "field": "enable_mw_filter", "in": [true] }],
+      "tooltip": "Maximum molecular weight in Daltons."
+    },
+    {
+      "key": "enable_hbd_filter",
+      "type": "boolean",
+      "label": "Enable HBD Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by hydrogen bond donors (≤ 1-2)."
+    },
+    {
+      "key": "hbd_max",
+      "type": "number",
+      "label": "HBD Maximum",
+      "placeholder": "2",
+      "defaultValue": 2,
+      "showWhen": [{ "field": "enable_hbd_filter", "in": [true] }],
+      "tooltip": "Maximum number of hydrogen bond donors."
+    },
+    {
+      "key": "enable_hba_filter",
+      "type": "boolean",
+      "label": "Enable HBA Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by hydrogen bond acceptors (≤ 4)."
+    },
+    {
+      "key": "hba_max",
+      "type": "number",
+      "label": "HBA Maximum",
+      "placeholder": "4",
+      "defaultValue": 4,
+      "showWhen": [{ "field": "enable_hba_filter", "in": [true] }],
+      "tooltip": "Maximum number of hydrogen bond acceptors."
+    },
+    {
+      "key": "enable_clogp_filter",
+      "type": "boolean",
+      "label": "Enable cLogP Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by calculated LogP (1.5-4.5)."
+    },
+    {
+      "key": "clogp_min",
+      "type": "number",
+      "label": "cLogP Minimum",
+      "placeholder": "1.5",
+      "defaultValue": 1.5,
+      "showWhen": [{ "field": "enable_clogp_filter", "in": [true] }],
+      "tooltip": "Minimum calculated LogP value."
+    },
+    {
+      "key": "clogp_max",
+      "type": "number",
+      "label": "cLogP Maximum",
+      "placeholder": "4.5",
+      "defaultValue": 4.5,
+      "showWhen": [{ "field": "enable_clogp_filter", "in": [true] }],
+      "tooltip": "Maximum calculated LogP value."
+    },
+    {
+      "key": "enable_rings_filter",
+      "type": "boolean",
+      "label": "Enable Rings Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by number of rings (≤ 2-3)."
+    },
+    {
+      "key": "rings_max",
+      "type": "number",
+      "label": "Rings Maximum",
+      "placeholder": "3",
+      "defaultValue": 3,
+      "showWhen": [{ "field": "enable_rings_filter", "in": [true] }],
+      "tooltip": "Maximum number of rings."
+    },
+    {
+      "key": "enable_heavy_atoms_filter",
+      "type": "boolean",
+      "label": "Enable Heavy Atoms Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by heavy atom count (≤ 22-28)."
+    },
+    {
+      "key": "heavy_atoms_max",
+      "type": "number",
+      "label": "Heavy Atoms Maximum",
+      "placeholder": "28",
+      "defaultValue": 28,
+      "showWhen": [{ "field": "enable_heavy_atoms_filter", "in": [true] }],
+      "tooltip": "Maximum number of heavy (non-hydrogen) atoms."
+    },
+    {
+      "key": "enable_rotb_filter",
+      "type": "boolean",
+      "label": "Enable Rotatable Bonds Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by rotatable bonds (≤ 6-8)."
+    },
+    {
+      "key": "rotb_max",
+      "type": "number",
+      "label": "Rotatable Bonds Maximum",
+      "placeholder": "8",
+      "defaultValue": 8,
+      "showWhen": [{ "field": "enable_rotb_filter", "in": [true] }],
+      "tooltip": "Maximum number of rotatable bonds."
+    },
+    {
+      "key": "enable_tpsa_filter",
+      "type": "boolean",
+      "label": "Enable TPSA Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by Topological Polar Surface Area (< 60-70 Å²)."
+    },
+    {
+      "key": "tpsa_max",
+      "type": "number",
+      "label": "TPSA Maximum (Å²)",
+      "placeholder": "70",
+      "defaultValue": 70,
+      "showWhen": [{ "field": "enable_tpsa_filter", "in": [true] }],
+      "tooltip": "Maximum Topological Polar Surface Area in square Angstroms."
+    },
+    {
+      "key": "enable_bp_filter",
+      "type": "boolean",
+      "label": "Enable BP Filter",
+      "defaultValue": false,
+      "tooltip": "Filter by boiling point (≤ 300 °C)."
+    },
+    {
+      "key": "bp_max",
+      "type": "number",
+      "label": "BP Maximum (°C)",
+      "placeholder": "300",
+      "defaultValue": 300,
+      "showWhen": [{ "field": "enable_bp_filter", "in": [true] }],
+      "tooltip": "Maximum boiling point in degrees Celsius."
+    },
+    {
+      "key": "enable_reactive_groups_filter",
+      "type": "boolean",
+      "label": "Exclude Reactive Functional Groups",
+      "defaultValue": false,
+      "tooltip": "Exclude compounds with reactive functional groups (Epoxide, Isocyanate, Acid chloride, Thiols, Michael acceptor)."
+    },
     {
       "key": "filterRules",
       "type": "filter",
-      "label": "Filter Conditions",
-      "description": "Define conditions to filter data. All conditions are combined with AND logic."
+      "label": "Additional Filter Conditions",
+      "description": "Define additional custom conditions to filter data. All conditions are combined with AND logic.",
+      "advanced": true
     }
   ]
 }
