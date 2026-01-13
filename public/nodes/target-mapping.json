@@ -72,23 +72,15 @@
       "label": "Effect + Use Pathway",
       "placeholder": "Enter desired effect and use pathway (e.g., \"Stress-reducing, calming sensory experience for fragrance\")",
       "tooltip": "Describe the desired effect and use pathway. This will be used to generate appropriate target mappings and rationale."
-    },
-    {
-      "key": "manualFreetext",
-      "type": "textarea",
-      "label": "Target Input (Alternative)",
-      "placeholder": "Enter target name or biological effect (e.g., GSK3B, hair growth trigger...)",
-      "tooltip": "Alternative: Use this when you want to type a target or biological effect manually instead of using effect + use pathway."
     }
   ],
   "defaultConfig": {
     "effectPathway": "",
-    "manualFreetext": "",
     "mappingTable": [
-      { "target": "OR1A1", "relevance": "Olfactory receptor activation", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" },
-      { "target": "OR2J3", "relevance": "Olfactory receptor activation", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" },
-      { "target": "TRPM8", "relevance": "Cooling sensation receptor", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" },
-      { "target": "TRPV3", "relevance": "Warm sensation receptor", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" }
+      { "Protein_target": "OR1A1", "Biological_system": "Olfactory", "Desired _modulation": "Activation", "Corresponding_assay": "Cell-based olfactory receptor assay (HEK293, cAMP or Ca2+ readout)", "Metric_used": "EC50", "Rationale": "OR1A1 responds to soft, pleasant odorants. Moderate activation supports smooth, familiar odor perception linked to reduced emotional arousal.", "Crystalized_structure_available?": "N/A", "ChemBL_ID": "N/A" },
+      { "Protein_target": "OR2J3", "Biological_system": "Olfactory", "Desired _modulation": "Activation", "Corresponding_assay": "Heterologous OR expression assay with reporter gene", "Metric_used": "EC50", "Rationale": "OR2J3 is associated with fresh/green odor notes. Balanced activation contributes to emotional lightness without overstimulation.", "Crystalized_structure_available?": "N/A", "ChemBL_ID": "N/A" },
+      { "Protein_target": "TRPM8", "Biological_system": "Trigeminal", "Desired _modulation": "Activation", "Corresponding_assay": "Calcium influx assay (TRPM8-expressing cells)", "Metric_used": "EC50", "Rationale": "Gentle TRPM8 engagement produces cooling and freshness that can bias autonomic tone toward relaxation when intensity is controlled.", "Crystalized_structure_available?": "YES", "ChemBL_ID": "CHEMBL1075319" },
+      { "Protein_target": "TRPV3", "Biological_system": "Trigeminal", "Desired _modulation": "Sub-threshold modulation", "Corresponding_assay": "Calcium influx inhibition assay", "Metric_used": "IC50", "Rationale": "TRPV3 contributes to warmth and comfort cues. Mild modulation supports safety and coziness rather than alertness.", "Crystalized_structure_available?": "YES", "ChemBL_ID": "CHEMBL5522" }
     ]
   }
 }
