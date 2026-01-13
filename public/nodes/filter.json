@@ -5,6 +5,7 @@
   "icon": "filter",
   "color": "green",
   "description": "Filter data based on conditions. All conditions are combined with AND logic.",
+  "outputMockLabel": "41 compounds",
   "pricing": {
     "credits": 100,
     "executionTime": 1
@@ -14,8 +15,9 @@
       "id": "data",
       "name": "data",
       "type": "array",
-      "required": true,
-      "description": "Data to filter"
+      "required": false,
+      "description": "Data to filter from upstream node",
+      "tooltip": "Input data array from upstream node (e.g., from Candidate Library). Leave empty to use mock data for preview."
     }
   ],
   "defaultOutputs": [
