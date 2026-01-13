@@ -4,149 +4,91 @@
   "category": "analysis",
   "icon": "target-icon",
   "color": "blue",
-  "description": "Maps protein names or biological descriptions to assay metrics. Supports manual free-text input or automated lookup.",
-  "pricing": {
-    "credits": 800,
-    "executionTime": 1
-  },
-  "outputMockLabel": "12 targets",
+  "description": "Maps protein names or biological descriptions to assay metrics. Supports manual free-text input or automated lookup. Rationale: These proteins represent primary sensory interaction points where fragrance molecules are detected and encoded. The desired modulation profile favors smooth, low-arousal sensory signals that support a calming experience.",
+  "outputMockLabel": "4 targets",
   "defaultInputs": [
     {
-      "id": "target-input",
-      "name": "Target/Protein Input",
+      "id": "effect-pathway-input",
+      "name": "Effect + Use Pathway",
       "type": "string",
       "required": false,
-      "tooltip": "Optional input port carrying protein names or biological descriptions from previous steps."
+      "tooltip": "Input describing the desired effect and use pathway (e.g., \"Stress-reducing / calming sensory experience for fragrance\")."
     }
   ],
   "defaultOutputs": [
     {
       "id": "target",
-      "name": "Target",
+      "name": "target",
       "type": "string",
-      "tooltip": "Protein target name or biological process (e.g. \"KATP\", \"GSK3β\", \"Safety assays\", \"Hair follicle biology\")."
+      "tooltip": "Protein target name or biological process (e.g. \"OR1A1\", \"OR2J3\", \"TRPM8\", \"TRPV3\")."
     },
     {
       "id": "why_relevant",
-      "name": "Why Relevant",
+      "name": "why_relevant",
       "type": "string",
-      "tooltip": "Biological rationale explaining why this target is relevant to the intended effect (e.g. \"DP anagen entry trigger\", \"Wnt inhibition release\")."
+      "tooltip": "Biological rationale explaining why this target is relevant to the intended effect (e.g. \"Olfactory receptor activation\", \"Cooling sensation receptor\")."
     },
     {
       "id": "desired_modulation",
-      "name": "Desired Modulation",
+      "name": "desired_modulation",
       "type": "string",
       "tooltip": "Required modulation type: \"activation\" or \"inhibition\" for protein targets, or \"N/A\" for non-protein assays (e.g. safety, biology, stability)."
     },
     {
       "id": "assay_type",
-      "name": "Assay Type",
+      "name": "assay_type",
       "type": "string",
-      "tooltip": "Specific assay method used to measure the target or biological effect (e.g. \"patch clamp\", \"kinase ATP assay\", \"Dermal Papilla Cell Viability (MTT 72h)\")."
+      "tooltip": "Specific assay method used to measure the target or biological effect (e.g. \"calcium imaging\", \"patch clamp\", \"kinase ATP assay\")."
     },
     {
       "id": "metric",
-      "name": "Metric",
+      "name": "metric",
       "type": "string",
       "tooltip": "Measurement unit or metric for the assay result (e.g. \"EC50\", \"IC50\", \"% viability\", \"mm\", \"MIC (µg/mL)\")."
+    },
+    {
+      "id": "rationale",
+      "name": "rationale",
+      "type": "string",
+      "tooltip": "Overall rationale explaining the target selection strategy and modulation profile for the specified effect and use pathway."
+    },
+    {
+      "id": "chembl_id",
+      "name": "chembl_id",
+      "type": "string",
+      "tooltip": "ChEMBL database identifier for the protein target (e.g., \"CHEMBL1234\"). May be \"N/A\" for non-protein targets or assays."
+    },
+    {
+      "id": "crystallized_structure",
+      "name": "crystallized_structure",
+      "type": "structure",
+      "tooltip": "PDB ID or structure file URL for crystallized protein structures. May be \"N/A\" if no structure is available."
     }
   ],
   "configSchema": [
     {
+      "key": "effectPathway",
+      "type": "textarea",
+      "label": "Effect + Use Pathway",
+      "placeholder": "Enter desired effect and use pathway (e.g., \"Stress-reducing, calming sensory experience for fragrance\")",
+      "tooltip": "Describe the desired effect and use pathway. This will be used to generate appropriate target mappings and rationale."
+    },
+    {
       "key": "manualFreetext",
       "type": "textarea",
-      "label": "Target Input",
+      "label": "Target Input (Alternative)",
       "placeholder": "Enter target name or biological effect (e.g., GSK3B, hair growth trigger...)",
-      "tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
+      "tooltip": "Alternative: Use this when you want to type a target or biological effect manually instead of using effect + use pathway."
     }
   ],
   "defaultConfig": {
+    "effectPathway": "",
     "manualFreetext": "",
     "mappingTable": [
-      {
-        "target": "KATP",
-        "relevance": "DP anagen entry trigger",
-        "modulation": "activation",
-        "assay": "patch clamp",
-        "metric": "EC50"
-      },
-      {
-        "target": "GSK3β",
-        "relevance": "Wnt inhibition release",
-        "modulation": "inhibition",
-        "assay": "kinase ATP assay",
-        "metric": "IC50"
-      },
-      {
-        "target": "PDE1A",
-        "relevance": "↑cAMP follicular signaling",
-        "modulation": "inhibition",
-        "assay": "cAMP hydrolysis assay",
-        "metric": "IC50"
-      },
-      {
-        "target": "TGFBR1",
-        "relevance": "block catagen transition",
-        "modulation": "inhibition",
-        "assay": "Smad phosphorylation",
-        "metric": "IC50"
-      },
-      {
-        "target": "Safety assays",
-        "relevance": "Cytotoxicity & viability",
-        "modulation": "N/A",
-        "assay": "Dermal Papilla Cell Viability (MTT 72h)",
-        "metric": "% viability"
-      },
-      {
-        "target": "Hair follicle biology",
-        "relevance": "Ex vivo Hair Shaft Growth",
-        "modulation": "N/A",
-        "assay": "microdissected follicles 10 days",
-        "metric": "mm"
-      },
-      {
-        "target": "Inflammation",
-        "relevance": "IL-8 Suppression",
-        "modulation": "N/A",
-        "assay": "ELISA / Reporter Assay",
-        "metric": "% reduction"
-      },
-      {
-        "target": "Oxidative stress",
-        "relevance": "ROS Reduction",
-        "modulation": "N/A",
-        "assay": "DCFDA assay H2O2 challenge",
-        "metric": "% ROS inhibition"
-      },
-      {
-        "target": "Antimicrobial efficacy",
-        "relevance": "MIC vs Malassezia restricta",
-        "modulation": "N/A",
-        "assay": "In vitro culture",
-        "metric": "MIC (µg/mL)"
-      },
-      {
-        "target": "Skin penetration",
-        "relevance": "Franz Diffusion Model",
-        "modulation": "N/A",
-        "assay": "Franz cell",
-        "metric": "cumulative permeation in µg/cm²/24h"
-      },
-      {
-        "target": "Stability",
-        "relevance": "4-week accelerated stability",
-        "modulation": "N/A",
-        "assay": "40°C/75%RH",
-        "metric": "% active remaining"
-      },
-      {
-        "target": "Gene expression",
-        "relevance": "WNT/β-catenin Gene Panel",
-        "modulation": "N/A",
-        "assay": "qPCR in DP cells",
-        "metric": "fold change vs untreated"
-      }
+      { "target": "OR1A1", "relevance": "Olfactory receptor activation", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" },
+      { "target": "OR2J3", "relevance": "Olfactory receptor activation", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" },
+      { "target": "TRPM8", "relevance": "Cooling sensation receptor", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" },
+      { "target": "TRPV3", "relevance": "Warm sensation receptor", "modulation": "activation", "assay": "calcium imaging", "metric": "EC50" }
     ]
   }
 }
