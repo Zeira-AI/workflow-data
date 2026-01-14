@@ -71,12 +71,16 @@
           "label": "Full Formula / Product Composition"
         },
         {
-          "value": "previous_output",
-          "label": "Use Previous Output"
+          "value": "compounds_previous",
+          "label": "Compounds (No similar product)"
+        },
+        {
+          "value": "formula_previous",
+          "label": "Formula"
         }
       ],
       "defaultValue": "single_ingredient",
-      "tooltip": "Choose how to input ingredients for regulatory checking."
+      "tooltip": "Choose how to input ingredients for regulatory checking. 'Compounds (No similar product)' is for checking individual compounds from upstream nodes. 'Formula' is for checking full product formulas from upstream nodes."
     },
     {
       "key": "ingredientName",
@@ -283,7 +287,7 @@
           "label": "INCI"
         }
       ],
-      "showWhen": [{ "field": "inputMode", "in": ["previous_output"] }],
+      "showWhen": [{ "field": "inputMode", "in": ["compounds_previous", "formula_previous"] }],
       "tooltip": "Select which fields from the upstream node to use as input. You can select multiple fields (e.g., Compound Name and SMILES). Options include compound/ingredient names and SMILES from filter, rule-based-filter, or candidate-library nodes.",
       "defaultValue": []
     },
@@ -292,6 +296,7 @@
       "type": "text",
       "label": "Similar Product (Link/Name)",
       "placeholder": "Paste product link or name here...",
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient", "batch_ingredients", "full_formula", "formula_previous"] }],
       "tooltip": "Optional reference product for comparison."
     },
     {
