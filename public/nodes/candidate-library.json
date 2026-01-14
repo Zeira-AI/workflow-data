@@ -4,12 +4,12 @@
   "category": "library",
   "icon": "book-open-text",
   "color": "blue",
-  "description": "Build a customized compound library of compound candidates based on biological intent and selected sources.",
+  "description": "Build a customized compound library of 30+ candidates based on biological intent and selected sources.",
   "pricing": {
     "credits": 800,
     "executionTime": 1
   },
-  "outputMockLabel": "100000 compounds",
+  "outputMockLabel": "25 compounds",
   "defaultInputs": [
     {
       "id": "search_keyword",
@@ -42,22 +42,28 @@
   ],
   "defaultOutputs": [
     {
-      "id": "Compound",
-      "name": "Compound",
+      "id": "name",
+      "name": "Name",
       "type": "string",
-      "tooltip": "Compound name or identifier (e.g. \"Linalool\", \"Geraniol\", \"Nerol\")."
+      "tooltip": "Compound name or identifier (e.g. \"Quercetin\", \"Kaempferol\", \"Minoxidil\")."
     },
     {
-      "id": "SMILES",
+      "id": "vecurate_link",
+      "name": "Vecurate Link",
+      "type": "string",
+      "tooltip": "URL link to the compound entry in the Vecurate database"
+    },
+    {
+      "id": "eu_cosing",
+      "name": "EU CoSing",
+      "type": "string",
+      "tooltip": "URL link to the compound entry in the EU CosIng database for cosmetic ingredient regulation"
+    },
+    {
+      "id": "smiles",
       "name": "SMILES",
       "type": "string",
       "tooltip": "SMILES string representing the compound's chemical structure."
-    },
-    {
-      "id": "Odor",
-      "name": "Odor",
-      "type": "string",
-      "tooltip": "Odor description or fragrance profile of the compound (e.g. \"Floral, lavender\", \"Rose, sweet\", \"Citrus\")."
     }
   ],
   "configSchema": [
@@ -71,12 +77,8 @@
           "label": "Vecurate"
         },
         {
-          "value": "good_scents",
-          "label": "The Good Scents Company"
-        },
-        {
-          "value": "odordb",
-          "label": "OdorDB"
+          "value": "vecurate_excerpt",
+          "label": "Vecurate Excerpt (25 compounds)"
         },
         {
           "value": "eu_cosing",
