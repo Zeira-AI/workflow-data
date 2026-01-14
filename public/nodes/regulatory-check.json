@@ -259,8 +259,16 @@
       "label": "Select Input Fields (from upstream node)",
       "options": [
         {
-          "value": "ingredients",
-          "label": "Ingredients"
+          "value": "Compound_name",
+          "label": "Compound Name"
+        },
+        {
+          "value": "Compound",
+          "label": "Compound"
+        },
+        {
+          "value": "SMILES",
+          "label": "SMILES"
         },
         {
           "value": "ingredient_name",
@@ -273,22 +281,10 @@
         {
           "value": "inci",
           "label": "INCI"
-        },
-        {
-          "value": "concentration",
-          "label": "Concentration"
-        },
-        {
-          "value": "function",
-          "label": "Function"
-        },
-        {
-          "value": "data",
-          "label": "Data (all fields)"
         }
       ],
       "showWhen": [{ "field": "inputMode", "in": ["previous_output"] }],
-      "tooltip": "Select which fields from the upstream node to use as input. You can select multiple fields.",
+      "tooltip": "Select which fields from the upstream node to use as input. You can select multiple fields (e.g., Compound Name and SMILES). Options include compound/ingredient names and SMILES from filter, rule-based-filter, or candidate-library nodes.",
       "defaultValue": []
     },
     {
