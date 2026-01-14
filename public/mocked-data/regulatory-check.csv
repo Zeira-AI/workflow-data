@@ -1,13 +1,36 @@
-ID,Ingredient Name,CAS Number,Concentration,Target Market,Status,Application Route,Target User,Warnings,Reasoning,Source Reference
-1,Salicylic Acid,69-72-7,2.5%,EU,FAIL,topical,Adult,"Exceeds concentration limit","The maximum allowed concentration for leave-on topical products in the EU is 2.0%. This formula contains 2.5%.","EU Annex III/18"
-2,Titanium Dioxide,13463-67-7,5.0%,EU,PASS,topical,All,None,"Safe for use as a UV filter up to 25%. Current concentration is within safe limits.","EU Annex VI/12"
-3,Retinol,68-26-8,0.3%,EU,PASS,topical,Adult,None,"Complies with the latest SCCS opinion for Vitamin A in body lotions (0.05%) and face products (0.3%).","SCCS/1652/23"
-4,Propylparaben,94-13-3,0.14%,EU,FAIL,topical,Infant,"Prohibited for diaper area","Prohibited in leave-on cosmetic products designed for application on the diaper area of children under 3 years.","Regulation (EU) No 1004/2014"
-5,Hydroquinone,123-31-9,1.0%,US,PASS,topical,Adult,None,"Permitted in the US for specific skin-lightening OTC products under FDA monograph (though restricted in other regions).","FDA OTC Monograph"
-6,Bakuchiol,10309-37-2,0.5%,GLOBAL,UNKNOWN,topical,All,"No specific regulatory record","This ingredient is not yet explicitly listed in major regulatory annexes (EU/CN). Safety must be verified via internal toxicology report.","ECHA Database"
-7,Phenoxyethanol,122-99-6,0.8%,CN,PASS,topical,All,None,"Within the maximum allowable limit of 1.0% for China CSAR standards.","China Safety & Technical Standards (2015)"
-8,Kojic Acid,501-30-4,1.0%,EU,PASS,topical,Adult,"Monitor SCCS updates","Currently considered safe at 1% in leave-on face products, but under ongoing review for endocrine potential.","SCCS/1637/21"
-9,BHT (Butylated Hydroxytoluene),128-37-0,0.5%,EU,PASS,topical,Adult,None,"Concentration is below the safety threshold of 0.8% for leave-on products.","SCCS/1636/21"
-10,Secret-Peptide-Complex,N/A,0.1%,EU,UNKNOWN,topical,Adult,"Ingredient not identified","INCI name or CAS number not recognized in the regulatory database. Manual review required.","N/A"
-11,Mercury,7439-97-6,0.001%,GLOBAL,FAIL,topical,All,"Prohibited Substance","Mercury and its compounds are strictly prohibited in cosmetics except for specific preservative uses in eye products.","EU Annex II / FDA Prohibited list"
-12,Zinc Oxide (Nano),1314-13-2,10.0%,EU,PASS,topical,All,"Labeling Requirement","Approved for use; however, the ingredient list must clearly state '(Nano)' next to the INCI name.","EU Annex VI/30a"
+Compound_name,SMILES,Status,Max_concentration_(%_w/w),Recommended_working_range_(%_w/w)
+Linalool,CC(=C)CCC(C)(C)OCC=C,RESTRICTED,0.1,0.01-0.05
+Geraniol,CC(=CCCC(=CCO)C)C,RESTRICTED,0.1,0.01-0.05
+Nerol,CC(=CCCC(=CCO)C)C,RESTRICTED,0.1,0.01-0.05
+Citronellol,CC(C)CCC(C)CO,RESTRICTED,0.2,0.02-0.10
+α-Terpineol,CC1=CCC(CC1)C(C)(C)O,ALLOWED,1,0.05-0.50
+Limonene,CC1=CCC(CC1)C(=C)C,RESTRICTED,0.2,0.01-0.10
+β-Pinene,CC1=CCC2CC1C2(C)C,ALLOWED,1,0.05-0.50
+γ-Pinene,CC1=CCC2CC1C2(C)C,ALLOWED,1,0.05-0.50
+Myrcene,CC(=CCC=C(C)C)C=C,ALLOWED,1,0.05-0.50
+Ocimene,CC(=CCC=C(C)C)C=C,ALLOWED,1,0.05-0.50
+Phenethyl alcohol,OCCc1ccccc1,ALLOWED,2,0.10-1.00
+Benzyl alcohol,OCCc1ccccc1,RESTRICTED,1,0.05-0.50
+Anethole,COC1=CC=C(C=C1)C=CC,RESTRICTED,0.5,0.02-0.20
+Thymol,CC(C)C1=CC=C(C=C1)O,RESTRICTED,0.5,0.01-0.20
+Carvacrol,CC(C)C1=CC=C(C=C1)O,RESTRICTED,0.5,0.01-0.20
+Menthol,CC(C)C1CCC(C)OCC1,RESTRICTED,0.5,0.05-0.30
+Borneol,CC1(C)C2CCC1(C)C(O)C2,ALLOWED,1,0.05-0.50
+Fenchol,CC1(C)C2CCC1(C)C(O)C2,ALLOWED,1,0.05-0.50
+γ-Nonalactone,CCCCCC1OC(=O)CC1,ALLOWED,1,0.02-0.30
+γ-Decalactone,CCCCCCC1OC(=O)CC1,ALLOWED,1,0.02-0.30
+Hexyl acetate,CCCCCCOC(=O)C,ALLOWED,2,0.10-1.00
+Isoamyl acetate,CC(C)CCOC(=O)C,ALLOWED,2,0.10-1.00
+cis-3-Hexenol,CCC/C=C\CO,ALLOWED,1,0.05-0.50
+cis-3-Hexenyl acetate,CCC/C=C\COC(C)=O,ALLOWED,1,0.05-0.50
+β-Ionone,CC(=O)C1=CC=CCC1=C(C)C,ALLOWED,1,0.02-0.30
+Damascone,CC(=O)CCC=C1CC=CC=C1,RESTRICTED,0.1,0.005-0.05
+Nerolidol,CC(=CCCC(=CCCC(=CCO)C)C)C,ALLOWED,1,0.05-0.50
+Farnesol,CC(=CCCC(=CCCC(=CCO)C)C)C,RESTRICTED,0.1,0.005-0.05
+Patchoulol,CC1CCC2(C)CCC(C)(C)C2C1O,ALLOWED,1,0.05-0.50
+Maltol,CC1=OC(=O)C(O)=C1,ALLOWED,0.5,0.01-0.20
+Guaiacol,COC1=CC=C(C=C1)O,RESTRICTED,0.1,0.005-0.05
+Benzaldehyde,O=CC1=CC=CC=C1,RESTRICTED,0.1,0.005-0.05
+Vanillin,COC1=CC(=C(C=C1O)C=O)O,RESTRICTED,0.5,0.02-0.20
+Veratraldehyde,COC1=CC(=CC=C1OC)C=O,RESTRICTED,0.1,0.005-0.05
+Safrole,COC1=CC2OCOC2=CC1,PROHIBITED,0,Not permitted

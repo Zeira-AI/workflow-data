@@ -9,51 +9,300 @@
     "credits": 0,
     "executionTime": 1
   },
-  "defaultInputs": [],
+  "defaultInputs": [
+    {
+      "id": "data",
+      "name": "Input Data",
+      "type": "array",
+      "required": false,
+      "description": "Connect data from upstream node",
+      "tooltip": "Connect output from upstream node. Alternatively, use the input mode selector below to choose Single Ingredient, Batch Ingredients, or Full Formula."
+    }
+  ],
   "defaultOutputs": [
     {
-      "id": "ingredients",
-      "name": "ingredients",
+      "id": "Compound_name",
+      "name": "Compound_name",
       "type": "string",
-      "description": "List of curated ingredients"
+      "tooltip": "Name of the compound."
     },
     {
-      "id": "analysis",
-      "name": "analysis",
+      "id": "SMILES",
+      "name": "SMILES",
       "type": "string",
-      "description": "Formula analysis and regulatory report"
+      "tooltip": "SMILES string representing the compound's chemical structure."
+    },
+    {
+      "id": "Status",
+      "name": "Status",
+      "type": "string",
+      "tooltip": "Regulatory status: ALLOWED, RESTRICTED, or PROHIBITED."
+    },
+    {
+      "id": "Max_concentration_(%_w/w)",
+      "name": "Max concentration (% w/w)",
+      "type": "number",
+      "tooltip": "Maximum allowed concentration percentage by weight."
+    },
+    {
+      "id": "Recommended_working_range_(%_w/w)",
+      "name": "Recommended working range (% w/w)",
+      "type": "string",
+      "tooltip": "Recommended working concentration range (e.g., '0.01-0.05' or 'Not permitted')."
     }
   ],
   "configSchema": [
     {
-      "key": "freeText",
-      "type": "text",
-      "label": "Manual Ingredients / Description",
-      "suggestedField": [
-        "smiles",
-        "name",
-        "ingredient_name",
-        "inci"
+      "key": "inputMode",
+      "type": "select",
+      "label": "Input Mode",
+      "options": [
+        {
+          "value": "single_ingredient",
+          "label": "Single Ingredient"
+        },
+        {
+          "value": "batch_ingredients",
+          "label": "Batch Ingredients (CSV)"
+        },
+        {
+          "value": "full_formula",
+          "label": "Full Formula / Product Composition"
+        },
+        {
+          "value": "previous_output",
+          "label": "Use Previous Output"
+        }
       ],
-      "placeholder": "Enter ingredients or describe desired formula"
+      "defaultValue": "single_ingredient",
+      "tooltip": "Choose how to input ingredients for regulatory checking."
     },
     {
-      "key": "ingredientFile",
-      "type": "file",
-      "label": "Upload Ingredient List",
-      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg"
+      "key": "ingredientName",
+      "type": "text",
+      "label": "Ingredient Name",
+      "placeholder": "Enter INCI name, CAS, or common name (autocomplete supported)",
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient"] }],
+      "tooltip": "Enter ingredient name. Supports autocomplete for INCI names, CAS numbers, and common names."
+    },
+    {
+      "key": "casNumber",
+      "type": "text",
+      "label": "CAS No. (Optional)",
+      "placeholder": "e.g., 123-45-6",
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient"] }],
+      "tooltip": "Optional CAS registry number for precise identification."
+    },
+    {
+      "key": "ecNumber",
+      "type": "text",
+      "label": "EC No. (Optional)",
+      "placeholder": "e.g., 204-617-8",
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient"] }],
+      "tooltip": "Optional EC (EINECS) number."
+    },
+    {
+      "key": "femaNumber",
+      "type": "text",
+      "label": "FEMA No. (Optional)",
+      "placeholder": "e.g., 2633",
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient"] }],
+      "tooltip": "Optional FEMA (Flavor and Extract Manufacturers Association) number."
+    },
+    {
+      "key": "drugbankId",
+      "type": "text",
+      "label": "DrugBank ID (Optional)",
+      "placeholder": "e.g., DB00131",
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient"] }],
+      "tooltip": "Optional DrugBank identifier."
+    },
+    {
+      "key": "intendedUse",
+      "type": "select",
+      "label": "Intended Use",
+      "options": [
+        {
+          "value": "preservative",
+          "label": "Preservative"
+        },
+        {
+          "value": "fragrance",
+          "label": "Fragrance"
+        },
+        {
+          "value": "active",
+          "label": "Active"
+        },
+        {
+          "value": "excipient",
+          "label": "Excipient"
+        }
+      ],
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient"] }],
+      "tooltip": "Select the intended use of the ingredient."
+    },
+    {
+      "key": "concentration",
+      "type": "number",
+      "label": "Concentration (%)",
+      "placeholder": "e.g., 2.5",
+      "showWhen": [{ "field": "inputMode", "in": ["single_ingredient"] }],
+      "tooltip": "Optional but recommended. Concentration percentage in the final product."
+    },
+    {
+      "key": "batchIngredientsFile",
+      "type": ["text", "file"],
+      "label": "Upload Batch Ingredients CSV",
+      "placeholder": "Upload CSV file or paste CSV data. Field mapping will appear after upload...",
+      "showWhen": [{ "field": "inputMode", "in": ["batch_ingredients"] }],
+      "tooltip": "Upload CSV file with batch ingredients. Required columns: Ingredient name. Optional: Concentration, Function. After uploading, you'll be able to map which columns from your CSV to use.",
+      "accept": ".csv,.txt"
+    },
+    {
+      "key": "batchTemplateDownload",
+      "type": "markdown",
+      "label": "CSV Template",
+      "description": "**Template Format:**\n- Required: Ingredient name\n- Optional: Concentration (%), Function\n\nDownload template or use the format above.",
+      "showWhen": [{ "field": "inputMode", "in": ["batch_ingredients"] }],
+      "color": "info"
+    },
+    {
+      "key": "fullFormulaFile",
+      "type": ["text", "file"],
+      "label": "Upload Full Formula CSV",
+      "placeholder": "Upload CSV file or paste CSV data. Field mapping will appear after upload...",
+      "showWhen": [{ "field": "inputMode", "in": ["full_formula"] }],
+      "tooltip": "Upload CSV file with full formula composition. Required columns: Ingredient, Concentration (%). Optional: Function, Phase. After uploading, you'll be able to map which columns from your CSV to use.",
+      "accept": ".csv,.txt"
+    },
+    {
+      "key": "productType",
+      "type": "select",
+      "label": "Product Type",
+      "options": [
+        {
+          "value": "leave_on_cosmetic",
+          "label": "Leave-on Cosmetic"
+        },
+        {
+          "value": "rinse_off_cosmetic",
+          "label": "Rinse-off Cosmetic"
+        },
+        {
+          "value": "personal_care",
+          "label": "Personal Care Product"
+        },
+        {
+          "value": "topical_drug",
+          "label": "Topical Drug"
+        },
+        {
+          "value": "oral_product",
+          "label": "Oral Product"
+        }
+      ],
+      "showWhen": [{ "field": "inputMode", "in": ["full_formula"] }],
+      "defaultValue": "leave_on_cosmetic",
+      "tooltip": "Select the type of product for formula validation."
+    },
+    {
+      "key": "targetMarkets",
+      "type": "multiselect",
+      "label": "Market(s)",
+      "options": [
+        {
+          "value": "EU",
+          "label": "EU"
+        },
+        {
+          "value": "US",
+          "label": "US"
+        },
+        {
+          "value": "UK",
+          "label": "UK"
+        },
+        {
+          "value": "CN",
+          "label": "China"
+        },
+        {
+          "value": "JP",
+          "label": "Japan"
+        },
+        {
+          "value": "ASEAN",
+          "label": "ASEAN"
+        },
+        {
+          "value": "GLOBAL",
+          "label": "Global / Multiple Markets"
+        }
+      ],
+      "showWhen": [{ "field": "inputMode", "in": ["full_formula"] }],
+      "defaultValue": ["GLOBAL"],
+      "tooltip": "Select target market(s) for regulatory compliance checking."
+    },
+    {
+      "key": "intendedClaims",
+      "type": "textarea",
+      "label": "Intended Claims (Optional)",
+      "placeholder": "e.g., Anti-aging, Whitening, Moisturizing...",
+      "showWhen": [{ "field": "inputMode", "in": ["full_formula"] }],
+      "tooltip": "Optional but powerful. List intended marketing or scientific claims for the product."
+    },
+    {
+      "key": "inputFields",
+      "type": "multiselect",
+      "label": "Select Input Fields (from upstream node)",
+      "options": [
+        {
+          "value": "ingredients",
+          "label": "Ingredients"
+        },
+        {
+          "value": "ingredient_name",
+          "label": "Ingredient Name"
+        },
+        {
+          "value": "name",
+          "label": "Name"
+        },
+        {
+          "value": "inci",
+          "label": "INCI"
+        },
+        {
+          "value": "concentration",
+          "label": "Concentration"
+        },
+        {
+          "value": "function",
+          "label": "Function"
+        },
+        {
+          "value": "data",
+          "label": "Data (all fields)"
+        }
+      ],
+      "showWhen": [{ "field": "inputMode", "in": ["previous_output"] }],
+      "tooltip": "Select which fields from the upstream node to use as input. You can select multiple fields.",
+      "defaultValue": []
     },
     {
       "key": "referenceProduct",
       "type": "text",
       "label": "Similar Product (Link/Name)",
-      "placeholder": "Paste product link or name here..."
+      "placeholder": "Paste product link or name here...",
+      "tooltip": "Optional reference product for comparison."
     },
     {
       "key": "desiredEffect",
       "type": "text",
       "label": "Desired Effect",
-      "placeholder": "e.g., Whitening, Anti-aging..."
+      "placeholder": "e.g., Whitening, Anti-aging...",
+      "tooltip": "Optional desired effect or benefit."
     },
     {
       "key": "targetUser",
@@ -169,12 +418,24 @@
     }
   ],
   "defaultConfig": {
-    "freeText": "",
-    "ingredientFile": null,
+    "inputMode": "single_ingredient",
+    "ingredientName": "",
+    "casNumber": "",
+    "ecNumber": "",
+    "femaNumber": "",
+    "drugbankId": "",
+    "intendedUse": "active",
+    "concentration": null,
+    "batchIngredientsFile": null,
+    "fullFormulaFile": null,
+    "productType": "leave_on_cosmetic",
+    "targetMarkets": ["GLOBAL"],
+    "intendedClaims": "",
+    "inputFields": [],
     "referenceProduct": "",
     "desiredEffect": "",
     "targetUser": "18_30",
-    "targetMarket": "asia",
+    "targetReligion": "asia",
     "applicationRoute": "topical",
     "dosageForm": "cream"
   }
