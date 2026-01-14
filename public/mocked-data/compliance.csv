@@ -1,13 +1,36 @@
-﻿ID;Ingredient Name;INCI Name;CAS Number;Concentration;Market;Regulatory Status;Restriction Type;Max Allowed Concentration;Reason;Regulation Source;Last Regulation Update
-1;Salicylic Acid;Salicylic Acid;69-72-7;2.5%;EU;FAIL;Restricted;2.0%;Exceeds max concentration for leave-on products;EU Cosmetics Regulation Annex III / Entry 98;2023-09
-2;Salicylic Acid;Salicylic Acid;69-72-7;2.5%;US;PASS;Restricted;3.0%;Allowed under FDA OTC acne monograph;FDA OTC Acne Monograph;2022-06
-3;Retinol;Retinol;68-26-8;0.3%;EU;PASS;Restricted;0.3%;Complies with SCCS opinion for face products;SCCS/1652/23;2023-03
-4;Retinol;Retinol;68-26-8;0.3%;CN;FAIL;Restricted;0.1%;Exceeds CSAR recommended limit for leave-on cosmetics;China CSAR Technical Guidelines;2023-01
-5;Phenoxyethanol;Phenoxyethanol;122-99-6;0.8%;EU;PASS;Restricted;1.0%;Within allowed preservative limit;EU Cosmetics Regulation Annex V / Entry 29;2024-02
-6;Phenoxyethanol;Phenoxyethanol;122-99-6;0.8%;JP;PASS;Restricted;1.0%;Permitted preservative under Japanese Standards;MHLW Standards for Cosmetics;2022-11
-7;Hydroquinone;Hydroquinone;123-31-9;1.0%;EU;FAIL;Prohibited;0.0%;Prohibited in cosmetic products;EU Cosmetics Regulation Annex II;2023-09
-8;Hydroquinone;Hydroquinone;123-31-9;1.0%;US;CONDITIONAL;Restricted;2.0%;Only allowed in OTC drug products, not cosmetics;FDA Drug vs Cosmetic Classification;2022-08
-9;Zinc Oxide (Nano);Zinc Oxide (nano);1314-13-2;10.0%;EU;PASS;Restricted;25.0%;"Approved UV filter; nano labeling required";EU Cosmetics Regulation Annex VI / Entry 30a;2024-01
-10;Zinc Oxide (Nano);Zinc Oxide (nano);1314-13-2;10.0%;CN;PASS;Restricted;25.0%;Approved UV filter under CSAR with labeling rules;China CSAR Annex;2023-05
-11;Bakuchiol;Bakuchiol;10309-37-2;0.5%;EU;UNKNOWN;Not Listed;N/A;"Not explicitly listed in annexes; safety assessment required";ECHA / SCCS database;2024-01
-12;Bakuchiol;Bakuchiol;10309-37-2;0.5%;US;UNKNOWN;Not Listed;N/A;"No specific FDA cosmetic restriction; requires substantiation";FDA Cosmetic Ingredient Database;2023-12
+﻿Compound_name,SMILES,Status,Max_concentration_(%_w/w),Recommended_working_range_(%_w/w)
+Linalool,CC(=C)CCC(C)(C)OCC=C,RESTRICTED,0.1,0.01-0.05
+Geraniol,CC(=CCCC(=CCO)C)C,RESTRICTED,0.1,0.01-0.05
+Nerol,CC(=CCCC(=CCO)C)C,RESTRICTED,0.1,0.01-0.05
+Citronellol,CC(C)CCC(C)CO,RESTRICTED,0.2,0.02-0.10
+α-Terpineol,CC1=CCC(CC1)C(C)(C)O,ALLOWED,1,0.05-0.50
+Limonene,CC1=CCC(CC1)C(=C)C,RESTRICTED,0.2,0.01-0.10
+β-Pinene,CC1=CCC2CC1C2(C)C,ALLOWED,1,0.05-0.50
+γ-Pinene,CC1=CCC2CC1C2(C)C,ALLOWED,1,0.05-0.50
+Myrcene,CC(=CCC=C(C)C)C=C,ALLOWED,1,0.05-0.50
+Ocimene,CC(=CCC=C(C)C)C=C,ALLOWED,1,0.05-0.50
+Phenethyl alcohol,OCCc1ccccc1,ALLOWED,2,0.10-1.00
+Benzyl alcohol,OCCc1ccccc1,RESTRICTED,1,0.05-0.50
+Anethole,COC1=CC=C(C=C1)C=CC,RESTRICTED,0.5,0.02-0.20
+Thymol,CC(C)C1=CC=C(C=C1)O,RESTRICTED,0.5,0.01-0.20
+Carvacrol,CC(C)C1=CC=C(C=C1)O,RESTRICTED,0.5,0.01-0.20
+Menthol,CC(C)C1CCC(C)OCC1,RESTRICTED,0.5,0.05-0.30
+Borneol,CC1(C)C2CCC1(C)C(O)C2,ALLOWED,1,0.05-0.50
+Fenchol,CC1(C)C2CCC1(C)C(O)C2,ALLOWED,1,0.05-0.50
+γ-Nonalactone,CCCCCC1OC(=O)CC1,ALLOWED,1,0.02-0.30
+γ-Decalactone,CCCCCCC1OC(=O)CC1,ALLOWED,1,0.02-0.30
+Hexyl acetate,CCCCCCOC(=O)C,ALLOWED,2,0.10-1.00
+Isoamyl acetate,CC(C)CCOC(=O)C,ALLOWED,2,0.10-1.00
+cis-3-Hexenol,CCC/C=C\CO,ALLOWED,1,0.05-0.50
+cis-3-Hexenyl acetate,CCC/C=C\COC(C)=O,ALLOWED,1,0.05-0.50
+β-Ionone,CC(=O)C1=CC=CCC1=C(C)C,ALLOWED,1,0.02-0.30
+Damascone,CC(=O)CCC=C1CC=CC=C1,RESTRICTED,0.1,0.005-0.05
+Nerolidol,CC(=CCCC(=CCCC(=CCO)C)C)C,ALLOWED,1,0.05-0.50
+Farnesol,CC(=CCCC(=CCCC(=CCO)C)C)C,RESTRICTED,0.1,0.005-0.05
+Patchoulol,CC1CCC2(C)CCC(C)(C)C2C1O,ALLOWED,1,0.05-0.50
+Maltol,CC1=OC(=O)C(O)=C1,ALLOWED,0.5,0.01-0.20
+Guaiacol,COC1=CC=C(C=C1)O,RESTRICTED,0.1,0.005-0.05
+Benzaldehyde,O=CC1=CC=CC=C1,RESTRICTED,0.1,0.005-0.05
+Vanillin,COC1=CC(=C(C=C1O)C=O)O,RESTRICTED,0.5,0.02-0.20
+Veratraldehyde,COC1=CC(=CC=C1OC)C=O,RESTRICTED,0.1,0.005-0.05
+Safrole,COC1=CC2OCOC2=CC1,PROHIBITED,0,Not permitted
