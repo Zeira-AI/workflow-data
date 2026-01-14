@@ -7,6 +7,7 @@
     "formulate",
     "data-source",
     "filter",
+    "rule-based-filter",
     "ingredient-search",
     "purchase",
     "regulatory-check",

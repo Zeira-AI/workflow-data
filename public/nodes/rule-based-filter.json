@@ -1,6 +1,6 @@
 {
-    "type": "filter",
-    "label": "Filter",
+    "type": "rule-based-filter",
+    "label": "Rule-based Filter",
     "category": "transform",
     "icon": "filter",
     "color": "green",
