@@ -5,6 +5,7 @@
   "icon": "shield-check",
   "color": "red",
   "description": "Check ingredient/formula compliance against global market regulations",
+  "outputMockLabel": "36 compounds",
   "pricing": {
     "credits": 0,
     "executionTime": 1
