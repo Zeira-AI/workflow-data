@@ -1,0 +1,126 @@
+{
+    "type": "target-mapping",
+    "label": "Target Mapping",
+    "category": "analysis",
+    "icon": "target-icon",
+    "color": "blue",
+    "description": "Maps protein targets to biological systems and assay metrics for calming-related cosmetic formulations.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "4 targets",
+    "defaultInputs": [
+        {
+            "id": "target-input",
+            "name": "Target/Protein Input",
+            "type": "string",
+            "required": false,
+            "tooltip": "Optional input port carrying protein names or biological descriptions from previous steps."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "protein_target",
+            "name": "Protein Target",
+            "type": "string",
+            "tooltip": "Protein target name (e.g. \"OR1A1\", \"TRPM8\", \"TRPV3\")."
+        },
+        {
+            "id": "biological_system",
+            "name": "Biological System",
+            "type": "string",
+            "tooltip": "The biological system involved (e.g. \"Olfactory\", \"Trigeminal\")."
+        },
+        {
+            "id": "desired_modulation",
+            "name": "Desired Modulation",
+            "type": "string",
+            "tooltip": "Required modulation type (e.g. \"Mild–moderate activation\", \"Low-level activation\", \"Sub-threshold modulation\")."
+        },
+        {
+            "id": "corresponding_assay",
+            "name": "Corresponding Assay",
+            "type": "string",
+            "tooltip": "Specific assay method used to measure the target (e.g. \"Cell-based olfactory receptor assay\", \"Calcium influx assay\")."
+        },
+        {
+            "id": "metric_used",
+            "name": "Metric Used",
+            "type": "string",
+            "tooltip": "Measurement unit for the assay result (e.g. \"EC50\", \"IC50\")."
+        },
+        {
+            "id": "rationale_for_calming",
+            "name": "Rationale for Calming Association",
+            "type": "string",
+            "tooltip": "Biological rationale explaining why this target is relevant to calming effects."
+        },
+        {
+            "id": "crystalized_structure",
+            "name": "Crystalized Structure Available?",
+            "type": "string",
+            "tooltip": "Whether a crystalized structure is available for the target (\"YES\" or \"N/A\")."
+        },
+        {
+            "id": "chembl_id",
+            "name": "ChemBL ID",
+            "type": "string",
+            "tooltip": "ChemBL database identifier for the target (e.g. \"CHEMBL1075319\")."
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "manualFreetext",
+            "type": "textarea",
+            "label": "Target Input",
+            "placeholder": "Enter target name or biological effect (e.g., OR1A1, TRPM8...)",
+            "tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
+        }
+    ],
+    "defaultConfig": {
+        "manualFreetext": "",
+        "mappingTable": [
+            {
+                "protein_target": "OR1A1",
+                "biological_system": "Olfactory",
+                "desired_modulation": "Mild–moderate activation",
+                "corresponding_assay": "Cell-based olfactory receptor assay (HEK293, cAMP or Ca²⁺ readout)",
+                "metric_used": "EC50",
+                "rationale_for_calming": "OR1A1 responds to soft, pleasant odorants. Moderate activation supports smooth, familiar odor perception linked to reduced emotional arousal.",
+                "crystalized_structure": "N/A",
+                "chembl_id": "N/A"
+            },
+            {
+                "protein_target": "OR2J3",
+                "biological_system": "Olfactory",
+                "desired_modulation": "Balanced activation (avoid saturation)",
+                "corresponding_assay": "Heterologous OR expression assay with reporter gene",
+                "metric_used": "EC50",
+                "rationale_for_calming": "OR2J3 is associated with fresh/green odor notes. Balanced activation contributes to emotional lightness without overstimulation.",
+                "crystalized_structure": "N/A",
+                "chembl_id": "N/A"
+            },
+            {
+                "protein_target": "TRPM8",
+                "biological_system": "Trigeminal",
+                "desired_modulation": "Low-level activation",
+                "corresponding_assay": "Calcium influx assay (TRPM8-expressing cells)",
+                "metric_used": "EC50",
+                "rationale_for_calming": "Gentle TRPM8 engagement produces cooling and freshness that can bias autonomic tone toward relaxation when intensity is controlled.",
+                "crystalized_structure": "YES",
+                "chembl_id": "CHEMBL1075319"
+            },
+            {
+                "protein_target": "TRPV3",
+                "biological_system": "Trigeminal",
+                "desired_modulation": "Sub-threshold modulation",
+                "corresponding_assay": "Calcium influx inhibition assay",
+                "metric_used": "IC50",
+                "rationale_for_calming": "TRPV3 contributes to warmth and comfort cues. Mild modulation supports safety and coziness rather than alertness.",
+                "crystalized_structure": "YES",
+                "chembl_id": "CHEMBL5522"
+            }
+        ]
+    }
+}
