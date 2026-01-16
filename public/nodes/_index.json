@@ -20,9 +20,7 @@
     "bioactivity-filter",
     "developability-filter",
     "qsar-filter",
-    "market-trend-timeline",
-    "market-industry-trend",
-    "market-competition-claim",
+    "market-intelligence",
     "claim-validation",
     "compliance"
   ]
