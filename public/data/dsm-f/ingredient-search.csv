@@ -1,12 +1,11 @@
-name
-ingredient_name
-Lavender Oil
-Linalool
-Vetiver Oil
-Chamomile Oil
-Sandalwood Oil
-Bergamot Oil
-Clary Sage Oil
-Alpha-Terpineol
-Cedrol
-Phytoncide Blend
+ID,ingredient_name,INCI_name,CAS_number,supplier_count,sources
+1,Lavender Oil,Lavandula Angustifolia Oil,8000-28-0,120, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Glycerin_Supplier_List.pdf
+2,Linalool,Linalool,78-70-6,200, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Hyaluronic_Acid_Supplier_List.pdf
+3,Vetiver Oil,Vetiveria Zizanoides Root Oil,8016-96-4,85, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Prickly_Pear_Seed_Oil_Supplier_List.pdf
+4,Chamomile Oil,Chamomilla Recutita Flower Oil,8015-92-7,70, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Bakuchiol_Supplier_List.pdf
+5,Sandalwood Oil,Santalum Album Oil,8006-87-9,60, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Ceramide_NP_Supplier_List.pdf
+6,Bergamot Oil,Bergamia Aurantium Peel Oil,8007-75-8,110, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Polysorbate_Supplier_List.pdf
+7,Clary Sage Oil,Salvia Sclarea Oil,8016-63-5,75, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Copper_Tripeptide-1_Supplier_List.pdf
+8,Alpha-Terpineol,Terpineol,98-55-5,95, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Niacinamide_Supplier_List.pdf
+9,Cedrol,Cedrol,77-53-2,40, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Squalane_Supplier_List.pdf
+10,Phytoncide Blend,Terpene Mixture (various),N/A,25, https://workflow-data-2sa8.vercel.app/data/ingredient-search/Tetrahexyldecyl_Ascorbate_Supplier_List.pdf

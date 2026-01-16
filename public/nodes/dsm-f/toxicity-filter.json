@@ -1,0 +1,125 @@
+{
+    "type": "toxicity-filter",
+    "label": "Toxicity Filter",
+    "category": "analysis",
+    "icon": "filtericon",
+    "color": "red",
+    "description": "Filter compounds based on physicochemical properties and custom rules.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "13 compounds",
+    "defaultInputs": [
+        {
+            "id": "input-mol-data",
+            "name": "Input Compounds",
+            "type": "array",
+            "required": true,
+            "tooltip": "Table of compounds."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "Compound name",
+            "name": "Compound name",
+            "type": "string",
+            "tooltip": "Name of the compound."
+        },
+        {
+            "id": "MW (Da)",
+            "name": "MW (Da)",
+            "type": "number",
+            "tooltip": "Molecular Weight in Daltons."
+        },
+        {
+            "id": "HBD",
+            "name": "HBD",
+            "type": "number",
+            "tooltip": "Hydrogen Bond Donors."
+        },
+        {
+            "id": "HBA",
+            "name": "HBA",
+            "type": "number",
+            "tooltip": "Hydrogen Bond Acceptors."
+        },
+        {
+            "id": "cLogP",
+            "name": "cLogP",
+            "type": "number",
+            "tooltip": "Calculated Partition Coeffient."
+        },
+        {
+            "id": "Rings",
+            "name": "Rings",
+            "type": "number",
+            "tooltip": "Number of rings."
+        },
+        {
+            "id": "Heavy Atoms",
+            "name": "Heavy Atoms",
+            "type": "number",
+            "tooltip": "Number of heavy atoms."
+        },
+        {
+            "id": "RotB",
+            "name": "RotB",
+            "type": "number",
+            "tooltip": "Number of rotatable bonds."
+        },
+        {
+            "id": "TPSA (A²)",
+            "name": "TPSA (A²)",
+            "type": "number",
+            "tooltip": "Topological Polar Surface Area."
+        },
+        {
+            "id": "BP (°C)",
+            "name": "BP (°C)",
+            "type": "number",
+            "tooltip": "Boiling Point in degrees Celsius."
+        },
+        {
+            "id": "Rule status",
+            "name": "Rule status",
+            "type": "string",
+            "tooltip": "Status based on filtering rules (PASS/FAIL)."
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "ingredientListText",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Compound List",
+            "tooltip": "Compounds for analysis",
+            "suggestedField": [
+                "smiles",
+                "name",
+                "Compound name"
+            ],
+            "accept": ".csv,.txt,.smi"
+        },
+        {
+            "key": "mw_threshold",
+            "type": "number",
+            "label": "MW Threshold",
+            "defaultValue": 400,
+            "tooltip": "Maximum molecular weight (Da)."
+        },
+        {
+            "key": "logp_threshold",
+            "type": "number",
+            "label": "logP Threshold",
+            "defaultValue": 4.0,
+            "tooltip": "Maximum cLogP."
+        }
+    ],
+    "defaultConfig": {
+        "mw_threshold": 300,
+        "logp_threshold": 3.0
+    }
+}

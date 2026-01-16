@@ -22,6 +22,7 @@
     "qsar-filter",
     "market-intelligence",
     "claim-validation",
-    "compliance"
+    "compliance",
+    "ingredient-interaction-risk-synergy-analysis"
   ]
 }

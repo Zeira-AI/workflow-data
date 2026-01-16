@@ -1,15 +1,6 @@
-name
-TRPM8 - EC50 - Assay: CHEMBL5738311
-Ligand
-α-Terpineol
-α-Pinene
-β-Pinene
-Myrcene
-γ-Nonalactone
-TRPV3 - IC50- Assay: CHEMBL3889302
-Ligand
-α-Terpineol
-α-Pinene
-β-Pinene
-Myrcene
-γ-Nonalactone
+Compound,TRPM8 - EC50 - Assay: CHEMBL5738311,TRPV3 - IC50- Assay: CHEMBL3889302
+α-Terpineol,8.8 µM,8.8 µM
+α-Pinene,25.1 µM,25.1 µM
+β-Pinene,51.3 µM,51.3 µM
+Myrcene,81.1 µM,81.1 µM
+γ-Nonalactone,>100 µM,>100 µM

@@ -1,8 +1,7 @@
-name
-product_name
-Aromatique Room Spray
-Deep Sleep Pillow Spray
-Rest & Relax Essential Oil Blend
-Real Luxury Fragrance
-Forest Lungs Fragrance
-Relax Deep Range
+ID,product,brand,product_type,format,primary_claim,functional_focus,key_odor_notes,image_url
+1,Aromatique Room Spray,Aesop,Functional fragrance,Alcohol-based spray,Calming and grounding,"Stress reduction; mood balance","Woody, herbal, resinous",https://placehold.co/100x100?text=Product
+2,Deep Sleep Pillow Spray,This Works,Functional fragrance,Aqueous mist,Sleep support and relaxation,"Stress reduction; sleep induction","Lavender, chamomile, vetiver",https://placehold.co/100x100?text=Product
+3,Rest & Relax Essential Oil Blend,Vitruvi,Functional fragrance,Essential oil blend,Relaxation and emotional calming,Parasympathetic activation,"Lavender, clary sage, bergamot",https://placehold.co/100x100?text=Product
+4,Real Luxury Fragrance,Neom Organics,Functional fine fragrance,Eau de parfum / diffuser,Stress relief and emotional balance,"Stress reduction; wellbeing","Lavender, jasmine, sandalwood",https://placehold.co/100x100?text=Product
+5,Forest Lungs Fragrance,The Nue Co.,Functional fragrance,Alcohol-based spray,Breathing ease and calm,"Parasympathetic activation; stress reduction","Pine, fir, phytoncides",https://placehold.co/100x100?text=Product
+6,Relax Deep Range,Aromatherapy Associates,Therapeutic functional fragrance,Rollerball / mist / diffuser,Deep relaxation and sleep support,"Stress reduction; sleep support","Vetiver, chamomile, sandalwood",https://placehold.co/100x100?text=Product

@@ -1,0 +1,131 @@
+{
+    "type": "candidate-library",
+    "label": "Candidate Library",
+    "category": "library",
+    "icon": "book-open-text",
+    "color": "blue",
+    "description": "Build a customized compound library of 30+ candidates based on biological intent and selected sources.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "30 candidates",
+    "defaultInputs": [
+        {
+            "id": "search_keyword",
+            "name": "Search Keyword",
+            "type": "string",
+            "required": true,
+            "tooltip": "Short text that anchors the search (e.g. \"natural flavonoids\", \"peptides\")."
+        },
+        {
+            "id": "biological_effects",
+            "name": "Biological Effects",
+            "type": "string",
+            "required": true,
+            "tooltip": "Comma‑separated desired effects (e.g. \"antioxidant, anti-inflammatory\")."
+        },
+        {
+            "id": "target_proteins",
+            "name": "Target Protein(s)",
+            "type": "string",
+            "required": false,
+            "tooltip": "Optional list of protein targets to focus the search (e.g. GSK3B, PDE1A)."
+        },
+        {
+            "id": "scientific_description",
+            "name": "Scientific Description",
+            "type": "string",
+            "required": false,
+            "tooltip": "Free‑text background or hypotheses the library should reflect."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "compound",
+            "name": "Compound",
+            "type": "string",
+            "tooltip": "Name of the compound."
+        },
+        {
+            "id": "smiles",
+            "name": "SMILES",
+            "type": "string",
+            "tooltip": "SMILES string representing the chemical structure."
+        },
+        {
+            "id": "odor",
+            "name": "Odor",
+            "type": "string",
+            "tooltip": "Odor description."
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "library_sources",
+            "type": "multiselect",
+            "label": "Primary Sources",
+            "options": [
+                {
+                    "value": "vecurate",
+                    "label": "Vecurate"
+                },
+                {
+                    "value": "vecurate_excerpt",
+                    "label": "Vecurate Excerpt (25 compounds)"
+                },
+                {
+                    "value": "eu_cosing",
+                    "label": "EU CoSing"
+                },
+                {
+                    "value": "pubchem",
+                    "label": "PubChem"
+                },
+                {
+                    "value": "chembl",
+                    "label": "ChEMBL"
+                },
+                {
+                    "value": "drugbank",
+                    "label": "DrugBank"
+                },
+                {
+                    "value": "drugs_com",
+                    "label": "Drugs.com"
+                },
+                {
+                    "value": "fda",
+                    "label": "FDA"
+                },
+                {
+                    "value": "nih",
+                    "label": "NIH"
+                },
+                {
+                    "value": "unii",
+                    "label": "UNII"
+                },
+                {
+                    "value": "chemspider",
+                    "label": "ChemSpider"
+                },
+                {
+                    "value": "cas",
+                    "label": "CAS"
+                }
+            ],
+            "tooltip": "Choose one or more databases to pull candidate structures from.",
+            "defaultValue": [
+                "vecurate"
+            ]
+        },
+        {
+            "key": "ingredientListFile",
+            "type": "file",
+            "label": "Or upload Compound List",
+            "accept": ".pdf,.doc,.docx,.txt,.csv",
+            "tooltip": "Upload your own compound list; parsed names/SMILES will be merged into the library."
+        }
+    ]
+}
