@@ -1,0 +1,17 @@
+ID;Proposed Claim;Claim Type;Market;Validation Status;Claim Issue;Market-Specific Compliance Issue;Conditional Usage Rules;Suggestion
+1;Reduces stress;Marketing;EU;CONDITIONALLY VALID;Medical implication;"Reduces stress" implies treatment of psychological condition;Allowed only with sensory framing;Rewrite to "helps create a calming atmosphere"
+2;Reduces stress;Marketing;US;CONDITIONALLY VALID;Drug boundary risk;May be interpreted as treating anxiety or stress disorder;Allowed with non-therapeutic wording;Change to "supports a sense of relaxation"
+3;Reduces stress;Marketing;Japan;INVALID;Medical efficacy claim;Interpreted as treatment of mental stress;Not allowed;Replace with mood or comfort-based wording only
+4;Reduces stress;Marketing;China;INVALID;Therapeutic implication;Considered mental health treatment under advertising law;Not allowed;Do not use; rephrase to cosmetic-safe claim
+5;Promotes relaxation;Marketing;EU;VALID;None;Acceptable sensory and wellness claim;No restriction;No action needed
+6;Promotes relaxation;Marketing;US;VALID;None;General cosmetic fragrance benefit;No restriction;No action needed
+7;Promotes relaxation;Marketing;Japan;CONDITIONALLY VALID;Scope limitation;Must avoid claims of mental health improvement;Allowed with sensory-only context;Use "promotes a relaxing sensory experience"
+8;Promotes relaxation;Marketing;China;VALID;None;Permitted fragrance wellness wording;No restriction;No action needed
+9;Calms the mind;Marketing;EU;CONDITIONALLY VALID;Psychological implication;"Mind calming" may imply CNS effect;Allowed with experiential framing;Rewrite to "creates a calming ambiance"
+10;Calms the mind;Marketing;US;CONDITIONALLY VALID;Implied neurological effect;Could be interpreted as affecting brain function;Allowed with softened wording;Change to "helps you feel calm"
+11;Calms the mind;Marketing;Japan;INVALID;Mental function claim;Considered mental-state modulation;Not allowed;Replace with indirect sensory wording
+12;Calms the mind;Marketing;China;INVALID;Mental health implication;Disallowed psychological claim;Not allowed;Do not use
+13;Clinically proven stress reduction;Marketing;EU;INVALID;Medical + evidence issue;Requires clinical stress or anxiety endpoints;Not allowed;Remove claim entirely
+14;Clinically proven stress reduction;Marketing;US;INVALID;Unsupported clinical claim;Biomarker or sensory data insufficient;Not allowed;Do not use
+15;Clinically proven stress reduction;Marketing;Japan;INVALID;Drug / mental health claim;Classified as medical efficacy;Not allowed;Do not use
+16;Clinically proven stress reduction;Marketing;China;INVALID;Medical advertising violation;Prohibited therapeutic claim;Not allowed;Do not use
