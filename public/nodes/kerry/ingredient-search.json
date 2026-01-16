@@ -41,17 +41,9 @@
       "placeholder": "Search by ingredient function, application, or INCI name",
       "defaultValue": "",
       "tooltip": "Enter search terms to find ingredients. You can search by:\n- **Function**: e.g., \"moisturizing\", \"anti-aging\"\n- **Application**: e.g., \"hair care\", \"scalp care\"\n- **INCI name**: e.g., \"Niacinamide\", \"Biotin\""
-    },
-    {
-      "key": "ingredientFile",
-      "type": "file",
-      "label": "Upload Ingredient List",
-      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg",
-      "tooltip": "Upload a document or image containing ingredient information. Supports multiple formats including **PDF**, **Word**, **CSV**, and **images** (OCR will be applied)."
     }
   ],
   "defaultConfig": {
     "query": ""
   }
 }
-
