@@ -1,0 +1,76 @@
+{
+  "type": "report-generator",
+  "label": "Report Generator",
+  "category": "Output",
+  "icon": "icon-report",
+  "color": "blue",
+  "description": "Generates a structured document based on input data and a selected template.",
+  "outputMockLabel": "1 item",
+  "defaultInputs": [
+    {
+      "id": "input-data",
+      "name": "Report Data",
+      "type": "object",
+      "required": true,
+      "description": "The raw data objects to be injected into the report template."
+    },
+    {
+      "id": "custom-title",
+      "name": "Dynamic Title",
+      "type": "string",
+      "required": false,
+      "description": "Optional title to override the default report name."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "report_id",
+      "name": "Report ID",
+      "type": "string",
+      "tooltip": "Unique identifier for the generated report (e.g. \"RPT-001\")."
+    },
+    {
+      "id": "report_name",
+      "name": "Report Name",
+      "type": "string",
+      "tooltip": "Name or title of the generated report (e.g. \"Kerry Report\")."
+    },
+    {
+      "id": "report_type",
+      "name": "Report Type",
+      "type": "string",
+      "tooltip": "Type of report generated (e.g. \"External Report\", \"Internal Report\")."
+    },
+    {
+      "id": "reference_url",
+      "name": "Reference URL",
+      "type": "string",
+      "tooltip": "URL link to access or download the generated report document."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "reportFormat",
+      "type": "select",
+      "label": "Export Format",
+      "options": [
+        { "value": "pdf", "label": "PDF Document" },
+        { "value": "csv", "label": "CSV Spreadsheet" },
+        { "value": "html", "label": "HTML Webpage" }
+      ],
+      "defaultValue": "pdf"
+    },
+    {
+      "key": "templateId",
+      "type": "text",
+      "label": "Template ID",
+      "placeholder": "e.g., invoice-template-v1",
+      "defaultValue": "default-template"
+    }
+  ],
+  "defaultConfig": {
+    "reportFormat": "pdf",
+    "templateId": "default-template"
+  }
+}
+

@@ -1,0 +1,203 @@
+{
+  "type": "toxicity-filter",
+  "label": "Toxicity Filter",
+  "category": "analysis",
+  "icon": "filtericon",
+  "color": "red",
+  "description": "Filter compounds based on SMILES data and ADMET predictions.",
+  "outputMockLabel": "41 compounds",
+  "defaultInputs": [
+    {
+      "id": "input-mol-data",
+      "name": "Input Compounds",
+      "type": "array",
+      "required": true,
+      "tooltip": "Table of compounds including at least a SMILES column and basic properties."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "Compound",
+      "name": "Compound",
+      "type": "string",
+      "tooltip": "Compound name or identifier (e.g. \"Methylglyoxal\", \"Dihydroxyacetone\", \"Leptosperin\")."
+    },
+    {
+      "id": "HIA",
+      "name": "HIA",
+      "type": "string",
+      "tooltip": "Human Intestinal Absorption prediction: Low, Mod (Moderate), High, or Var (Variable)."
+    },
+    {
+      "id": "Caco-2",
+      "name": "Caco-2",
+      "type": "string",
+      "tooltip": "Caco-2 cell permeability prediction: Low, Mod (Moderate), High, or Var (Variable)."
+    },
+    {
+      "id": "Sol.",
+      "name": "Solubility",
+      "type": "string",
+      "tooltip": "Aqueous solubility prediction: Low, Mod (Moderate), High, or Var (Variable)."
+    },
+    {
+      "id": "logP",
+      "name": "logP",
+      "type": "number",
+      "tooltip": "Octanol-water partition coefficient (lipophilicity)."
+    },
+    {
+      "id": "BBB",
+      "name": "BBB",
+      "type": "string",
+      "tooltip": "Blood-Brain Barrier penetration: Yes, No, Low, or Var (Variable)."
+    },
+    {
+      "id": "PPB",
+      "name": "PPB",
+      "type": "string",
+      "tooltip": "Plasma Protein Binding: Low, Mod (Moderate), High, or Var (Variable)."
+    },
+    {
+      "id": "Clearance",
+      "name": "Clearance",
+      "type": "string",
+      "tooltip": "Metabolic clearance prediction: Low, Mod (Moderate), High, or Var (Variable)."
+    },
+    {
+      "id": "CYP inhib.",
+      "name": "CYP Inhibition",
+      "type": "string",
+      "tooltip": "Cytochrome P450 inhibition: Yes or No."
+    },
+    {
+      "id": "RM risk",
+      "name": "RM Risk",
+      "type": "string",
+      "tooltip": "Reactive Metabolite risk: Yes or No."
+    },
+    {
+      "id": "hERG",
+      "name": "hERG",
+      "type": "string",
+      "tooltip": "hERG channel inhibition risk: Neg (Negative), Weak, Pos (Positive), or Var (Variable)."
+    },
+    {
+      "id": "Geno",
+      "name": "Genotoxicity",
+      "type": "string",
+      "tooltip": "Genotoxicity prediction: Neg (Negative), Pos (Positive), or Var (Variable)."
+    },
+    {
+      "id": "Acute tox",
+      "name": "Acute Toxicity",
+      "type": "string",
+      "tooltip": "Acute toxicity prediction: Low, Mod (Moderate), High, Extreme, or Var (Variable)."
+    },
+    {
+      "id": "Repeat tox",
+      "name": "Repeat Toxicity",
+      "type": "string",
+      "tooltip": "Repeated dose toxicity prediction: Low, Mod (Moderate), High, Extreme, or Var (Variable)."
+    },
+    {
+      "id": "Dev/Repro",
+      "name": "Developmental/Reproductive",
+      "type": "string",
+      "tooltip": "Developmental and reproductive toxicity: Yes, No, or Var (Variable)."
+    },
+    {
+      "id": "Endocrine",
+      "name": "Endocrine",
+      "type": "string",
+      "tooltip": "Endocrine disruption potential: Yes, No, Possible, or Var (Variable)."
+    },
+    {
+      "id": "Oral irrit.",
+      "name": "Oral Irritation",
+      "type": "string",
+      "tooltip": "Oral irritation potential: Low, Mod (Moderate), High, or Var (Variable)."
+    },
+    {
+      "id": "Volatile",
+      "name": "Volatile",
+      "type": "string",
+      "tooltip": "Volatility assessment: Yes or No."
+    },
+    {
+      "id": "Decision",
+      "name": "Decision",
+      "type": "string",
+      "tooltip": "Overall toxicity decision: PASS (approved), PASS* (approved with conditions), or FAIL (rejected)."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredientListText",
+      "type": ["text", "file"],
+      "label": "Compound List",
+      "tooltip": "Compounds for ADMET prediction",
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "accept": ".csv,.txt,.smi"
+    },
+    {
+      "key": "admet_models",
+      "type": "select",
+      "label": "Admet Prediction Models",
+      "options": [
+        { "value": "admet_ai", "label": "Admet AI - best for fast predictions" },
+        { "value": "swiss_adme", "label": "SwissADME - best for accurate predictions" },
+        { "value": "toxtree", "label": "ToxTree - best for comprehensive predictions" }
+      ],
+      "tooltip": "Choose which ADMET engine to use; models trade off speed vs. detail."
+    },
+    {
+      "key": "mw_threshold",
+      "type": "number",
+      "label": "MW Threshold",
+      "defaultValue": 400,
+      "tooltip": "Maximum molecular weight (Da) allowed for compounds."
+    },
+    {
+      "key": "logp_threshold",
+      "type": "number",
+      "label": "logP Threshold",
+      "defaultValue": 4.0,
+      "tooltip": "Maximum calculated logP (lipophilicity) allowed."
+    },
+    {
+      "key": "TPSA_threshold",
+      "type": "number",
+      "label": "TPSA Threshold",
+      "defaultValue": 60,
+      "tooltip": "Maximum topological polar surface area (Å²); higher TPSA often reduces permeability."
+    },
+    {
+      "key": "HBD_threshold",
+      "type": "number",
+      "label": "HBD Threshold",
+      "defaultValue": 4.0,
+      "tooltip": "Maximum number of hydrogen bond donors."
+    },
+    {
+      "key": "HBA_threshold",
+      "type": "number",
+      "label": "HBA Threshold",
+      "defaultValue": 3.0,
+      "tooltip": "Maximum number of hydrogen bond acceptors."
+    },
+    {
+      "key": "RotB_threshold",
+      "type": "number",
+      "label": "RotB Threshold",
+      "defaultValue": 4.0,
+      "tooltip": "Maximum number of rotatable bonds (flexibility proxy)."
+    }
+  ],
+  "defaultConfig": {
+    "smiles_column": "smiles",
+    "mw_threshold": 300,
+    "logp_threshold": 3.0
+  }
+}
+

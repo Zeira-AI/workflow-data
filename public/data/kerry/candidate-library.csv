@@ -1,0 +1,41 @@
+name,smiles,taste
+Fructose,C(C1C(C(C(C(O1)O)O)O)O)O,Sweet
+Glucose,C(C1C(C(C(C(O1)O)O)O)O)O,Sweet
+Sucrose,OC[C@H]1O[C@@H](O[C@H]2[C@@H](O)[C@H](O)[C@@H](CO)O[C@H]2O)[C@H](O)[C@@H](O)[C@@H]1O,Sweet
+Maltose,OC[C@H]1O[C@@H](O[C@H]2[C@@H](O)[C@H](O)[C@@H](CO)O[C@H]2O)[C@H](O)[C@@H](O)[C@@H]1O,Mild sweet
+Trehalose,OC[C@H]1O[C@@H](O[C@H]2[C@@H](O)[C@H](O)[C@@H](CO)O[C@H]2O)[C@H](O)[C@@H](O)[C@@H]1O,Mild sweet
+Melezitose,N/A (oligosaccharide),Mild sweet / mouthfeel
+Methylglyoxal,CC(=O)C=O,Sharp / pungent
+Dihydroxyacetone,C(C(=O)CO)O,Neutral
+Leptosperin,N/A (complex glycoside),Neutral
+Methyl syringate,COC1=CC(=C(C(=C1)OC)OC)C(=O)OC,Mild sweet / floral
+3-Phenyllactic acid,OC(C(C1=CC=CC=C1)C(=O)O)O,Sour / mild bitter
+Caffeic acid,O=C(O)/C=C/C1=CC(O)=C(O)C=C1,Bitter
+p-Coumaric acid,O=C(O)/C=C/C1=CC=C(O)C=C1,Bitter
+Ferulic acid,COC1=CC=C(C=C1O)/C=C/C(=O)O,Bitter
+Gallic acid,O=C(O)C1=CC(O)=C(O)C(O)=C1,Astringent
+Quercetin,O=C1C(O)=C(O)C2=CC=CC(O)=C2O1,Bitter
+Kaempferol,O=C1C(O)=C(O)C2=CC(O)=CC(O)=C2O1,Bitter
+Pinocembrin,O=C1CC(C2=CC=CC=C2)OC2=CC(O)=CC(O)=C12,Bitter
+Chrysin,O=C1C(O)=C(O)C2=CC=CC=C2O1,Bitter
+Apigenin,O=C1C(O)=C(O)C2=CC(O)=CC=C2O1,Bitter
+2-Phenylethanol,OCC1=CC=CC=C1,Floral / sweet
+Benzaldehyde,O=CC1=CC=CC=C1,Almond / sweet
+Linalool,CC(C)=CCC=C(C)CO,Floral / sweet
+Limonene,CC1=CCC(CC1)=C(C)C,Citrus
+α-Terpineol,CC1=CCC(CC1)(C)O,Floral / sweet
+β-Pinene,CC1=CCC2CC1C2,Pine / resinous
+Myrcene,CC(=C)CCC=C(C)C=C,Herbal / green
+γ-Nonalactone,CCCCCC1OC(=O)C1,Creamy / coconut
+Vanillin,COC1=CC=C(C=C1O)C=O,Vanilla / sweet
+Furaneol,CC1=OC(C(O)=O)=CO1,Caramel / strawberry
+2-Acetylfuran,CC(=O)C1=COC=C1,Sweet / roasted
+2-Acetylpyrazine,CC(=O)C1=NC=CN=C1,Nutty / roasted
+Neokestose,N/A (oligosaccharide),Mild sweet
+Sweet dipeptide (Asp–Phe analog),N/A (peptide),Sweet
+Thaumatin fragment,N/A (protein fragment),Sweet
+MRJP1 peptide fragment,N/A (protein fragment),Neutral
+"3,4-Dimethoxycinnamic acid methyl ester",COC(=O)/C=C/C1=CC(OC)=C(OC)C=C1,Sweet / spicy
+2-Phenylacetic acid,O=C(O)CC1=CC=CC=C1,Honey-like / sweet
+Methyl anthranilate,COC(=O)C1=CC=CC=C1N,Grape / floral
+S-Methylmethionine,CSCC[C@H](N)C(=O)O,Savory / mild

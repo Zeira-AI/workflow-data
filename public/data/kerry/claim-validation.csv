@@ -1,0 +1,25 @@
+Proposed Claim,Claim Type,Market,Validation Status,Claim Issue,Market-Specific Compliance Issue,Conditional Usage Rules,Suggestion
+Reduces sugar intake,Marketing,EU,CONDITIONALLY VALID,Implied health benefit,Could imply nutritional or metabolic benefit,Allowed only with formulation context,Rewrite to “supports reduced-sugar formulations”
+Reduces sugar intake,Marketing,US,CONDITIONALLY VALID,Consumer health inference,May imply dietary or health outcome,Use product-centric framing,Change to “helps formulators reduce sugar levels”
+Reduces sugar intake,Marketing,Japan,INVALID,Health outcome implication,Dietary benefit claims tightly regulated,Not allowed,Avoid; use formulation-based wording
+Reduces sugar intake,Marketing,China,INVALID,Health / nutrition implication,Considered misleading without approval,Not allowed,Do not use
+Enables reduced-sugar formulations,Functional,EU,VALID,None,Ingredient-function claim acceptable,No restriction,No action needed
+Enables reduced-sugar formulations,Functional,US,VALID,None,Common B2B ingredient claim,No restriction,No action needed
+Enables reduced-sugar formulations,Functional,Japan,CONDITIONALLY VALID,Scope clarity,Must avoid consumer-facing health implication,Use B2B / technical context,Specify “for product formulation use”
+Enables reduced-sugar formulations,Functional,China,VALID,None,Technical ingredient claim allowed,No restriction,No action needed
+Enhances sweetness perception,Functional,EU,VALID,None,Sensory mechanism description acceptable,No restriction,No action needed
+Enhances sweetness perception,Functional,US,VALID,None,Sensory claim supported by testing,No restriction,No action needed
+Enhances sweetness perception,Functional,Japan,VALID,None,Sensory explanation permitted,No restriction,No action needed
+Enhances sweetness perception,Functional,China,VALID,None,Ingredient-function linkage acceptable,No restriction,No action needed
+Healthier than sugar,Marketing,EU,INVALID,Comparative health claim,Requires nutritional substantiation,Not allowed,Remove claim
+Healthier than sugar,Marketing,US,CONDITIONALLY VALID,Implied health superiority,Could be interpreted as nutrition claim,Allowed only with substantiation,Reframe to “alternative sweetness solution”
+Healthier than sugar,Marketing,Japan,INVALID,Health comparison,Nutrition claims tightly controlled,Not allowed,Do not use
+Healthier than sugar,Marketing,China,INVALID,Misleading health comparison,Prohibited advertising language,Not allowed,Do not use
+Clinically proven sweetness enhancement,Marketing,EU,INVALID,Scientific substantiation misuse,“Clinically proven” not applicable to food ingredients,Not allowed,Remove claim
+Clinically proven sweetness enhancement,Marketing,US,INVALID,Unsupported clinical language,No recognized clinical endpoints,Not allowed,Do not use
+Clinically proven sweetness enhancement,Marketing,Japan,INVALID,Overstated scientific claim,Considered misleading,Not allowed,Do not use
+Clinically proven sweetness enhancement,Marketing,China,INVALID,False scientific endorsement,Prohibited claim wording,Not allowed,Do not use
+Honey-based sweetness system,Marketing,EU,VALID,None,Ingredient origin description acceptable,No restriction,No action needed
+Honey-based sweetness system,Marketing,US,VALID,None,Common clean-label positioning,No restriction,No action needed
+Honey-based sweetness system,Marketing,Japan,VALID,None,Origin-based description permitted,No restriction,No action needed
+Honey-based sweetness system,Marketing,China,VALID,None,Permitted descriptive claim,No restriction,No action needed
