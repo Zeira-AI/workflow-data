@@ -1,0 +1,40 @@
+Compound,SMILES,Taste
+Denatonium benzoate,CN+(C)CCOC1=CC=CC=C1C(=O)[O-],Extremely bitter
+Quinine,COc1ccc2nccc(C(O)C)nc2c1,Bitter
+Caffeine,CN1C(=O)N(C)c2ncn(C)c2N1=O,Bitter
+Naringin,CC1OC(O)C(O)C(O)C1OOC2=CC=C(O)C=C2,Bitter
+Limonin,CC1(C)C2CCC3(C)OC(=O)C=C4OC(C)(C)CCC4(C)C3C2,Bitter
+Amarogentin,COc1cc2oc3cc(O)c(O)c(O)c3oc2cc1,Extremely bitter
+Salicin,OC[C@H]1OC(O)C(O)C(O)C1Oc2ccccc2,Bitter
+Andrographolide,CC1=CCC2C(C)(C)CCC3(C)OC(=O)C=C123,Bitter
+Catechin,Oc1cc(O)c2c(c1)OC(CO)C(O)C2,Bitter/astringent
+Epicatechin gallate,COc1cc(O)c(O)c(O)c1C(=O)O,Bitter/astringent
+Sinigrin,OS(=O)(=O)OCC(C)N=C=S,Bitter/pungent
+Piperine,O=C(OCC=CC=C)N1CCCCC1,Pungent
+Capsaicin,CC(C)NC(=O)C1=CC(=O)OC=C1,Pungent/burning
+Gingerol,CC(C)CC(C1=CC=CC=C1)O,Pungent
+Shogaol,CC(C)=CC=CC(=O)C1=CC=CC=C1,Sharp pungent
+Thymol,CC(C)C1=CC=C(O)C=C1,"Sharp, medicinal"
+Carvacrol,CC(C)C1=CC=C(C=C1)O,"Sharp, bitter"
+Berberine,COc1ccc2c(c1)nc3ccc(OC)c4n+ccc2c34,Bitter
+Matrine,C1CCN2CCC1CC2,Bitter
+Strychnine,CN1CC2=CC=CC3=C2N(C)C4CC3,Extremely bitter
+Brucine,COc1ccc2c(c1)nc3ccc(OC)c4ccn2c34,Bitter
+Nicotine,CN1CCC[C@H]1c2cccnc2,Bitter/pungent
+Aconitine,CC1(C)C2CCC3(C)OC(=O)C=C4OC(C)(C)CCC4(C)C3C2,Bitter
+Solanine,CC1CCC2C3CCC4=CC(=O)OC4C3(CC2)C1,Bitter
+Tomatine,CC1CCC2C3CCC4=CC(=O)OC4C3(CC2)C1,Bitter
+Safrole,COc1ccc2occc2c1,Sharp/spicy
+Eugenol,COc1cc(CC=C)ccc1O,Pungent
+Allicin,CSSC=O,Pungent
+Isohumulone,CC(C)=CC[C@H]1OC(=O)C=C(C)C1,Bitter
+Humulone,CC(C)=CC[C@H]1OC(=O)C(O)=C(C)C1,Bitter
+Tannic acid,O=C(O)c1cc(O)c(O)c(O)c1,Bitter/astringent
+Ellagic acid,O=C1OC2=CC(O)=C(O)C(O)=C2C1=O,Bitter/astringent
+Arbutin,OC[C@H]1OC(O)C(O)C(O)C1Oc2ccc(O)cc2,Bitter
+Glycyrrhizin,CC1OC(O)C(O)C(O)C1OC2=CC=C(O)C=C2,Bitter/sweet
+Theobromine,CN1C=NC2=C1C(=O)N(C)C(=O)N2,Bitter
+Theophylline,CN1C=NC2=C1C(=O)NC(=O)N2,Bitter
+Cucurbitacin B,CC1(C)C2CCC3(C)OC(=O)C=C4OC(C)(C)CCC4(C)C3C2,Bitter
+Picroside I,COc1cc2oc3cc(O)c(O)c(O)c3oc2cc1,Bitter
+Resin acids (abietic-type),CC1=CCC2C(C)(C)CCC3(C)OC(=O)C=C123,Sharp/bitter

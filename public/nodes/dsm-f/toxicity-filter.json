@@ -21,67 +21,67 @@
     ],
     "defaultOutputs": [
         {
-            "id": "Compound name",
+            "id": "compound_name",
             "name": "Compound name",
             "type": "string",
             "tooltip": "Name of the compound."
         },
         {
-            "id": "MW (Da)",
+            "id": "mw_da",
             "name": "MW (Da)",
             "type": "number",
             "tooltip": "Molecular Weight in Daltons."
         },
         {
-            "id": "HBD",
+            "id": "hbd",
             "name": "HBD",
             "type": "number",
             "tooltip": "Hydrogen Bond Donors."
         },
         {
-            "id": "HBA",
+            "id": "hba",
             "name": "HBA",
             "type": "number",
             "tooltip": "Hydrogen Bond Acceptors."
         },
         {
-            "id": "cLogP",
+            "id": "clogp",
             "name": "cLogP",
             "type": "number",
             "tooltip": "Calculated Partition Coeffient."
         },
         {
-            "id": "Rings",
+            "id": "rings",
             "name": "Rings",
             "type": "number",
             "tooltip": "Number of rings."
         },
         {
-            "id": "Heavy Atoms",
+            "id": "heavy_atoms",
             "name": "Heavy Atoms",
             "type": "number",
             "tooltip": "Number of heavy atoms."
         },
         {
-            "id": "RotB",
+            "id": "rotb",
             "name": "RotB",
             "type": "number",
             "tooltip": "Number of rotatable bonds."
         },
         {
-            "id": "TPSA (A²)",
+            "id": "tpsa",
             "name": "TPSA (A²)",
             "type": "number",
             "tooltip": "Topological Polar Surface Area."
         },
         {
-            "id": "BP (°C)",
+            "id": "bp_celsius",
             "name": "BP (°C)",
             "type": "number",
             "tooltip": "Boiling Point in degrees Celsius."
         },
         {
-            "id": "Rule status",
+            "id": "rule_status",
             "name": "Rule status",
             "type": "string",
             "tooltip": "Status based on filtering rules (PASS/FAIL)."
@@ -99,7 +99,7 @@
             "suggestedField": [
                 "smiles",
                 "name",
-                "Compound name"
+                "compound_name"
             ],
             "accept": ".csv,.txt,.smi"
         },

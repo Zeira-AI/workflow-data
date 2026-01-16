@@ -1,0 +1,41 @@
+compound,hia,caco_2,sol,logp,bbb,ppb,clearance,cyp_inhib,rm_risk,herg,geno,acute_tox,repeat_tox,dev_repro,endocrine,oral_irrit,volatile,decision
+Denatonium benzoate,Low,Low,High,1.2,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
+Quinine,Mod,Mod,Mod,2.8,Low,High,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS*
+Caffeine,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Neg,Neg,Low,Mod,No,No,Low,No,FAIL
+Naringin,Low,Low,Low,1.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Limonin,Low,Low,Low,2.3,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Amarogentin,Low,Low,Low,1.9,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
+Salicin,Mod,Low,High,−0.5,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,No,Low,No,PASS*
+Andrographolide,Low,Low,Low,2.1,No,Mod,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Moderate,No,PASS
+Catechin,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Epicatechin gallate,Low,Low,Low,1.3,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Sinigrin,Low,Low,High,−1.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
+Piperine,High,High,Low,2.9,Yes,High,Low,Yes,No,Weak,Neg,Mod,Mod,No,No,High,No,FAIL
+Capsaicin,Mod,Mod,Low,3.2,Yes,High,Low,Yes,No,Weak,Neg,High,Mod,No,No,High,No,FAIL
+Gingerol,Low,Low,Mod,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
+Shogaol,Mod,Mod,Low,2.8,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,High,No,PASS*
+Thymol,Mod,High,Low,3.3,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
+Carvacrol,Mod,High,Low,3.4,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
+Berberine,Low,Low,Low,1.5,No,Mod,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS
+Matrine,Mod,Low,High,1.1,No,Low,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Strychnine,High,High,Mod,2.6,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
+Brucine,High,High,Mod,2.9,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
+Nicotine,High,High,High,1.2,Yes,Low,Mod,Yes,No,Pos,Neg,High,Mod,Yes,No,Mod,Yes,FAIL
+Aconitine,High,High,Low,3.1,Yes,High,Low,Yes,Yes,Pos,Pos,Extreme,Extreme,Yes,No,High,No,FAIL
+Solanine,Mod,Low,Low,1.8,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
+Tomatine,Mod,Low,Low,1.9,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
+Safrole,High,High,Mod,2.7,Yes,Mod,Low,Yes,Yes,Neg,Pos,Mod,Mod,Yes,Yes,Mod,Yes,FAIL
+Eugenol,Mod,High,Mod,2.1,Yes,Mod,Low,Yes,No,Weak,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
+Allicin,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,High,Yes,PASS
+Isohumulone,Low,Low,Low,2.5,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Humulone,Low,Low,Low,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Tannic acid,Low,Low,High,0.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
+Ellagic acid,Low,Low,Low,0.7,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
+Arbutin,Mod,Low,High,−0.3,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,Possible,Low,No,PASS*
+Glycyrrhizin,Low,Low,Low,1.2,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,Yes,Yes,Low,No,PASS*
+Theobromine,Mod,Mod,High,−0.1,Yes,Low,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Low,No,FAIL
+Theophylline,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Pos,Neg,Mod,Mod,No,No,Low,No,FAIL
+Cucurbitacin B,Low,Low,Low,2.0,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,No,High,No,FAIL
+Picroside I,Low,Low,High,0.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
+Glycoalkaloid mix,Var,Var,Var,Var,Var,Var,Var,Yes,Yes,Pos,Pos,High,High,Yes,Possible,High,No,FAIL
+Resin acids,Low,Low,Low,2.7,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,Mod,Yes,PASS*

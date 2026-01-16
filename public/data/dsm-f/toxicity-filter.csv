@@ -1,4 +1,4 @@
-"Compound name","MW (Da)",HBD,HBA,cLogP,Rings,"Heavy Atoms",RotB,"TPSA (A²)","BP (°C)","Rule status"
+compound_name,mw_da,hbd,hba,clogp,rings,heavy_atoms,rotb,tpsa,bp_celsius,rule_status
 Linalool,154,1,1,2.7,0,11,5,20,198,PASS
 Geraniol,154,1,1,3.2,0,11,6,20,230,PASS
 Nerol,154,1,1,3.1,0,11,6,20,227,PASS

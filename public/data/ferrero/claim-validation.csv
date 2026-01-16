@@ -1,0 +1,21 @@
+ID;Proposed Claim;Claim Type;Market;Validation Status;Claim Issue;Market-Specific Compliance Issue;Conditional Usage Rules;Suggestion
+1;Prevents chewing;Marketing;EU;CONDITIONALLY VALID;Absolute behavioral claim;"Prevents" implies guaranteed behavioral outcome;Allowed only with non-absolute wording;Rewrite to "helps discourage chewing"
+2;Prevents chewing;Marketing;US;CONDITIONALLY VALID;Performance guarantee risk;Could be interpreted as guaranteed training outcome;Allowed with probabilistic language;Change to "designed to discourage chewing behavior"
+3;Prevents chewing;Marketing;Japan;INVALID;Overstated efficacy;Absolute outcome claims not permitted for pet products;Not allowed;Replace with indirect deterrence wording
+4;Prevents chewing;Marketing;China;INVALID;Misleading performance claim;Absolute claims considered deceptive advertising;Not allowed;Do not use; soften claim
+5;Discourages chewing;Marketing;EU;VALID;None;Acceptable behavioral deterrence wording;No restriction;No action needed
+6;Discourages chewing;Marketing;US;VALID;None;Common pet-product claim language;No restriction;No action needed
+7;Discourages chewing;Marketing;Japan;CONDITIONALLY VALID;Scope limitation;Must avoid implication of training or conditioning;Allowed with object-focused framing;Use "discourages chewing of treated surfaces"
+8;Discourages chewing;Marketing;China;VALID;None;Permitted functional description;No restriction;No action needed
+9;Bitter taste deters chewing;Functional;EU;VALID;None;Sensory mechanism description acceptable;No restriction;No action needed
+10;Bitter taste deters chewing;Functional;US;VALID;None;Mechanism-based claim allowed;No restriction;No action needed
+11;Bitter taste deters chewing;Functional;Japan;VALID;None;Sensory explanation permitted;No restriction;No action needed
+12;Bitter taste deters chewing;Functional;China;VALID;None;Ingredient-function linkage acceptable;No restriction;No action needed
+13;Trains pets not to chew;Marketing;EU;INVALID;Training / behavioral modification claim;Implies behavioral conditioning;Not allowed;Replace with passive deterrence wording
+14;Trains pets not to chew;Marketing;US;CONDITIONALLY VALID;Implied behavioral training;Could imply professional training outcome;Allowed only if reframed;Change to "supports deterrence during training"
+15;Trains pets not to chew;Marketing;Japan;INVALID;Behavioral control claim;Considered animal behavior intervention;Not allowed;Do not use
+16;Trains pets not to chew;Marketing;China;INVALID;Behavioral efficacy claim;Training claims restricted;Not allowed;Do not use
+17;Clinically proven to stop chewing;Marketing;EU;INVALID;Medical / evidence misuse;"Clinically proven" not applicable to consumer sprays;Not allowed;Remove claim entirely
+18;Clinically proven to stop chewing;Marketing;US;INVALID;Unsupported clinical claim;No recognized clinical endpoints;Not allowed;Do not use
+19;Clinically proven to stop chewing;Marketing;Japan;INVALID;Scientific substantiation claim;Considered misleading efficacy;Not allowed;Do not use
+20;Clinically proven to stop chewing;Marketing;China;INVALID;False scientific endorsement;Prohibited advertising language;Not allowed;Do not use

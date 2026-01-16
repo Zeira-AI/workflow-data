@@ -1,0 +1,85 @@
+{
+    "type": "target-mapping",
+    "label": "Target Mapping",
+    "category": "analysis",
+    "icon": "target",
+    "color": "rose",
+    "description": "Map specific protein targets to biological systems and desired modulations (Ferrero specific)",
+    "pricing": {
+        "credits": 500,
+        "executionTime": 1
+    },
+    "outputMockLabel": "4 targets",
+    "defaultInputs": [],
+    "defaultOutputs": [
+        {
+            "id": "protein_target",
+            "name": "Protein Target",
+            "type": "string",
+            "tooltip": "The specific protein being targeted (e.g. TAS2R14, TRPV1)."
+        },
+        {
+            "id": "biological_system",
+            "name": "Biological System",
+            "type": "string",
+            "tooltip": "The biological system or sense associated with the target (e.g. Gustatory, Trigeminal)."
+        },
+        {
+            "id": "desired_modulation",
+            "name": "Desired Modulation",
+            "type": "string",
+            "tooltip": "The intended effect on the target (e.g. Strong agonism, Blockage)."
+        },
+        {
+            "id": "corresponding_assay",
+            "name": "Corresponding Assay",
+            "type": "string",
+            "tooltip": "The assay used to measure the effect."
+        },
+        {
+            "id": "metric_used",
+            "name": "Metric Used",
+            "type": "string",
+            "tooltip": "The metric used for measurement (e.g. EC50)."
+        },
+        {
+            "id": "rationale_for_deterrence",
+            "name": "Rationale for Deterrence",
+            "type": "string",
+            "tooltip": "Reasoning behind using this target for deterrence."
+        },
+        {
+            "id": "crystalized_structure_available",
+            "name": "Crystalized Structure Available?",
+            "type": "string",
+            "tooltip": "Whether a crystal structure exists for the target (YES/NO)."
+        },
+        {
+            "id": "chembl_id",
+            "name": "ChEMBL ID",
+            "type": "string",
+            "tooltip": "The ChEMBL identifier for the target."
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "targetList",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Target List",
+            "placeholder": "Enter or upload target list...",
+            "suggestedField": [
+                "target",
+                "protein",
+                "gene"
+            ],
+            "tooltip": "List of protein targets to analyze.",
+            "accept": ".txt,.csv"
+        }
+    ],
+    "defaultConfig": {
+        "targetList": ""
+    }
+}
