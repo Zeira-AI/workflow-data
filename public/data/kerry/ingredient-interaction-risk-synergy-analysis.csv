@@ -1,0 +1,14 @@
+Pair,Predicted Synergistic Signal,Synergy Type (Dominant),Confidence,Flag
+Methylglyoxal × Dihydroxyacetone,Complementary precursor–active relationship,Formation / availability support,0.72,Safe
+Methylglyoxal × Leptosperin,Co-occurrence stability signal,Matrix stabilization / persistence,0.61,Low Risk
+Methylglyoxal × Methyl syringate,Functional complementarity,Bioactive + antioxidant balance,0.58,Low Risk
+Methylglyoxal × 3-Phenyllactic acid,Reinforcing antimicrobial context,Bioactivity reinforcement,0.65,Low Risk
+Methylglyoxal × Pinocembrin,Complementary polyphenol context,Activity buffering / mitigation,0.54,Low Risk
+Dihydroxyacetone × Leptosperin,Source-marker alignment,Natural co-origin consistency,0.60,Low Risk
+Dihydroxyacetone × Methyl syringate,Sensory moderation signal,Harshness smoothing,0.56,Low Risk
+Leptosperin × Methyl syringate,Phenolic co-modulation,Stability / antioxidant support,0.62,Low Risk
+Leptosperin × 3-Phenyllactic acid,Compatible bioactivity context,Multi-marker coherence,0.59,Low Risk
+Leptosperin × Pinocembrin,Polyphenol complementarity,Antioxidant breadth,0.64,Low Risk
+Methyl syringate × 3-Phenyllactic acid,Sensory–bioactivity balance,Flavor masking / balance,0.67,Low Risk
+Methyl syringate × Pinocembrin,Polyphenol synergy,Antioxidant coverage,0.71,Safe
+3-Phenyllactic acid × Pinocembrin,Reinforcing phenolic context,Bioactivity breadth,0.63,Low Risk

@@ -1,0 +1,113 @@
+{
+  "type": "structure-prediction",
+  "label": "Structure Prediction",
+  "category": "analysis",
+  "icon": "dna",
+  "color": "purple",
+  "description": "Predict protein 3D structures from amino acid sequences using AI-based models",
+  "outputMockLabel": "1 protein",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
+  "defaultInputs": [
+    {
+      "id": "proteinList",
+      "name": "Protein List",
+      "type": "array",
+      "required": true,
+      "description": "List of proteins with FASTA sequences",
+      "tooltip": "Input table of proteins with names and FASTA sequences for structure prediction."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "Protein name",
+      "name": "Protein name",
+      "type": "string",
+      "tooltip": "Name or identifier of the protein (e.g., 'TAS1R2')."
+    },
+    {
+      "id": "Fasta",
+      "name": "Fasta",
+      "type": "string",
+      "tooltip": "FASTA sequence of the protein including header and amino acid sequence."
+    },
+    {
+      "id": "pTM ",
+      "name": "pTM",
+      "type": "number",
+      "tooltip": "Predicted Template Modeling score (0-1), indicating the confidence in the predicted structure. Higher values indicate better confidence (e.g. 0.79)."
+    },
+    {
+      "id": "Druggability",
+      "name": "Druggability",
+      "type": "number",
+      "tooltip": "Druggability score (0-1) indicating the potential of the protein as a drug target. Higher values indicate better druggability."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "proteinListText",
+      "type": "text",
+      "label": "Protein List (Paste)",
+      "placeholder": ">Protein1\nMKTAYIAKQR...\n>Protein2\nMNDDGKVNAS...",
+      "tooltip": "Paste protein names and FASTA sequences. Format: >ProteinName followed by sequence on next lines, or use comma-separated format.",
+      "suggestedField": [
+        "Protein_name",
+        "name",
+        "target",
+        "Fasta",
+        "sequence"
+      ]
+    },
+    {
+      "key": "proteinFile",
+      "type": "file",
+      "label": "Upload Protein File",
+      "accept": ".fasta,.fa,.txt,.csv",
+      "tooltip": "Upload a FASTA file or CSV containing protein names and sequences. Required: protein identifier and FASTA sequence."
+    },
+    {
+      "key": "predictionMethod",
+      "type": "select",
+      "label": "Prediction Method",
+      "options": [
+        {
+          "value": "alphafold",
+          "label": "AlphaFold"
+        },
+        {
+          "value": "esmfold",
+          "label": "ESMFold"
+        },
+        {
+          "value": "rosettafold",
+          "label": "RoseTTAFold"
+        }
+      ],
+      "defaultValue": "alphafold",
+      "tooltip": "Select the protein structure prediction method. AlphaFold is recommended for highest accuracy."
+    },
+    {
+      "key": "includeConfidence",
+      "type": "boolean",
+      "label": "Include Confidence Scores",
+      "defaultValue": true,
+      "tooltip": "Include pTM and other confidence metrics in the output."
+    },
+    {
+      "key": "calculateDruggability",
+      "type": "boolean",
+      "label": "Calculate Druggability",
+      "defaultValue": true,
+      "tooltip": "Calculate druggability scores for predicted structures."
+    }
+  ],
+  "defaultConfig": {
+    "predictionMethod": "alphafold",
+    "includeConfidence": true,
+    "calculateDruggability": true
+  }
+}
+
