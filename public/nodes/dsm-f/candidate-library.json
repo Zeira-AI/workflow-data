@@ -9,7 +9,7 @@
         "credits": 800,
         "executionTime": 1
     },
-    "outputMockLabel": "30 candidates",
+    "outputMockLabel": "10000 compounds",
     "defaultInputs": [
         {
             "id": "search_keyword",
