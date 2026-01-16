@@ -1,0 +1,68 @@
+{
+  "type": "market-intelligence",
+  "label": "Market Intelligence",
+  "category": "analysis",
+  "icon": "chart-line",
+  "color": "indigo",
+  "description": "Analyze market opportunities and recommend product categories based on growth trends, demand signals, and competitive landscape.",
+  "outputMockLabel": "7 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Segment",
+      "name": "Segment",
+      "type": "string",
+      "tooltip": "Product segment or category identified from the market analysis (e.g. \"Stress-Reducing Room & Body Sprays\", \"Sleep & Pillow Mists\")."
+    },
+    {
+      "id": "Product growth (Supply)",
+      "name": "Product Growth (Supply)",
+      "type": "string",
+      "tooltip": "Year-over-year growth rate in product launches/supply for this segment. Positive values indicate growth, negative values indicate decline (e.g. \"(+) 11%\", \"(-) 4%\")."
+    },
+    {
+      "id": "Review growth (Demand)",
+      "name": "Review Growth (Demand)",
+      "type": "string",
+      "tooltip": "Year-over-year growth rate in consumer reviews/demand signals for this segment. Indicates market interest and consumer engagement (e.g. \"(+) 38%\", \"(+) 62%\")."
+    },
+    {
+      "id": "Recommended Category",
+      "name": "Recommended Category",
+      "type": "string",
+      "tooltip": "Recommended product category positioning based on market analysis."
+    },
+    {
+      "id": "Key Competing Brands",
+      "name": "Key Competing Brands",
+      "type": "string",
+      "tooltip": "List of main competing brands in this segment, useful for competitive benchmarking (e.g. \"Aesop, Neom Organics, The Nue Co., Saje Wellness\")."
+    },
+    {
+      "id": "Main Price Range (USD)",
+      "name": "Main Price Range (USD)",
+      "type": "string",
+      "tooltip": "Typical price range for products in this segment in US dollars, including average price (e.g. \"30 – 90 (Avg ~55)\", \"20 – 60 (Avg ~35)\")."
+    },
+    {
+      "id": "3 Key Reasons for Recommendation",
+      "name": "3 Key Reasons for Recommendation",
+      "type": "string",
+      "tooltip": "Three key strategic reasons why this category is recommended, including market opportunity, consumer trends, and competitive advantages."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "query",
+      "type": ["text", "file"],
+      "label": "Market Query",
+      "placeholder": "Enter your product launch question or market research query...",
+      "tooltip": "Describe your product idea, target market, or ask a market intelligence question. Example: \"I want to launch a honey-based sweetness & taste modulation syrup on Amazon. Which category would be the best fit?\"\n\nYou can enter text directly or upload a file (TXT, CSV) containing your query.",
+      "accept": ".txt,.csv"
+    }
+  ],
+  "defaultConfig": {
+    "query": ""
+  }
+}
+
