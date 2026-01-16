@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { readFile } from 'fs/promises';
 import path from 'path';
 
-const VALID_CLIENTS = ['dsm-f', 'ferrero'];
+import { VALID_CLIENTS } from '../../../constants';
 
 export async function GET(
   request: NextRequest,

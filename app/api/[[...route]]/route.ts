@@ -2,6 +2,7 @@ import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
 import { readFile, readdir } from 'fs/promises'
 import path from 'path'
+import { VALID_CLIENTS } from '../../constants'
 
 // Create Hono app
 const app = new Hono().basePath('/api')
@@ -20,8 +21,7 @@ app.get('/data', async (c) => {
         const client = c.req.header('X-Client') || 'dsm-f'
 
         // Validate client
-        const validClients = ['dsm-f', 'ferrero']
-        if (!validClients.includes(client)) {
+        if (!VALID_CLIENTS.includes(client)) {
             return c.json({ error: 'Invalid client' }, 400)
         }
 
@@ -44,8 +44,7 @@ app.get('/data/:filename', async (c) => {
         const client = c.req.header('X-Client') || 'dsm-f'
 
         // Validate client
-        const validClients = ['dsm-f', 'ferrero']
-        if (!validClients.includes(client)) {
+        if (!VALID_CLIENTS.includes(client)) {
             return c.json({ error: 'Invalid client' }, 400)
         }
 
