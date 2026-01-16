@@ -1,31 +1,42 @@
-name
-Compound
-Linalool
-Geraniol
-Nerol
-Citronellol
-α-Terpineol
-Limonene
-α-Pinene
-β-Pinene
-Myrcene
-Ocimene
-Phenethyl alcohol
-Benzyl alcohol
-Anethole
-Thymol
-Carvacrol
-Menthol
-Borneol
-Fenchol
-γ-Nonalactone
-γ-Decalactone
-Hexyl acetate
-Isoamyl acetate
-cis-3-Hexenol
-cis-3-Hexenyl acetate
-β-Ionone
-Damascone
-Nerolidol
-Farnesol
-Patchoulol
+compound,smiles,odor
+Linalool,CC(=C)CCC(C)(C)O,Floral, lavender
+Geraniol,CC(=CCCC(=CCO)C)C,Rose, sweet
+Nerol,CC(=CCCC(=CCO)C)C,Fresh rose
+Citronellal,CC(C)CCC(C)CC=O,Citrus floral
+α-Terpineol,CC1=CCC(CC1)C(C)(C)O,Lilac
+Limonene,CC1=CCC(CC1)C(=C)C,Citrus
+α-Pinene,CC1=CCC2CC1C2(C)C,Pine
+β-Pinene,CC1=CCC2CC1C2(C)C,Woody green
+Myrcene,CC(=CCCC(=C)C=C)C,Resin balsamic
+Ocimene,CC(=CCCC(=C)C=C)C,Sweet herbal
+Phenethyl alcohol,OCCc1ccccc1,Rose, honey
+Benzyl alcohol,OCc1ccccc1,Mild floral
+Anethole,CCC=Cc1ccc(OC)cc1,Anise, sweet
+Thymol,CC(C)c1ccc(O)c(C)c1,Herbal
+Carvacrol,CC(C)c1ccc(O)c(C)c1,Warm herbal
+Menthol,CC(C)C1CCC(C(O)1)C,Minty, cooling
+Borneol,CC1(C)C2CCC1(C)C(O)C2,Camphoraceous
+Fenchol,CC1(C)C2CCC1(C)C(O)C2,Earthy mint
+γ-Nonalactone,CCCCCC1OC(=O)CC1,Coconut
+γ-Decalactone,CCCCCCC1OC(=O)CC1,Peach
+Hexyl acetate,CCCCCCOC(=O)C,Fruity
+Isoamyl acetate,CC(C)CCCOC(=O)C,Banana
+cis-3-Hexenol,CCC/C=C\CO,Green leaf
+cis-3-Hexenyl acetate,CCC/C=C\COC(C)=O,Fresh green
+β-Ionone,CC(=O)C\C=C\C1=C(C)CCCC1(C)C,Violet
+Damascone,CC(=O)C\C=C\C(C)C1C(=C)CCCC1(C)C,Rose fruity
+Nerolidol,CC(C)=CCCC(C)=CCCC(C)(O)C=C,Woody floral
+Farnesol,CC(C)=CCCC(C)=CCCC(C)=CCO,Sweet floral
+Patchoulol,CC12CCC(C)(CC1)C3(C)CCC(O)C23,Earthy woody
+Maltol,CC1=C(O)C(=O)C=CO1,Caramel
+Guaiacol,COc1ccccc1O,Smoky sweet
+Benzaldehyde,O=Cc1ccccc1,Almond
+Vanillin,COc1cc(C=O)ccc1O,Vanilla
+Veratraldehyde,COc1cc(C=O)ccc1OC,Warm sweet
+Cinnamaldehyde,O=CC=Cc1ccccc1,Cinnamon
+Lilial,CC(C)CC(C)c1ccc(cc1)C=O,Soft floral
+Safrole,O=Cc1ccc2OCOc2c1,Sassafras
+Coumarin,O=C1OC2=CC=CC=C2C=C1,Sweet hay
+Ethyl maltol,CCOC1=C(O)C(=O)C=CO1,Cotton candy
+Galaxolide,CC1CCC2(CC1)CCC(C)(C)C2C,Clean musk
+Ambroxide,CC1CCC2(C)C(CCC3(C)OCC(C3)C2C)C1,Ambergris
