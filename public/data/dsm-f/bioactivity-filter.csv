@@ -1,6 +1,6 @@
-Compound,TRPM8 - EC50 - Assay: CHEMBL5738311,TRPV3 - IC50- Assay: CHEMBL3889302
-α-Terpineol,8.8 µM,8.8 µM
-α-Pinene,25.1 µM,25.1 µM
-β-Pinene,51.3 µM,51.3 µM
-Myrcene,81.1 µM,81.1 µM
-γ-Nonalactone,>100 µM,>100 µM
+compound,trpm8_ec50,trpv3_ic50
+Menthol,0.15,2.50
+Isomenthol,0.22,3.10
+Linalool,0.85,1.80
+Eucalyptol,1.20,0.95
+γ-Nonalactone,>10,>10

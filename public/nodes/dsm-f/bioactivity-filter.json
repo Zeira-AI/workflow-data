@@ -28,19 +28,19 @@
     ],
     "defaultOutputs": [
         {
-            "id": "Compound",
+            "id": "compound",
             "name": "Compound",
             "type": "string",
             "tooltip": "Compound identifier"
         },
         {
-            "id": "TRPM8 - EC50 - Assay: CHEMBL5738311",
+            "id": "trpm8_ec50",
             "name": "TRPM8 - EC50 (µM)",
             "type": "string",
             "tooltip": "EC50 for TRPM8 (Assay: CHEMBL5738311)"
         },
         {
-            "id": "TRPV3 - IC50- Assay: CHEMBL3889302",
+            "id": "trpv3_ic50",
             "name": "TRPV3 - IC50 (µM)",
             "type": "string",
             "tooltip": "IC50 for TRPV3 (Assay: CHEMBL3889302)"

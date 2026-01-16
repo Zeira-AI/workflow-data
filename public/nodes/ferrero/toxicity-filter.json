@@ -1,0 +1,139 @@
+{
+    "type": "toxicity-filter",
+    "label": "Toxicity Filter",
+    "category": "analysis",
+    "icon": "filtericon",
+    "color": "red",
+    "description": "Filter compounds based on ADMET properties and specific toxicity risks (Ferrero specific).",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "38 compounds",
+    "defaultInputs": [
+        {
+            "id": "input-mol-data",
+            "name": "Input Compounds",
+            "type": "array",
+            "required": true,
+            "tooltip": "Table of compounds."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "compound",
+            "name": "Compound",
+            "type": "string"
+        },
+        {
+            "id": "hia",
+            "name": "HIA",
+            "type": "string",
+            "tooltip": "Human Intestinal Absorption"
+        },
+        {
+            "id": "caco_2",
+            "name": "Caco-2",
+            "type": "string",
+            "tooltip": "Caco-2 permeability"
+        },
+        {
+            "id": "sol",
+            "name": "Solubility",
+            "type": "string"
+        },
+        {
+            "id": "logp",
+            "name": "logP",
+            "type": "number"
+        },
+        {
+            "id": "bbb",
+            "name": "BBB",
+            "type": "string",
+            "tooltip": "Blood-Brain Barrier penetration"
+        },
+        {
+            "id": "ppb",
+            "name": "PPB",
+            "type": "string",
+            "tooltip": "Plasma Protein Binding"
+        },
+        {
+            "id": "clearance",
+            "name": "Clearance",
+            "type": "string"
+        },
+        {
+            "id": "cyp_inhib",
+            "name": "CYP Inhib.",
+            "type": "string",
+            "tooltip": "Cytochrome P450 inhibition"
+        },
+        {
+            "id": "rm_risk",
+            "name": "RM Risk",
+            "type": "string",
+            "tooltip": "Reactive Metabolite risk"
+        },
+        {
+            "id": "herg",
+            "name": "hERG",
+            "type": "string",
+            "tooltip": "hERG channel inhibition (cardiotoxicity)"
+        },
+        {
+            "id": "geno",
+            "name": "Genotoxicity",
+            "type": "string"
+        },
+        {
+            "id": "acute_tox",
+            "name": "Acute Tox",
+            "type": "string"
+        },
+        {
+            "id": "repeat_tox",
+            "name": "Repeat Tox",
+            "type": "string"
+        },
+        {
+            "id": "dev_repro",
+            "name": "Dev/Repro",
+            "type": "string",
+            "tooltip": "Developmental/Reproductive toxicity"
+        },
+        {
+            "id": "endocrine",
+            "name": "Endocrine",
+            "type": "string"
+        },
+        {
+            "id": "oral_irrit",
+            "name": "Oral Irrit.",
+            "type": "string"
+        },
+        {
+            "id": "volatile",
+            "name": "Volatile",
+            "type": "string"
+        },
+        {
+            "id": "decision",
+            "name": "Decision",
+            "type": "string"
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "ingredientListText",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Compound List",
+            "accept": ".csv,.txt,.smi"
+        }
+    ],
+    "defaultConfig": {}
+}
