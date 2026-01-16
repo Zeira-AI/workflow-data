@@ -1,0 +1,27 @@
+ID;Ingredient Name;INCI Name;CAS Number;Concentration;Market;Regulatory Status;Restriction Type;Max Allowed Concentration;Reason;Regulation Source;Last Regulation Update
+1;Ethanol;Alcohol;64-17-5;75.00%;EU;PASS;Permitted;No specific limit;Permitted solvent; flammability labeling required;EU Cosmetics Regulation;2024-02
+2;Ethanol;Alcohol;64-17-5;75.00%;US;PASS;Permitted;No specific limit;Permitted cosmetic solvent;FDA Cosmetics Guidance;2023-10
+3;Water;Water;7732-18-5;10.00%;EU;PASS;Permitted;No limit;No restriction;EU Cosmetics Regulation;2024-02
+4;Water;Water;7732-18-5;10.00%;US;PASS;Permitted;No limit;No restriction;FDA Cosmetics Guidance;2023-10
+5;Phenethyl Alcohol;Phenethyl Alcohol;60-12-8;4.00%;EU;PASS;Permitted;No specific limit;Low sensitization risk fragrance alcohol;EU Cosmetics Regulation;2024-02
+6;Phenethyl Alcohol;Phenethyl Alcohol;60-12-8;4.00%;US;PASS;Permitted;No specific limit;Generally permitted fragrance ingredient;FDA Cosmetic Ingredient Database;2023-12
+7;α-Terpineol;Terpineol;98-55-5;2.00%;EU;PASS;Restricted;IFRA category limit applies;Fragrance allergen; must comply with IFRA standards;IFRA Standards / EU Cosmetics Regulation;2024-01
+8;α-Terpineol;Terpineol;98-55-5;2.00%;US;PASS;Restricted;IFRA category limit applies;Permitted fragrance material with IFRA compliance;IFRA Standards;2024-01
+9;γ-Decalactone;Gamma-Decalactone;706-14-9;1.50%;EU;PASS;Permitted;No specific limit;Low toxicological concern lactone;EU Cosmetics Regulation;2024-02
+10;γ-Decalactone;Gamma-Decalactone;706-14-9;1.50%;US;PASS;Permitted;No specific limit;Permitted fragrance ingredient;FDA Cosmetic Ingredient Database;2023-12
+11;Patchoulol;Patchouli Alcohol;5986-55-0;1.50%;EU;PASS;Restricted;IFRA category limit applies;Natural fragrance constituent; allergen consideration;IFRA Standards;2024-01
+12;Patchoulol;Patchouli Alcohol;5986-55-0;1.50%;US;PASS;Restricted;IFRA category limit applies;Permitted with IFRA compliance;IFRA Standards;2024-01
+13;Borneol;Borneol;507-70-0;1.00%;EU;PASS;Restricted;IFRA category limit applies;Camphoraceous alcohol; CNS activity at high exposure;IFRA Standards / EU Cosmetics Regulation;2024-01
+14;Borneol;Borneol;507-70-0;1.00%;US;PASS;Restricted;IFRA category limit applies;Permitted fragrance ingredient with use limits;IFRA Standards;2024-01
+15;Pentylene Glycol;Pentylene Glycol;5343-92-0;2.50%;EU;PASS;Permitted;No specific limit;Approved solvent and humectant;EU Cosmetics Regulation;2024-02
+16;Pentylene Glycol;Pentylene Glycol;5343-92-0;2.50%;US;PASS;Permitted;No specific limit;Permitted cosmetic solvent;FDA Cosmetic Ingredient Database;2023-12
+17;Glycerin;Glycerin;56-81-5;1.50%;EU;PASS;Permitted;No limit;No restriction;EU Cosmetics Regulation;2024-02
+18;Glycerin;Glycerin;56-81-5;1.50%;US;PASS;Permitted;No limit;No restriction;FDA Cosmetics Guidance;2023-10
+19;Ethylhexylglycerin;Ethylhexylglycerin;70445-33-9;0.40%;EU;PASS;Permitted;No specific limit;Preservative booster permitted;EU Cosmetics Regulation;2024-02
+20;Ethylhexylglycerin;Ethylhexylglycerin;70445-33-9;0.40%;US;PASS;Permitted;No specific limit;Permitted cosmetic ingredient;FDA Cosmetic Ingredient Database;2023-12
+21;Caprylhydroxamic Acid;Caprylhydroxamic Acid;3/9/7377;0.20%;EU;PASS;Restricted;1.00%;Within preservative safety limits;EU Cosmetics Regulation Annex V;2024-02
+22;Caprylhydroxamic Acid;Caprylhydroxamic Acid;3/9/7377;0.20%;US;PASS;Permitted;No specific limit;Permitted preservative;FDA Cosmetic Ingredient Database;2023-12
+23;Sodium Citrate;Sodium Citrate;4/3/6132;0.20%;EU;PASS;Permitted;No limit;pH adjuster; no restriction;EU Cosmetics Regulation;2024-02
+24;Sodium Citrate;Sodium Citrate;4/3/6132;0.20%;US;PASS;Permitted;No limit;pH adjuster; no restriction;FDA Cosmetics Guidance;2023-10
+25;Citric Acid;Citric Acid;77-92-9;0.10%;EU;PASS;Permitted;No limit;pH adjuster; low irritation at this level;EU Cosmetics Regulation;2024-02
+26;Citric Acid;Citric Acid;77-92-9;0.10%;US;PASS;Permitted;No limit;Permitted cosmetic ingredient;FDA Cosmetics Guidance;2023-10

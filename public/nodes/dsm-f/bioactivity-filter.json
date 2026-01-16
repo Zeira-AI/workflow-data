@@ -1,0 +1,92 @@
+{
+    "type": "bioactivity-filter",
+    "label": "Bioactivity Filter",
+    "category": "analysis",
+    "icon": "activity",
+    "color": "green",
+    "description": "Filter compound bioactivity (pEC50 / pIC50) across TRPM8 and TRPV3 targets.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "5 compounds",
+    "defaultInputs": [
+        {
+            "id": "compoundList",
+            "name": "Compound List",
+            "type": "array",
+            "required": true,
+            "tooltip": "Input table of compounds (IDs and SMILES) to score."
+        },
+        {
+            "id": "targetList",
+            "name": "Target List",
+            "type": "array",
+            "required": true,
+            "tooltip": "Targets or assays (EC50 / IC50) that bioactivity should be predicted against."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "Compound",
+            "name": "Compound",
+            "type": "string",
+            "tooltip": "Compound identifier"
+        },
+        {
+            "id": "TRPM8 - EC50 - Assay: CHEMBL5738311",
+            "name": "TRPM8 - EC50 (µM)",
+            "type": "string",
+            "tooltip": "EC50 for TRPM8 (Assay: CHEMBL5738311)"
+        },
+        {
+            "id": "TRPV3 - IC50- Assay: CHEMBL3889302",
+            "name": "TRPV3 - IC50 (µM)",
+            "type": "string",
+            "tooltip": "IC50 for TRPV3 (Assay: CHEMBL3889302)"
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "dockingListText",
+            "type": "text",
+            "label": "Compound-Target Docking List",
+            "tooltip": "Input the compound-target docking for bioactivity prediction",
+            "suggestedField": [
+                "docked_structure"
+            ]
+        },
+        {
+            "key": "modelType",
+            "type": "select",
+            "label": "Available Tools",
+            "options": [
+                {
+                    "value": "dtign",
+                    "label": "DTIGN - Best for fast predictions"
+                },
+                {
+                    "value": "ligospace",
+                    "label": "Ligospace - Best for accurate predictions"
+                }
+            ],
+            "defaultValue": "Ligospace",
+            "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
+        },
+        {
+            "key": "dockingFiles",
+            "type": "file",
+            "label": "Docking Files",
+            "multiple": true,
+            "tooltip": "Optional upload of docking results."
+        },
+        {
+            "key": "pvalue",
+            "type": "number",
+            "label": "pValue cutoff",
+            "placeholder": "e.g. 5",
+            "defaultValue": 7,
+            "tooltip": "Minimum pEC50 / pIC50 value to consider a compound active. We recommend a value of 7 for DTIGN and Ligospace."
+        }
+    ]
+}
