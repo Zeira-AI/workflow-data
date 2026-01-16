@@ -1,0 +1,108 @@
+{
+  "type": "product-search",
+  "label": "Product Search",
+  "category": "search",
+  "icon": "search",
+  "color": "amber",
+  "description": "Search for products in the search tool",
+  "outputMockLabel": "8 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Brand",
+      "name": "Brand",
+      "type": "string",
+      "tooltip": "Brand name of the product (e.g. \"Grannick's\", \"Fooey!\", \"Rocco & Roxie\")."
+    },
+    {
+      "id": "Product",
+      "name": "Product",
+      "type": "string",
+      "tooltip": "Product name or title (e.g. \"Bitter Apple Spray for Dogs\", \"Ultra-Bitter Training Spray\")."
+    },
+    {
+      "id": "Ingredients",
+      "name": "Ingredients",
+      "type": "string",
+      "tooltip": "Comma-separated list of ingredients in the product formulation."
+    },
+    {
+      "id": "Description",
+      "name": "Description",
+      "type": "string",
+      "tooltip": "Product description explaining its purpose, benefits, and usage."
+    },
+    {
+      "id": "URL",
+      "name": "URL",
+      "type": "string",
+      "tooltip": "Product page URL link."
+    },
+    {
+      "id": "Price_usd",
+      "name": "Price (USD)",
+      "type": "number",
+      "tooltip": "Product price in US dollars."
+    },
+    {
+      "id": "size_ml",
+      "name": "Size (ml)",
+      "type": "number",
+      "tooltip": "Product size/volume in milliliters."
+    },
+    {
+      "id": "format",
+      "name": "Format",
+      "type": "string",
+      "tooltip": "Product format or delivery method (e.g. \"Trigger spray\")."
+    },
+    {
+      "id": "rating",
+      "name": "Rating",
+      "type": "number",
+      "tooltip": "Product rating score (typically on a scale of 1-5)."
+    },
+    {
+      "id": "review_count",
+      "name": "Review Count",
+      "type": "number",
+      "tooltip": "Total number of customer reviews for the product."
+    },
+    {
+      "id": "image_url",
+      "name": "Product Image",
+      "type": "image",
+      "tooltip": "Product image URL."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "query",
+      "type": "text",
+      "label": "Search Query",
+      "placeholder": "Enter product name, compounds, effects, or other search terms...",
+      "tooltip": "Text search query for products. You can search by product name, key compounds, desired effects, or other product attributes."
+    },
+    {
+      "key": "region",
+      "type": "select",
+      "label": "Region",
+      "options": [
+        { "value": "global", "label": "Global" },
+        { "value": "north_america", "label": "North America" },
+        { "value": "south_america", "label": "South America" },
+        { "value": "europe", "label": "Europe" },
+        { "value": "asia", "label": "Asia" },
+        { "value": "africa", "label": "Africa" },
+        { "value": "oceania", "label": "Oceania" }
+      ],
+      "defaultValue": "global",
+      "tooltip": "Select the continent/region to filter product search results."
+    }
+  ],
+  "defaultConfig": {
+    "query": "",
+    "region": "global"
+  }
+}
+

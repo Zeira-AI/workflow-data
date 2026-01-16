@@ -1,0 +1,57 @@
+{
+  "type": "ingredient-search",
+  "label": "Ingredient Search",
+  "category": "search",
+  "icon": "search",
+  "color": "green",
+  "description": "Search ingredients suitable for your applications",
+  "outputMockLabel": "30 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "ingredient_name",
+      "name": "Ingredient Name",
+      "type": "string",
+      "tooltip": "Common or trade name of the ingredient (e.g. \"Methylglyoxal\", \"Dihydroxyacetone\", \"Leptosperin\")."
+    },
+    {
+      "id": "INCI_name",
+      "name": "INCI Name",
+      "type": "string",
+      "tooltip": "International Nomenclature of Cosmetic Ingredients (INCI) name, the standardized name used in cosmetic labeling. May be \"N/A\" if not established."
+    },
+    {
+      "id": "CAS_number",
+      "name": "CAS Number",
+      "type": "string",
+      "tooltip": "Chemical Abstracts Service (CAS) registry number, a unique identifier for the chemical substance (e.g. \"78-98-8\", \"96-26-4\"). May be \"N/A\" for complex mixtures."
+    },
+    {
+      "id": "supplier_count",
+      "name": "Supplier Count",
+      "type": "number",
+      "tooltip": "Number of available suppliers for this ingredient in the database."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "query",
+      "type": "textarea",
+      "label": "Search Ingredient",
+      "placeholder": "Search by ingredient function, application, or INCI name",
+      "defaultValue": "",
+      "tooltip": "Enter search terms to find ingredients. You can search by:\n- **Function**: e.g., \"moisturizing\", \"anti-aging\"\n- **Application**: e.g., \"hair care\", \"scalp care\"\n- **INCI name**: e.g., \"Niacinamide\", \"Biotin\""
+    },
+    {
+      "key": "ingredientFile",
+      "type": "file",
+      "label": "Upload Ingredient List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv,.png,.jpg",
+      "tooltip": "Upload a document or image containing ingredient information. Supports multiple formats including **PDF**, **Word**, **CSV**, and **images** (OCR will be applied)."
+    }
+  ],
+  "defaultConfig": {
+    "query": ""
+  }
+}
+

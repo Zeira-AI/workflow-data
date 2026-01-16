@@ -1,0 +1,11 @@
+Ingredient Name,INCI Name,CAS Number,Concentration (%),Market,Regulatory Status,Restriction Type,Max Allowed Concentration,Reason,Regulation Source,Last Regulation Update
+Honey (standardized),Mel,N/A (natural mixture),65.0,US / EU,Allowed,None,GMP,Traditional food ingredient,FDA CFR Title 21 / EFSA Food Catalogue,2023
+Fructose,Fructose,57-48-7,10.0,US / EU,Allowed,None,GMP,Common food sugar,FDA CFR Title 21 / EFSA,2023
+Glucose,Glucose,50-99-7,8.0,US / EU,Allowed,None,GMP,Common food sugar,FDA CFR Title 21 / EFSA,2023
+Methyl syringate,Methyl Syringate,2451-71-2,0.05,US / EU,Conditionally allowed,Flavoring (natural),GMP,Naturally occurring phenolic in honey,FEMA GRAS / EFSA Flavorings,2022
+Pinocembrin,Pinocembrin,480-39-7,0.02,US / EU,Conditionally allowed,Novel ingredient review,Low-level use only,Polyphenol; limited direct food-use history,EFSA Novel Foods,2022
+3-Phenyllactic acid,Phenyllactic Acid,7326-19-4,0.03,US / EU,Conditionally allowed,Flavor / processing aid,GMP,Naturally present in fermented foods,EFSA / Literature-based,2021
+Vanillin (natural),Vanillin,121-33-5,0.04,US / EU,Allowed,Flavoring,GMP,Widely approved flavoring,FEMA GRAS / EFSA,2023
+Furaneol,Furaneol,3658-77-3,0.01,US / EU,Allowed,Flavoring,GMP,Approved flavoring substance,FEMA GRAS / EFSA,2022
+Citric acid,Citric Acid,77-92-9,0.30,US / EU,Allowed,Acidity regulator,GMP,Common food acidulant,FDA CFR Title 21 / EFSA,2023
+Water (purified),Aqua,7732-18-5,q.s.,US / EU,Allowed,None,GMP,Food-grade carrier,FDA CFR Title 21 / EFSA,2023

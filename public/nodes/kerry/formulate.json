@@ -1,0 +1,110 @@
+{
+  "type": "formulate",
+  "label": "Formulate",
+  "category": "analysis",
+  "icon": "flask",
+  "color": "purple",
+  "description": "Analyze and deformulate product compositions based on specific requirements",
+  "outputMockLabel": "10 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Ingredient Name",
+      "name": "Ingredient Name",
+      "type": "string",
+      "tooltip": "Common or trade name of the ingredient (e.g. \"Honey (standardized)\", \"Fructose\", \"Glucose\")."
+    },
+    {
+      "id": "INCI Name",
+      "name": "INCI Name",
+      "type": "string",
+      "tooltip": "International Nomenclature of Cosmetic Ingredients (INCI) name, the standardized name used in cosmetic labeling."
+    },
+    {
+      "id": "CAS Number",
+      "name": "CAS Number",
+      "type": "string",
+      "tooltip": "Chemical Abstracts Service (CAS) registry number, a unique identifier for the chemical substance. May be \"N/A (natural mixture)\" for complex natural products."
+    },
+    {
+      "id": "Concentration (%)",
+      "name": "Concentration (%)",
+      "type": "string",
+      "tooltip": "Concentration of the ingredient in the formulation as a percentage (e.g. \"65.0\", \"10.0\", \"q.s.\" for quantum satis)."
+    },
+    {
+      "id": "Market",
+      "name": "Market",
+      "type": "string",
+      "tooltip": "Target market/region for the formulation (e.g. \"US / EU\")."
+    },
+    {
+      "id": "Regulatory Status",
+      "name": "Regulatory Status",
+      "type": "string",
+      "tooltip": "Regulatory compliance status: \"Allowed\", \"Conditionally allowed\", or other status."
+    },
+    {
+      "id": "Restriction Type",
+      "name": "Restriction Type",
+      "type": "string",
+      "tooltip": "Type of regulatory restriction: \"None\", \"Flavoring (natural)\", \"Novel ingredient review\", \"Flavor / processing aid\", \"Acidity regulator\", or other."
+    },
+    {
+      "id": "Max Allowed Concentration",
+      "name": "Max Allowed Concentration",
+      "type": "string",
+      "tooltip": "Maximum allowed concentration for the ingredient (e.g. \"GMP\" for Good Manufacturing Practice, \"Low-level use only\")."
+    },
+    {
+      "id": "Reason",
+      "name": "Reason",
+      "type": "string",
+      "tooltip": "Explanation for the regulatory status and usage (e.g. \"Traditional food ingredient\", \"Common food sugar\")."
+    },
+    {
+      "id": "Regulation Source",
+      "name": "Regulation Source",
+      "type": "string",
+      "tooltip": "Source regulation or standard governing this ingredient (e.g. \"FDA CFR Title 21 / EFSA Food Catalogue\")."
+    },
+    {
+      "id": "Last Regulation Update",
+      "name": "Last Regulation Update",
+      "type": "string",
+      "tooltip": "Year of the last update to the regulation (e.g. \"2023\", \"2022\")."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredientList",
+      "type": ["text", "file"],
+      "label": "Ingredient List",
+      "placeholder": "Select or upload a list of ingredients...",
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "tooltip": "Select or upload a list of ingredients.\nSupported formats: **TXT**, **CSV**, **SMILES**.",
+      "accept": ".txt,.csv,.smi"
+    },
+    {
+      "key": "referenceProduct",
+      "type": "text",
+      "label": "Similar Product (Link/Name)",
+      "suggestedField": ["product", "name"],
+      "placeholder": "Paste product link or name here..."
+    },
+    {
+      "key": "desiredEffect",
+      "type": "text",
+      "label": "Desired Effect (Required)",
+      "placeholder": "e.g., Whitening, Anti-aging..."
+    },
+    {
+      "key": "options",
+      "type": "json",
+      "label": "Advanced Options",
+      "placeholder": "{ \"target user\": \"baby\", \"application route\": \"topical\", \"dosage form\": \"cream\" }"
+    }
+  ],
+  "defaultConfig": {}
+}
+
