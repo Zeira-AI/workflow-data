@@ -1,0 +1,5 @@
+protein_target,biological_system,desired_modulation,corresponding_assay,metric_used,rationale_for_calming,crystalized_structure,chembl_id
+OR1A1,Olfactory,Mild–moderate activation,"Cell-based olfactory receptor assay (HEK293, cAMP or Ca²⁺ readout)",EC50,"OR1A1 responds to soft, pleasant odorants. Moderate activation supports smooth, familiar odor perception linked to reduced emotional arousal.",N/A,N/A
+OR2J3,Olfactory,Balanced activation (avoid saturation),Heterologous OR expression assay with reporter gene,EC50,"OR2J3 is associated with fresh/green odor notes. Balanced activation contributes to emotional lightness without overstimulation.",N/A,N/A
+TRPM8,Trigeminal,Low-level activation,Calcium influx assay (TRPM8-expressing cells),EC50,"Gentle TRPM8 engagement produces cooling and freshness that can bias autonomic tone toward relaxation when intensity is controlled.",YES,CHEMBL1075319
+TRPV3,Trigeminal,Sub-threshold modulation,Calcium influx inhibition assay,IC50,"TRPV3 contributes to warmth and comfort cues. Mild modulation supports safety and coziness rather than alertness.",YES,CHEMBL5522
