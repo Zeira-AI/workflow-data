@@ -1,0 +1,21 @@
+docked_structure,compound,target,delta_g
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Minoxidil,Kir6.2,-6.3
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Caffeine,Kir6.2,-5.6
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Adenosine,Kir6.2,-7.4
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Baicalin,Kir6.2,-7.7
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Piroctone Olamine,Kir6.2,-7.8
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Minoxidil,GSK3β,-6.047
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Caffeine,GSK3β,-5.2
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Adenosine,GSK3β,-6.9
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Baicalin,GSK3β,-9.2
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Piroctone Olamine,GSK3β,-8
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Minoxidil,PDE1A,-6.1
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Caffeine,PDE1A,-6.6
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Adenosine,PDE1A,-6
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Baicalin,PDE1A,-7.1
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Piroctone Olamine,PDE1A,-6.9
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Minoxidil,TGFBR1,-5.9
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Caffeine,TGFBR1,-5
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Adenosine,TGFBR1,-6.3
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Baicalin,TGFBR1,-8.7
+https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Piroctone Olamine,TGFBR1,-7.4

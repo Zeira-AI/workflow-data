@@ -1,0 +1,13 @@
+ID,Ingredient Name,CAS Number,Concentration,Target Market,Status,Application Route,Target User,Warnings,Reasoning,Source Reference
+1,Salicylic Acid,69-72-7,2.5%,EU,FAIL,topical,Adult,"Exceeds concentration limit","The maximum allowed concentration for leave-on topical products in the EU is 2.0%. This formula contains 2.5%.","EU Annex III/18"
+2,Titanium Dioxide,13463-67-7,5.0%,EU,PASS,topical,All,None,"Safe for use as a UV filter up to 25%. Current concentration is within safe limits.","EU Annex VI/12"
+3,Retinol,68-26-8,0.3%,EU,PASS,topical,Adult,None,"Complies with the latest SCCS opinion for Vitamin A in body lotions (0.05%) and face products (0.3%).","SCCS/1652/23"
+4,Propylparaben,94-13-3,0.14%,EU,FAIL,topical,Infant,"Prohibited for diaper area","Prohibited in leave-on cosmetic products designed for application on the diaper area of children under 3 years.","Regulation (EU) No 1004/2014"
+5,Hydroquinone,123-31-9,1.0%,US,PASS,topical,Adult,None,"Permitted in the US for specific skin-lightening OTC products under FDA monograph (though restricted in other regions).","FDA OTC Monograph"
+6,Bakuchiol,10309-37-2,0.5%,GLOBAL,UNKNOWN,topical,All,"No specific regulatory record","This ingredient is not yet explicitly listed in major regulatory annexes (EU/CN). Safety must be verified via internal toxicology report.","ECHA Database"
+7,Phenoxyethanol,122-99-6,0.8%,CN,PASS,topical,All,None,"Within the maximum allowable limit of 1.0% for China CSAR standards.","China Safety & Technical Standards (2015)"
+8,Kojic Acid,501-30-4,1.0%,EU,PASS,topical,Adult,"Monitor SCCS updates","Currently considered safe at 1% in leave-on face products, but under ongoing review for endocrine potential.","SCCS/1637/21"
+9,BHT (Butylated Hydroxytoluene),128-37-0,0.5%,EU,PASS,topical,Adult,None,"Concentration is below the safety threshold of 0.8% for leave-on products.","SCCS/1636/21"
+10,Secret-Peptide-Complex,N/A,0.1%,EU,UNKNOWN,topical,Adult,"Ingredient not identified","INCI name or CAS number not recognized in the regulatory database. Manual review required.","N/A"
+11,Mercury,7439-97-6,0.001%,GLOBAL,FAIL,topical,All,"Prohibited Substance","Mercury and its compounds are strictly prohibited in cosmetics except for specific preservative uses in eye products.","EU Annex II / FDA Prohibited list"
+12,Zinc Oxide (Nano),1314-13-2,10.0%,EU,PASS,topical,All,"Labeling Requirement","Approved for use; however, the ingredient list must clearly state '(Nano)' next to the INCI name.","EU Annex VI/30a"
