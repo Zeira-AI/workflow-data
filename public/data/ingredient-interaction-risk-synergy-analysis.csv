@@ -1,0 +1,11 @@
+Pair,Predicted_Interaction_Signal,Risk_Type_(Dominant),Confidence,Flag
+α-Terpineol x β-Pinene,Low,No significant interaction,0.18,LOW_RISK
+α-Terpineol x γ-Pinene,Low,No significant interaction,0.21,LOW_RISK
+α-Terpineol x Myrcene,Moderate,Additive irritation potential,0.62,MODERATE_RISK
+α-Terpineol x γ-Nonalactone,Low,Compatible,0.15,SAFE
+β-Pinene x γ-Pinene,Moderate,Additive volatility / exposure,0.58,MODERATE_RISK
+β-Pinene x Myrcene,Moderate,Exposure escalation signal,0.66,MODERATE_RISK
+β-Pinene x γ-Nonalactone,Low,Compatible,0.22,LOW_RISK
+γ-Pinene x Myrcene,Moderate,Additive irritation potential,0.61,MODERATE_RISK
+γ-Pinene x γ-Nonalactone,Low,Compatible,0.19,SAFE
+Myrcene x γ-Nonalactone,Low,Compatible,0.17,SAFE
