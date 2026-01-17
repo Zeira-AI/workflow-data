@@ -1,0 +1,158 @@
+{
+    "type": "structure-prediction",
+    "label": "Structure Prediction",
+    "category": "analysis",
+    "icon": "dna",
+    "color": "purple",
+    "description": "Predict protein 3D structures from amino acid sequences using AI-based models",
+    "outputMockLabel": "2 proteins",
+    "pricing": {
+        "credits": 0,
+        "executionTime": 1
+    },
+    "defaultInputs": [
+        {
+            "id": "protein_list",
+            "name": "Protein List",
+            "type": "array",
+            "required": true,
+            "description": "List of proteins with FASTA sequences",
+            "tooltip": "Input table of proteins with names and FASTA sequences for structure prediction."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "protein_name",
+            "name": "Protein name",
+            "type": "string",
+            "tooltip": "Name or identifier of the protein (e.g., 'OR1A1', 'OR2J3')."
+        },
+        {
+            "id": "fasta",
+            "name": "Fasta",
+            "type": "string",
+            "tooltip": "FASTA sequence of the protein including header and amino acid sequence."
+        },
+        {
+            "id": "ptm",
+            "name": "pTM",
+            "type": "number",
+            "tooltip": "Predicted Template Modeling score (0-1), indicating the confidence in the predicted structure."
+        },
+        {
+            "id": "structure_3d",
+            "name": "3D Structure",
+            "type": "structure",
+            "tooltip": "URL to the 3D protein structure PDB file from AlphaFold database."
+        },
+        {
+            "id": "pocket_detected",
+            "name": "Pocket Detected",
+            "type": "boolean",
+            "tooltip": "Whether a binding pocket was detected in the protein structure."
+        },
+        {
+            "id": "pocket_score",
+            "name": "Pocket Score",
+            "type": "number",
+            "tooltip": "Druggability score of the detected pocket (0-1). Higher values indicate better druggability."
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "proteinListText",
+            "type": "text",
+            "label": "Protein List (Paste)",
+            "placeholder": ">Protein1\nMKTAYIAKQR...\n>Protein2\nMNDDGKVNAS...",
+            "tooltip": "Paste protein names and FASTA sequences. Format: >ProteinName followed by sequence on next lines.",
+            "suggestedField": [
+                "protein_name",
+                "name",
+                "target",
+                "fasta",
+                "sequence"
+            ]
+        },
+        {
+            "key": "proteinFile",
+            "type": "file",
+            "label": "Upload Protein File",
+            "accept": ".fasta,.fa,.txt,.csv",
+            "tooltip": "Upload a FASTA file or CSV containing protein names and sequences."
+        },
+        {
+            "key": "predictionMethod",
+            "type": "select",
+            "label": "Prediction Method",
+            "options": [
+                {
+                    "value": "alphafold",
+                    "label": "AlphaFold"
+                },
+                {
+                    "value": "esmfold",
+                    "label": "ESMFold"
+                },
+                {
+                    "value": "rosettafold",
+                    "label": "RoseTTAFold"
+                }
+            ],
+            "defaultValue": "alphafold",
+            "tooltip": "Select the protein structure prediction method. AlphaFold is recommended for highest accuracy."
+        },
+        {
+            "key": "includeConfidence",
+            "type": "boolean",
+            "label": "Include Confidence Scores",
+            "defaultValue": true,
+            "tooltip": "Include pTM and other confidence metrics in the output."
+        },
+        {
+            "key": "findPocketRegion",
+            "type": "boolean",
+            "label": "Finding the pocket region?",
+            "defaultValue": true,
+            "tooltip": "Whether to detect and analyze binding pocket regions in the predicted structure."
+        },
+        {
+            "key": "pocketModel",
+            "type": "select",
+            "label": "Choose model to predict pocket",
+            "options": [
+                {
+                    "value": "fpocket",
+                    "label": "fpocket"
+                },
+                {
+                    "value": "sitemap",
+                    "label": "SiteMap"
+                },
+                {
+                    "value": "deepsite",
+                    "label": "DeepSite"
+                },
+                {
+                    "value": "p2rank",
+                    "label": "P2Rank"
+                }
+            ],
+            "defaultValue": "fpocket",
+            "tooltip": "Select the pocket prediction model. fpocket is fast and open-source, SiteMap provides detailed druggability analysis.",
+            "showWhen": [
+                {
+                    "field": "findPocketRegion",
+                    "in": [
+                        "true"
+                    ]
+                }
+            ]
+        }
+    ],
+    "defaultConfig": {
+        "predictionMethod": "alphafold",
+        "includeConfidence": true,
+        "findPocketRegion": true,
+        "pocketModel": "fpocket"
+    }
+}
