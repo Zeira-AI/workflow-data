@@ -48,7 +48,7 @@
             "id": "clogp",
             "name": "cLogP",
             "type": "number",
-            "tooltip": "Calculated Partition Coeffient."
+            "tooltip": "Calculated Partition Coefficient."
         },
         {
             "id": "rings",
@@ -104,22 +104,118 @@
             "accept": ".csv,.txt,.smi"
         },
         {
-            "key": "mw_threshold",
-            "type": "number",
-            "label": "MW Threshold",
-            "defaultValue": 400,
-            "tooltip": "Maximum molecular weight (Da)."
+            "key": "hbd_range",
+            "type": "range",
+            "label": "HBD Range",
+            "defaultValue": [
+                0,
+                5
+            ],
+            "tooltip": "Hydrogen Bond Donors range (min - max)."
         },
         {
-            "key": "logp_threshold",
-            "type": "number",
-            "label": "logP Threshold",
-            "defaultValue": 4.0,
-            "tooltip": "Maximum cLogP."
+            "key": "hba_range",
+            "type": "range",
+            "label": "HBA Range",
+            "defaultValue": [
+                0,
+                10
+            ],
+            "tooltip": "Hydrogen Bond Acceptors range (min - max)."
+        },
+        {
+            "key": "clogp_range",
+            "type": "range",
+            "label": "cLogP Range",
+            "defaultValue": [
+                0,
+                5.0
+            ],
+            "tooltip": "Calculated Partition Coefficient range (min - max)."
+        },
+        {
+            "key": "rings_range",
+            "type": "range",
+            "label": "Rings Range",
+            "defaultValue": [
+                0,
+                4
+            ],
+            "tooltip": "Number of rings range (min - max)."
+        },
+        {
+            "key": "heavy_atoms_range",
+            "type": "range",
+            "label": "Heavy Atoms Range",
+            "defaultValue": [
+                0,
+                30
+            ],
+            "tooltip": "Number of heavy atoms range (min - max)."
+        },
+        {
+            "key": "rotb_range",
+            "type": "range",
+            "label": "RotB Range",
+            "defaultValue": [
+                0,
+                10
+            ],
+            "tooltip": "Number of rotatable bonds range (min - max)."
+        },
+        {
+            "key": "tpsa_range",
+            "type": "range",
+            "label": "TPSA (A²) Range",
+            "defaultValue": [
+                0,
+                140
+            ],
+            "tooltip": "Topological Polar Surface Area range (min - max)."
+        },
+        {
+            "key": "bp_celsius_range",
+            "type": "range",
+            "label": "BP (°C) Range",
+            "defaultValue": [
+                100,
+                350
+            ],
+            "tooltip": "Boiling Point range in degrees Celsius (min - max)."
         }
     ],
     "defaultConfig": {
-        "mw_threshold": 300,
-        "logp_threshold": 3.0
+        "hbd_range": [
+            0,
+            5
+        ],
+        "hba_range": [
+            0,
+            10
+        ],
+        "clogp_range": [
+            0,
+            5.0
+        ],
+        "rings_range": [
+            0,
+            4
+        ],
+        "heavy_atoms_range": [
+            0,
+            30
+        ],
+        "rotb_range": [
+            0,
+            10
+        ],
+        "tpsa_range": [
+            0,
+            140
+        ],
+        "bp_celsius_range": [
+            100,
+            350
+        ]
     }
 }

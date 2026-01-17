@@ -5,6 +5,10 @@
   "icon": "filtericon",
   "color": "red",
   "description": "Filter compounds based on SMILES data and ADMET predictions.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
   "outputMockLabel": "41 compounds",
   "defaultInputs": [
     {
@@ -17,115 +21,115 @@
   ],
   "defaultOutputs": [
     {
-      "id": "Compound",
+      "id": "compound",
       "name": "Compound",
       "type": "string",
-      "tooltip": "Compound name or identifier (e.g. \"Methylglyoxal\", \"Dihydroxyacetone\", \"Leptosperin\")."
+      "tooltip": "Compound name or identifier."
     },
     {
-      "id": "HIA",
+      "id": "hia",
       "name": "HIA",
       "type": "string",
       "tooltip": "Human Intestinal Absorption prediction: Low, Mod (Moderate), High, or Var (Variable)."
     },
     {
-      "id": "Caco-2",
+      "id": "caco_2",
       "name": "Caco-2",
       "type": "string",
       "tooltip": "Caco-2 cell permeability prediction: Low, Mod (Moderate), High, or Var (Variable)."
     },
     {
-      "id": "Sol.",
+      "id": "sol",
       "name": "Solubility",
       "type": "string",
       "tooltip": "Aqueous solubility prediction: Low, Mod (Moderate), High, or Var (Variable)."
     },
     {
-      "id": "logP",
+      "id": "logp",
       "name": "logP",
       "type": "number",
       "tooltip": "Octanol-water partition coefficient (lipophilicity)."
     },
     {
-      "id": "BBB",
+      "id": "bbb",
       "name": "BBB",
       "type": "string",
       "tooltip": "Blood-Brain Barrier penetration: Yes, No, Low, or Var (Variable)."
     },
     {
-      "id": "PPB",
+      "id": "ppb",
       "name": "PPB",
       "type": "string",
       "tooltip": "Plasma Protein Binding: Low, Mod (Moderate), High, or Var (Variable)."
     },
     {
-      "id": "Clearance",
+      "id": "clearance",
       "name": "Clearance",
       "type": "string",
       "tooltip": "Metabolic clearance prediction: Low, Mod (Moderate), High, or Var (Variable)."
     },
     {
-      "id": "CYP inhib.",
+      "id": "cyp_inhib",
       "name": "CYP Inhibition",
       "type": "string",
       "tooltip": "Cytochrome P450 inhibition: Yes or No."
     },
     {
-      "id": "RM risk",
+      "id": "rm_risk",
       "name": "RM Risk",
       "type": "string",
       "tooltip": "Reactive Metabolite risk: Yes or No."
     },
     {
-      "id": "hERG",
+      "id": "herg",
       "name": "hERG",
       "type": "string",
       "tooltip": "hERG channel inhibition risk: Neg (Negative), Weak, Pos (Positive), or Var (Variable)."
     },
     {
-      "id": "Geno",
+      "id": "geno",
       "name": "Genotoxicity",
       "type": "string",
       "tooltip": "Genotoxicity prediction: Neg (Negative), Pos (Positive), or Var (Variable)."
     },
     {
-      "id": "Acute tox",
+      "id": "acute_tox",
       "name": "Acute Toxicity",
       "type": "string",
       "tooltip": "Acute toxicity prediction: Low, Mod (Moderate), High, Extreme, or Var (Variable)."
     },
     {
-      "id": "Repeat tox",
+      "id": "repeat_tox",
       "name": "Repeat Toxicity",
       "type": "string",
       "tooltip": "Repeated dose toxicity prediction: Low, Mod (Moderate), High, Extreme, or Var (Variable)."
     },
     {
-      "id": "Dev/Repro",
+      "id": "dev_repro",
       "name": "Developmental/Reproductive",
       "type": "string",
       "tooltip": "Developmental and reproductive toxicity: Yes, No, or Var (Variable)."
     },
     {
-      "id": "Endocrine",
+      "id": "endocrine",
       "name": "Endocrine",
       "type": "string",
       "tooltip": "Endocrine disruption potential: Yes, No, Possible, or Var (Variable)."
     },
     {
-      "id": "Oral irrit.",
+      "id": "oral_irrit",
       "name": "Oral Irritation",
       "type": "string",
       "tooltip": "Oral irritation potential: Low, Mod (Moderate), High, or Var (Variable)."
     },
     {
-      "id": "Volatile",
+      "id": "volatile",
       "name": "Volatile",
       "type": "string",
       "tooltip": "Volatility assessment: Yes or No."
     },
     {
-      "id": "Decision",
+      "id": "decision",
       "name": "Decision",
       "type": "string",
       "tooltip": "Overall toxicity decision: PASS (approved), PASS* (approved with conditions), or FAIL (rejected)."
@@ -134,10 +138,18 @@
   "configSchema": [
     {
       "key": "ingredientListText",
-      "type": ["text", "file"],
+      "type": [
+        "text",
+        "file"
+      ],
       "label": "Compound List",
       "tooltip": "Compounds for ADMET prediction",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci_name"
+      ],
       "accept": ".csv,.txt,.smi"
     },
     {
@@ -145,59 +157,197 @@
       "type": "select",
       "label": "Admet Prediction Models",
       "options": [
-        { "value": "admet_ai", "label": "Admet AI - best for fast predictions" },
-        { "value": "swiss_adme", "label": "SwissADME - best for accurate predictions" },
-        { "value": "toxtree", "label": "ToxTree - best for comprehensive predictions" }
+        {
+          "value": "admet_ai",
+          "label": "Admet AI - best for fast predictions"
+        },
+        {
+          "value": "swiss_adme",
+          "label": "SwissADME - best for accurate predictions"
+        },
+        {
+          "value": "toxtree",
+          "label": "ToxTree - best for comprehensive predictions"
+        }
       ],
       "tooltip": "Choose which ADMET engine to use; models trade off speed vs. detail."
     },
     {
-      "key": "mw_threshold",
-      "type": "number",
-      "label": "MW Threshold",
-      "defaultValue": 400,
-      "tooltip": "Maximum molecular weight (Da) allowed for compounds."
+      "key": "logp_range",
+      "type": "range",
+      "label": "logP Range",
+      "defaultValue": [
+        -2,
+        4.0
+      ],
+      "tooltip": "Partition coefficient range (min - max)."
     },
     {
-      "key": "logp_threshold",
-      "type": "number",
-      "label": "logP Threshold",
-      "defaultValue": 4.0,
-      "tooltip": "Maximum calculated logP (lipophilicity) allowed."
+      "key": "hia_filter",
+      "type": "multiselect",
+      "label": "HIA Filter",
+      "options": [
+        {
+          "value": "Low",
+          "label": "Low"
+        },
+        {
+          "value": "Mod",
+          "label": "Moderate"
+        },
+        {
+          "value": "High",
+          "label": "High"
+        },
+        {
+          "value": "Var",
+          "label": "Variable"
+        }
+      ],
+      "defaultValue": [
+        "Low",
+        "Mod",
+        "High"
+      ],
+      "tooltip": "Allowed Human Intestinal Absorption levels."
     },
     {
-      "key": "TPSA_threshold",
-      "type": "number",
-      "label": "TPSA Threshold",
-      "defaultValue": 60,
-      "tooltip": "Maximum topological polar surface area (Å²); higher TPSA often reduces permeability."
+      "key": "bbb_filter",
+      "type": "multiselect",
+      "label": "BBB Filter",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes (Penetrates)"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        },
+        {
+          "value": "Low",
+          "label": "Low"
+        },
+        {
+          "value": "Var",
+          "label": "Variable"
+        }
+      ],
+      "defaultValue": [
+        "No",
+        "Low"
+      ],
+      "tooltip": "Allowed Blood-Brain Barrier penetration levels."
     },
     {
-      "key": "HBD_threshold",
-      "type": "number",
-      "label": "HBD Threshold",
-      "defaultValue": 4.0,
-      "tooltip": "Maximum number of hydrogen bond donors."
+      "key": "geno_filter",
+      "type": "multiselect",
+      "label": "Genotoxicity Filter",
+      "options": [
+        {
+          "value": "Neg",
+          "label": "Negative"
+        },
+        {
+          "value": "Pos",
+          "label": "Positive"
+        },
+        {
+          "value": "Var",
+          "label": "Variable"
+        }
+      ],
+      "defaultValue": [
+        "Neg"
+      ],
+      "tooltip": "Allowed genotoxicity outcomes."
     },
     {
-      "key": "HBA_threshold",
-      "type": "number",
-      "label": "HBA Threshold",
-      "defaultValue": 3.0,
-      "tooltip": "Maximum number of hydrogen bond acceptors."
+      "key": "acute_tox_filter",
+      "type": "multiselect",
+      "label": "Acute Toxicity Filter",
+      "options": [
+        {
+          "value": "Low",
+          "label": "Low"
+        },
+        {
+          "value": "Mod",
+          "label": "Moderate"
+        },
+        {
+          "value": "High",
+          "label": "High"
+        },
+        {
+          "value": "Extreme",
+          "label": "Extreme"
+        },
+        {
+          "value": "Var",
+          "label": "Variable"
+        }
+      ],
+      "defaultValue": [
+        "Low",
+        "Mod"
+      ],
+      "tooltip": "Allowed acute toxicity levels."
     },
     {
-      "key": "RotB_threshold",
-      "type": "number",
-      "label": "RotB Threshold",
-      "defaultValue": 4.0,
-      "tooltip": "Maximum number of rotatable bonds (flexibility proxy)."
+      "key": "herg_filter",
+      "type": "multiselect",
+      "label": "hERG Filter",
+      "options": [
+        {
+          "value": "Neg",
+          "label": "Negative"
+        },
+        {
+          "value": "Weak",
+          "label": "Weak"
+        },
+        {
+          "value": "Pos",
+          "label": "Positive"
+        },
+        {
+          "value": "Var",
+          "label": "Variable"
+        }
+      ],
+      "defaultValue": [
+        "Neg",
+        "Weak"
+      ],
+      "tooltip": "Allowed hERG inhibition levels."
     }
   ],
   "defaultConfig": {
     "smiles_column": "smiles",
-    "mw_threshold": 300,
-    "logp_threshold": 3.0
+    "logp_range": [
+      -2,
+      4.0
+    ],
+    "hia_filter": [
+      "Low",
+      "Mod",
+      "High"
+    ],
+    "bbb_filter": [
+      "No",
+      "Low"
+    ],
+    "geno_filter": [
+      "Neg"
+    ],
+    "acute_tox_filter": [
+      "Low",
+      "Mod"
+    ],
+    "herg_filter": [
+      "Neg",
+      "Weak"
+    ]
   }
 }
-

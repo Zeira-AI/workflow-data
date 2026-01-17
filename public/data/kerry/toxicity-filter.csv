@@ -1,4 +1,4 @@
-Compound,HIA,Caco-2,Sol.,logP,BBB,PPB,Clearance,CYP inhib.,RM risk,hERG,Geno,Acute tox,Repeat tox,Dev/Repro,Endocrine,Oral irrit.,Volatile,Decision
+compound,hia,caco_2,sol,logp,bbb,ppb,clearance,cyp_inhib,rm_risk,herg,geno,acute_tox,repeat_tox,dev_repro,endocrine,oral_irrit,volatile,decision
 Methylglyoxal,Low,Low,High,1.2,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
 Dihydroxyacetone,Mod,Mod,Mod,2.8,Low,High,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS*
 Leptosperin,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Neg,Neg,Low,Mod,No,No,Low,No,PASS

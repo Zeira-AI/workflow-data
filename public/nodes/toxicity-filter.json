@@ -101,61 +101,91 @@
       "tooltip": "Choose which ADMET engine to use; models trade off speed vs. detail."
     },
     {
-      "key": "mw_threshold",
-      "type": "number",
-      "label": "MW Threshold",
-      "defaultValue": 400,
-      "tooltip": "Maximum molecular weight (Da) allowed for compounds."
+      "key": "mw_range",
+      "type": "range",
+      "label": "MW Range",
+      "defaultValue": [
+        0,
+        500
+      ],
+      "tooltip": "Molecular weight (Da) range (min - max)."
     },
     {
-      "key": "logp_threshold",
-      "type": "number",
-      "label": "logP Threshold",
-      "defaultValue": 4.0,
-      "tooltip": "Maximum calculated logP (lipophilicity) allowed."
+      "key": "logp_range",
+      "type": "range",
+      "label": "logP Range",
+      "defaultValue": [
+        -2,
+        5.0
+      ],
+      "tooltip": "Calculated logP (lipophilicity) range (min - max)."
     },
     {
-      "key": "TPSA_threshold",
-      "type": "number",
-      "label": "TPSA Threshold",
-      "defaultValue": 60,
-      "tooltip": "Maximum topological polar surface area (Å²); higher TPSA often reduces permeability."
+      "key": "tpsa_range",
+      "type": "range",
+      "label": "TPSA Range",
+      "defaultValue": [
+        0,
+        140
+      ],
+      "tooltip": "Topological polar surface area (Å²) range (min - max)."
     },
     {
-      "key": "HBD_threshold",
-      "type": "number",
-      "label": "HBD Threshold",
-      "defaultValue": 4.0,
-      "tooltip": "Maximum number of hydrogen bond donors."
+      "key": "hbd_range",
+      "type": "range",
+      "label": "HBD Range",
+      "defaultValue": [
+        0,
+        5
+      ],
+      "tooltip": "Number of hydrogen bond donors range (min - max)."
     },
     {
-      "key": "HBA_threshold",
-      "type": "number",
-      "label": "HBA Threshold",
-      "defaultValue": 3.0,
-      "tooltip": "Maximum number of hydrogen bond acceptors."
+      "key": "hba_range",
+      "type": "range",
+      "label": "HBA Range",
+      "defaultValue": [
+        0,
+        10
+      ],
+      "tooltip": "Number of hydrogen bond acceptors range (min - max)."
     },
     {
-      "key": "RotB_threshold",
-      "type": "number",
-      "label": "RotB Threshold",
-      "defaultValue": 4.0,
-      "tooltip": "Maximum number of rotatable bonds (flexibility proxy)."
+      "key": "rotb_range",
+      "type": "range",
+      "label": "RotB Range",
+      "defaultValue": [
+        0,
+        10
+      ],
+      "tooltip": "Number of rotatable bonds range (min - max)."
     }
   ],
   "defaultConfig": {
     "smiles_column": "smiles",
-    "mw_threshold": 300,
-    "logp_threshold": 3.0,
-    "mapping": {
-      "name": "name",
-      "smiles": "smiles",
-      "MW_Da": "MW_Da",
-      "logP": "logP",
-      "TPSA": "TPSA",
-      "HBD": "HDB",
-      "HBA": "HDA",
-      "RotB": "RotB"
-    }
+    "mw_range": [
+      0,
+      500
+    ],
+    "logp_range": [
+      -2,
+      5.0
+    ],
+    "tpsa_range": [
+      0,
+      140
+    ],
+    "hbd_range": [
+      0,
+      5
+    ],
+    "hba_range": [
+      0,
+      10
+    ],
+    "rotb_range": [
+      0,
+      10
+    ]
   }
 }
