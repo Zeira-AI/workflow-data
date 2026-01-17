@@ -164,7 +164,8 @@
                 "textarea",
                 "file",
                 "markdown",
-                "filter"
+                "filter",
+                "range"
               ]
             },
             {
@@ -181,7 +182,8 @@
                   "textarea",
                   "file",
                   "markdown",
-                  "filter"
+                  "filter",
+                  "range"
                 ]
               },
               "minItems": 1
@@ -266,6 +268,18 @@
         "color": {
           "type": "string",
           "description": "For markdown fields: color theme for the card container (e.g., 'info', 'success', 'warning', 'error', 'default')"
+        },
+        "min": {
+          "type": "number",
+          "description": "For range fields: minimum value allowed"
+        },
+        "max": {
+          "type": "number",
+          "description": "For range fields: maximum value allowed"
+        },
+        "step": {
+          "type": "number",
+          "description": "For range fields: step increment value"
         },
         "suggestedField": {
           "type": "array",
