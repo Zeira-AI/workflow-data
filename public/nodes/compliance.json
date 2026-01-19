@@ -60,21 +60,24 @@
   ],
   "configSchema": [
     {
-      "key": "ingredientList",
-      "type": [
-        "text",
-        "file"
-      ],
-      "label": "Ingredient List",
-      "placeholder": "Select or enter ingredient list...",
+      "key": "ingredient_name",
+      "type": "text",
+      "label": "Ingredient Name",
+      "placeholder": "Enter a ingredient name...",
       "suggestedField": [
-        "ingredient_name",
-        "INCI_name",
-        "inci",
-        "name"
+        "inci"
       ],
-      "tooltip": "List of ingredients to check for compliance. Can be selected from ingredient-search output or entered manually. Supports text input or file upload (TXT, CSV).",
-      "accept": ".txt,.csv"
+      "tooltip": "Enter a ingredient name."
+    },
+    {
+      "key": "concentration",
+      "type": "text",
+      "label": "Concentration",
+      "suggestedField": [
+        "estimatedPercent"
+      ],
+      "placeholder": "Enter a concentration...",
+      "tooltip": "Enter a concentration."
     },
     {
       "key": "referenceProduct",
