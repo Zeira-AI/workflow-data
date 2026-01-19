@@ -75,6 +75,14 @@
                     "label": "Vecurate Excerpt (25 compounds)"
                 },
                 {
+                    "value": "good_scents",
+                    "label": "Good Scents"
+                },
+                {
+                    "value": "odor_db",
+                    "label": "OdorDB"
+                },
+                {
                     "value": "eu_cosing",
                     "label": "EU CoSing"
                 },
