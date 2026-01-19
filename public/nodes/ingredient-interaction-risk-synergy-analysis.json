@@ -75,6 +75,23 @@
       "tooltip": "Upload a CSV or TXT file containing compound names and SMILES strings. Required columns: compound name/identifier and SMILES."
     },
     {
+      "key": "model",
+      "type": "select",
+      "label": "Model",
+      "options": [
+        {
+          "value": "deepddi",
+          "label": "DeepDDI"
+        },
+        {
+          "value": "decagon",
+          "label": "Decagon"
+        }
+      ],
+      "defaultValue": "deepddi",
+      "tooltip": "DeepDDI - detailed, human-readable interaction predictions; Decagon - network-scale side effect & synergy modeling."
+    },
+    {
       "key": "analysisMode",
       "type": "select",
       "label": "Analysis Mode",
@@ -106,10 +123,5 @@
       "defaultValue": true,
       "tooltip": "Include pairs with low risk scores in the output results."
     }
-  ],
-  "defaultConfig": {
-    "analysisMode": "all_pairs",
-    "riskThreshold": 0.5,
-    "includeLowRisk": true
-  }
+  ]
 }
