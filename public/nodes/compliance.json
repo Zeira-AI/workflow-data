@@ -42,7 +42,7 @@
     {
       "id": "concentration",
       "name": "Concentration",
-      "type": "text",
+      "type": "number",
       "tooltip": "Concentration of the ingredient in the formulation as a percentage (e.g., 0.01, 0.05)."
     },
     {
