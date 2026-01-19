@@ -79,14 +79,6 @@
             "label": "Docking Files",
             "multiple": true,
             "tooltip": "Optional upload of docking results."
-        },
-        {
-            "key": "pvalue",
-            "type": "number",
-            "label": "pValue cutoff",
-            "placeholder": "e.g. 5",
-            "defaultValue": 7,
-            "tooltip": "Minimum pEC50 / pIC50 value to consider a compound active. We recommend a value of 7 for DTIGN and Ligospace."
         }
     ]
 }
