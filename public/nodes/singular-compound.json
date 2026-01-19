@@ -45,7 +45,7 @@
     },
     {
       "key": "concentration",
-      "type": "number",
+      "type": "text",
       "label": "Concentration",
       "suggestedField": [
         "concentration"
