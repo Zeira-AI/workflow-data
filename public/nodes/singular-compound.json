@@ -34,16 +34,24 @@
   ],
   "configSchema": [
     {
-      "key": "formula",
-      "type": [
-        "text",
-        "file"
+      "key": "ingredient_name",
+      "type": "text",
+      "label": "Ingredient Name",
+      "placeholder": "Enter a ingredient name...",
+      "suggestedField": [
+        "ingredient_name"
       ],
-      "label": "Formula",
-      "placeholder": "Select or upload a formula...",
-      "suggestedField": [],
-      "tooltip": "Select or upload a formula.\nSupported formats: **CSV**.",
-      "accept": ".csv"
+      "tooltip": "Enter a ingredient name."
+    },
+    {
+      "key": "concentration",
+      "type": "number",
+      "label": "Concentration",
+      "suggestedField": [
+        "concentration"
+      ],
+      "placeholder": "Enter a concentration...",
+      "tooltip": "Enter a concentration."
     },
     {
       "key": "claims",

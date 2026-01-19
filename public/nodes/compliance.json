@@ -22,10 +22,10 @@
   ],
   "defaultOutputs": [
     {
-      "id": "Compound_name",
-      "name": "Compound_name",
+      "id": "ingredient_name",
+      "name": "Ingredient_name",
       "type": "string",
-      "tooltip": "Name of the compound."
+      "tooltip": "Name of the ingredient."
     },
     {
       "id": "SMILES",
@@ -38,6 +38,12 @@
       "name": "Status",
       "type": "string",
       "tooltip": "Regulatory status: ALLOWED, RESTRICTED, or PROHIBITED."
+    },
+    {
+      "id": "concentration",
+      "name": "Concentration",
+      "type": "number",
+      "tooltip": "Concentration of the ingredient in the formulation as a percentage (e.g., 0.01, 0.05)."
     },
     {
       "id": "Max_concentration_(%_w/w)",
