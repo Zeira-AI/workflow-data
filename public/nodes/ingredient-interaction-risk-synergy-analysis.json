@@ -89,7 +89,7 @@
         }
       ],
       "defaultValue": "deepddi",
-      "tooltip": "DeepDDI - detailed, human-readable interaction predictions; Decagon - network-scale side effect & synergy modeling."
+      "tooltip": "**DeepDDI** - detailed, human-readable interaction predictions; \n **Decagon** - network-scale side effect & synergy modeling."
     },
     {
       "key": "analysisMode",
