@@ -1,6 +1,6 @@
-compound,tas2r14_ec50
-Denatonium benzoate,8.8
-Quinine,25.1
-Naringin,51.3
-Limonin,81.1
-Epicatechin gallate,>100
+compound,tas2r14_ic50,trpv1_ic50,trpa1_ic50
+Denatonium benzoate,8.8,12.0,7.5
+Quinine,25.1,30.1,12.2
+Naringin,51.3,53.1,15.2
+Limonin,81.1,18.3,22.6
+Epicatechin gallate,>100,99.1,>100

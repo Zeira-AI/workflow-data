@@ -4,7 +4,7 @@
     "category": "analysis",
     "icon": "activity",
     "color": "green",
-    "description": "Filter compound bioactivity (EC50) against TAS2R14 bitter taste receptor.",
+    "description": "Filter compound bioactivity (IC50) against TAS2R14, TRPV1, and TRPA1 receptors.",
     "pricing": {
         "credits": 800,
         "executionTime": 1
@@ -34,10 +34,22 @@
             "tooltip": "Compound identifier"
         },
         {
-            "id": "tas2r14_ec50",
-            "name": "TAS2R14 - EC50 (µM)",
+            "id": "tas2r14_ic50",
+            "name": "TAS2R14 - IC50 (µM)",
             "type": "string",
-            "tooltip": "EC50 for TAS2R14 (Assay: CHEMBL3309105)"
+            "tooltip": "IC50 for TAS2R14 (Assay: CHEMBL3887148)"
+        },
+        {
+            "id": "trpv1_ic50",
+            "name": "TRPV1 - IC50 (µM)",
+            "type": "string",
+            "tooltip": "IC50 for TRPV1 (Assay: CHEMBL4794)"
+        },
+        {
+            "id": "trpa1_ic50",
+            "name": "TRPA1 - IC50 (µM)",
+            "type": "string",
+            "tooltip": "IC50 for TRPA1 (Assay: CHEMBL1118499)"
         }
     ],
     "configSchema": [

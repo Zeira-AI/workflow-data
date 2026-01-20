@@ -1,5 +1,5 @@
 protein_target,biological_system,desired_modulation,corresponding_assay,metric_used,rationale_for_deterrence,crystalized_structure_available,chembl_id
-TAS2R14,Gustatory (bitter taste GPCR),Strong agonism,Cell-based TAS2R Ca²⁺ flux assay (HEK293 + Gα16),EC50,"Broadly tuned bitter receptor; strong activation produces an instinctive ""poison"" response, especially pronounced in children.",YES,CHEMBL3309105
-TAS2R38,Gustatory (bitter taste GPCR),Strong agonism,Ca²⁺ mobilization assay,EC50,Highly correlated with bitterness sensitivity; activation reliably causes rejection even at very low exposure.,NO,CHEMBL4523248
-TRPA1,Trigeminal (irritant sensor),"Brief, low-dose activation",Calcium influx assay (electrophilic agonists),EC50,"Produces sharp, unpleasant oral sensation (sting/irritation) without heat; effective at triggering immediate withdrawal.",YES,CHEMBL6007
+TAS2R14,Gustatory (bitter taste GPCR),Strong agonism,Fluorescence Polarization Assays,IC50,"Broadly tuned bitter receptor; strong activation produces an instinctive ""poison"" response, especially pronounced in children.",YES,CHEMBL3309105
+TAS2R38,Gustatory (bitter taste GPCR),Strong agonism,-,-,"Highly correlated with bitterness sensitivity; activation reliably causes rejection even at very low exposure.",NO,NO
+TRPA1,Trigeminal (irritant sensor),"Brief, low-dose activation",Calcium influx assay (electrophilic agonists),IC50,"Produces sharp, unpleasant oral sensation (sting/irritation) without heat; effective at triggering immediate withdrawal.",YES,CHEMBL6007
 TRPV1,Trigeminal (heat/pungency),Sub-threshold activation,Capsaicin-like Ca²⁺ influx assay,EC50,Mild pungency reinforces aversion but must remain below pain or panic thresholds for child safety.,YES,CHEMBL4794
