@@ -1,0 +1,143 @@
+{
+  "type": "claim-validation",
+  "label": "Claim Validation",
+  "category": "analysis",
+  "icon": "check-circle",
+  "color": "green",
+  "description": "Validate marketing and scientific claims against regulatory requirements across different markets.",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
+  "outputMockLabel": "20 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "ID",
+      "name": "ID",
+      "type": "string",
+      "tooltip": "Unique identifier for each claim validation result."
+    },
+    {
+      "id": "Proposed Claim",
+      "name": "Proposed Claim",
+      "type": "string",
+      "tooltip": "The marketing or scientific claim text being validated (e.g. \"Promotes hair growth\", \"Reduces hair fall\")."
+    },
+    {
+      "id": "Claim Type",
+      "name": "Claim Type",
+      "type": "string",
+      "tooltip": "Type of claim: \"Marketing\" for consumer-facing claims or \"Scientific\" for technical/evidence-based claims."
+    },
+    {
+      "id": "Market",
+      "name": "Market",
+      "type": "string",
+      "tooltip": "Target market/region for validation (e.g. \"EU\", \"US\", \"Japan\", \"China\")."
+    },
+    {
+      "id": "Validation Status",
+      "name": "Validation Status",
+      "type": "string",
+      "tooltip": "Overall validation result: \"VALID\" (approved), \"INVALID\" (not allowed), or \"CONDITIONALLY VALID\" (allowed with modifications)."
+    },
+    {
+      "id": "Claim Issue",
+      "name": "Claim Issue",
+      "type": "string",
+      "tooltip": "Specific regulatory issue identified with the claim (e.g. \"Drug-like wording\", \"Evidence gap\", \"Therapeutic implication\")."
+    },
+    {
+      "id": "Market-Specific Compliance Issue",
+      "name": "Market-Specific Compliance Issue",
+      "type": "string",
+      "tooltip": "Detailed explanation of the compliance problem specific to the target market's regulations."
+    },
+    {
+      "id": "Conditional Usage Rules",
+      "name": "Conditional Usage Rules",
+      "type": "string",
+      "tooltip": "Restrictions or conditions for using the claim if conditionally valid (e.g. \"Not allowed\", \"Allowed only with softened cosmetic wording\")."
+    },
+    {
+      "id": "Suggestion",
+      "name": "Suggestion",
+      "type": "string",
+      "tooltip": "Recommended action to make the claim compliant (e.g. \"Rewrite to appearance-based wording only\", \"Add ≥8-week human shedding-count study\")."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "available_evidence",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Available Evidence",
+      "placeholder": "Upload evidence documents supporting the claims...",
+      "required": true,
+      "tooltip": "Upload evidence documents supporting the claims (e.g. in vitro studies, ex vivo penetration studies, human biomarker studies). Supported formats: PDF, Word, TXT, CSV.",
+      "accept": ".pdf,.doc,.docx,.txt,.csv"
+    },
+    {
+      "key": "proposed_claim",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Proposed Claim",
+      "placeholder": "Enter claim text or upload a claim list...",
+      "suggestedField": [
+        "claim",
+        "proposed_claim"
+      ],
+      "tooltip": "Enter the marketing or scientific claim text directly (e.g. \"Promotes hair growth by strengthening scalp barrier\") or upload a file containing multiple claims.",
+      "accept": ".txt,.csv"
+    },
+    {
+      "key": "claim_type",
+      "type": "multiselect",
+      "label": "Claim Type",
+      "options": [
+        {
+          "value": "marketing",
+          "label": "Marketing claim"
+        },
+        {
+          "value": "scientific",
+          "label": "Scientific claim"
+        }
+      ],
+      "tooltip": "Select one or more claim types to validate. Marketing claims are consumer-facing, while scientific claims are technical/evidence-based."
+    },
+    {
+      "key": "region",
+      "type": "select",
+      "label": "Region",
+      "options": [
+        {
+          "value": "US",
+          "label": "US"
+        },
+        {
+          "value": "EU",
+          "label": "EU"
+        },
+        {
+          "value": "Japan",
+          "label": "Japan"
+        },
+        {
+          "value": "China",
+          "label": "China"
+        }
+      ],
+      "tooltip": "Select the target market/region for claim validation. Different regions have varying regulatory requirements for cosmetic and therapeutic claims."
+    }
+  ],
+  "defaultConfig": {
+    "claim_type": [],
+    "region": "US"
+  }
+}

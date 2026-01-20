@@ -1,22 +1,4 @@
 Pair,Predicted Interaction Signal,Risk Type (Dominant),Confidence,Flag
-Denatonium benzoate × Quinine,Moderate interaction detected,Additive irritation / exposure,0.64,MODERATE_RISK
-Denatonium benzoate × Caffeine,High interaction detected,Exposure escalation (systemic),0.71,HIGH_RISK
-Denatonium benzoate × Naringin,No significant interaction,Compatible,0.18,SAFE
-Denatonium benzoate × Limonin,No significant interaction,Compatible,0.22,SAFE
-Denatonium benzoate × Amarogentin,Moderate interaction detected,Additive irritation,0.69,MODERATE_RISK
-Denatonium benzoate × Salicin,No significant interaction,Compatible,0.20,SAFE
-Quinine × Caffeine,High interaction detected,CNS-related exposure concern,0.76,HIGH_RISK
-Quinine × Naringin,Moderate interaction detected,Metabolic interference,0.61,MODERATE_RISK
-Quinine × Limonin,No significant interaction,Compatible,0.24,SAFE
-Quinine × Amarogentin,High interaction detected,Additive bitterness / irritation,0.72,HIGH_RISK
-Quinine × Salicin,No significant interaction,Compatible,0.27,SAFE
-Caffeine × Naringin,Moderate interaction detected,Metabolic interaction,0.68,MODERATE_RISK
-Caffeine × Limonin,No significant interaction,Compatible,0.19,SAFE
-Caffeine × Amarogentin,High interaction detected,Exposure escalation,0.73,HIGH_RISK
-Caffeine × Salicin,No significant interaction,Compatible,0.23,SAFE
-Naringin × Limonin,No significant interaction,Compatible,0.16,SAFE
-Naringin × Amarogentin,Moderate interaction detected,Additive bitterness,0.58,MODERATE_RISK
-Naringin × Salicin,No significant interaction,Compatible,0.21,SAFE
-Limonin × Amarogentin,No significant interaction,Compatible,0.25,SAFE
-Limonin × Salicin,No significant interaction,Compatible,0.18,SAFE
-Amarogentin × Salicin,No significant interaction,Compatible,0.22,SAFE
+Vanillin + Ethyl vanillin,No adverse interaction predicted; shared metabolic and sensory pathways,Low risk (Redundancy),High,Monitor
+Vanillin + Ethyl maltol,No adverse interaction predicted; minimal pathway overlap,Low risk (Non-overlapping exposure),Medium–High,Green
+Ethyl vanillin + Ethyl maltol,Weak cumulative exposure signal,Low–Moderate risk (Exposure stacking),Medium,Caution

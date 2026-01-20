@@ -1,11 +1,10 @@
 ID,ingredient_name,INCI_name,CAS_number,supplier_count,sources
-1,Denatonium Benzoate,Denatonium Benzoate,3734-33-6,95,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Glycerin_Supplier_List.pdf
-2,Isopropyl Alcohol,Isopropyl Alcohol,67-63-0,300,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Hyaluronic_Acid_Supplier_List.pdf
-3,Ethanol,Alcohol,64-17-5,350,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Prickly_Pear_Seed_Oil_Supplier_List.pdf
-4,Citric Acid,Citric Acid,77-92-9,400,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Bakuchiol_Supplier_List.pdf
-5,Sodium Bicarbonate,Sodium Bicarbonate,144-55-8,280,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Ceramide_NP_Supplier_List.pdf
-6,Bitter Apple Extract,Pyrus Malus (Apple) Extract,85251-63-4,45,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Polysorbate_Supplier_List.pdf
-7,Grapefruit Seed Extract,Citrus Paradisi Seed Extract,90045-43-5,80,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Copper_Tripeptide-1_Supplier_List.pdf
-8,Lemon Extract,Citrus Limon (Lemon) Fruit Extract,84929-31-7,70,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Niacinamide_Supplier_List.pdf
-9,Glycerin,Glycerin,56-81-5,500,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Squalane_Supplier_List.pdf
-10,Purified Water,Aqua,7732-18-5,1000,https://workflow-data-2sa8.vercel.app/data/ingredient-search/Tetrahexyldecyl_Ascorbate_Supplier_List.pdf
+1,Cocoa Flavanol Extract,Theobroma cacao extract,N/A,35+,"Givaudan, Cyvex, World-way"
+2,Caffeine,Caffeine,58-08-2,70+,"PureBulk, NutriScience, Activ’Inside, Salius"
+3,Green Tea Extract,Camellia sinensis leaf extract,84650-60-2,65+,"Activ’Inside, NutraGroup Organic Ingredients, Arjuna Natural"
+4,Turmeric / Curcumin,Curcuma longa root extract,458-37-7,28+,"Arjuna Natural, NutraGroup Organic Ingredients, BioNutricia Extract"
+5,Vitamin C,Ascorbic acid,50-81-7,80+,"Vivion Nutraceuticals, 360 Ingredients, Nutriavenue"
+6,Ashwagandha Extract,Withania somnifera root extract,90147-43-2,22+,"Arjuna Natural, 360 Ingredients,  ProVitabio"
+7,Magnesium Citrate,Magnesium citrate,7775-41-9,42+,"ProVitabio, NutraGroup, PWRFOODS"
+8,Inulin (Prebiotic Fiber),Inulin,9005-80-5,45+,"BioNeutra, ProVitabio, Nutpharma"
+9,Probiotics (multi-strain),"Lacticaseibacillus rhamnosus, etc.",N/A,40+,"Salius, Chr. Hansen, DuPont, Danisco"

@@ -1,21 +1,25 @@
 ID,Proposed Claim,Claim Type,Market,Validation Status,Claim Issue,Market-Specific Compliance Issue,Conditional Usage Rules,Suggestion
-1,Prevents chewing,Marketing,EU,CONDITIONALLY VALID,Absolute behavioral claim,"Prevents" implies guaranteed behavioral outcome,Allowed only with non-absolute wording,Rewrite to "helps discourage chewing"
-2,Prevents chewing,Marketing,US,CONDITIONALLY VALID,Performance guarantee risk,Could be interpreted as guaranteed training outcome,Allowed with probabilistic language,Change to "designed to discourage chewing behavior"
-3,Prevents chewing,Marketing,Japan,INVALID,Overstated efficacy,Absolute outcome claims not permitted for pet products,Not allowed,Replace with indirect deterrence wording
-4,Prevents chewing,Marketing,China,INVALID,Misleading performance claim,Absolute claims considered deceptive advertising,Not allowed,Do not use; soften claim
-5,Discourages chewing,Marketing,EU,VALID,None,Acceptable behavioral deterrence wording,No restriction,No action needed
-6,Discourages chewing,Marketing,US,VALID,None,Common pet-product claim language,No restriction,No action needed
-7,Discourages chewing,Marketing,Japan,CONDITIONALLY VALID,Scope limitation,Must avoid implication of training or conditioning,Allowed with object-focused framing,Use "discourages chewing of treated surfaces"
-8,Discourages chewing,Marketing,China,VALID,None,Permitted functional description,No restriction,No action needed
-9,Bitter taste deters chewing,Functional,EU,VALID,None,Sensory mechanism description acceptable,No restriction,No action needed
-10,Bitter taste deters chewing,Functional,US,VALID,None,Mechanism-based claim allowed,No restriction,No action needed
-11,Bitter taste deters chewing,Functional,Japan,VALID,None,Sensory explanation permitted,No restriction,No action needed
-12,Bitter taste deters chewing,Functional,China,VALID,None,Ingredient-function linkage acceptable,No restriction,No action needed
-13,Trains pets not to chew,Marketing,EU,INVALID,Training / behavioral modification claim,Implies behavioral conditioning,Not allowed,Replace with passive deterrence wording
-14,Trains pets not to chew,Marketing,US,CONDITIONALLY VALID,Implied behavioral training,Could imply professional training outcome,Allowed only if reframed,Change to "supports deterrence during training"
-15,Trains pets not to chew,Marketing,Japan,INVALID,Behavioral control claim,Considered animal behavior intervention,Not allowed,Do not use
-16,Trains pets not to chew,Marketing,China,INVALID,Behavioral efficacy claim,Training claims restricted,Not allowed,Do not use
-17,Clinically proven to stop chewing,Marketing,EU,INVALID,Medical / evidence misuse,"Clinically proven" not applicable to consumer sprays,Not allowed,Remove claim entirely
-18,Clinically proven to stop chewing,Marketing,US,INVALID,Unsupported clinical claim,No recognized clinical endpoints,Not allowed,Do not use
-19,Clinically proven to stop chewing,Marketing,Japan,INVALID,Scientific substantiation claim,Considered misleading efficacy,Not allowed,Do not use
-20,Clinically proven to stop chewing,Marketing,China,INVALID,False scientific endorsement,Prohibited advertising language,Not allowed,Do not use
+1,Improves focus,Marketing,EU,CONDITIONALLY VALID,Absolute cognitive improvement,"Improves" implies guaranteed cognitive outcome,Allowed only with support / maintenance framing,Rewrite to "helps support focus"
+2,Improves focus,Marketing,US,CONDITIONALLY VALID,Performance enhancement risk,Could be interpreted as guaranteed mental performance,Allowed with subjective or probabilistic language,Change to "designed to support focus"
+3,Improves focus,Marketing,Japan,INVALID,Overstated cognitive efficacy,Cognitive improvement claims treated as quasi-medical,Not allowed,Replace with sensory or experience-based wording
+4,Improves focus,Marketing,China,INVALID,Misleading functional claim,Cognitive enhancement claims considered deceptive,Not allowed,Do not use; soften claim
+5,Supports focus,Marketing,EU,VALID,None,Acceptable general well-being wording,No restriction,No action needed
+6,Supports focus,Marketing,US,VALID,None,Common functional food phrasing,No restriction,No action needed
+7,Supports focus,Marketing,Japan,CONDITIONALLY VALID,Scope limitation,Must avoid implication of cognitive enhancement,Allowed with daily-life context,Use "supports focus during daily activities"
+8,Supports focus,Marketing,China,VALID,None,Permitted general functional description,No restriction,No action needed
+9,Helps maintain concentration,Marketing,EU,VALID,None,Maintenance framing acceptable,No restriction,No action needed
+10,Helps maintain concentration,Marketing,US,VALID,None,Widely accepted phrasing,No restriction,No action needed
+11,Helps maintain concentration,Marketing,Japan,CONDITIONALLY VALID,Context sensitivity,Must avoid clinical or academic performance implication,Allowed with situational framing,Use "helps maintain concentration while working or studying"
+12,Helps maintain concentration,Marketing,China,VALID,None,Acceptable functional phrasing,No restriction,No action needed
+13,Cocoa-derived caffeine supports alertness,Functional,EU,VALID,None,Ingredient–function linkage acceptable,No restriction,No action needed
+14,Cocoa-derived caffeine supports alertness,Functional,US,VALID,None,Mechanism-based food claim allowed,No restriction,No action needed
+15,Cocoa-derived caffeine supports alertness,Functional,Japan,VALID,None,Ingredient explanation permitted,No restriction,No action needed
+16,Cocoa-derived caffeine supports alertness,Functional,China,VALID,None,Acceptable ingredient-function description,No restriction,No action needed
+17,Enhances cognitive performance,Marketing,EU,INVALID,Broad cognitive enhancement claim,Considered medical / neurological implication,Not allowed,Remove claim entirely
+18,Enhances cognitive performance,Marketing,US,CONDITIONALLY VALID,Ambiguous cognitive benefit,Requires strong substantiation,Generally discouraged,Replace with "supports focus"
+19,Enhances cognitive performance,Marketing,Japan,INVALID,Cognitive function intervention,Treated as medical efficacy,Not allowed,Do not use
+20,Enhances cognitive performance,Marketing,China,INVALID,Misleading health claim,Cognitive enhancement restricted,Not allowed,Do not use
+21,Clinically proven to improve focus,Marketing,EU,INVALID,Scientific substantiation misuse,"Clinically proven" not appropriate for foods,Not allowed,Remove claim entirely
+22,Clinically proven to improve focus,Marketing,US,INVALID,Unsupported clinical claim,No recognized clinical endpoints,Not allowed,Do not use
+23,Clinically proven to improve focus,Marketing,Japan,INVALID,Scientific authority misuse,Considered misleading,Not allowed,Do not use
+24,Clinically proven to improve focus,Marketing,China,INVALID,False scientific endorsement,Prohibited advertising language,Not allowed,Do not use

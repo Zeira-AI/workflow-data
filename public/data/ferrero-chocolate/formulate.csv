@@ -1,10 +1,10 @@
-ID,INCI,Functions,Estimated Percent
-1,Purified water,Solvent / carrier,q.s. to 100
-2,Denatonium benzoate,Primary bitterant (active),2
-3,Amarogentin (plant extract),Secondary bitterant (active),10
-4,Tannic acid,Astringency / persistence aid,50
-5,Hydroxypropyl methylcellulose,Film former,300
-6,Glycerin,Humectant / adhesion,1.000
-7,Polysorbate 20,Solubilizer,150
-8,Sodium benzoate,Preservative,250
-9,Citric acid,pH adjuster,q.s. (pH 5.5–6.0)
+ID,Component,% w/w,Functional role
+1,Cocoa mass (liquor),60.00,Primary focus-active source: delivers caffeine + theobromine that increase alertness and attentional readiness
+2,Cocoa butter,12.00,"Controls melt and aroma release, supporting consistent sensory exposure"
+3,Sugar,17.30,Bitterness balancing to prevent distraction
+4,Inulin,5.00,Glycemic smoothing to avoid post-consumption attention crash
+5,Ethyl maltol,15,Bitterness suppression enabling higher cocoa (focus-active) load
+6,Vanillin,8,Olfactory calming that stabilizes attention during arousal
+7,Ethyl vanillin,3,High-impact aroma cue; kept low to avoid redundancy
+8,Sunflower lecithin,0.30,Matrix stability and uniform active distribution
+9,Sea salt,0.20,"Enhances cocoa perception, improving palatability"

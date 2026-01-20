@@ -1,6 +1,9 @@
-compound,tas2r14_ic50,trpv1_ic50,trpa1_ic50
-Denatonium benzoate,8.8,12.0,7.5
-Quinine,25.1,30.1,12.2
-Naringin,51.3,53.1,15.2
-Limonin,81.1,18.3,22.6
-Epicatechin gallate,>100,99.1,>100
+compound,chrm1_ac50,drd1_ac50
+Caffeine,2267.2,> 10000.0
+Theobromine,2939.3,
+(-)-Epicatechin,15092.8,> 10000.0
+Catechin,17726.0,
+Ethyl maltol,7261.4,
+L-Theanine,,44.2
+Vanillin,,340.0
+Ethyl vanillin,,510.0

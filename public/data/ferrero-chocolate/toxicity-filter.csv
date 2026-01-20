@@ -1,41 +1,39 @@
-compound,hia,caco_2,sol,logp,bbb,ppb,clearance,cyp_inhib,rm_risk,herg,geno,acute_tox,repeat_tox,dev_repro,endocrine,oral_irrit,volatile,decision
-Denatonium benzoate,Low,Low,High,1.2,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Quinine,Mod,Mod,Mod,2.8,Low,High,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS*
-Caffeine,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Neg,Neg,Low,Mod,No,No,Low,No,FAIL
-Naringin,Low,Low,Low,1.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Limonin,Low,Low,Low,2.3,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Amarogentin,Low,Low,Low,1.9,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Salicin,Mod,Low,High,−0.5,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,No,Low,No,PASS*
-Andrographolide,Low,Low,Low,2.1,No,Mod,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Moderate,No,PASS
-Catechin,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Epicatechin gallate,Low,Low,Low,1.3,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Sinigrin,Low,Low,High,−1.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Piperine,High,High,Low,2.9,Yes,High,Low,Yes,No,Weak,Neg,Mod,Mod,No,No,High,No,FAIL
-Capsaicin,Mod,Mod,Low,3.2,Yes,High,Low,Yes,No,Weak,Neg,High,Mod,No,No,High,No,FAIL
-Gingerol,Low,Low,Mod,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Shogaol,Mod,Mod,Low,2.8,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,High,No,PASS*
-Thymol,Mod,High,Low,3.3,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Carvacrol,Mod,High,Low,3.4,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Berberine,Low,Low,Low,1.5,No,Mod,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS
-Matrine,Mod,Low,High,1.1,No,Low,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Strychnine,High,High,Mod,2.6,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
-Brucine,High,High,Mod,2.9,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
-Nicotine,High,High,High,1.2,Yes,Low,Mod,Yes,No,Pos,Neg,High,Mod,Yes,No,Mod,Yes,FAIL
-Aconitine,High,High,Low,3.1,Yes,High,Low,Yes,Yes,Pos,Pos,Extreme,Extreme,Yes,No,High,No,FAIL
-Solanine,Mod,Low,Low,1.8,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
-Tomatine,Mod,Low,Low,1.9,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
-Safrole,High,High,Mod,2.7,Yes,Mod,Low,Yes,Yes,Neg,Pos,Mod,Mod,Yes,Yes,Mod,Yes,FAIL
-Eugenol,Mod,High,Mod,2.1,Yes,Mod,Low,Yes,No,Weak,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Allicin,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,High,Yes,PASS
-Isohumulone,Low,Low,Low,2.5,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Humulone,Low,Low,Low,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Tannic acid,Low,Low,High,0.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Ellagic acid,Low,Low,Low,0.7,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Arbutin,Mod,Low,High,−0.3,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,Possible,Low,No,PASS*
-Glycyrrhizin,Low,Low,Low,1.2,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,Yes,Yes,Low,No,PASS*
-Theobromine,Mod,Mod,High,−0.1,Yes,Low,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Low,No,FAIL
-Theophylline,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Pos,Neg,Mod,Mod,No,No,Low,No,FAIL
-Cucurbitacin B,Low,Low,Low,2.0,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,No,High,No,FAIL
-Picroside I,Low,Low,High,0.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Glycoalkaloid mix,Var,Var,Var,Var,Var,Var,Var,Yes,Yes,Pos,Pos,High,High,Yes,Possible,High,No,FAIL
-Resin acids,Low,Low,Low,2.7,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,Mod,Yes,PASS*
+Compound,HIA,Caco-2,Sol.,logP,logBB,PPB,Cl,CYP IC₅₀,hERG IC₅₀,Ames,LD₅₀,NOAEL,Oral irrit.,Decision
+Caffeine,0.99,25,21.7,−0.1,−0.1,35,15,>100,>100,0.02,190,150,1.2,Advance
+Theobromine,0.85,12,3.5,−0.1,−0.8,25,18,>100,>100,0.01,950,300,0.8,Advance
+Theophylline,0.95,22,8.0,−0.1,−0.2,40,10,45,>100,0.03,220,80,1.5,Reformulate
+(-)-Epicatechin,0.18,1.0,0.04,1.2,−1.6,85,20,>100,>100,0.04,2000,300,0.6,Advance
+Catechin,0.20,1.2,0.05,1.1,−1.5,82,18,>100,>100,0.04,1800,250,0.6,Advance
+Quercetin,0.22,1.1,2,2.0,−1.5,99,6,8.5,>100,0.08,161,50,1.5,Reformulate
+L-Theanine,0.90,6,50.0,−2.0,−1.2,10,20,>100,>100,0.01,5000,1000,0.3,Advance
+Vanillin,0.95,18,25.0,1.2,−1.1,30,25,>100,>100,0.02,1580,300,0.5,Advance
+Ethyl vanillin,0.96,20,15.0,1.6,−1.0,35,22,>100,>100,0.02,1800,350,0.6,Advance
+Maltol,0.92,14,40.0,0.0,−1.3,15,30,>100,>100,0.01,1400,400,0.4,Advance
+Ethyl maltol,0.94,15,18.0,1.1,−1.1,25,28,>100,>100,0.01,1600,450,0.4,Advance
+Menthol,0.75,18,0.4,3.4,−0.5,95,12,>100,>100,0.03,3300,200,4.8,Reformulate
+Menthone,0.72,17,0.3,3.1,−0.6,92,14,>100,>100,0.03,2400,180,4.2,Reformulate
+Limonene,0.70,20,0.01,4.5,−0.3,98,25,>100,>100,0.02,4400,300,3.8,Reformulate
+Linalool,0.78,16,0.2,2.7,−0.8,80,22,>100,>100,0.02,2800,250,2.2,Advance
+Geraniol,0.76,15,0.15,3.0,−0.7,82,20,>100,>100,0.02,3600,300,2.0,Advance
+Phenethyl alcohol,0.95,22,22.0,1.4,−1.0,55,28,>100,>100,0.02,1800,400,0.7,Advance
+Benzyl alcohol,0.93,21,40.0,1.1,−1.1,50,30,>100,>100,0.02,1230,300,0.8,Advance
+γ-Decalactone,0.68,19,0.05,4.2,−0.4,96,14,>100,>100,0.03,3500,200,2.8,Reformulate
+δ-Octalactone,0.70,18,0.08,3.8,−0.5,94,16,>100,>100,0.03,3200,220,2.6,Reformulate
+Acetylpyrazine,0.98,24,60.0,0.4,−1.4,20,35,>100,>100,0.01,2000,500,0.4,Advance
+Trimethylpyrazine,0.97,23,55.0,0.6,−1.3,25,33,>100,>100,0.01,1800,450,0.4,Advance
+2,3-Butanedione,0.99,26,miscible,−0.3,−1.6,5,40,>100,>100,0.10,3000,50,3.5,Reformulate
+Acetoin,0.98,25,miscible,−0.2,−1.5,8,38,>100,>100,0.02,4000,600,0.6,Advance
+Phenylalanine,0.85,2,27.0,−1.4,−1.8,15,35,>100,>100,0.01,1700,800,0.3,Advance
+Tryptophan,0.80,1.5,11.0,−1.1,−1.6,25,25,>100,>100,0.01,1600,600,0.4,Advance
+Tyrosine,0.78,1.2,2.5,−2.0,−1.9,10,30,>100,>100,0.01,1800,700,0.3,Advance
+Sucralose,0.15,0.4,280,−1.0,−2.0,5,5,>100,>100,0.01,16000,5000,0.2,Advance
+Steviol glycoside (mock),0.12,0.3,0.6,3.5,−1.9,98,4,>100,>100,0.02,15000,4000,0.4,Advance
+Glycine,0.95,1.0,250,−3.2,−2.2,5,45,>100,>100,0.00,8000,2000,0.1,Advance
+Alanine,0.94,1.1,165,−2.5,−2.1,5,42,>100,>100,0.00,6000,1800,0.1,Advance
+Proline,0.92,0.9,150,−1.6,−2.0,8,40,>100,>100,0.00,5000,1500,0.2,Advance
+Citral,0.75,18,0.2,3.0,−0.6,85,20,>100,>100,0.03,3000,200,3.0,Reformulate
+Eugenol,0.80,17,0.6,2.5	−0.7,90,18	>100	>100	0.03	2650	300	2.6	Reformulate
+Anethole,0.78,19,0.1,4.0,−0.5,95,16,>100,>100,0.02,2100,250,2.4,Reformulate
+Piperonal,0.82,14,3.5,2.0,−1.0,65,22,>100,>100,0.02,1500,400,0.9,Advance
+Coumarin,0.95,20,2.0,1.5,−0.4,70,12,15,>100,0.05,275,50,1.0,Reformulate
+Hexanal,0.96,23,miscible,1.8,−1.2,30,35,>100,>100,0.02,4900,500,2.0,Advance
