@@ -13,28 +13,28 @@
   "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "id",
-      "name": "id",
+      "id": "ID",
+      "name": "ID",
       "type": "string",
       "description": "Formulation ID"
     },
     {
-      "id": "inci",
-      "name": "INCI",
+      "id": "Component",
+      "name": "Component",
       "type": "string",
-      "description": "INCI name"
+      "description": "Component name"
     },
     {
-      "id": "functions",
-      "name": "Functions",
+      "id": "% w/w",
+      "name": "% w/w",
       "type": "string",
-      "description": "Functions of the ingredient in the formulation"
+      "description": "Percentage by weight"
     },
     {
-      "id": "estimatedPercent",
-      "name": "Estimated Percent",
+      "id": "Functional role",
+      "name": "Functional role",
       "type": "string",
-      "description": "Estimated percentage of the ingredient in the formulation"
+      "description": "Functional role of the component"
     }
   ],
   "configSchema": [

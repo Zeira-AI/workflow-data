@@ -1,0 +1,127 @@
+{
+  "type": "ingredient-interaction-risk-synergy-analysis",
+  "label": "Ingredient interaction & Risk synergy analysis",
+  "category": "analysis",
+  "icon": "alert-triangle",
+  "color": "red",
+  "description": "Analyze synergistic effects and safety risks of ingredient pairs by combining compound-SMILES pairs",
+  "outputMockLabel": "3 pairs",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
+  "defaultInputs": [
+    {
+      "id": "compoundList",
+      "name": "Compound List",
+      "type": "array",
+      "required": true,
+      "description": "List of compounds with SMILES strings",
+      "tooltip": "Input table of compounds with names and SMILES strings. The module will analyze all possible pairs for synergistic effects and safety risks."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "Pair",
+      "name": "Pair",
+      "type": "string",
+      "tooltip": "The pair of compounds being analyzed (e.g., 'Compound A + Compound B')."
+    },
+    {
+      "id": "Predicted_Interaction_Signal",
+      "name": "Predicted Interaction Signal",
+      "type": "string",
+      "tooltip": "The predicted interaction signal indicating the type of synergistic effect or interaction between the compound pair."
+    },
+    {
+      "id": "Risk_Type_(Dominant)",
+      "name": "Risk Type (Dominant)",
+      "type": "string",
+      "tooltip": "The dominant risk type associated with the compound pair interaction (e.g., 'Toxicity', 'Allergenicity', 'Irritation')."
+    },
+    {
+      "id": "Confidence",
+      "name": "Confidence",
+      "type": "number",
+      "tooltip": "Confidence score for the predicted interaction and risk assessment (typically 0-1 or 0-100)."
+    },
+    {
+      "id": "Flag",
+      "name": "Flag",
+      "type": "string",
+      "tooltip": "Flag indicating the severity or action required (e.g., 'HIGH_RISK', 'MODERATE_RISK', 'LOW_RISK', 'SAFE')."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "compoundListText",
+      "type": "text",
+      "label": "Compound List (Paste)",
+      "placeholder": "Compound A,SMILES_A\nCompound B,SMILES_B\n...",
+      "tooltip": "Paste compound names and SMILES strings, one per line, separated by comma. Format: CompoundName,SMILES",
+      "suggestedField": [
+        "name",
+        "Compound_name",
+        "Compound",
+        "SMILES",
+        "smiles"
+      ]
+    },
+    {
+      "key": "compoundFile",
+      "type": "file",
+      "label": "Upload Compound File",
+      "accept": ".csv,.txt",
+      "tooltip": "Upload a CSV or TXT file containing compound names and SMILES strings. Required columns: compound name/identifier and SMILES."
+    },
+    {
+      "key": "model",
+      "type": "select",
+      "label": "Model",
+      "options": [
+        {
+          "value": "deepddi",
+          "label": "DeepDDI"
+        },
+        {
+          "value": "decagon",
+          "label": "Decagon"
+        }
+      ],
+      "defaultValue": "deepddi",
+      "tooltip": "**DeepDDI** - detailed, human-readable interaction predictions; \n **Decagon** - network-scale side effect & synergy modeling."
+    },
+    {
+      "key": "analysisMode",
+      "type": "select",
+      "label": "Analysis Mode",
+      "options": [
+        {
+          "value": "all_pairs",
+          "label": "All Pairs (Exhaustive)"
+        },
+        {
+          "value": "selected_pairs",
+          "label": "Selected Pairs Only"
+        }
+      ],
+      "defaultValue": "all_pairs",
+      "tooltip": "Choose whether to analyze all possible compound pairs or only selected pairs."
+    },
+    {
+      "key": "riskThreshold",
+      "type": "number",
+      "label": "Risk Threshold",
+      "placeholder": "e.g., 0.7",
+      "defaultValue": 0.5,
+      "tooltip": "Minimum confidence threshold for flagging high-risk interactions (0-1 scale)."
+    },
+    {
+      "key": "includeLowRisk",
+      "type": "boolean",
+      "label": "Include Low Risk Pairs",
+      "defaultValue": true,
+      "tooltip": "Include pairs with low risk scores in the output results."
+    }
+  ]
+}

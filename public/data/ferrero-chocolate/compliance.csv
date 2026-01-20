@@ -1,19 +1,11 @@
 id;ingredient_name;inci_name;cas_number;concentration;market;regulatory_status;restriction_type;max_allowed_concentration;reason;regulation_source;last_regulation_update
-1;Purified Water;Aqua;7732-18-5;q.s. to 100%;EU;PASS;Permitted;No limit;Inert carrier, no regulatory restriction;EU General Product Safety Regulation (GPSR);2024-01
-2;Purified Water;Aqua;7732-18-5;q.s. to 100%;US;PASS;Permitted;No limit;Inert carrier, no restriction;US CPSC Consumer Product Safety;2023-10
-3;Denatonium Benzoate;Denatonium Benzoate;3734-33-6;2%;EU;PASS;Restricted;Typical use ≤0.01%;Bitterant allowed for deterrent use, toxicity via ingestion mitigated by aversion;ECHA / EU CLP Guidance;2024-02
-4;Denatonium Benzoate;Denatonium Benzoate;3734-33-6;2%;US;PASS;Restricted;Typical use ≤0.01%;Widely used aversive agent in consumer products;EPA / CPSC Guidance;2023-11
-5;Amarogentin (Plant Extract);Gentiana Lutea Root Extract;5087-96-5;0.10%;EU;PASS;Permitted;No specific limit;Botanical bitter compound, low dermal exposure risk;ECHA Botanical Substances Inventory;2024-01
-6;Amarogentin (Plant Extract);Gentiana Lutea Root Extract;5087-96-5;0.10%;US;PASS;Permitted;No specific limit;Non-volatile plant extract, surface application only;FDA Inactive Ingredient Database (reference);2023-12
-7;Tannic Acid;Tannic Acid;1401-55-4;0.50%;EU;PASS;Restricted;≤1.0% (surface products);Astringent, irritation possible at higher levels;ECHA Substance Evaluation;2024-02
-8;Tannic Acid;Tannic Acid;1401-55-4;0.50%;US;PASS;Restricted;≤1.0% (surface products);Acceptable for non-skin consumer products;EPA / CPSC Guidance;2023-11
-9;Hydroxypropyl Methylcellulose;Hydroxypropyl Methylcellulose;9004-65-3;0.30%;EU;PASS;Permitted;No limit;Film former, inert polymer;EU REACH;2024-01
-10;Hydroxypropyl Methylcellulose;Hydroxypropyl Methylcellulose;9004-65-3;0.30%;US;PASS;Permitted;No limit;Generally recognized as safe polymer;FDA Inactive Ingredient Database;2023-12
-11;Glycerin;Glycerin;56-81-5;1.00%;EU;PASS;Permitted;No limit;Humectant, non-hazardous;EU REACH;2024-01
-12;Glycerin;Glycerin;56-81-5;1.00%;US;PASS;Permitted;No limit;Low toxicity, widely used;FDA / CPSC Guidance;2023-10
-13;Polysorbate 20;Polysorbate 20;9005-64-5;0.15%;EU;PASS;Permitted;No specific limit;Solubilizer, low dermal exposure;EU REACH;2024-01
-14;Polysorbate 20;Polysorbate 20;9005-64-5;0.15%;US;PASS;Permitted;No specific limit;Approved nonionic surfactant;FDA Inactive Ingredient Database;2023-12
-15;Sodium Benzoate;Sodium Benzoate;532-32-1;0.25%;EU;PASS;Restricted;≤0.5%;Preservative allowed in surface products;EU Biocidal Products Regulation;2024-02
-16;Sodium Benzoate;Sodium Benzoate;532-32-1;0.25%;US;PASS;Permitted;No specific limit;Common preservative, low toxicity;EPA / FDA Guidance;2023-11
-17;Citric Acid;Citric Acid;77-92-9;q.s. (pH 5.5–6.0);EU;PASS;Permitted;No limit;pH adjustment, low irritation at final pH;EU REACH;2024-01
-18;Citric Acid;Citric Acid;77-92-9;q.s. (pH 5.5–6.0);US;PASS;Permitted;No limit;pH adjuster, safe at low levels;FDA / CPSC Guidance;2023-10
+1;Cocoa mass (liquor);Theobroma Cacao (Cocoa) Seed Paste;84649-99-0;60.00;US / EU;Allowed;None;Not specified;Conventional food ingredient;FDA / EFSA;2023
+2;Cocoa butter;Theobroma Cacao (Cocoa) Seed Butter;8002-31-1;12.00;US / EU;Allowed;None;Not specified;Conventional food fat;FDA / EFSA;2023
+3;Sugar (cane);Sucrose;57-50-1;17.30;US / EU;Allowed;None;Not specified;Conventional sweetener;FDA / EFSA;2023
+4;Inulin;Inulin;9005-80-5;5.00;US / EU;Allowed (GRAS / Novel Food cleared);Labeling (fiber claim);Not specified;Dietary fiber; GI tolerance considerations;FDA / EFSA;2022
+5;Ethyl maltol;Ethyl Maltol;4940-11-8;15;US / EU;Allowed;Use level guidance;GMP / flavoring use;Flavoring substance;FEMA / EFSA;2022
+6;Vanillin;Vanillin;121-33-5;8;US / EU;Allowed;Use level guidance;GMP / flavoring use;Flavoring substance;FEMA / EFSA;2022
+7;Ethyl vanillin;Ethyl Vanillin;121-32-4;3;US / EU;Allowed;Use level guidance;GMP / flavoring use;Flavoring substance;FEMA / EFSA;2022
+8;Sunflower lecithin;Lecithins;8002-43-5;0.30;US / EU;Allowed;None;Not specified;Emulsifier (E322);FDA / EFSA;2023
+9;Sea salt;Sodium Chloride;7647-14-5;0.20;US / EU;Allowed;None;Not specified;Conventional seasoning;FDA / EFSA;2023
+10;Cocoa methylxanthines (naturally occurring);Caffeine (natural constituent);58-08-2;~0.10*;US / EU;Allowed (natural occurrence);Advisory (labeling);No fixed limit (food);Consumer sensitivity to caffeine;FDA / EFSA;2024
