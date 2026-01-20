@@ -1,0 +1,78 @@
+{
+    "type": "bioactivity-filter",
+    "label": "Bioactivity Filter",
+    "category": "analysis",
+    "icon": "activity",
+    "color": "green",
+    "description": "Filter compound bioactivity (EC50) against TAS2R14 bitter taste receptor.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "5 compounds",
+    "defaultInputs": [
+        {
+            "id": "compoundList",
+            "name": "Compound List",
+            "type": "array",
+            "required": true,
+            "tooltip": "Input table of compounds (IDs and SMILES) to score."
+        },
+        {
+            "id": "targetList",
+            "name": "Target List",
+            "type": "array",
+            "required": true,
+            "tooltip": "Targets or assays (EC50 / IC50) that bioactivity should be predicted against."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "compound",
+            "name": "Compound",
+            "type": "string",
+            "tooltip": "Compound identifier"
+        },
+        {
+            "id": "tas2r14_ec50",
+            "name": "TAS2R14 - EC50 (µM)",
+            "type": "string",
+            "tooltip": "EC50 for TAS2R14 (Assay: CHEMBL3309105)"
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "dockingListText",
+            "type": "text",
+            "label": "Compound-Target Docking List",
+            "tooltip": "Input the compound-target docking for bioactivity prediction",
+            "suggestedField": [
+                "docked_structure"
+            ]
+        },
+        {
+            "key": "modelType",
+            "type": "select",
+            "label": "Available Tools",
+            "options": [
+                {
+                    "value": "dtign",
+                    "label": "DTIGN - Best for fast predictions"
+                },
+                {
+                    "value": "ligospace",
+                    "label": "Ligospace - Best for accurate predictions"
+                }
+            ],
+            "defaultValue": "Ligospace",
+            "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
+        },
+        {
+            "key": "dockingFiles",
+            "type": "file",
+            "label": "Docking Files",
+            "multiple": true,
+            "tooltip": "Optional upload of docking results."
+        }
+    ]
+}
