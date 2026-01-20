@@ -1,0 +1,294 @@
+{
+    "type": "toxicity-filter",
+    "label": "Toxicity Filter",
+    "category": "analysis",
+    "icon": "filtericon",
+    "color": "red",
+    "description": "Filter compounds based on ADMET properties and specific toxicity risks (Ferrero specific).",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "38 compounds",
+    "defaultInputs": [
+        {
+            "id": "input-mol-data",
+            "name": "Input Compounds",
+            "type": "array",
+            "required": true,
+            "tooltip": "Table of compounds."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "compound",
+            "name": "Compound",
+            "type": "string"
+        },
+        {
+            "id": "hia",
+            "name": "HIA",
+            "type": "string",
+            "tooltip": "Human Intestinal Absorption"
+        },
+        {
+            "id": "caco_2",
+            "name": "Caco-2",
+            "type": "string",
+            "tooltip": "Caco-2 permeability"
+        },
+        {
+            "id": "sol",
+            "name": "Solubility",
+            "type": "string"
+        },
+        {
+            "id": "logp",
+            "name": "logP",
+            "type": "number"
+        },
+        {
+            "id": "bbb",
+            "name": "BBB",
+            "type": "string",
+            "tooltip": "Blood-Brain Barrier penetration"
+        },
+        {
+            "id": "ppb",
+            "name": "PPB",
+            "type": "string",
+            "tooltip": "Plasma Protein Binding"
+        },
+        {
+            "id": "clearance",
+            "name": "Clearance",
+            "type": "string"
+        },
+        {
+            "id": "cyp_inhib",
+            "name": "CYP Inhib.",
+            "type": "string",
+            "tooltip": "Cytochrome P450 inhibition"
+        },
+        {
+            "id": "rm_risk",
+            "name": "RM Risk",
+            "type": "string",
+            "tooltip": "Reactive Metabolite risk"
+        },
+        {
+            "id": "herg",
+            "name": "hERG",
+            "type": "string",
+            "tooltip": "hERG channel inhibition (cardiotoxicity)"
+        },
+        {
+            "id": "geno",
+            "name": "Genotoxicity",
+            "type": "string"
+        },
+        {
+            "id": "acute_tox",
+            "name": "Acute Tox",
+            "type": "string"
+        },
+        {
+            "id": "repeat_tox",
+            "name": "Repeat Tox",
+            "type": "string"
+        },
+        {
+            "id": "dev_repro",
+            "name": "Dev/Repro",
+            "type": "string",
+            "tooltip": "Developmental/Reproductive toxicity"
+        },
+        {
+            "id": "endocrine",
+            "name": "Endocrine",
+            "type": "string"
+        },
+        {
+            "id": "oral_irrit",
+            "name": "Oral Irrit.",
+            "type": "string"
+        },
+        {
+            "id": "volatile",
+            "name": "Volatile",
+            "type": "string"
+        },
+        {
+            "id": "decision",
+            "name": "Decision",
+            "type": "string"
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "ingredientListText",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Compound List",
+            "accept": ".csv,.txt,.smi"
+        },
+        {
+            "key": "logp_range",
+            "type": "range",
+            "label": "logP Range",
+            "defaultValue": [
+                -2,
+                4.0
+            ],
+            "tooltip": "Partition coefficient range (min - max)."
+        },
+        {
+            "key": "hia_filter",
+            "type": "multiselect",
+            "label": "HIA Filter",
+            "options": [
+                {
+                    "value": "Low",
+                    "label": "Low"
+                },
+                {
+                    "value": "Mod",
+                    "label": "Moderate"
+                },
+                {
+                    "value": "High",
+                    "label": "High"
+                }
+            ],
+            "defaultValue": [
+                "Low",
+                "Mod",
+                "High"
+            ],
+            "tooltip": "Allowed Human Intestinal Absorption levels."
+        },
+        {
+            "key": "bbb_filter",
+            "type": "multiselect",
+            "label": "BBB Filter",
+            "options": [
+                {
+                    "value": "Yes",
+                    "label": "Yes (Penetrates)"
+                },
+                {
+                    "value": "No",
+                    "label": "No"
+                },
+                {
+                    "value": "Low",
+                    "label": "Low"
+                }
+            ],
+            "defaultValue": [
+                "No",
+                "Low"
+            ],
+            "tooltip": "Allowed Blood-Brain Barrier penetration levels."
+        },
+        {
+            "key": "geno_filter",
+            "type": "multiselect",
+            "label": "Genotoxicity Filter",
+            "options": [
+                {
+                    "value": "Neg",
+                    "label": "Negative"
+                },
+                {
+                    "value": "Pos",
+                    "label": "Positive"
+                }
+            ],
+            "defaultValue": [
+                "Neg"
+            ],
+            "tooltip": "Allowed genotoxicity outcomes."
+        },
+        {
+            "key": "acute_tox_filter",
+            "type": "multiselect",
+            "label": "Acute Toxicity Filter",
+            "options": [
+                {
+                    "value": "Low",
+                    "label": "Low"
+                },
+                {
+                    "value": "Mod",
+                    "label": "Moderate"
+                },
+                {
+                    "value": "High",
+                    "label": "High"
+                },
+                {
+                    "value": "Extreme",
+                    "label": "Extreme"
+                }
+            ],
+            "defaultValue": [
+                "Low",
+                "Mod"
+            ],
+            "tooltip": "Allowed acute toxicity levels."
+        },
+        {
+            "key": "herg_filter",
+            "type": "multiselect",
+            "label": "hERG Filter",
+            "options": [
+                {
+                    "value": "Neg",
+                    "label": "Negative"
+                },
+                {
+                    "value": "Weak",
+                    "label": "Weak"
+                },
+                {
+                    "value": "Pos",
+                    "label": "Positive"
+                }
+            ],
+            "defaultValue": [
+                "Neg",
+                "Weak"
+            ],
+            "tooltip": "Allowed hERG inhibition levels."
+        }
+    ],
+    "defaultConfig": {
+        "logp_range": [
+            -2,
+            4.0
+        ],
+        "hia_filter": [
+            "Low",
+            "Mod",
+            "High"
+        ],
+        "bbb_filter": [
+            "No",
+            "Low"
+        ],
+        "geno_filter": [
+            "Neg"
+        ],
+        "acute_tox_filter": [
+            "Low",
+            "Mod"
+        ],
+        "herg_filter": [
+            "Neg",
+            "Weak"
+        ]
+    }
+}
