@@ -1,0 +1,128 @@
+{
+    "type": "compliance",
+    "label": "Compliance Check",
+    "category": "analysis",
+    "icon": "shield-check",
+    "color": "blue",
+    "description": "Check ingredient/formula compliance against global market regulations (Ferrero specific)",
+    "outputMockLabel": "18 compounds",
+    "pricing": {
+        "credits": 0,
+        "executionTime": 1
+    },
+    "defaultInputs": [
+        {
+            "id": "data",
+            "name": "Input Data",
+            "type": "array",
+            "required": false,
+            "description": "Connect data from upstream node",
+            "tooltip": "Connect output from upstream node."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "id",
+            "name": "ID",
+            "type": "string"
+        },
+        {
+            "id": "ingredient_name",
+            "name": "Ingredient Name",
+            "type": "string"
+        },
+        {
+            "id": "inci_name",
+            "name": "INCI Name",
+            "type": "string"
+        },
+        {
+            "id": "cas_number",
+            "name": "CAS Number",
+            "type": "string"
+        },
+        {
+            "id": "concentration",
+            "name": "Concentration",
+            "type": "string"
+        },
+        {
+            "id": "market",
+            "name": "Market",
+            "type": "string"
+        },
+        {
+            "id": "regulatory_status",
+            "name": "Regulatory Status",
+            "type": "string"
+        },
+        {
+            "id": "restriction_type",
+            "name": "Restriction Type",
+            "type": "string"
+        },
+        {
+            "id": "max_allowed_concentration",
+            "name": "Max Allowed Concentration",
+            "type": "string"
+        },
+        {
+            "id": "reason",
+            "name": "Reason",
+            "type": "string"
+        },
+        {
+            "id": "regulation_source",
+            "name": "Regulation Source",
+            "type": "string"
+        },
+        {
+            "id": "last_regulation_update",
+            "name": "Last Regulation Update",
+            "type": "string"
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "ingredientList",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Ingredient List",
+            "accept": ".txt,.csv"
+        },
+        {
+            "key": "referenceProduct",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Similar Product (Link/Name)"
+        },
+        {
+            "key": "market",
+            "type": "multiselect",
+            "label": "Market",
+            "options": [
+                {
+                    "value": "GLOBAL",
+                    "label": "Global / All Markets"
+                },
+                {
+                    "value": "EU",
+                    "label": "European Union"
+                },
+                {
+                    "value": "US",
+                    "label": "United States"
+                }
+            ]
+        }
+    ],
+    "defaultConfig": {
+        "market": [
+            "GLOBAL"
+        ]
+    }
+}
