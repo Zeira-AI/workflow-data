@@ -1,2 +1,2 @@
-report_id,report_name,report_type,category,application,reference_url,notes
-RPT-001,"Croda Hair Growth Report","External Report","Hair Growth","Formulation & Claim Validation","https://drive.google.com/file/d/1B9K9CPgzYCzGEU6mtsGz7yf6rQdMPp9D/view?usp=sharing","Reference document for deterrent formulation strategy"
+report_id,report_name,report_type,category,application,reference_url
+RPT-001,Ferrero,External Report,Toy-coating spray,Formulation & Claim Validation,https://drive.google.com/file/d/1B9K9CPgzYCzGEU6mtsGz7yf6rQdMPp9D/view?usp=sharing
