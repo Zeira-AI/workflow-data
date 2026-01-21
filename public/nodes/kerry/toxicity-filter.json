@@ -153,24 +153,24 @@
       "accept": ".csv,.txt,.smi"
     },
     {
-      "key": "admet_models",
+      "key": "model",
       "type": "select",
-      "label": "Admet Prediction Models",
+      "label": "Model",
       "options": [
         {
-          "value": "admet_ai",
-          "label": "Admet AI - best for fast predictions"
-        },
-        {
           "value": "swiss_adme",
-          "label": "SwissADME - best for accurate predictions"
+          "label": "SwissADME"
         },
         {
-          "value": "toxtree",
-          "label": "ToxTree - best for comprehensive predictions"
+          "value": "admet_ai",
+          "label": "ADMET-AI"
+        },
+        {
+          "value": "preadmet",
+          "label": "preADMET"
         }
       ],
-      "tooltip": "Choose which ADMET engine to use; models trade off speed vs. detail."
+      "tooltip": "Choose which ADMET prediction model to use."
     },
     {
       "key": "logp_range",

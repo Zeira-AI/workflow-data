@@ -152,6 +152,26 @@
             "accept": ".csv,.txt,.smi"
         },
         {
+            "key": "model",
+            "type": "select",
+            "label": "Model",
+            "options": [
+                {
+                    "value": "swiss_adme",
+                    "label": "SwissADME"
+                },
+                {
+                    "value": "admet_ai",
+                    "label": "ADMET-AI"
+                },
+                {
+                    "value": "preadmet",
+                    "label": "preADMET"
+                }
+            ],
+            "tooltip": "Choose which ADMET prediction model to use."
+        },
+        {
             "key": "hia_filter",
             "type": "multiselect",
             "label": "HIA Filter",
