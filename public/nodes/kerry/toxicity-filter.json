@@ -170,7 +170,7 @@
           "label": "preADMET"
         }
       ],
-      "tooltip": "Choose which ADMET prediction model to use."
+      "tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
     },
     {
       "key": "logp_range",
