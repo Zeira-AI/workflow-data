@@ -10,6 +10,7 @@
     "executionTime": 1
   },
   "outputMockLabel": "27 compounds",
+  "outputPageSize": 5,
   "defaultInputs": [
     {
       "id": "compoundList",

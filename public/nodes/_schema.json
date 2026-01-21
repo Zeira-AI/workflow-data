@@ -44,6 +44,11 @@
       "type": "string",
       "description": "Optional: mock label for output count display (e.g., '24 items', '20 compounds')"
     },
+    "outputPageSize": {
+      "type": "integer",
+      "description": "Number of items per page in output table display (default: 10)",
+      "minimum": 1
+    },
     "defaultInputs": {
       "type": "array",
       "description": "Default input ports for the node",
