@@ -2,3 +2,15 @@ Pair,Predicted Interaction Signal,Risk Type (Dominant),Confidence,Flag
 Vanillin + Ethyl vanillin,No adverse interaction predicted; shared metabolic and sensory pathways,Low risk (Redundancy),High,Monitor
 Vanillin + Ethyl maltol,No adverse interaction predicted; minimal pathway overlap,Low risk (Non-overlapping exposure),Medium–High,Green
 Ethyl vanillin + Ethyl maltol,Weak cumulative exposure signal,Low–Moderate risk (Exposure stacking),Medium,Caution
+Vanillin × Cocoa mass,Strong affinity for cocoa polyphenols; gradual aroma release,Low risk (Matrix binding),High,Green
+Vanillin × Cocoa butter,Lipophilic partitioning into fat phase; stable retention,Low risk (Fat-phase solubilization),High,Green
+Vanillin × Sugar,No chemical interaction; sweetness enhances aroma perception,No risk (Sensory synergy),High,Green
+Vanillin × Lecithin,Mild association with emulsifier; no stability issues predicted,Low risk (Formulation compatibility),Medium–High,Green
+Ethyl vanillin × Cocoa mass,Stronger fat-phase preference than vanillin; potential delayed release,Low risk (Retention delay),Medium,Monitor
+Ethyl vanillin × Cocoa butter,High solubility in lipid phase; possible aroma persistence,Low–Moderate risk (Over-retention),Medium,Monitor
+Ethyl vanillin × Sugar,No interaction; sweetness amplifies top-note intensity,No risk (Perceptual amplification),High,Green
+Ethyl vanillin × Lecithin,Increased dispersion efficiency; no destabilization predicted,Low risk,Medium,Green
+Ethyl maltol × Cocoa mass,Interaction with bitter polyphenols reduces perceived bitterness,Low risk (Bitterness masking),High,Green
+Ethyl maltol × Cocoa butter,Moderate lipid affinity; uniform distribution expected,Low risk,Medium–High,Green
+Ethyl maltol × Sugar,Synergistic sweetness enhancement,No risk (Sensory enhancement),High,Green
+Ethyl maltol × Lecithin,Stable dispersion; no phase separation predicted,Low risk,Medium,Green
