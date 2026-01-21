@@ -1,41 +1,41 @@
-compound,hia,caco_2,sol,logp,bbb,ppb,clearance,cyp_inhib,rm_risk,herg,geno,acute_tox,repeat_tox,dev_repro,endocrine,oral_irrit,volatile,decision
-Denatonium benzoate,Low,Low,High,1.2,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Quinine,Mod,Mod,Mod,2.8,Low,High,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS*
-Caffeine,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Neg,Neg,Low,Mod,No,No,Low,No,FAIL
-Naringin,Low,Low,Low,1.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Limonin,Low,Low,Low,2.3,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Amarogentin,Low,Low,Low,1.9,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Salicin,Mod,Low,High,−0.5,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,No,Low,No,PASS*
-Andrographolide,Low,Low,Low,2.1,No,Mod,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Moderate,No,PASS
-Catechin,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Epicatechin gallate,Low,Low,Low,1.3,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Sinigrin,Low,Low,High,−1.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Piperine,High,High,Low,2.9,Yes,High,Low,Yes,No,Weak,Neg,Mod,Mod,No,No,High,No,FAIL
-Capsaicin,Mod,Mod,Low,3.2,Yes,High,Low,Yes,No,Weak,Neg,High,Mod,No,No,High,No,FAIL
-Gingerol,Low,Low,Mod,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Shogaol,Mod,Mod,Low,2.8,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,High,No,PASS*
-Thymol,Mod,High,Low,3.3,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Carvacrol,Mod,High,Low,3.4,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Berberine,Low,Low,Low,1.5,No,Mod,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS
-Matrine,Mod,Low,High,1.1,No,Low,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Strychnine,High,High,Mod,2.6,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
-Brucine,High,High,Mod,2.9,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
-Nicotine,High,High,High,1.2,Yes,Low,Mod,Yes,No,Pos,Neg,High,Mod,Yes,No,Mod,Yes,FAIL
-Aconitine,High,High,Low,3.1,Yes,High,Low,Yes,Yes,Pos,Pos,Extreme,Extreme,Yes,No,High,No,FAIL
-Solanine,Mod,Low,Low,1.8,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
-Tomatine,Mod,Low,Low,1.9,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
-Safrole,High,High,Mod,2.7,Yes,Mod,Low,Yes,Yes,Neg,Pos,Mod,Mod,Yes,Yes,Mod,Yes,FAIL
-Eugenol,Mod,High,Mod,2.1,Yes,Mod,Low,Yes,No,Weak,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Allicin,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,High,Yes,PASS
-Isohumulone,Low,Low,Low,2.5,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Humulone,Low,Low,Low,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Tannic acid,Low,Low,High,0.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Ellagic acid,Low,Low,Low,0.7,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Arbutin,Mod,Low,High,−0.3,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,Possible,Low,No,PASS*
-Glycyrrhizin,Low,Low,Low,1.2,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,Yes,Yes,Low,No,PASS*
-Theobromine,Mod,Mod,High,−0.1,Yes,Low,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Low,No,FAIL
-Theophylline,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Pos,Neg,Mod,Mod,No,No,Low,No,FAIL
-Cucurbitacin B,Low,Low,Low,2.0,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,No,High,No,FAIL
-Picroside I,Low,Low,High,0.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Glycoalkaloid mix,Var,Var,Var,Var,Var,Var,Var,Yes,Yes,Pos,Pos,High,High,Yes,Possible,High,No,FAIL
-Resin acids,Low,Low,Low,2.7,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,Mod,Yes,PASS*
+Compound,HIA_pct,Caco2_pct,Sol_mg_mL,logP,BBB,PPB_pct,Clearance_mL_min_kg,CYP_inhib_n,RM_risk,hERG_IC50_uM,Geno,LD50_mg_kg,NOAEL_mg_kg_d,DevRepro,Endocrine,OralIrrit,Volatile,Decision
+Denatonium benzoate,12,8,85,1.2,0,18,65,0,0,120,0,1200,400,0,0,5,0,PASS
+Quinine,45,40,12,2.8,0,92,35,2,0,18,0,600,120,0,0,5,0,PASS*
+Caffeine,92,88,220,-0.1,1,28,30,3,0,95,0,190,100,0,0,2,0,FAIL
+Naringin,8,6,1.2,1.6,0,22,70,0,0,150,0,2000,500,0,0,1,0,PASS
+Limonin,10,9,0.8,2.3,0,55,40,0,0,140,0,1600,450,0,0,2,0,PASS
+Amarogentin,4,3,0.4,1.9,0,18,75,0,0,160,0,2500,600,0,0,4,0,PASS
+Salicin,55,20,95,-0.5,0,12,32,0,0,180,0,3500,700,0,0,1,0,PASS*
+Andrographolide,15,12,0.9,2.1,0,48,38,0,0,110,0,300,80,0,0,4,0,PASS
+Catechin,18,14,60,1,0,20,68,0,0,200,0,5000,1000,0,0,1,0,PASS
+Epicatechin gallate,6,5,0.6,1.3,0,25,72,0,0,190,0,4500,900,0,0,1,0,PASS
+Sinigrin,5,4,120,-1.8,0,10,80,0,0,210,0,7000,1500,0,0,4,0,PASS
+Piperine,85,82,0.3,2.9,1,94,18,3,0,22,0,330,70,0,0,8,0,FAIL
+Capsaicin,60,58,0.25,3.2,1,97,15,3,0,16,0,150,50,0,0,9,0,FAIL
+Gingerol,25,22,8,2.4,0,52,45,0,0,130,0,2500,600,0,0,4,0,PASS
+Shogaol,45,40,0.7,2.8,0,58,22,0,0,115,0,900,200,0,0,7,0,PASS*
+Thymol,55,85,0.9,3.3,1,96,14,0,0,90,0,640,160,0,0.5,6,1,FAIL
+Carvacrol,58,88,0.8,3.4,1,97,13,0,0,85,0,650,150,0,0.5,6,1,FAIL
+Berberine,12,10,0.5,1.5,0,60,36,2,0,25,0,500,120,0,0,4,0,PASS
+Matrine,48,18,75,1.1,0,15,34,0,0,160,0,1500,400,0,0,1,0,PASS
+Strychnine,95,90,15,2.6,1,98,10,4,1,1.2,1,2,0.5,1,0,9,0,FAIL
+Brucine,90,88,14,2.9,1,97,11,4,1,1.8,1,5,1,1,0,8,0,FAIL
+Nicotine,98,95,1000,1.2,1,12,28,3,0,6,1,50,10,1,0,6,1,FAIL
+Aconitine,95,92,0.2,3.1,1,99,6,4,1,0.6,1,1,0.2,1,0,9,0,FAIL
+Solanine,45,20,0.6,1.8,0,65,20,0,1,55,1,590,90,1,0.5,5,0,FAIL
+Tomatine,48,18,0.5,1.9,0,62,22,0,1,50,1,500,80,1,0.5,5,0,FAIL
+Safrole,90,88,18,2.7,1,60,16,3,1,70,1,1950,300,1,1,4,1,FAIL
+Eugenol,65,82,22,2.1,1,65,18,2,0,40,0,2680,300,0,0.5,5,1,FAIL
+Allicin,20,18,140,1,0,12,70,0,0,150,0,5000,1200,0,0,7,1,PASS
+Isohumulone,15,14,0.9,2.5,0,55,38,0,0,130,0,3500,800,0,0,2,0,PASS
+Humulone,14,13,0.8,2.4,0,53,40,0,0,135,0,3600,820,0,0,2,0,PASS
+Tannic acid,6,5,180,0.6,0,18,75,0,0,220,0,8000,2000,0,0,4,0,PASS
+Ellagic acid,7,6,0.7,0.7,0,20,70,0,0,210,0,5000,1200,0,0,2,0,PASS
+Arbutin,52,18,160,-0.3,0,15,34,0,0,180,0,4000,900,0,0.5,1,0,PASS*
+Glycyrrhizin,10,8,0.9,1.2,0,70,20,0,0,120,0,2000,200,1,1,1,0,PASS*
+Theobromine,48,45,85,-0.1,1,10,32,0,0,140,0,1000,200,0,0,1,0,FAIL
+Theophylline,85,80,90,-0.1,1,12,28,3,0,12,1,450,100,0,0,1,0,FAIL
+Cucurbitacin B,8,7,0.3,2,0,60,18,0,1,45,1,15,2,1,0,8,0,FAIL
+Picroside I,9,8,95,0.8,0,14,72,0,0,160,0,6000,1500,0,0,4,0,PASS
+Glycoalkaloid mix,40,25,5,2,0,75,18,4,1,30,1,300,50,1,0.5,6,0,FAIL
+Resin acids,12,10,0.6,2.7,0,58,22,0,0,125,0,2000,400,0,0,4,1,PASS*

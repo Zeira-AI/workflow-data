@@ -21,115 +21,115 @@
     ],
     "defaultOutputs": [
         {
-            "id": "compound",
+            "id": "Compound",
             "name": "Compound",
             "type": "string",
             "tooltip": "Name of the compound."
         },
         {
-            "id": "hia",
-            "name": "HIA",
-            "type": "string",
-            "tooltip": "Human Intestinal Absorption (Low/Mod/High)."
+            "id": "HIA_pct",
+            "name": "HIA_pct",
+            "type": "number",
+            "tooltip": "Human Intestinal Absorption (%)."
         },
         {
-            "id": "caco_2",
-            "name": "Caco-2",
-            "type": "string",
-            "tooltip": "Caco-2 permeability (Low/Mod/High)."
+            "id": "Caco2_pct",
+            "name": "Caco2_pct",
+            "type": "number",
+            "tooltip": "Caco-2 permeability (%)."
         },
         {
-            "id": "sol",
-            "name": "Sol",
-            "type": "string",
-            "tooltip": "Aqueous solubility (Low/Mod/High)."
+            "id": "Sol_mg_mL",
+            "name": "Sol_mg_mL",
+            "type": "number",
+            "tooltip": "Aqueous solubility (mg/mL)."
         },
         {
-            "id": "logp",
+            "id": "logP",
             "name": "logP",
             "type": "number",
             "tooltip": "Partition coefficient (octanol/water)."
         },
         {
-            "id": "bbb",
+            "id": "BBB",
             "name": "BBB",
-            "type": "string",
-            "tooltip": "Blood-brain barrier penetration (Yes/No/Low)."
+            "type": "number",
+            "tooltip": "Blood-brain barrier penetration (0=No, 1=Yes)."
         },
         {
-            "id": "ppb",
-            "name": "PPB",
-            "type": "string",
-            "tooltip": "Plasma Protein Binding (Low/Mod/High)."
+            "id": "PPB_pct",
+            "name": "PPB_pct",
+            "type": "number",
+            "tooltip": "Plasma Protein Binding (%)."
         },
         {
-            "id": "clearance",
-            "name": "Clearance",
-            "type": "string",
-            "tooltip": "Clearance rate (Low/Mod/High)."
+            "id": "Clearance_mL_min_kg",
+            "name": "Clearance_mL_min_kg",
+            "type": "number",
+            "tooltip": "Clearance (mL/min/kg)."
         },
         {
-            "id": "cyp_inhib",
-            "name": "CYP Inhib",
-            "type": "string",
-            "tooltip": "Cytochrome P450 inhibition (Yes/No)."
+            "id": "CYP_inhib_n",
+            "name": "CYP_inhib_n",
+            "type": "number",
+            "tooltip": "Number of CYP450 isoforms inhibited."
         },
         {
-            "id": "rm_risk",
-            "name": "RM Risk",
-            "type": "string",
-            "tooltip": "Reactive metabolite risk (Yes/No)."
+            "id": "RM_risk",
+            "name": "RM_risk",
+            "type": "number",
+            "tooltip": "Reactive metabolite risk (0=No, 1=Yes)."
         },
         {
-            "id": "herg",
-            "name": "hERG",
-            "type": "string",
-            "tooltip": "hERG channel activity (Neg/Weak/Pos)."
+            "id": "hERG_IC50_uM",
+            "name": "hERG_IC50_uM",
+            "type": "number",
+            "tooltip": "hERG channel inhibition IC₅₀ (µM)."
         },
         {
-            "id": "geno",
+            "id": "Geno",
             "name": "Geno",
-            "type": "string",
-            "tooltip": "Genotoxicity (Neg/Pos)."
+            "type": "number",
+            "tooltip": "Genotoxicity (0=Negative, 1=Positive)."
         },
         {
-            "id": "acute_tox",
-            "name": "Acute Tox",
-            "type": "string",
-            "tooltip": "Acute toxicity (Low/Mod/High/Extreme)."
+            "id": "LD50_mg_kg",
+            "name": "LD50_mg_kg",
+            "type": "number",
+            "tooltip": "Lethal dose 50% (mg/kg)."
         },
         {
-            "id": "repeat_tox",
-            "name": "Repeat Tox",
-            "type": "string",
-            "tooltip": "Repeat dose toxicity (Low/Mod/High/Extreme)."
+            "id": "NOAEL_mg_kg_d",
+            "name": "NOAEL_mg_kg_d",
+            "type": "number",
+            "tooltip": "No Observed Adverse Effect Level (mg/kg/day)."
         },
         {
-            "id": "dev_repro",
-            "name": "Dev/Repro",
-            "type": "string",
-            "tooltip": "Developmental/Reproductive toxicity (Yes/No)."
+            "id": "DevRepro",
+            "name": "DevRepro",
+            "type": "number",
+            "tooltip": "Developmental/Reproductive toxicity (0=No, 1=Yes)."
         },
         {
-            "id": "endocrine",
+            "id": "Endocrine",
             "name": "Endocrine",
-            "type": "string",
-            "tooltip": "Endocrine disruption (No/Possible/Yes)."
+            "type": "number",
+            "tooltip": "Endocrine disruption risk (0=No, 0.5=Possible, 1=Yes)."
         },
         {
-            "id": "oral_irrit",
-            "name": "Oral Irrit",
-            "type": "string",
-            "tooltip": "Oral irritation (Low/Moderate/High)."
+            "id": "OralIrrit",
+            "name": "OralIrrit",
+            "type": "number",
+            "tooltip": "Oral irritation score (0-10)."
         },
         {
-            "id": "volatile",
+            "id": "Volatile",
             "name": "Volatile",
-            "type": "string",
-            "tooltip": "Volatility (Yes/No)."
+            "type": "number",
+            "tooltip": "Volatility (0=No, 1=Yes)."
         },
         {
-            "id": "decision",
+            "id": "Decision",
             "name": "Decision",
             "type": "string",
             "tooltip": "Toxicity filter decision (PASS/PASS*/FAIL)."
@@ -147,7 +147,7 @@
             "suggestedField": [
                 "smiles",
                 "name",
-                "compound"
+                "Compound"
             ],
             "accept": ".csv,.txt,.smi"
         },
@@ -172,176 +172,104 @@
             "tooltip": "Choose which ADMET prediction model to use."
         },
         {
-            "key": "hia_filter",
-            "type": "multiselect",
-            "label": "HIA Filter",
-            "options": [
-                {
-                    "value": "Low",
-                    "label": "Low"
-                },
-                {
-                    "value": "Mod",
-                    "label": "Moderate"
-                },
-                {
-                    "value": "High",
-                    "label": "High"
-                }
-            ],
+            "key": "hia_range",
+            "type": "range",
+            "label": "HIA Range (%)",
             "defaultValue": [
-                "Low",
-                "Mod",
-                "High"
+                0,
+                100
             ],
-            "tooltip": "Filter by Human Intestinal Absorption level."
+            "tooltip": "Human Intestinal Absorption range (min - max %)."
         },
         {
-            "key": "bbb_filter",
-            "type": "multiselect",
-            "label": "BBB Filter",
-            "options": [
-                {
-                    "value": "Yes",
-                    "label": "Yes"
-                },
-                {
-                    "value": "No",
-                    "label": "No"
-                },
-                {
-                    "value": "Low",
-                    "label": "Low"
-                }
-            ],
+            "key": "logp_range",
+            "type": "range",
+            "label": "logP Range",
             "defaultValue": [
-                "Yes",
-                "No",
-                "Low"
+                -3.0,
+                5.0
             ],
-            "tooltip": "Filter by Blood-brain barrier penetration."
+            "tooltip": "Partition coefficient range (min - max)."
         },
         {
-            "key": "herg_filter",
-            "type": "multiselect",
-            "label": "hERG Filter",
-            "options": [
-                {
-                    "value": "Neg",
-                    "label": "Negative"
-                },
-                {
-                    "value": "Weak",
-                    "label": "Weak"
-                },
-                {
-                    "value": "Pos",
-                    "label": "Positive"
-                }
-            ],
+            "key": "ppb_range",
+            "type": "range",
+            "label": "PPB Range (%)",
             "defaultValue": [
-                "Neg",
-                "Weak"
+                0,
+                100
             ],
-            "tooltip": "Filter by hERG channel activity."
+            "tooltip": "Plasma Protein Binding range (min - max %)."
         },
         {
-            "key": "geno_filter",
-            "type": "multiselect",
-            "label": "Genotoxicity Filter",
-            "options": [
-                {
-                    "value": "Neg",
-                    "label": "Negative"
-                },
-                {
-                    "value": "Pos",
-                    "label": "Positive"
-                }
-            ],
+            "key": "herg_range",
+            "type": "range",
+            "label": "hERG IC₅₀ Range (µM)",
             "defaultValue": [
-                "Neg"
+                10,
+                500
             ],
-            "tooltip": "Filter by genotoxicity."
+            "tooltip": "hERG channel IC₅₀ range (min - max µM)."
         },
         {
-            "key": "acute_tox_filter",
-            "type": "multiselect",
-            "label": "Acute Toxicity Filter",
-            "options": [
-                {
-                    "value": "Low",
-                    "label": "Low"
-                },
-                {
-                    "value": "Mod",
-                    "label": "Moderate"
-                },
-                {
-                    "value": "High",
-                    "label": "High"
-                },
-                {
-                    "value": "Extreme",
-                    "label": "Extreme"
-                }
-            ],
+            "key": "ld50_range",
+            "type": "range",
+            "label": "LD₅₀ Range (mg/kg)",
             "defaultValue": [
-                "Low",
-                "Mod"
+                100,
+                10000
             ],
-            "tooltip": "Filter by acute toxicity level."
+            "tooltip": "LD₅₀ threshold range (mg/kg)."
         },
         {
-            "key": "decision_filter",
-            "type": "multiselect",
-            "label": "Decision Filter",
-            "options": [
-                {
-                    "value": "PASS",
-                    "label": "PASS"
-                },
-                {
-                    "value": "PASS*",
-                    "label": "PASS*"
-                },
-                {
-                    "value": "FAIL",
-                    "label": "FAIL"
-                }
-            ],
+            "key": "noael_range",
+            "type": "range",
+            "label": "NOAEL Range (mg/kg/day)",
             "defaultValue": [
-                "PASS",
-                "PASS*"
+                50,
+                5000
             ],
-            "tooltip": "Filter by decision status."
+            "tooltip": "NOAEL threshold range (mg/kg/day)."
+        },
+        {
+            "key": "oral_irrit_range",
+            "type": "range",
+            "label": "Oral Irritation Range",
+            "defaultValue": [
+                0,
+                5
+            ],
+            "tooltip": "Oral irritation score range (0-10)."
         }
     ],
     "defaultConfig": {
-        "hia_filter": [
-            "Low",
-            "Mod",
-            "High"
+        "hia_range": [
+            0,
+            100
         ],
-        "bbb_filter": [
-            "Yes",
-            "No",
-            "Low"
+        "logp_range": [
+            -3.0,
+            5.0
         ],
-        "herg_filter": [
-            "Neg",
-            "Weak"
+        "ppb_range": [
+            0,
+            100
         ],
-        "geno_filter": [
-            "Neg"
+        "herg_range": [
+            10,
+            500
         ],
-        "acute_tox_filter": [
-            "Low",
-            "Mod"
+        "ld50_range": [
+            100,
+            10000
         ],
-        "decision_filter": [
-            "PASS",
-            "PASS*"
+        "noael_range": [
+            50,
+            5000
+        ],
+        "oral_irrit_range": [
+            0,
+            5
         ]
     }
 }
