@@ -1,9 +1,9 @@
 compound,chrm1_ac50,drd1_ac50
 Caffeine,2267.2,> 10000.0
-Theobromine,2939.3,
+Theobromine,2939.3,No suitable docking pose
 (-)-Epicatechin,15092.8,> 10000.0
-Catechin,17726.0,
-Ethyl maltol,7261.4,
-L-Theanine,,44.2
-Vanillin,,340.0
-Ethyl vanillin,,510.0
+Catechin,17726.0,No suitable docking pose
+Ethyl maltol,7261.4,No suitable docking pose
+L-Theanine,No suitable docking pose,44.2
+Vanillin,No suitable docking pose,340.0
+Ethyl vanillin,No suitable docking pose,510.0
