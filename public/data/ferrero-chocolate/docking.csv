@@ -1,8 +1,8 @@
 docked_structure,compound,target,delta_g
-https://workflow-data-2sa8.vercel.app/data/docking/Caffeine.pdb,Caffeine,CHRM1,-7.6
-https://workflow-data-2sa8.vercel.app/data/docking/Theobromine.pdb,Theobromine,CHRM1,-7.8
-https://workflow-data-2sa8.vercel.app/data/docking/Catechin.pdb,Catechin,CHRM1,-7.4
-https://workflow-data-2sa8.vercel.app/data/docking/L-Theanine.pdb,L-Theanine,CHRM1,1.2
+https://workflow-data-2sa8.vercel.app/data/docking/CHRM1+Tiotropium_Caffeine_complex.pdb,Caffeine,CHRM1,-7.6
+https://workflow-data-2sa8.vercel.app/data/docking/CHRM1+Tiotropium_Theobromine_complex.pdb,Theobromine,CHRM1,-7.8
+https://workflow-data-2sa8.vercel.app/data/docking/CHRM1+Tiotropium_Catechin_complex.pdb,Catechin,CHRM1,-7.4
+https://workflow-data-2sa8.vercel.app/data/docking/CHRM1+Tiotropium_L-Theanine_complex.pdb,L-Theanine,CHRM1,1.2
 https://workflow-data-2sa8.vercel.app/data/docking/CHRM1+ligand3.pdb,(-)-Epicatechin,CHRM1,-7.2
 https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Vanillin,CHRM1,-0.2
 https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Ethyl vanillin,CHRM1,-3.5
