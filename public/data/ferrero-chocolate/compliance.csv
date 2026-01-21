@@ -2,7 +2,7 @@ id;ingredient_name;inci_name;cas_number;concentration;market;regulatory_status;r
 1;Cocoa mass (liquor);Theobroma Cacao (Cocoa) Seed Paste;84649-99-0;60.00;US / EU;Allowed;None;Not specified;Conventional food ingredient;FDA / EFSA;2023
 2;Cocoa butter;Theobroma Cacao (Cocoa) Seed Butter;8002-31-1;12.00;US / EU;Allowed;None;Not specified;Conventional food fat;FDA / EFSA;2023
 3;Sugar (cane);Sucrose;57-50-1;17.30;US / EU;Allowed;None;Not specified;Conventional sweetener;FDA / EFSA;2023
-4;Inulin;Inulin;9005-80-5;5.00;US / EU;Allowed (GRAS / Novel Food cleared);Labeling (fiber claim);Not specified;Dietary fiber; GI tolerance considerations;FDA / EFSA;2022
+4;Inulin;Inulin;9005-80-5;5.00;US / EU;Allowed (GRAS / Novel Food cleared);Labeling (fiber claim);Not specified;"Dietary fiber; GI tolerance considerations";FDA / EFSA;2022
 5;Ethyl maltol;Ethyl Maltol;4940-11-8;15;US / EU;Allowed;Use level guidance;GMP / flavoring use;Flavoring substance;FEMA / EFSA;2022
 6;Vanillin;Vanillin;121-33-5;8;US / EU;Allowed;Use level guidance;GMP / flavoring use;Flavoring substance;FEMA / EFSA;2022
 7;Ethyl vanillin;Ethyl Vanillin;121-32-4;3;US / EU;Allowed;Use level guidance;GMP / flavoring use;Flavoring substance;FEMA / EFSA;2022
