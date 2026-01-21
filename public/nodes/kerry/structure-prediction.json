@@ -12,7 +12,7 @@
   },
   "defaultInputs": [
     {
-      "id": "proteinList",
+      "id": "protein_list",
       "name": "Protein List",
       "type": "array",
       "required": true,
@@ -22,28 +22,40 @@
   ],
   "defaultOutputs": [
     {
-      "id": "Protein name",
+      "id": "protein_name",
       "name": "Protein name",
       "type": "string",
-      "tooltip": "Name or identifier of the protein (e.g., 'TAS1R2')."
+      "tooltip": "Name or identifier of the protein (e.g., 'OR1A1', 'OR2J3')."
     },
     {
-      "id": "Fasta",
+      "id": "fasta",
       "name": "Fasta",
       "type": "string",
       "tooltip": "FASTA sequence of the protein including header and amino acid sequence."
     },
     {
-      "id": "pTM ",
+      "id": "ptm",
       "name": "pTM",
       "type": "number",
-      "tooltip": "Predicted Template Modeling score (0-1), indicating the confidence in the predicted structure. Higher values indicate better confidence (e.g. 0.79)."
+      "tooltip": "Predicted Template Modeling score (0-1), indicating the confidence in the predicted structure."
     },
     {
-      "id": "Druggability",
-      "name": "Druggability",
+      "id": "structure_3d",
+      "name": "3D Structure",
+      "type": "structure",
+      "tooltip": "URL to the 3D protein structure PDB file from AlphaFold database."
+    },
+    {
+      "id": "pocket_detected",
+      "name": "Pocket Detected",
+      "type": "boolean",
+      "tooltip": "Whether a binding pocket was detected in the protein structure."
+    },
+    {
+      "id": "pocket_score",
+      "name": "Pocket Score",
       "type": "number",
-      "tooltip": "Druggability score (0-1) indicating the potential of the protein as a drug target. Higher values indicate better druggability."
+      "tooltip": "Druggability score of the detected pocket (0-1). Higher values indicate better druggability."
     }
   ],
   "configSchema": [
@@ -52,12 +64,12 @@
       "type": "text",
       "label": "Protein List (Paste)",
       "placeholder": ">Protein1\nMKTAYIAKQR...\n>Protein2\nMNDDGKVNAS...",
-      "tooltip": "Paste protein names and FASTA sequences. Format: >ProteinName followed by sequence on next lines, or use comma-separated format.",
+      "tooltip": "Paste protein names and FASTA sequences. Format: >ProteinName followed by sequence on next lines.",
       "suggestedField": [
-        "Protein_name",
+        "protein_name",
         "name",
         "target",
-        "Fasta",
+        "fasta",
         "sequence"
       ]
     },
@@ -66,7 +78,7 @@
       "type": "file",
       "label": "Upload Protein File",
       "accept": ".fasta,.fa,.txt,.csv",
-      "tooltip": "Upload a FASTA file or CSV containing protein names and sequences. Required: protein identifier and FASTA sequence."
+      "tooltip": "Upload a FASTA file or CSV containing protein names and sequences."
     },
     {
       "key": "predictionMethod",
@@ -97,17 +109,50 @@
       "tooltip": "Include pTM and other confidence metrics in the output."
     },
     {
-      "key": "calculateDruggability",
+      "key": "findPocketRegion",
       "type": "boolean",
-      "label": "Calculate Druggability",
+      "label": "Finding the pocket region?",
       "defaultValue": true,
-      "tooltip": "Calculate druggability scores for predicted structures."
+      "tooltip": "Whether to detect and analyze binding pocket regions in the predicted structure."
+    },
+    {
+      "key": "pocketModel",
+      "type": "select",
+      "label": "Choose model to predict pocket",
+      "options": [
+        {
+          "value": "fpocket",
+          "label": "fpocket"
+        },
+        {
+          "value": "sitemap",
+          "label": "SiteMap"
+        },
+        {
+          "value": "deepsite",
+          "label": "DeepSite"
+        },
+        {
+          "value": "p2rank",
+          "label": "P2Rank"
+        }
+      ],
+      "defaultValue": "fpocket",
+      "tooltip": "Select the pocket prediction model. fpocket is fast and open-source, SiteMap provides detailed druggability analysis.",
+      "showWhen": [
+        {
+          "field": "findPocketRegion",
+          "in": [
+            "true"
+          ]
+        }
+      ]
     }
   ],
   "defaultConfig": {
     "predictionMethod": "alphafold",
     "includeConfidence": true,
-    "calculateDruggability": true
+    "findPocketRegion": true,
+    "pocketModel": "fpocket"
   }
 }
-
