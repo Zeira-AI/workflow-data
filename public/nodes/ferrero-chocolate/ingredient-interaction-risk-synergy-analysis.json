@@ -115,13 +115,6 @@
       "placeholder": "e.g., 0.7",
       "defaultValue": 0.5,
       "tooltip": "Minimum confidence threshold for flagging high-risk interactions (0-1 scale)."
-    },
-    {
-      "key": "includeLowRisk",
-      "type": "boolean",
-      "label": "Include Low Risk Pairs",
-      "defaultValue": true,
-      "tooltip": "Include pairs with low risk scores in the output results."
     }
   ]
 }
