@@ -66,16 +66,123 @@
       "placeholder": "Paste product link or name here..."
     },
     {
-      "key": "desiredEffect",
-      "type": "text",
-      "label": "Desired Effect (Required)",
-      "placeholder": "e.g., Whitening, Anti-aging..."
+      "key": "category",
+      "type": "select",
+      "label": "Category",
+      "options": [
+        {
+          "value": "drug",
+          "label": "Drug"
+        },
+        {
+          "value": "food",
+          "label": "Food"
+        },
+        {
+          "value": "supplements",
+          "label": "Supplements"
+        },
+        {
+          "value": "cosmetics",
+          "label": "Cosmetics"
+        },
+        {
+          "value": "consumer_products",
+          "label": "Consumer Products"
+        }
+      ],
+      "defaultValue": "food",
+      "tooltip": "Select the product category."
+    },
+    {
+      "key": "routeOfAdministration",
+      "type": "select",
+      "label": "Route of Administration/Exposure",
+      "options": [
+        {
+          "value": "oral",
+          "label": "Oral"
+        },
+        {
+          "value": "skin_dermal",
+          "label": "Skin/Dermal"
+        },
+        {
+          "value": "inhalation",
+          "label": "Inhalation"
+        }
+      ],
+      "defaultValue": "oral",
+      "tooltip": "Select the route of administration or exposure.",
+      "showWhen": [
+        {
+          "field": "category",
+          "in": [
+            "food",
+            "supplements",
+            "cosmetics"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "routeOfAdministrationDrug",
+      "type": "select",
+      "label": "Route of Administration/Exposure",
+      "options": [
+        {
+          "value": "oral",
+          "label": "Oral"
+        },
+        {
+          "value": "skin_dermal",
+          "label": "Skin/Dermal"
+        },
+        {
+          "value": "inhalation",
+          "label": "Inhalation"
+        },
+        {
+          "value": "iv",
+          "label": "IV (Intravenous)"
+        },
+        {
+          "value": "intravaginal",
+          "label": "Intravaginal"
+        },
+        {
+          "value": "intramuscular",
+          "label": "Intramuscular"
+        },
+        {
+          "value": "subcutaneous",
+          "label": "Subcutaneous"
+        },
+        {
+          "value": "rectal",
+          "label": "Rectal"
+        },
+        {
+          "value": "ophthalmic",
+          "label": "Ophthalmic"
+        }
+      ],
+      "defaultValue": "oral",
+      "tooltip": "Select the route of administration or exposure.",
+      "showWhen": [
+        {
+          "field": "category",
+          "in": [
+            "drug"
+          ]
+        }
+      ]
     },
     {
       "key": "options",
       "type": "json",
       "label": "Advanced Options",
-      "placeholder": "{ \"target user\": \"baby\", \"application route\": \"topical\", \"dosage form\": \"cream\" }"
+      "placeholder": "{ \"target user\": \"baby\", \"dosage form\": \"cream\" }"
     }
   ]
 }

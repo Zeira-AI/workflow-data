@@ -59,6 +59,12 @@
             "name": "ChEMBL ID",
             "type": "string",
             "tooltip": "The ChEMBL identifier for the target."
+        },
+        {
+            "id": "protein_structure",
+            "name": "Protein Structure",
+            "type": "structure",
+            "tooltip": "3D protein structure PDB file URL."
         }
     ],
     "configSchema": [
