@@ -75,6 +75,18 @@
                     "label": "Vecurate Excerpt (25 compounds)"
                 },
                 {
+                    "value": "bitterdb",
+                    "label": "BitterDB"
+                },
+                {
+                    "value": "super_sweet_db",
+                    "label": "SuperSweetDB"
+                },
+                {
+                    "value": "foo_db",
+                    "label": "FooDB"
+                },
+                {
                     "value": "eu_cosing",
                     "label": "EU CoSing"
                 },
