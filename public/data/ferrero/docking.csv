@@ -1,6 +1,6 @@
 docked_structure,compound,target,delta_g
 https://workflow-data-2sa8.vercel.app/data/docking/Naringin.pdb,Naringin,TAS2R14,-7.2
-https://workflow-data-2sa8.vercel.app/data/docking/Amarogentin-test.pdb,Amarogentin,TAS2R14,-7.4
+https://workflow-data-2sa8.vercel.app/data/docking/8RQL.pdb,Amarogentin,TAS2R14,-7.4
 https://workflow-data-2sa8.vercel.app/data/docking/Salicin.pdb,Salicin,TAS2R14,-6.9
 https://workflow-data-2sa8.vercel.app/data/docking/TAS2R14+ligand1.pdb,Denatonium benzoate,TAS2R14,-7.6
 https://workflow-data-2sa8.vercel.app/data/docking/TAS2R14+ligand2.pdb,Quinine,TAS2R14,-7.8
