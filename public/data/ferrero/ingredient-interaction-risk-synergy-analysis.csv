@@ -1,22 +1,7 @@
 Pair,Predicted Interaction Signal,Risk Type (Dominant),Confidence,Flag
-Denatonium benzoate × Quinine,Moderate interaction detected,Additive irritation / exposure,0.64,MODERATE_RISK
-Denatonium benzoate × Caffeine,High interaction detected,Exposure escalation (systemic),0.71,HIGH_RISK
-Denatonium benzoate × Naringin,No significant interaction,Compatible,0.18,SAFE
-Denatonium benzoate × Limonin,No significant interaction,Compatible,0.22,SAFE
-Denatonium benzoate × Amarogentin,Moderate interaction detected,Additive irritation,0.69,MODERATE_RISK
-Denatonium benzoate × Salicin,No significant interaction,Compatible,0.20,SAFE
-Quinine × Caffeine,High interaction detected,CNS-related exposure concern,0.76,HIGH_RISK
-Quinine × Naringin,Moderate interaction detected,Metabolic interference,0.61,MODERATE_RISK
-Quinine × Limonin,No significant interaction,Compatible,0.24,SAFE
-Quinine × Amarogentin,High interaction detected,Additive bitterness / irritation,0.72,HIGH_RISK
-Quinine × Salicin,No significant interaction,Compatible,0.27,SAFE
-Caffeine × Naringin,Moderate interaction detected,Metabolic interaction,0.68,MODERATE_RISK
-Caffeine × Limonin,No significant interaction,Compatible,0.19,SAFE
-Caffeine × Amarogentin,High interaction detected,Exposure escalation,0.73,HIGH_RISK
-Caffeine × Salicin,No significant interaction,Compatible,0.23,SAFE
-Naringin × Limonin,No significant interaction,Compatible,0.16,SAFE
-Naringin × Amarogentin,Moderate interaction detected,Additive bitterness,0.58,MODERATE_RISK
-Naringin × Salicin,No significant interaction,Compatible,0.21,SAFE
-Limonin × Amarogentin,No significant interaction,Compatible,0.25,SAFE
-Limonin × Salicin,No significant interaction,Compatible,0.18,SAFE
-Amarogentin × Salicin,No significant interaction,Compatible,0.22,SAFE
+Denatonium benzoate × Polypropylene (PP),Low affinity for hydrophobic polymer; surface retention favored,Low migration risk,High,SAFE
+Denatonium benzoate × ABS,Limited diffusion predicted; stable surface localization,Low material interaction,Medium–High,SAFE
+Quinine sulfate × Polycarbonate (PC),Moderate polarity mismatch; potential surface crystallization,Coating instability,Medium,LOW_RISK
+Capsaicin × Polyethylene (PE),High hydrophobic affinity; diffusion into polymer bulk predicted,Polymer migration,High,HIGH_RISK
+TRPA1 agonist × Acrylic coating,Compatible polarity; low volatility; stable embedding,Low interaction risk,Medium,SAFE
+Bitter peptide × PU coating,Large size limits diffusion; possible surface retention,"Low migration, formulation-dependent",Medium,LOW_RISK

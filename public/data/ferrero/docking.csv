@@ -2,8 +2,8 @@ docked_structure,compound,target,delta_g
 https://workflow-data-2sa8.vercel.app/data/docking/8RQL_Naringin_complex.pdb,Naringin,TAS2R14,-7.2
 https://workflow-data-2sa8.vercel.app/data/docking/8RQL_Amarogentin_complex.pdb,Amarogentin,TAS2R14,-7.4
 https://workflow-data-2sa8.vercel.app/data/docking/8RQL_Salicin_complex.pdb,Salicin,TAS2R14,-6.9
-https://workflow-data-2sa8.vercel.app/data/docking/TAS2R14+ligand1.pdb,Denatonium benzoate,TAS2R14,-7.6
-https://workflow-data-2sa8.vercel.app/data/docking/TAS2R14+ligand2.pdb,Quinine,TAS2R14,-7.8
+https://workflow-data-2sa8.vercel.app/data/docking/8RQL_Salicin_complex.pdb,Denatonium benzoate,TAS2R14,-7.6
+https://workflow-data-2sa8.vercel.app/data/docking/8RQL_Salicin_complex.pdb,Quinine,TAS2R14,-7.8
 https://workflow-data-2sa8.vercel.app/data/docking/TAS2R14+ligand4.pdb,Limonin,TAS2R14,-7.4
 https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Andrographolide,TAS2R14,-3.5
 https://workflow-data-2sa8.vercel.app/data/docking/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb,Catechin,TAS2R14,-2.8

@@ -5,7 +5,7 @@
   "icon": "alert-triangle",
   "color": "red",
   "description": "Analyze synergistic effects and safety risks of ingredient pairs by combining compound-SMILES pairs",
-  "outputMockLabel": "21 pairs",
+  "outputMockLabel": "6 pairs",
   "pricing": {
     "credits": 0,
     "executionTime": 1
