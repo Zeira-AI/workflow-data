@@ -4,12 +4,12 @@
     "category": "analysis",
     "icon": "filtericon",
     "color": "red",
-    "description": "Filter compounds based on ADMET properties and specific toxicity risks (Ferrero specific).",
+    "description": "Filter compounds based on physicochemical properties and custom rules.",
     "pricing": {
         "credits": 800,
         "executionTime": 1
     },
-    "outputMockLabel": "38 compounds",
+    "outputMockLabel": "40 compounds",
     "defaultInputs": [
         {
             "id": "input-mol-data",
@@ -23,105 +23,116 @@
         {
             "id": "compound",
             "name": "Compound",
-            "type": "string"
+            "type": "string",
+            "tooltip": "Name of the compound."
         },
         {
             "id": "hia",
             "name": "HIA",
             "type": "string",
-            "tooltip": "Human Intestinal Absorption"
+            "tooltip": "Human Intestinal Absorption (Low/Mod/High)."
         },
         {
             "id": "caco_2",
             "name": "Caco-2",
             "type": "string",
-            "tooltip": "Caco-2 permeability"
+            "tooltip": "Caco-2 permeability (Low/Mod/High)."
         },
         {
             "id": "sol",
-            "name": "Solubility",
-            "type": "string"
+            "name": "Sol",
+            "type": "string",
+            "tooltip": "Aqueous solubility (Low/Mod/High)."
         },
         {
             "id": "logp",
             "name": "logP",
-            "type": "number"
+            "type": "number",
+            "tooltip": "Partition coefficient (octanol/water)."
         },
         {
             "id": "bbb",
             "name": "BBB",
             "type": "string",
-            "tooltip": "Blood-Brain Barrier penetration"
+            "tooltip": "Blood-brain barrier penetration (Yes/No/Low)."
         },
         {
             "id": "ppb",
             "name": "PPB",
             "type": "string",
-            "tooltip": "Plasma Protein Binding"
+            "tooltip": "Plasma Protein Binding (Low/Mod/High)."
         },
         {
             "id": "clearance",
             "name": "Clearance",
-            "type": "string"
+            "type": "string",
+            "tooltip": "Clearance rate (Low/Mod/High)."
         },
         {
             "id": "cyp_inhib",
-            "name": "CYP Inhib.",
+            "name": "CYP Inhib",
             "type": "string",
-            "tooltip": "Cytochrome P450 inhibition"
+            "tooltip": "Cytochrome P450 inhibition (Yes/No)."
         },
         {
             "id": "rm_risk",
             "name": "RM Risk",
             "type": "string",
-            "tooltip": "Reactive Metabolite risk"
+            "tooltip": "Reactive metabolite risk (Yes/No)."
         },
         {
             "id": "herg",
             "name": "hERG",
             "type": "string",
-            "tooltip": "hERG channel inhibition (cardiotoxicity)"
+            "tooltip": "hERG channel activity (Neg/Weak/Pos)."
         },
         {
             "id": "geno",
-            "name": "Genotoxicity",
-            "type": "string"
+            "name": "Geno",
+            "type": "string",
+            "tooltip": "Genotoxicity (Neg/Pos)."
         },
         {
             "id": "acute_tox",
             "name": "Acute Tox",
-            "type": "string"
+            "type": "string",
+            "tooltip": "Acute toxicity (Low/Mod/High/Extreme)."
         },
         {
             "id": "repeat_tox",
             "name": "Repeat Tox",
-            "type": "string"
+            "type": "string",
+            "tooltip": "Repeat dose toxicity (Low/Mod/High/Extreme)."
         },
         {
             "id": "dev_repro",
             "name": "Dev/Repro",
             "type": "string",
-            "tooltip": "Developmental/Reproductive toxicity"
+            "tooltip": "Developmental/Reproductive toxicity (Yes/No)."
         },
         {
             "id": "endocrine",
             "name": "Endocrine",
-            "type": "string"
+            "type": "string",
+            "tooltip": "Endocrine disruption (No/Possible/Yes)."
         },
         {
             "id": "oral_irrit",
-            "name": "Oral Irrit.",
-            "type": "string"
+            "name": "Oral Irrit",
+            "type": "string",
+            "tooltip": "Oral irritation (Low/Moderate/High)."
         },
         {
             "id": "volatile",
             "name": "Volatile",
-            "type": "string"
+            "type": "string",
+            "tooltip": "Volatility (Yes/No)."
         },
         {
             "id": "decision",
             "name": "Decision",
-            "type": "string"
+            "type": "string",
+            "tooltip": "Toxicity filter decision (PASS/PASS*/FAIL)."
         }
     ],
     "configSchema": [
@@ -132,17 +143,13 @@
                 "file"
             ],
             "label": "Compound List",
-            "accept": ".csv,.txt,.smi"
-        },
-        {
-            "key": "logp_range",
-            "type": "range",
-            "label": "logP Range",
-            "defaultValue": [
-                -2,
-                4.0
+            "tooltip": "Compounds for analysis",
+            "suggestedField": [
+                "smiles",
+                "name",
+                "compound"
             ],
-            "tooltip": "Partition coefficient range (min - max)."
+            "accept": ".csv,.txt,.smi"
         },
         {
             "key": "hia_filter",
@@ -167,7 +174,7 @@
                 "Mod",
                 "High"
             ],
-            "tooltip": "Allowed Human Intestinal Absorption levels."
+            "tooltip": "Filter by Human Intestinal Absorption level."
         },
         {
             "key": "bbb_filter",
@@ -176,7 +183,7 @@
             "options": [
                 {
                     "value": "Yes",
-                    "label": "Yes (Penetrates)"
+                    "label": "Yes"
                 },
                 {
                     "value": "No",
@@ -188,10 +195,35 @@
                 }
             ],
             "defaultValue": [
+                "Yes",
                 "No",
                 "Low"
             ],
-            "tooltip": "Allowed Blood-Brain Barrier penetration levels."
+            "tooltip": "Filter by Blood-brain barrier penetration."
+        },
+        {
+            "key": "herg_filter",
+            "type": "multiselect",
+            "label": "hERG Filter",
+            "options": [
+                {
+                    "value": "Neg",
+                    "label": "Negative"
+                },
+                {
+                    "value": "Weak",
+                    "label": "Weak"
+                },
+                {
+                    "value": "Pos",
+                    "label": "Positive"
+                }
+            ],
+            "defaultValue": [
+                "Neg",
+                "Weak"
+            ],
+            "tooltip": "Filter by hERG channel activity."
         },
         {
             "key": "geno_filter",
@@ -210,7 +242,7 @@
             "defaultValue": [
                 "Neg"
             ],
-            "tooltip": "Allowed genotoxicity outcomes."
+            "tooltip": "Filter by genotoxicity."
         },
         {
             "key": "acute_tox_filter",
@@ -238,46 +270,47 @@
                 "Low",
                 "Mod"
             ],
-            "tooltip": "Allowed acute toxicity levels."
+            "tooltip": "Filter by acute toxicity level."
         },
         {
-            "key": "herg_filter",
+            "key": "decision_filter",
             "type": "multiselect",
-            "label": "hERG Filter",
+            "label": "Decision Filter",
             "options": [
                 {
-                    "value": "Neg",
-                    "label": "Negative"
+                    "value": "PASS",
+                    "label": "PASS"
                 },
                 {
-                    "value": "Weak",
-                    "label": "Weak"
+                    "value": "PASS*",
+                    "label": "PASS*"
                 },
                 {
-                    "value": "Pos",
-                    "label": "Positive"
+                    "value": "FAIL",
+                    "label": "FAIL"
                 }
             ],
             "defaultValue": [
-                "Neg",
-                "Weak"
+                "PASS",
+                "PASS*"
             ],
-            "tooltip": "Allowed hERG inhibition levels."
+            "tooltip": "Filter by decision status."
         }
     ],
     "defaultConfig": {
-        "logp_range": [
-            -2,
-            4.0
-        ],
         "hia_filter": [
             "Low",
             "Mod",
             "High"
         ],
         "bbb_filter": [
+            "Yes",
             "No",
             "Low"
+        ],
+        "herg_filter": [
+            "Neg",
+            "Weak"
         ],
         "geno_filter": [
             "Neg"
@@ -286,9 +319,9 @@
             "Low",
             "Mod"
         ],
-        "herg_filter": [
-            "Neg",
-            "Weak"
+        "decision_filter": [
+            "PASS",
+            "PASS*"
         ]
     }
 }
