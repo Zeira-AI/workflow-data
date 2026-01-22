@@ -1,0 +1,5 @@
+protein_target,biological_system,desired_modulation,corresponding_assay,metric_used,rationale_for_deterrence,crystalized_structure_available,chembl_id,protein_structure
+COX-2 (PTGS2),Human inflammatory pathway,Inhibition,Enzyme inhibition assay,%I,Honey flavonoids (e.g. quercetin chrysin) directly inhibit COX-2 reducing prostaglandin synthesis,Yes,CHEMBL197,https://workflow-data-2sa8.vercel.app/data/docking/Cox-2.pdb
+COX-1 (PTGS1),Human inflammatory pathway,Weak inhibition (selectivity check),Enzyme inhibition assay,%I,Used to assess inflammatory selectivity and safety margin,Yes,CHEMBL221,https://workflow-data-2sa8.vercel.app/data/docking/COX-1.pdb
+5-LOX (ALOX5),Leukotriene synthesis,Inhibition,Lipoxygenase activity assay,IC50,Polyphenols in darker NZ honeys inhibit leukotriene formation,Yes,CHEMBL215,https://workflow-data-2sa8.vercel.app/data/docking/LOX5.pdb
+iNOS (NOS2),Inflammatory nitric oxide production,Inhibition,NO production assay,IC50,Honey-derived compounds suppress excessive NO generation,No,CHEMBL4481,https://workflow-data-2sa8.vercel.app/data/docking/NOS2.pdb
