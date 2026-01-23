@@ -1,0 +1,179 @@
+{
+  "type": "structure-preparation",
+  "label": "Structure Preparation",
+  "category": "analysis",
+  "icon": "structure-icon",
+  "color": "blue",
+  "description": "Clean/repair PDBs, add missing atoms/residues, standardize formats and protonation to produce analysis-ready receptor and peptide structures.",
+  "pricing": {
+    "credits": 1200,
+    "executionTime": 5
+  },
+  "outputMockLabel": "2 structures",
+  "defaultInputs": [
+    {
+      "id": "receptor_source",
+      "name": "Receptor Source",
+      "type": "structure",
+      "required": true,
+      "tooltip": "PDB file, AlphaFold model, or experimental structure for the receptor. Can be a filepath or accession ID."
+    },
+    {
+      "id": "ligand_peptide_source",
+      "name": "Ligand/Peptide Source",
+      "type": "structure",
+      "required": true,
+      "tooltip": "PDB file or amino acid sequence string for the ligand peptide."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "receptor_clean",
+      "name": "Cleaned Receptor",
+      "type": "structure",
+      "tooltip": "Cleaned and prepared receptor structure (PDB format)."
+    },
+    {
+      "id": "peptide_clean",
+      "name": "Cleaned Peptide",
+      "type": "structure",
+      "tooltip": "Cleaned and prepared peptide structure (PDB format)."
+    },
+    {
+      "id": "missing_residues_filled",
+      "name": "Missing Residues Filled",
+      "type": "array",
+      "tooltip": "List of residues that were modeled/filled during preparation."
+    },
+    {
+      "id": "mutations_applied",
+      "name": "Mutations Applied",
+      "type": "array",
+      "tooltip": "List of mutations that were applied during preparation."
+    },
+    {
+      "id": "protonation_summary",
+      "name": "Protonation Summary",
+      "type": "object",
+      "tooltip": "Summary of predicted protonation states for each residue."
+    },
+    {
+      "id": "notes",
+      "name": "Notes",
+      "type": "string",
+      "tooltip": "Additional notes and warnings from the structure preparation process."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "receptorSourceType",
+      "type": "select",
+      "label": "Receptor Source Type",
+      "options": [
+        { "value": "pdb_file", "label": "PDB file" },
+        { "value": "alphafold", "label": "AlphaFold model" },
+        { "value": "experimental", "label": "Experimental structure" }
+      ],
+      "defaultValue": "pdb_file",
+      "tooltip": "Type of receptor source: upload PDB file, use AlphaFold prediction, or fetch experimental structure."
+    },
+    {
+      "key": "ligandSourceType",
+      "type": "select",
+      "label": "Ligand Source Type",
+      "options": [
+        { "value": "pdb_file", "label": "PDB file" },
+        { "value": "sequence", "label": "Sequence" }
+      ],
+      "defaultValue": "pdb_file",
+      "tooltip": "Type of ligand/peptide source: upload PDB file or provide amino acid sequence."
+    },
+    {
+      "key": "desiredPH",
+      "type": "number",
+      "label": "Desired pH",
+      "defaultValue": 7.4,
+      "placeholder": "7.4",
+      "tooltip": "Target pH for protonation state prediction (e.g., 7.4 for physiological conditions)."
+    },
+    {
+      "key": "preparationTool",
+      "type": "select",
+      "label": "Preparation Tool",
+      "options": [
+        { "value": "pdbfixer", "label": "PDBFixer" },
+        { "value": "foldx", "label": "FoldX RepairPDB" },
+        { "value": "pdb-tools", "label": "pdb-tools" },
+        { "value": "biopython", "label": "BioPython" },
+        { "value": "modeller", "label": "MODELLER" }
+      ],
+      "defaultValue": "pdbfixer",
+      "tooltip": "Tool to use for structure preparation. PDBFixer is recommended for most cases."
+    },
+    {
+      "key": "fixMissingResidues",
+      "type": "boolean",
+      "label": "Fix Missing Residues",
+      "defaultValue": true,
+      "tooltip": "Attempt to model and add missing residues in the structure."
+    },
+    {
+      "key": "addHydrogens",
+      "type": "boolean",
+      "label": "Add Hydrogens",
+      "defaultValue": true,
+      "tooltip": "Add hydrogen atoms to the structure based on pH-dependent protonation states."
+    },
+    {
+      "key": "forcefield",
+      "type": "select",
+      "label": "Force Field",
+      "options": [
+        { "value": "amber99sb-ildn", "label": "AMBER99SB-ILDN" },
+        { "value": "amber14-all", "label": "AMBER14-all" },
+        { "value": "charmm36", "label": "CHARMM36" },
+        { "value": "opls-aa", "label": "OPLS-AA" }
+      ],
+      "defaultValue": "amber99sb-ildn",
+      "tooltip": "Force field to use for parameterization and hydrogen placement."
+    },
+    {
+      "key": "repairMode",
+      "type": "select",
+      "label": "Repair Mode",
+      "options": [
+        { "value": "minimal", "label": "Minimal – only fix critical issues" },
+        { "value": "aggressive", "label": "Aggressive – fix all detected problems" }
+      ],
+      "defaultValue": "minimal",
+      "tooltip": "Minimal: only fix critical issues. Aggressive: attempt to fix all detected problems."
+    },
+    {
+      "key": "mutations",
+      "type": "textarea",
+      "label": "Mutations (Optional)",
+      "placeholder": "e.g., A123G, B456F",
+      "tooltip": "Optional list of mutations to apply, in format: ChainResidueNewAA (e.g., A123G means chain A, residue 123, mutate to Glycine)."
+    },
+    {
+      "key": "removeChains",
+      "type": "text",
+      "label": "Remove Chains (Optional)",
+      "placeholder": "e.g., C, D",
+      "tooltip": "Optional list of chain IDs to remove from the structure."
+    }
+  ],
+  "defaultConfig": {
+    "receptorSourceType": "pdb_file",
+    "ligandSourceType": "pdb_file",
+    "desiredPH": 7.4,
+    "preparationTool": "pdbfixer",
+    "fixMissingResidues": true,
+    "addHydrogens": true,
+    "forcefield": "amber99sb-ildn",
+    "repairMode": "minimal",
+    "mutations": "",
+    "removeChains": ""
+  },
+  "feedsTo": ["docking", "electrostatics", "surface-mapping"]
+}

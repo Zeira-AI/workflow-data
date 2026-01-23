@@ -17,6 +17,7 @@
     "target-mapping",
     "docking",
     "structure-prediction",
+    "structure-preparation",
     "bioactivity-filter",
     "developability-filter",
     "qsar-filter",
