@@ -1,0 +1,195 @@
+{
+    "type": "toxicity-filter",
+    "label": "Toxicity Filter",
+    "category": "analysis",
+    "icon": "filtericon",
+    "color": "red",
+    "description": "Filter honey compounds based on toxicity endpoints and safety thresholds.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "33 compounds",
+    "defaultInputs": [
+        {
+            "id": "input-mol-data",
+            "name": "Input Compounds",
+            "type": "array",
+            "required": true,
+            "tooltip": "Table of compounds."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "Compound",
+            "name": "Compound",
+            "type": "string",
+            "tooltip": "Name of the compound."
+        },
+        {
+            "id": "hERG_IC50_uM",
+            "name": "hERG IC₅₀ (µM)",
+            "type": "string",
+            "tooltip": "hERG channel inhibition IC₅₀ (µM). Higher values indicate lower cardiac risk."
+        },
+        {
+            "id": "Ames_prob",
+            "name": "Ames Test (prob.)",
+            "type": "number",
+            "tooltip": "Ames test mutagenicity probability (0-1). Lower values indicate lower genotoxic risk."
+        },
+        {
+            "id": "Hepatotox_prob",
+            "name": "Hepatotox (prob.)",
+            "type": "number",
+            "tooltip": "Hepatotoxicity probability (0-1). Lower values indicate lower liver toxicity risk."
+        },
+        {
+            "id": "Skin_sens_prob",
+            "name": "Skin Sensitization (prob.)",
+            "type": "number",
+            "tooltip": "Skin sensitization probability (0-1). Lower values indicate lower allergenic potential."
+        },
+        {
+            "id": "LD50_oral_rat_mg_kg",
+            "name": "LD₅₀ Oral Rat (mg/kg)",
+            "type": "string",
+            "tooltip": "Lethal dose 50% in rats via oral route (mg/kg). Higher values indicate lower acute toxicity."
+        },
+        {
+            "id": "Max_daily_intake_mg",
+            "name": "Max Daily Intake (mg/day)",
+            "type": "number",
+            "tooltip": "Maximum recommended daily intake in mg/day (mock data)."
+        },
+        {
+            "id": "Tox_decision",
+            "name": "Tox Decision",
+            "type": "string",
+            "tooltip": "Toxicity filter decision (Pass/Caution/Fail)."
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "ingredientListText",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Compound List",
+            "tooltip": "Compounds for analysis",
+            "suggestedField": [
+                "smiles",
+                "name",
+                "Compound"
+            ],
+            "accept": ".csv,.txt,.smi"
+        },
+        {
+            "key": "model",
+            "type": "select",
+            "label": "Model",
+            "options": [
+                {
+                    "value": "swiss_adme",
+                    "label": "SwissADME"
+                },
+                {
+                    "value": "admet_ai",
+                    "label": "ADMET-AI"
+                },
+                {
+                    "value": "preadmet",
+                    "label": "preADMET"
+                }
+            ],
+            "tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
+        },
+        {
+            "key": "herg_range",
+            "type": "range",
+            "label": "hERG IC₅₀ Range (µM)",
+            "defaultValue": [
+                10,
+                1000
+            ],
+            "tooltip": "hERG channel IC₅₀ range (min - max µM). Values below 10 µM indicate cardiac risk."
+        },
+        {
+            "key": "ames_max",
+            "type": "range",
+            "label": "Ames Probability Range",
+            "defaultValue": [
+                0,
+                0.5
+            ],
+            "tooltip": "Ames test probability range (0-1). Values above 0.5 indicate mutagenic potential."
+        },
+        {
+            "key": "hepatotox_max",
+            "type": "range",
+            "label": "Hepatotox Probability Range",
+            "defaultValue": [
+                0,
+                0.6
+            ],
+            "tooltip": "Hepatotoxicity probability range (0-1). Values above 0.6 indicate liver toxicity risk."
+        },
+        {
+            "key": "skin_sens_max",
+            "type": "range",
+            "label": "Skin Sensitization Range",
+            "defaultValue": [
+                0,
+                0.5
+            ],
+            "tooltip": "Skin sensitization probability range (0-1). Values above 0.5 indicate allergenic potential."
+        },
+        {
+            "key": "ld50_range",
+            "type": "range",
+            "label": "LD₅₀ Range (mg/kg)",
+            "defaultValue": [
+                500,
+                25000
+            ],
+            "tooltip": "LD₅₀ threshold range (mg/kg). Values below 500 indicate high acute toxicity."
+        },
+        {
+            "key": "max_daily_intake_range",
+            "type": "range",
+            "label": "Max Daily Intake Range (mg/day)",
+            "defaultValue": [
+                1,
+                500
+            ],
+            "tooltip": "Maximum recommended daily intake range (mg/day)."
+        }
+    ],
+    "defaultConfig": {
+        "herg_range": [
+            10,
+            1000
+        ],
+        "ames_max": [
+            0,
+            0.5
+        ],
+        "hepatotox_max": [
+            0,
+            0.6
+        ],
+        "skin_sens_max": [
+            0,
+            0.5
+        ],
+        "ld50_range": [
+            500,
+            25000
+        ],
+        "max_daily_intake_range": [
+            1,
+            500
+        ]
+    }
+}
