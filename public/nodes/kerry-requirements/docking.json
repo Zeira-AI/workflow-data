@@ -60,15 +60,15 @@
         "text",
         "file"
       ],
-      "label": "SMILES",
-      "tooltip": "Smiles strings of the compounds to be docked",
+      "label": "Ligand",
+      "tooltip": "Ligand structure",
       "suggestedField": [
         "smiles",
         "name",
         "ingredient_name",
         "inci_name"
       ],
-      "accept": ".csv,.txt,.smi"
+      "accept": ".pdb"
     },
     {
       "key": "protein_column",
@@ -91,60 +91,60 @@
       "tooltip": "Select the binding pocket for docking.",
       "options": [
         {
-          "value": "chainB:1",
+          "value": "chainA:1",
           "label": "Pocket 1",
-          "group": "Chain B (TAS1R2)",
-          "groupColor": "purple",
-          "filterValue": "TAS1R2 - chain B"
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
         },
         {
-          "value": "chainB:2",
+          "value": "chainA:2",
           "label": "Pocket 2",
-          "group": "Chain B (TAS1R2)",
-          "groupColor": "purple",
-          "filterValue": "TAS1R2 - chain B"
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
         },
         {
-          "value": "chainB:3",
+          "value": "chainA:3",
           "label": "Pocket 3",
-          "group": "Chain B (TAS1R2)",
-          "groupColor": "purple",
-          "filterValue": "TAS1R2 - chain B"
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
         },
         {
-          "value": "chainB:4",
+          "value": "chainA:4",
           "label": "Pocket 4",
-          "group": "Chain B (TAS1R2)",
-          "groupColor": "purple",
-          "filterValue": "TAS1R2 - chain B"
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
         },
         {
-          "value": "chainB:5",
+          "value": "chainA:5",
           "label": "Pocket 5",
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
+        },
+        {
+          "value": "chainB:6",
+          "label": "Pocket 6",
           "group": "Chain B (TAS1R2)",
           "groupColor": "purple",
           "filterValue": "TAS1R2 - chain B"
         },
         {
-          "value": "chainA:6",
-          "label": "Pocket 6",
-          "group": "Chain A (TAS1R3)",
-          "groupColor": "teal",
-          "filterValue": "TAS1R3 - chain A"
-        },
-        {
-          "value": "chainA:7",
+          "value": "chainB:7",
           "label": "Pocket 7",
-          "group": "Chain A (TAS1R3)",
-          "groupColor": "teal",
-          "filterValue": "TAS1R3 - chain A"
+          "group": "Chain B (TAS1R2)",
+          "groupColor": "purple",
+          "filterValue": "TAS1R2 - chain B"
         },
         {
-          "value": "chainA:8",
+          "value": "chainB:8",
           "label": "Pocket 8",
-          "group": "Chain A (TAS1R3)",
-          "groupColor": "teal",
-          "filterValue": "TAS1R3 - chain A"
+          "group": "Chain B (TAS1R2)",
+          "groupColor": "purple",
+          "filterValue": "TAS1R2 - chain B"
         }
       ],
       "showWhen": [
