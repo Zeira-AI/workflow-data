@@ -1,0 +1,230 @@
+{
+  "type": "md-simulation",
+  "label": "Molecular Dynamics (Stability & Activation)",
+  "category": "analysis",
+  "icon": "activity",
+  "color": "orange",
+  "description": "Simulate dynamics of complex to check stability of binding and sample conformational changes using GROMACS or OpenMM.",
+  "pricing": {
+    "credits": 2500,
+    "executionTime": 60
+  },
+  "outputMockLabel": "MD Results",
+  "defaultInputs": [
+    {
+      "id": "complex_structure",
+      "name": "Complex Centroid PDB",
+      "type": "structure",
+      "required": true,
+      "tooltip": "PDB file of the complex centroid or starting structure."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "trajectory_xtc",
+      "name": "Trajectory (XTC/TRR)",
+      "type": "string",
+      "tooltip": "Molecular dynamics trajectory file."
+    },
+    {
+      "id": "final_structure_gro",
+      "name": "Final Structure (GRO)",
+      "type": "structure",
+      "tooltip": "Final structure from the simulation."
+    },
+    {
+      "id": "energy_log",
+      "name": "Energy Log",
+      "type": "string",
+      "tooltip": "Log file containing energy terms."
+    },
+    {
+      "id": "rmsd_timeseries_csv",
+      "name": "RMSD Timeseries",
+      "type": "string",
+      "tooltip": "CSV of RMSD vs Time."
+    },
+    {
+      "id": "contact_frequency_csv",
+      "name": "Contact Frequency",
+      "type": "string",
+      "tooltip": "CSV of residue-residue contact frequencies."
+    },
+    {
+      "id": "snapshots_dir",
+      "name": "Snapshots",
+      "type": "string",
+      "tooltip": "Directory containing extracted frames."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "complex_centroid_pdb",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Complex/Reseter Centroid PDB",
+      "suggestedField": ["complex_centroid", "pdb_file"],
+      "accept": ".pdb",
+      "tooltip": "Upload or select a PDB file for the complex centroid or starting structure."
+    },
+    {
+      "key": "simulation_engine",
+      "type": "select",
+      "label": "Simulation Engine",
+      "options": [
+        { "value": "gromacs", "label": "GROMACS" },
+        { "value": "openmm", "label": "OpenMM" }
+      ],
+      "defaultValue": "gromacs",
+      "tooltip": "Select the MD engine. GROMACS for performance, OpenMM for flexibility."
+    },
+    {
+      "key": "forcefield",
+      "type": "select",
+      "label": "Forcefield",
+      "options": [
+        { "value": "amber99sb", "label": "AMBER99SB" },
+        { "value": "charmm36m", "label": "CHARMM36m" },
+        { "value": "opls-aa", "label": "OPLS-AA" }
+      ],
+      "defaultValue": "amber99sb",
+      "tooltip": "Forcefield for topology generation."
+    },
+    {
+      "key": "water_model",
+      "type": "select",
+      "label": "Water Model",
+      "options": [
+        { "value": "tip3p", "label": "TIP3P" },
+        { "value": "tip4p", "label": "TIP4P" },
+        { "value": "spce", "label": "SPC/E" }
+      ],
+      "defaultValue": "tip3p",
+      "tooltip": "Water model for solvation."
+    },
+    {
+      "key": "simulation_length_ns",
+      "type": "number",
+      "label": "Simulation Length (ns)",
+      "defaultValue": 10.0,
+      "tooltip": "Length of the production simulation in nanoseconds."
+    },
+    {
+      "key": "time_step_fs",
+      "type": "number",
+      "label": "Time Step (fs)",
+      "defaultValue": 2.0,
+      "tooltip": "Integration time step in femtoseconds.",
+      "advanced": true
+    },
+    {
+      "key": "temperature_K",
+      "type": "number",
+      "label": "Temperature (K)",
+      "defaultValue": 300.0,
+      "tooltip": "Simulation temperature."
+    },
+    {
+      "key": "pressure_bar",
+      "type": "number",
+      "label": "Pressure (bar)",
+      "defaultValue": 1.0,
+      "tooltip": "Simulation pressure."
+    },
+    {
+      "key": "solvent_model",
+      "type": "select",
+      "label": "Solvent Model",
+      "options": [
+        { "value": "explicit", "label": "Explicit Water" },
+        { "value": "implicit", "label": "Implicit Solvent" }
+      ],
+      "defaultValue": "explicit",
+      "tooltip": "Type of solvation."
+    },
+    {
+      "key": "ion_concentration",
+      "type": "number",
+      "label": "Ion Concentration (M)",
+      "defaultValue": 0.15,
+      "tooltip": "Salt concentration for neutralization."
+    },
+    {
+      "key": "box_type",
+      "type": "select",
+      "label": "Box Type",
+      "options": [
+        { "value": "dodecahedron", "label": "Dodecahedron" },
+        { "value": "cubic", "label": "Cubic" },
+        { "value": "triclinic", "label": "Triclinic" }
+      ],
+      "defaultValue": "dodecahedron",
+      "tooltip": "Simulation box shape.",
+      "advanced": true
+    },
+    {
+      "key": "box_margin",
+      "type": "number",
+      "label": "Box Margin (Å)",
+      "defaultValue": 10.0,
+      "tooltip": "Distance from solute to box edge.",
+      "advanced": true
+    },
+    {
+      "key": "plumed_file",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "PLUMED Input File",
+      "accept": ".dat,.plumed",
+      "tooltip": "Optional PLUMED file for enhanced sampling or collective variables.",
+      "advanced": true
+    },
+    {
+      "key": "thermostat",
+      "type": "select",
+      "label": "Thermostat",
+      "options": [
+        { "value": "v-rescale", "label": "V-rescale" },
+        { "value": "nose-hoover", "label": "Nose-Hoover" },
+        { "value": "berendsen", "label": "Berendsen" }
+      ],
+      "defaultValue": "v-rescale",
+      "tooltip": "Thermostat algorithm.",
+      "advanced": true
+    },
+    {
+      "key": "barostat",
+      "type": "select",
+      "label": "Barostat",
+      "options": [
+        { "value": "parrinello-rahman", "label": "Parrinello-Rahman" },
+        { "value": "berendsen", "label": "Berendsen" },
+        { "value": "c-rescale", "label": "C-rescale" }
+      ],
+      "defaultValue": "parrinello-rahman",
+      "tooltip": "Barostat algorithm.",
+      "advanced": true
+    },
+    {
+      "key": "num_replicas",
+      "type": "number",
+      "label": "Number of Replicas",
+      "defaultValue": 1,
+      "tooltip": "Number of simulation replicas to run.",
+      "advanced": true
+    },
+    {
+      "key": "checkpoint_interval",
+      "type": "number",
+      "label": "Checkpoint Interval (ps)",
+      "defaultValue": 150,
+      "tooltip": "Frequency of writing checkpoint files.",
+      "advanced": true
+    }
+  ],
+  "feedsTo": ["energetics", "mechanistic-hypothesis", "mutation-design"]
+}

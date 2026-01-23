@@ -25,6 +25,8 @@
     "claim-validation",
     "compliance",
     "ingredient-interaction-risk-synergy-analysis",
-    "electrostatic-mapping"
+    "electrostatic-mapping",
+    "surface-mapping",
+    "md-simulation"
   ]
 }

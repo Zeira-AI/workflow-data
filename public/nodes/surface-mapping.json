@@ -1,0 +1,139 @@
+{
+  "type": "surface-mapping",
+  "label": "Surface Mapping (Hydrophobic / Pocket / ML)",
+  "category": "analysis",
+  "icon": "structure-icon",
+  "color": "teal",
+  "description": "Map hydrophobic/hydrophilic patches, pocket geometry, and compute ML surface fingerprints to identify interaction-prone areas using FreeSASA, fpocket, and MaSIF.",
+  "pricing": {
+    "credits": 1500,
+    "executionTime": 10
+  },
+  "outputMockLabel": "Surface Map",
+  "defaultInputs": [
+    {
+      "id": "input_structure",
+      "name": "Input Structure",
+      "type": "structure",
+      "required": false,
+      "tooltip": "PDB file of the complex or receptor."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "sasa_per_residue_csv",
+      "name": "SASA per Residue",
+      "type": "string",
+      "tooltip": "CSV containing SASA values per residue."
+    },
+    {
+      "id": "pockets_json",
+      "name": "Pockets",
+      "type": "object",
+      "tooltip": "JSON object describing detected pockets."
+    },
+    {
+      "id": "surface_patches_csv",
+      "name": "Surface Patches",
+      "type": "string",
+      "tooltip": "CSV describing surface patches and properties."
+    },
+    {
+      "id": "masif_descriptors_npy",
+      "name": "MaSIF Descriptors",
+      "type": "string",
+      "tooltip": "NPY file or link to ML surface descriptors."
+    },
+    {
+      "id": "binding_propensity_csv",
+      "name": "Binding Propensity",
+      "type": "string",
+      "tooltip": "CSV containing per-residue binding propensities."
+    },
+    {
+      "id": "surface_mapping_image",
+      "name": "Visualization",
+      "type": "image",
+      "tooltip": "Visual overlay of surface mapping (PNG)."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "pdb_input_file",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Complex/Resetor PDB Input File",
+      "suggestedField": ["pdb_file", "structure"],
+      "accept": ".pdb",
+      "tooltip": "Upload or select a PDB file."
+    },
+    {
+      "key": "surface_resolution",
+      "type": "number",
+      "label": "Surface Resolution",
+      "defaultValue": 1.0,
+      "placeholder": "1.0",
+      "tooltip": "Resolution for surface generation (optional)."
+    },
+    {
+      "key": "patch_radius",
+      "type": "number",
+      "label": "Patch Radius (Å)",
+      "defaultValue": 10.0,
+      "placeholder": "10.0",
+      "tooltip": "Radius for surface patches used in fingerprinting."
+    },
+    {
+      "key": "sasa_probe_radius",
+      "type": "number",
+      "label": "SASA Probe Radius (Å)",
+      "defaultValue": 1.4,
+      "placeholder": "1.4",
+      "tooltip": "Probe radius for SASA calculation (FreeSASA)."
+    },
+    {
+      "key": "pocket_min_volume",
+      "type": "number",
+      "label": "Min. Pocket Volume (Å³)",
+      "defaultValue": 100,
+      "placeholder": "100",
+      "tooltip": "Minimum volume for pocket detection.",
+      "advanced": true
+    },
+    {
+      "key": "masif_descriptor_dim",
+      "type": "number",
+      "label": "MaSIF Descriptor Dim",
+      "defaultValue": 80,
+      "tooltip": "Dimension of the output MaSIF descriptors.",
+      "advanced": true
+    },
+    {
+      "key": "scannet_window_size",
+      "type": "number",
+      "label": "ScanNet Window Size",
+      "defaultValue": 0,
+      "tooltip": "Window size for ScanNet analysis.",
+      "advanced": true
+    },
+    {
+      "key": "scannet_threshold",
+      "type": "number",
+      "label": "ScanNet Threshold",
+      "defaultValue": 0.5,
+      "placeholder": "0.5",
+      "tooltip": "Probability threshold for binding propensity.",
+      "advanced": true
+    },
+    {
+      "key": "output_mesh",
+      "type": "boolean",
+      "label": "Output Mesh",
+      "defaultValue": true,
+      "tooltip": "Whether to generate and output a surface mesh."
+    }
+  ],
+  "feedsTo": ["docking", "md-simulation", "mechanistic-hypothesis"]
+}
