@@ -1,0 +1,127 @@
+{
+  "type": "sequence-generation",
+  "label": "Sequence Generation",
+  "category": "analysis",
+  "icon": "dna",
+  "color": "violet",
+  "description": "Generate novel peptide sequences using generative models like PepGAN, PepINVENT, or ProGen.",
+  "pricing": {
+    "credits": 2500,
+    "executionTime": 45
+  },
+  "outputMockLabel": "Generated Sequences",
+  "defaultInputs": [
+    {
+      "id": "conditioning_data",
+      "name": "Conditioning Data",
+      "type": "string",
+      "required": false,
+      "tooltip": "Optional data for conditioning or seeding the generation."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "generated_sequences_csv",
+      "name": "Generated Sequences",
+      "type": "string",
+      "tooltip": "CSV containing generated sequences and scores."
+    },
+    {
+      "id": "generation_log_txt",
+      "name": "Generation Log",
+      "type": "string",
+      "tooltip": "Log file with generation parameters and details."
+    },
+    {
+      "id": "filtered_candidates_fasta",
+      "name": "Filtered Candidates (FASTA)",
+      "type": "string",
+      "tooltip": "FASTA file of the best candidates."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "generator_model",
+      "type": "select",
+      "label": "Generative Model",
+      "options": [
+        { "value": "pepgan", "label": "PepGAN" },
+        { "value": "pepinvent", "label": "PepINVENT (RL)" },
+        { "value": "progen2", "label": "ProGen2 (Autoregressive)" },
+        { "value": "pepediff", "label": "PepEDiff (Diffusion)" }
+      ],
+      "defaultValue": "pepgan",
+      "tooltip": "Select the generative model architecture."
+    },
+    {
+      "key": "num_samples",
+      "type": "number",
+      "label": "Number of Samples",
+      "defaultValue": 100,
+      "tooltip": "Number of sequences to generate."
+    },
+    {
+      "key": "length_min",
+      "type": "number",
+      "label": "Min Length",
+      "defaultValue": 5,
+      "tooltip": "Minimum peptide length."
+    },
+    {
+      "key": "length_max",
+      "type": "number",
+      "label": "Max Length",
+      "defaultValue": 20,
+      "tooltip": "Maximum peptide length."
+    },
+    {
+      "key": "diversity_temperature",
+      "type": "number",
+      "label": "Diversity Temperature",
+      "defaultValue": 1.0,
+      "tooltip": "Sampling temperature for diversity (higher = more diverse).",
+      "advanced": true
+    },
+    {
+      "key": "target_charge",
+      "type": "number",
+      "label": "Target Charge",
+      "defaultValue": 0,
+      "tooltip": "Desired net charge (optional conditioning).",
+      "advanced": true
+    },
+    {
+      "key": "hydrophobicity_min",
+      "type": "number",
+      "label": "Hydrophobicity Min",
+      "defaultValue": -1.0,
+      "tooltip": "Minimum hydrophobicity (optional).",
+      "advanced": true
+    },
+    {
+      "key": "hydrophobicity_max",
+      "type": "number",
+      "label": "Hydrophobicity Max",
+      "defaultValue": 1.0,
+      "tooltip": "Maximum hydrophobicity (optional).",
+      "advanced": true
+    },
+    {
+      "key": "allowed_motifs",
+      "type": "text",
+      "label": "Allowed Motifs",
+      "placeholder": "RGD, KKK",
+      "tooltip": "Comma-separated list of motifs to encourage.",
+      "advanced": true
+    },
+    {
+      "key": "forbidden_motifs",
+      "type": "text",
+      "label": "Forbidden Motifs",
+      "placeholder": "C, M",
+      "tooltip": "Comma-separated list of motifs or amino acids to avoid.",
+      "advanced": true
+    }
+  ],
+  "feedsTo": ["candidate-library", "structure-prediction", "peptide-finetune"]
+}

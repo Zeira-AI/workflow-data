@@ -32,6 +32,7 @@
     "ml-interpretability",
     "mechanistic-hypothesis",
     "sequence-embeddings",
-    "peptide-finetune"
+    "peptide-finetune",
+    "sequence-generation"
   ]
 }
