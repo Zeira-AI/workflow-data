@@ -170,6 +170,10 @@
         {
           "value": "swissdock",
           "label": "SwissDock"
+        },
+        {
+          "value": "haddock",
+          "label": "HADDOCK"
         }
       ],
       "defaultValue": "vina",
@@ -218,7 +222,8 @@
           "field": "engine",
           "in": [
             "vina",
-            "swissdock"
+            "swissdock",
+            "haddock"
           ]
         }
       ],

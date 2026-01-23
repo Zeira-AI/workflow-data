@@ -9,7 +9,7 @@
     "credits": 1200,
     "executionTime": 5
   },
-  "outputMockLabel": "2 structures",
+  "outputMockLabel": "Result",
   "defaultInputs": [
     {
       "id": "receptor_source",
@@ -28,14 +28,8 @@
   ],
   "defaultOutputs": [
     {
-      "id": "receptor_clean",
-      "name": "Cleaned Receptor",
-      "type": "structure",
-      "tooltip": "Cleaned and prepared receptor structure (PDB format)."
-    },
-    {
       "id": "ligand_clean",
-      "name": "Cleaned Ligand",
+      "name": "",
       "type": "structure",
       "tooltip": "Cleaned and prepared ligand structure (PDB format)."
     }
@@ -55,15 +49,39 @@
     },
     {
       "key": "receptorPdbFile",
-      "type": "file",
-      "label": "Upload PDB File",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "PDB File",
       "accept": ".pdb",
-      "tooltip": "Upload a PDB file containing protein names and sequences.",
+      "tooltip": "PDB file containing protein names and sequences.",
       "showWhen": [
         {
           "field": "receptorSourceType",
           "in": [
             "pdb_file"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "receptorPdbFileChoice",
+      "type": "select",
+      "label": "choose PDB file",
+      "suggestedField": ["pdb_1"],
+      "options": [
+        { "value": "9now", "label": "9NOW" },
+        { "value": "9nor", "label": "9NOR" },
+        { "value": "9nos", "label": "9NOS" }
+      ],
+      "defaultValue": "9now",
+      "tooltip": "Select the type of PDB file you want to use.",
+      "showWhen": [
+        {
+          "field": "receptorPdbFile",
+          "in": [
+            "*"
           ]
         }
       ]
@@ -94,47 +112,6 @@
           "field": "receptorSourceType",
           "in": [
             "experimental"
-          ]
-        }
-      ]
-    },
-    {
-      "key": "ligandSourceType",
-      "type": "select",
-      "label": "Ligand Source Type",
-      "options": [
-        { "value": "pdb_file", "label": "PDB file" },
-        { "value": "sequence", "label": "Sequence" }
-      ],
-      "defaultValue": "pdb_file",
-      "tooltip": "Type of ligand/peptide source: upload PDB file or provide amino acid sequence."
-    },
-    {
-      "key": "ligandPdbFile",
-      "type": "file",
-      "label": "Upload PDB File",
-      "accept": ".pdb",
-      "tooltip": "Upload a PDB file containing protein names and sequences.",
-      "showWhen": [
-        {
-          "field": "ligandSourceType",
-          "in": [
-            "pdb_file"
-          ]
-        }
-      ]
-    },
-    {
-      "key": "ligandSequence",
-      "type": "textarea",
-      "label": "Sequence",
-      "placeholder": "e.g., ACDEFGHIKLMNPQRSTVWY",
-      "tooltip": "Sequence of the ligand/peptide.",
-      "showWhen": [
-        {
-          "field": "ligandSourceType",
-          "in": [
-            "sequence"
           ]
         }
       ]
