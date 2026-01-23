@@ -41,6 +41,12 @@
   ],
   "configSchema": [
     {
+      "key": "sample",
+      "type": "file",
+      "label": "Sample",
+      "tooltip": "Sample file."
+    },
+    {
       "key": "generator_model",
       "type": "select",
       "label": "Generative Model",
@@ -54,7 +60,7 @@
       "tooltip": "Select the generative model architecture."
     },
     {
-      "key": "num_samples",
+      "key": "n_samples",
       "type": "number",
       "label": "Number of Samples",
       "defaultValue": 100,
@@ -75,7 +81,7 @@
       "tooltip": "Maximum peptide length."
     },
     {
-      "key": "diversity_temperature",
+      "key": "diversity_temp",
       "type": "number",
       "label": "Diversity Temperature",
       "defaultValue": 1.0,
