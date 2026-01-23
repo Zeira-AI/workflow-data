@@ -71,7 +71,7 @@
     },
         {
             "key": "selectModel",
-            "type": "multiselect",
+            "type": "select",
             "label": "Select Model",
             "options": [
               {
@@ -91,10 +91,8 @@
                 "label": "ScanNet (per-residue binding probability)"
               }
             ],
-            "tooltip": "Choose one or more databases to pull candidate structures from.",
-            "defaultValue": [
-                "vecurate"
-            ]
+            "tooltip": "Select the model for surface mapping.",
+            "defaultValue": "FreeSASA"
         },
     {
       "key": "surface_resolution",
