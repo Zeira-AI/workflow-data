@@ -71,19 +71,19 @@
     {
       "id": "pdb_1",
       "name": "PDBs",
-      "type": "string",
+      "type": "structure",
       "tooltip": "URL to the first PDB structure file."
     },
     {
       "id": "pdb_2",
       "name": "",
-      "type": "string",
+      "type": "structure",
       "tooltip": "URL to the second PDB structure file."
     },
     {
       "id": "pdb_3",
       "name": "",
-      "type": "string",
+      "type": "structure",
       "tooltip": "URL to the third PDB structure file."
     }
   ],
