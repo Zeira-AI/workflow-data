@@ -30,6 +30,8 @@
     "md-simulation",
     "energetics",
     "ml-interpretability",
-    "mechanistic-hypothesis"
+    "mechanistic-hypothesis",
+    "sequence-embeddings",
+    "peptide-finetune"
   ]
 }

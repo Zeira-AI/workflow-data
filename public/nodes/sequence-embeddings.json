@@ -1,0 +1,79 @@
+{
+  "type": "sequence-embeddings",
+  "label": "Sequence Representation / Embeddings",
+  "category": "analysis",
+  "icon": "binary",
+  "color": "cyan",
+  "description": "Generate protein sequence embeddings using models like ESM, ProGen, or ProtTrans.",
+  "pricing": {
+    "credits": 1000,
+    "executionTime": 15
+  },
+  "outputMockLabel": "Embeddings",
+  "defaultInputs": [
+    {
+      "id": "sequences",
+      "name": "Sequences",
+      "type": "string",
+      "required": true,
+      "tooltip": "Dataset containing sequences or FASTA file."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "embeddings_npy",
+      "name": "Embeddings (NPY)",
+      "type": "string",
+      "tooltip": "Link to the embeddings .npy file."
+    },
+    {
+      "id": "embedding_metadata_csv",
+      "name": "Embedding Metadata",
+      "type": "string",
+      "tooltip": "CSV containing metadata for the generated embeddings."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "sequence_input_file",
+      "type": [
+          "text",
+          "file"
+      ],
+      "label": "Sequence Input File",
+      "suggestedField": ["sequences", "fasta_file"],
+      "accept": ".fasta,.txt,.csv",
+      "tooltip": "Upload or select a file containing sequences."
+    },
+    {
+      "key": "embedding_model",
+      "type": "select",
+      "label": "Embedding Model",
+      "options": [
+        { "value": "esm2_t33_650M_UR50D", "label": "ESM2 (650M Params)" },
+        { "value": "esm2_t36_3B_UR50D", "label": "ESM2 (3B Params)" },
+        { "value": "progen2-base", "label": "ProGen2 (Base)" },
+        { "value": "prot_bert", "label": "ProtT5/ProtBert" }
+      ],
+      "defaultValue": "esm2_t33_650M_UR50D",
+      "tooltip": "Select the protein language model."
+    },
+    {
+      "key": "model_layer",
+      "type": "text",
+      "label": "Model Layer / Pooling",
+      "defaultValue": "mean_pool",
+      "placeholder": "33 or mean_pool",
+      "tooltip": "Enter the layer number (int) or 'mean_pool'."
+    },
+    {
+      "key": "batch_size",
+      "type": "number",
+      "label": "Batch Size",
+      "defaultValue": 4,
+      "tooltip": "Batch size for inference.",
+      "advanced": true
+    }
+  ],
+  "feedsTo": ["ml-interpretability", "mechanistic-hypothesis"]
+}

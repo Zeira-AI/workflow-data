@@ -1,0 +1,113 @@
+{
+  "type": "peptide-finetune",
+  "label": "Peptide Fine-tune / Train Classifier",
+  "category": "analysis",
+  "icon": "brain",
+  "color": "pink",
+  "description": "Fine-tune a protein language model or train a classifier on peptide embeddings for property prediction (e.g., sweetness).",
+  "pricing": {
+    "credits": 3000,
+    "executionTime": 60
+  },
+  "outputMockLabel": "Trained Model",
+  "defaultInputs": [
+    {
+      "id": "train_data",
+      "name": "Training Data",
+      "type": "string",
+      "required": true,
+      "tooltip": "CSV dataset with sequences and labels."
+    },
+    {
+      "id": "features",
+      "name": "Features/Embeddings",
+      "type": "string",
+      "required": false,
+      "tooltip": "Optional embeddings or features corresponding to the training data."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "model_pt",
+      "name": "Trained Model",
+      "type": "string",
+      "tooltip": "Link to the saved model file (.pt)."
+    },
+    {
+      "id": "metrics_json",
+      "name": "Metrics",
+      "type": "object",
+      "tooltip": "JSON object containing performance metrics (accuracy, F1, etc.)."
+    },
+    {
+      "id": "predictions_csv",
+      "name": "Predictions",
+      "type": "string",
+      "tooltip": "CSV with predictions on the training/validation set."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "train_data_file",
+      "type": [
+          "text",
+          "file"
+      ],
+      "label": "Training Data File",
+      "suggestedField": ["train_data", "csv_file"],
+      "accept": ".csv",
+      "tooltip": "Upload or select the training data CSV."
+    },
+    {
+      "key": "model_choice",
+      "type": "select",
+      "label": "Model Architecture",
+      "options": [
+        { "value": "plm_finetune", "label": "Fine-tune PLM (ESM/ProGen)" },
+        { "value": "embedding_mlp", "label": "Embedding + MLP" },
+        { "value": "lightgbm", "label": "LightGBM (Classical ML)" }
+      ],
+      "defaultValue": "embedding_mlp",
+      "tooltip": "Select the modeling approach. PLM fine-tuning is more accurate but slower."
+    },
+    {
+      "key": "epochs",
+      "type": "number",
+      "label": "Epochs",
+      "defaultValue": 20,
+      "tooltip": "Number of training epochs."
+    },
+    {
+      "key": "batch_size",
+      "type": "number",
+      "label": "Batch Size",
+      "defaultValue": 32,
+      "tooltip": "Batch size for training."
+    },
+    {
+      "key": "learning_rate",
+      "type": "number",
+      "label": "Learning Rate",
+      "defaultValue": 0.001,
+      "tooltip": "Learning rate for the optimizer.",
+      "advanced": true
+    },
+    {
+      "key": "validation_split",
+      "type": "number",
+      "label": "Validation Split",
+      "defaultValue": 0.2,
+      "tooltip": "Fraction of data to use for validation (0.0 - 1.0).",
+      "advanced": true
+    },
+    {
+      "key": "balance_classes",
+      "type": "boolean",
+      "label": "Balance Classes",
+      "defaultValue": true,
+      "tooltip": "Automatically weight classes to handle imbalance.",
+      "advanced": true
+    }
+  ],
+  "feedsTo": ["candidate-library", "mechanistic-hypothesis"]
+}
