@@ -54,6 +54,7 @@
         "file"
       ],
       "label": "PDB File",
+      "suggestedField": ["pdb_1"],
       "accept": ".pdb",
       "tooltip": "PDB file containing protein names and sequences.",
       "showWhen": [
@@ -69,7 +70,6 @@
       "key": "receptorPdbFileChoice",
       "type": "select",
       "label": "choose PDB file",
-      "suggestedField": ["pdb_1"],
       "options": [
         { "value": "9now", "label": "9NOW" },
         { "value": "9nor", "label": "9NOR" },
