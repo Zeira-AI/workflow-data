@@ -1,14 +1,22 @@
-Pair,Predicted Synergistic Signal,Synergy Type (Dominant),Confidence,Flag
-Methylglyoxal × Dihydroxyacetone,Complementary precursor–active relationship,Formation / availability support,0.72,Safe
-Methylglyoxal × Leptosperin,Co-occurrence stability signal,Matrix stabilization / persistence,0.61,Low Risk
-Methylglyoxal × Methyl syringate,Functional complementarity,Bioactive + antioxidant balance,0.58,Low Risk
-Methylglyoxal × 3-Phenyllactic acid,Reinforcing antimicrobial context,Bioactivity reinforcement,0.65,Low Risk
-Methylglyoxal × Pinocembrin,Complementary polyphenol context,Activity buffering / mitigation,0.54,Low Risk
-Dihydroxyacetone × Leptosperin,Source-marker alignment,Natural co-origin consistency,0.60,Low Risk
-Dihydroxyacetone × Methyl syringate,Sensory moderation signal,Harshness smoothing,0.56,Low Risk
-Leptosperin × Methyl syringate,Phenolic co-modulation,Stability / antioxidant support,0.62,Low Risk
-Leptosperin × 3-Phenyllactic acid,Compatible bioactivity context,Multi-marker coherence,0.59,Low Risk
-Leptosperin × Pinocembrin,Polyphenol complementarity,Antioxidant breadth,0.64,Low Risk
-Methyl syringate × 3-Phenyllactic acid,Sensory–bioactivity balance,Flavor masking / balance,0.67,Low Risk
-Methyl syringate × Pinocembrin,Polyphenol synergy,Antioxidant coverage,0.71,Safe
-3-Phenyllactic acid × Pinocembrin,Reinforcing phenolic context,Bioactivity breadth,0.63,Low Risk
+Pair,Predicted_Synergistic_Signal,Synergy_Type_Dominant,Confidence,Flag
+D-Glucose + D-Fructose,Increased solubility and dispersion of phenolics,Matrix facilitation,High,SAFE
+D-Glucose + Sucrose,No functional interaction detected,Neutral co-presence,High,SAFE
+D-Fructose + Sucrose,Osmotic and viscosity effects only,Physical matrix effect,High,SAFE
+D-Glucose + Ferulic acid,Improved phenolic stability via hydrogen bonding,Stability enhancement,Medium–High,SAFE
+D-Fructose + Ferulic acid,Minor increase in oxidative degradation risk,Weak antagonism (chemical),Medium,LOW_RISK
+Sucrose + Ferulic acid,Reduced free phenolic availability,Bioavailability dampening,Medium,MODERATE_RISK
+D-Glucose + p-Coumaric acid,No adverse interaction predicted,Neutral,High,SAFE
+D-Fructose + p-Coumaric acid,Enhanced intestinal uptake (predicted),Absorption synergy,Medium,SAFE
+Sucrose + p-Coumaric acid,Slight dilution of functional signal,Exposure dilution,Medium,LOW_RISK
+D-Glucose + Syringic acid,Stabilization against oxidative degradation,Stability synergy,Medium–High,SAFE
+D-Fructose + Syringic acid,No meaningful interaction,Neutral,High,SAFE
+Sucrose + Syringic acid,Reduced diffusion rate in matrix,Physical hindrance,Medium,LOW_RISK
+D-Glucose + Chrysin,Increased apparent solubility,Matrix-enabled bioavailability,Medium,SAFE
+D-Fructose + Chrysin,Possible glycation risk at high heat,Processing-sensitive antagonism,Low–Medium,MODERATE_RISK
+Sucrose + Chrysin,Reduced absorption efficiency,Bioavailability suppression,Medium,MODERATE_RISK
+Ferulic acid + p-Coumaric acid,Additive antioxidant capacity,Additive functional synergy,High,SAFE
+Ferulic acid + Syringic acid,Cooperative ROS scavenging,Functional complementarity,High,SAFE
+p-Coumaric acid + Syringic acid,Overlapping antioxidant pathways,Redundant synergy,Medium–High,LOW_RISK
+Ferulic acid + Chrysin,Enhanced anti-inflammatory signal,Multi-target synergy,Medium,SAFE
+p-Coumaric acid + Chrysin,Weak cumulative benefit,Partial redundancy,Medium,LOW_RISK
+Syringic acid + Chrysin,No adverse interaction predicted,Neutral,Medium–High,SAFE

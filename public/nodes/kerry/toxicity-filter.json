@@ -1,353 +1,195 @@
 {
-  "type": "toxicity-filter",
-  "label": "Toxicity Filter",
-  "category": "analysis",
-  "icon": "filtericon",
-  "color": "red",
-  "description": "Filter compounds based on SMILES data and ADMET predictions.",
-  "pricing": {
-    "credits": 800,
-    "executionTime": 1
-  },
-  "outputMockLabel": "41 compounds",
-  "defaultInputs": [
-    {
-      "id": "input-mol-data",
-      "name": "Input Compounds",
-      "type": "array",
-      "required": true,
-      "tooltip": "Table of compounds including at least a SMILES column and basic properties."
+    "type": "toxicity-filter",
+    "label": "Toxicity Filter",
+    "category": "analysis",
+    "icon": "filtericon",
+    "color": "red",
+    "description": "Filter honey compounds based on toxicity endpoints and safety thresholds.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "33 compounds",
+    "defaultInputs": [
+        {
+            "id": "input-mol-data",
+            "name": "Input Compounds",
+            "type": "array",
+            "required": true,
+            "tooltip": "Table of compounds."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "Compound",
+            "name": "Compound",
+            "type": "string",
+            "tooltip": "Name of the compound."
+        },
+        {
+            "id": "hERG_IC50_uM",
+            "name": "hERG IC₅₀ (µM)",
+            "type": "string",
+            "tooltip": "hERG channel inhibition IC₅₀ (µM). Higher values indicate lower cardiac risk."
+        },
+        {
+            "id": "Ames_prob",
+            "name": "Ames Test (prob.)",
+            "type": "number",
+            "tooltip": "Ames test mutagenicity probability (0-1). Lower values indicate lower genotoxic risk."
+        },
+        {
+            "id": "Hepatotox_prob",
+            "name": "Hepatotox (prob.)",
+            "type": "number",
+            "tooltip": "Hepatotoxicity probability (0-1). Lower values indicate lower liver toxicity risk."
+        },
+        {
+            "id": "Skin_sens_prob",
+            "name": "Skin Sensitization (prob.)",
+            "type": "number",
+            "tooltip": "Skin sensitization probability (0-1). Lower values indicate lower allergenic potential."
+        },
+        {
+            "id": "LD50_oral_rat_mg_kg",
+            "name": "LD₅₀ Oral Rat (mg/kg)",
+            "type": "string",
+            "tooltip": "Lethal dose 50% in rats via oral route (mg/kg). Higher values indicate lower acute toxicity."
+        },
+        {
+            "id": "Max_daily_intake_mg",
+            "name": "Max Daily Intake (mg/day)",
+            "type": "number",
+            "tooltip": "Maximum recommended daily intake in mg/day (mock data)."
+        },
+        {
+            "id": "Tox_decision",
+            "name": "Tox Decision",
+            "type": "string",
+            "tooltip": "Toxicity filter decision (Pass/Caution/Fail)."
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "ingredientListText",
+            "type": [
+                "text",
+                "file"
+            ],
+            "label": "Compound List",
+            "tooltip": "Compounds for analysis",
+            "suggestedField": [
+                "smiles",
+                "name",
+                "Compound"
+            ],
+            "accept": ".csv,.txt,.smi"
+        },
+        {
+            "key": "model",
+            "type": "select",
+            "label": "Model",
+            "options": [
+                {
+                    "value": "swiss_adme",
+                    "label": "SwissADME"
+                },
+                {
+                    "value": "admet_ai",
+                    "label": "ADMET-AI"
+                },
+                {
+                    "value": "preadmet",
+                    "label": "preADMET"
+                }
+            ],
+            "tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
+        },
+        {
+            "key": "herg_range",
+            "type": "range",
+            "label": "hERG IC₅₀ Range (µM)",
+            "defaultValue": [
+                10,
+                1000
+            ],
+            "tooltip": "hERG channel IC₅₀ range (min - max µM). Values below 10 µM indicate cardiac risk."
+        },
+        {
+            "key": "ames_max",
+            "type": "range",
+            "label": "Ames Probability Range",
+            "defaultValue": [
+                0,
+                0.5
+            ],
+            "tooltip": "Ames test probability range (0-1). Values above 0.5 indicate mutagenic potential."
+        },
+        {
+            "key": "hepatotox_max",
+            "type": "range",
+            "label": "Hepatotox Probability Range",
+            "defaultValue": [
+                0,
+                0.6
+            ],
+            "tooltip": "Hepatotoxicity probability range (0-1). Values above 0.6 indicate liver toxicity risk."
+        },
+        {
+            "key": "skin_sens_max",
+            "type": "range",
+            "label": "Skin Sensitization Range",
+            "defaultValue": [
+                0,
+                0.5
+            ],
+            "tooltip": "Skin sensitization probability range (0-1). Values above 0.5 indicate allergenic potential."
+        },
+        {
+            "key": "ld50_range",
+            "type": "range",
+            "label": "LD₅₀ Range (mg/kg)",
+            "defaultValue": [
+                500,
+                25000
+            ],
+            "tooltip": "LD₅₀ threshold range (mg/kg). Values below 500 indicate high acute toxicity."
+        },
+        {
+            "key": "max_daily_intake_range",
+            "type": "range",
+            "label": "Max Daily Intake Range (mg/day)",
+            "defaultValue": [
+                1,
+                500
+            ],
+            "tooltip": "Maximum recommended daily intake range (mg/day)."
+        }
+    ],
+    "defaultConfig": {
+        "herg_range": [
+            10,
+            1000
+        ],
+        "ames_max": [
+            0,
+            0.5
+        ],
+        "hepatotox_max": [
+            0,
+            0.6
+        ],
+        "skin_sens_max": [
+            0,
+            0.5
+        ],
+        "ld50_range": [
+            500,
+            25000
+        ],
+        "max_daily_intake_range": [
+            1,
+            500
+        ]
     }
-  ],
-  "defaultOutputs": [
-    {
-      "id": "compound",
-      "name": "Compound",
-      "type": "string",
-      "tooltip": "Compound name or identifier."
-    },
-    {
-      "id": "hia",
-      "name": "HIA",
-      "type": "string",
-      "tooltip": "Human Intestinal Absorption prediction: Low, Mod (Moderate), High, or Var (Variable)."
-    },
-    {
-      "id": "caco_2",
-      "name": "Caco-2",
-      "type": "string",
-      "tooltip": "Caco-2 cell permeability prediction: Low, Mod (Moderate), High, or Var (Variable)."
-    },
-    {
-      "id": "sol",
-      "name": "Solubility",
-      "type": "string",
-      "tooltip": "Aqueous solubility prediction: Low, Mod (Moderate), High, or Var (Variable)."
-    },
-    {
-      "id": "logp",
-      "name": "logP",
-      "type": "number",
-      "tooltip": "Octanol-water partition coefficient (lipophilicity)."
-    },
-    {
-      "id": "bbb",
-      "name": "BBB",
-      "type": "string",
-      "tooltip": "Blood-Brain Barrier penetration: Yes, No, Low, or Var (Variable)."
-    },
-    {
-      "id": "ppb",
-      "name": "PPB",
-      "type": "string",
-      "tooltip": "Plasma Protein Binding: Low, Mod (Moderate), High, or Var (Variable)."
-    },
-    {
-      "id": "clearance",
-      "name": "Clearance",
-      "type": "string",
-      "tooltip": "Metabolic clearance prediction: Low, Mod (Moderate), High, or Var (Variable)."
-    },
-    {
-      "id": "cyp_inhib",
-      "name": "CYP Inhibition",
-      "type": "string",
-      "tooltip": "Cytochrome P450 inhibition: Yes or No."
-    },
-    {
-      "id": "rm_risk",
-      "name": "RM Risk",
-      "type": "string",
-      "tooltip": "Reactive Metabolite risk: Yes or No."
-    },
-    {
-      "id": "herg",
-      "name": "hERG",
-      "type": "string",
-      "tooltip": "hERG channel inhibition risk: Neg (Negative), Weak, Pos (Positive), or Var (Variable)."
-    },
-    {
-      "id": "geno",
-      "name": "Genotoxicity",
-      "type": "string",
-      "tooltip": "Genotoxicity prediction: Neg (Negative), Pos (Positive), or Var (Variable)."
-    },
-    {
-      "id": "acute_tox",
-      "name": "Acute Toxicity",
-      "type": "string",
-      "tooltip": "Acute toxicity prediction: Low, Mod (Moderate), High, Extreme, or Var (Variable)."
-    },
-    {
-      "id": "repeat_tox",
-      "name": "Repeat Toxicity",
-      "type": "string",
-      "tooltip": "Repeated dose toxicity prediction: Low, Mod (Moderate), High, Extreme, or Var (Variable)."
-    },
-    {
-      "id": "dev_repro",
-      "name": "Developmental/Reproductive",
-      "type": "string",
-      "tooltip": "Developmental and reproductive toxicity: Yes, No, or Var (Variable)."
-    },
-    {
-      "id": "endocrine",
-      "name": "Endocrine",
-      "type": "string",
-      "tooltip": "Endocrine disruption potential: Yes, No, Possible, or Var (Variable)."
-    },
-    {
-      "id": "oral_irrit",
-      "name": "Oral Irritation",
-      "type": "string",
-      "tooltip": "Oral irritation potential: Low, Mod (Moderate), High, or Var (Variable)."
-    },
-    {
-      "id": "volatile",
-      "name": "Volatile",
-      "type": "string",
-      "tooltip": "Volatility assessment: Yes or No."
-    },
-    {
-      "id": "decision",
-      "name": "Decision",
-      "type": "string",
-      "tooltip": "Overall toxicity decision: PASS (approved), PASS* (approved with conditions), or FAIL (rejected)."
-    }
-  ],
-  "configSchema": [
-    {
-      "key": "ingredientListText",
-      "type": [
-        "text",
-        "file"
-      ],
-      "label": "Compound List",
-      "tooltip": "Compounds for ADMET prediction",
-      "suggestedField": [
-        "smiles",
-        "name",
-        "ingredient_name",
-        "inci_name"
-      ],
-      "accept": ".csv,.txt,.smi"
-    },
-    {
-      "key": "model",
-      "type": "select",
-      "label": "Model",
-      "options": [
-        {
-          "value": "swiss_adme",
-          "label": "SwissADME"
-        },
-        {
-          "value": "admet_ai",
-          "label": "ADMET-AI"
-        },
-        {
-          "value": "preadmet",
-          "label": "preADMET"
-        }
-      ],
-      "tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
-    },
-    {
-      "key": "logp_range",
-      "type": "range",
-      "label": "logP Range",
-      "defaultValue": [
-        -2,
-        4.0
-      ],
-      "tooltip": "Partition coefficient range (min - max)."
-    },
-    {
-      "key": "hia_filter",
-      "type": "multiselect",
-      "label": "HIA Filter",
-      "options": [
-        {
-          "value": "Low",
-          "label": "Low"
-        },
-        {
-          "value": "Mod",
-          "label": "Moderate"
-        },
-        {
-          "value": "High",
-          "label": "High"
-        },
-        {
-          "value": "Var",
-          "label": "Variable"
-        }
-      ],
-      "defaultValue": [
-        "Low",
-        "Mod",
-        "High"
-      ],
-      "tooltip": "Allowed Human Intestinal Absorption levels."
-    },
-    {
-      "key": "bbb_filter",
-      "type": "multiselect",
-      "label": "BBB Filter",
-      "options": [
-        {
-          "value": "Yes",
-          "label": "Yes (Penetrates)"
-        },
-        {
-          "value": "No",
-          "label": "No"
-        },
-        {
-          "value": "Low",
-          "label": "Low"
-        },
-        {
-          "value": "Var",
-          "label": "Variable"
-        }
-      ],
-      "defaultValue": [
-        "No",
-        "Low"
-      ],
-      "tooltip": "Allowed Blood-Brain Barrier penetration levels."
-    },
-    {
-      "key": "geno_filter",
-      "type": "multiselect",
-      "label": "Genotoxicity Filter",
-      "options": [
-        {
-          "value": "Neg",
-          "label": "Negative"
-        },
-        {
-          "value": "Pos",
-          "label": "Positive"
-        },
-        {
-          "value": "Var",
-          "label": "Variable"
-        }
-      ],
-      "defaultValue": [
-        "Neg"
-      ],
-      "tooltip": "Allowed genotoxicity outcomes."
-    },
-    {
-      "key": "acute_tox_filter",
-      "type": "multiselect",
-      "label": "Acute Toxicity Filter",
-      "options": [
-        {
-          "value": "Low",
-          "label": "Low"
-        },
-        {
-          "value": "Mod",
-          "label": "Moderate"
-        },
-        {
-          "value": "High",
-          "label": "High"
-        },
-        {
-          "value": "Extreme",
-          "label": "Extreme"
-        },
-        {
-          "value": "Var",
-          "label": "Variable"
-        }
-      ],
-      "defaultValue": [
-        "Low",
-        "Mod"
-      ],
-      "tooltip": "Allowed acute toxicity levels."
-    },
-    {
-      "key": "herg_filter",
-      "type": "multiselect",
-      "label": "hERG Filter",
-      "options": [
-        {
-          "value": "Neg",
-          "label": "Negative"
-        },
-        {
-          "value": "Weak",
-          "label": "Weak"
-        },
-        {
-          "value": "Pos",
-          "label": "Positive"
-        },
-        {
-          "value": "Var",
-          "label": "Variable"
-        }
-      ],
-      "defaultValue": [
-        "Neg",
-        "Weak"
-      ],
-      "tooltip": "Allowed hERG inhibition levels."
-    }
-  ],
-  "defaultConfig": {
-    "smiles_column": "smiles",
-    "logp_range": [
-      -2,
-      4.0
-    ],
-    "hia_filter": [
-      "Low",
-      "Mod",
-      "High"
-    ],
-    "bbb_filter": [
-      "No",
-      "Low"
-    ],
-    "geno_filter": [
-      "Neg"
-    ],
-    "acute_tox_filter": [
-      "Low",
-      "Mod"
-    ],
-    "herg_filter": [
-      "Neg",
-      "Weak"
-    ]
-  }
 }

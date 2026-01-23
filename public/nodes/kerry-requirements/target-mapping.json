@@ -1,0 +1,130 @@
+{
+  "type": "target-mapping",
+  "label": "Target Mapping",
+  "category": "analysis",
+  "icon": "target-icon",
+  "color": "blue",
+  "description": "Maps protein targets to biological systems, assays, and metrics for sweet taste receptor research.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
+  "outputMockLabel": "2 targets",
+  "defaultInputs": [
+    {
+      "id": "target-input",
+      "name": "Target/Protein Input",
+      "type": "string",
+      "required": false,
+      "tooltip": "Optional input port carrying protein names or biological descriptions from previous steps."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "protein_target",
+      "name": "Protein Target",
+      "type": "string",
+      "tooltip": "Protein target name (e.g. \"TAS1R2\", \"TAS1R3\")."
+    },
+    {
+      "id": "biological_system",
+      "name": "Biological System",
+      "type": "string",
+      "tooltip": "Description of the biological system and expression context (e.g. \"Human sweet taste receptor (GPCR), heterodimerized with TAS1R3...\")."
+    },
+    {
+      "id": "desired_modulation",
+      "name": "Desired Modulation",
+      "type": "string",
+      "tooltip": "Required modulation type (e.g. \"Agonism or partial agonism\", \"Positive modulation / co-agonism\")."
+    },
+    {
+      "id": "corresponding_assay",
+      "name": "Corresponding Assay",
+      "type": "string",
+      "tooltip": "Specific assay method used to measure the target activity (e.g. \"Cell-based calcium flux assay\")."
+    },
+    {
+      "id": "metric_used",
+      "name": "Metric Used",
+      "type": "string",
+      "tooltip": "Measurement unit or metric for the assay result (e.g. \"EC₅₀, Emax\", \"EC₅₀ shift, Emax modulation\")."
+    },
+    {
+      "id": "rationale",
+      "name": "Rationale",
+      "type": "string",
+      "tooltip": "Scientific rationale explaining target relevance to sweet taste perception."
+    },
+    {
+      "id": "crystallized_structure",
+      "name": "Crystallized Structure Available?",
+      "type": "string",
+      "tooltip": "Indicates if a crystallized structure is available with PDB IDs (e.g. \"Yes (PDB: 9NOW, 9NOS..)\")."
+    },
+    {
+      "id": "chembl_id",
+      "name": "ChEMBL ID",
+      "type": "string",
+      "tooltip": "ChEMBL database identifier for the target (e.g. \"CHEMBL2363059\")."
+    },
+    {
+      "id": "pdb_1",
+      "name": "PDBs",
+      "type": "string",
+      "tooltip": "URL to the first PDB structure file."
+    },
+    {
+      "id": "pdb_2",
+      "name": "",
+      "type": "string",
+      "tooltip": "URL to the second PDB structure file."
+    },
+    {
+      "id": "pdb_3",
+      "name": "",
+      "type": "string",
+      "tooltip": "URL to the third PDB structure file."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "manualFreetext",
+      "type": "textarea",
+      "label": "Target Input",
+      "placeholder": "Enter target name or biological effect (e.g., TAS1R2, sweet taste receptor...)",
+      "tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
+    }
+  ],
+  "defaultConfig": {
+    "manualFreetext": "",
+    "mappingTable": [
+      {
+        "protein_target": "TAS1R2",
+        "biological_system": "Human sweet taste receptor (GPCR), heterodimerized with TAS1R3 in the VFT domain; expressed in taste receptor cells and heterologous systems (e.g., HEK293)",
+        "desired_modulation": "Agonism or partial agonism (sweet perception activation)",
+        "corresponding_assay": "Cell-based calcium flux assay (co-expression of TAS1R2/TAS1R3 with Gα16 or Gαgustducin); alternatively cAMP or IP₃ reporter assays",
+        "metric_used": "EC₅₀, Emax (relative to reference sweetener)",
+        "rationale": "TAS1R2 contains the primary orthosteric binding determinants for many sweet ligands; agonist-induced activation correlates with perceived sweetness intensity",
+        "crystallized_structure": "Yes (PDB: 9NOW, 9NOS..)",
+        "chembl_id": "CHEMBL2363059",
+        "pdb_1": "https://workflow-data-2sa8.vercel.app/data/docking/9NOR.pdb",
+        "pdb_2": "https://workflow-data-2sa8.vercel.app/data/docking/9NOS.pdb",
+        "pdb_3": "https://workflow-data-2sa8.vercel.app/data/docking/9NOW.pdb"
+      },
+      {
+        "protein_target": "TAS1R3",
+        "biological_system": "Human sweet taste receptor co-receptor; obligate heterodimer partner of TAS1R2",
+        "desired_modulation": "Positive modulation / co-agonism; structural stabilization of active heterodimer",
+        "corresponding_assay": "Same calcium flux or reporter assay as above; optional mutagenesis-assisted functional assays",
+        "metric_used": "EC₅₀ shift, Emax modulation, Δresponse vs TAS1R2 alone",
+        "rationale": "TAS1R3 is required for receptor assembly, signaling competence, and ligand-dependent conformational change; modulation enhances or enables TAS1R2-driven activation",
+        "crystallized_structure": "Yes (PDB: 9NOW, 9NOS..)",
+        "chembl_id": "CHEMBL2363060",
+        "pdb_1": "https://workflow-data-2sa8.vercel.app/data/docking/9NOR.pdb",
+        "pdb_2": "https://workflow-data-2sa8.vercel.app/data/docking/9NOS.pdb",
+        "pdb_3": "https://workflow-data-2sa8.vercel.app/data/docking/9NOW.pdb"
+      }
+    ]
+  }
+}

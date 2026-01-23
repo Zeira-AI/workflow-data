@@ -1,41 +1,34 @@
-compound,hia,caco_2,sol,logp,bbb,ppb,clearance,cyp_inhib,rm_risk,herg,geno,acute_tox,repeat_tox,dev_repro,endocrine,oral_irrit,volatile,decision
-Methylglyoxal,Low,Low,High,1.2,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Dihydroxyacetone,Mod,Mod,Mod,2.8,Low,High,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS*
-Leptosperin,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Neg,Neg,Low,Mod,No,No,Low,No,PASS
-Methyl syringate,Low,Low,Low,1.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-3-Phenyllactic acid,Low,Low,Low,2.3,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Pinocembrin,Low,Low,Low,1.9,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Chrysin,Mod,Low,High,−0.5,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,No,Low,No,PASS*
-Galangin,Low,Low,Low,2.1,No,Mod,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Moderate,No,PASS
-Quercetin,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Kaempferol,Low,Low,Low,1.3,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Caffeic acid,Low,Low,High,−1.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-p-Coumaric acid,High,High,Low,2.9,Yes,High,Low,Yes,No,Weak,Neg,Mod,Mod,No,No,High,No,FAIL
-MRJP-derived peptides,Mod,Mod,Low,3.2,Yes,High,Low,Yes,No,Weak,Neg,High,Mod,No,No,High,No,FAIL
-Hydroxymethylfurfural,Low,Low,Mod,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-2-Phenylethanol,Mod,Mod,Low,2.8,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,High,No,PASS*
-Methyl anthranilate,Mod,High,Low,3.3,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Benzoic acid,Mod,High,Low,3.4,Yes,High,Low,No,No,Neg,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-Vanillin,Low,Low,Low,1.5,No,Mod,Mod,Yes,No,Weak,Neg,Mod,Mod,No,No,Moderate,No,PASS
-Furaneol,Mod,Low,High,1.1,No,Low,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Nonanal,High,High,Mod,2.6,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
-Hexanal,High,High,Mod,2.9,Yes,High,Low,Yes,Yes,Pos,Pos,High,High,Yes,No,High,No,FAIL
-Melezitose,High,High,High,1.2,Yes,Low,Mod,Yes,No,Pos,Neg,High,Mod,Yes,No,Mod,Yes,FAIL
-Arabinose,High,High,Low,3.1,Yes,High,Low,Yes,Yes,Pos,Pos,Extreme,Extreme,Yes,No,High,No,FAIL
-Xylose,Mod,Low,Low,1.8,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
-Sucrose,Mod,Low,Low,1.9,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,Possible,Mod,No,FAIL
-Naringenin glycosides,High,High,Mod,2.7,Yes,Mod,Low,Yes,Yes,Neg,Pos,Mod,Mod,Yes,Yes,Mod,Yes,FAIL
-4-Hydroxybenzoic acid,Mod,High,Mod,2.1,Yes,Mod,Low,Yes,No,Weak,Neg,Mod,Mod,No,Possible,Mod,Yes,FAIL
-3-Methylbutanal,Low,Low,High,1.0,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,High,Yes,PASS
-2-Methylbutanal,Low,Low,Low,2.5,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Furaneol,Low,Low,Low,2.4,No,Mod,Mod,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-2-Acetylfuran,Low,Low,High,0.6,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-2-Acetylpyrazine,Low,Low,Low,0.7,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Low,No,PASS
-Neokestose,Mod,Low,High,−0.3,No,Low,Mod,No,No,Neg,Neg,Low,Mod,No,Possible,Low,No,PASS*
-Sweet dipeptide (Asp–Phe analog),Low,Low,Low,1.2,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,Yes,Yes,Low,No,PASS*
-Thaumatin fragment,Mod,Mod,High,−0.1,Yes,Low,Mod,No,No,Neg,Neg,Mod,Mod,No,No,Low,No,FAIL
-MRJP1 peptide fragment,High,High,High,−0.1,Yes,Low,Mod,Yes,No,Pos,Neg,Mod,Mod,No,No,Low,No,FAIL
-"3,4-Dimethoxycinnamic acid methyl ester",Low,Low,Low,2.0,No,Mod,Low,No,Yes,Neg,Pos,High,High,Yes,No,High,No,FAIL
-2-Phenylacetic acid,Low,Low,High,0.8,No,Low,High,No,No,Neg,Neg,Low,Low,No,No,Moderate,No,PASS
-Methyl anthranilate,Var,Var,Var,Var,Var,Var,Var,Yes,Yes,Pos,Pos,High,High,Yes,Possible,High,No,FAIL
-S-Methylmethionine,Low,Low,Low,2.7,No,Mod,Low,No,No,Neg,Neg,Mod,Mod,No,No,Mod,Yes,PASS*
+Compound,hERG_IC50_uM,Ames_prob,Hepatotox_prob,Skin_sens_prob,LD50_oral_rat_mg_kg,Max_daily_intake_mg,Tox_decision
+D-Glucose,>1000,0.01,0.01,0.01,>20000,10,Pass
+D-Fructose,>1000,0.01,0.05,0.01,>20000,8,Pass
+Sucrose,>1000,0.01,0.02,0.01,>20000,10,Pass
+Methylglyoxal (MGO),180,0.22,0.68,0.55,1200,0.5,Fail (systemic)
+Dihydroxyacetone (DHA),>500,0.18,0.42,0.20,6000,50,Caution
+Leptosperin,>300,0.04,0.15,0.05,>5000,100,Pass
+Gallic acid,>500,0.09,0.35,0.32,5000,300,Pass
+Caffeic acid,>200,0.21,0.48,0.28,2000,200,Caution
+Ferulic acid,>500,0.06,0.22,0.12,5000,300,Pass
+p-Coumaric acid,>500,0.05,0.20,0.10,5000,300,Pass
+Syringic acid,>500,0.04,0.18,0.08,5000,300,Pass
+Quercetin,>100,0.12,0.55,0.20,160,150,Caution
+Kaempferol,>200,0.08,0.38,0.15,1000,200,Pass
+Chrysin,>300,0.06,0.25,0.10,4000,200,Pass
+Luteolin,>80,0.15,0.62,0.18,1500,100,Caution
+Apigenin,>200,0.07,0.30,0.12,2000,200,Pass
+4-Hydroxyacetophenone,>300,0.10,0.28,0.25,1600,150,Pass
+Benzaldehyde,>250,0.19,0.45,0.40,1300,50,Caution
+Phenylacetic acid,>500,0.05,0.20,0.10,2000,200,Pass
+Pinocembrin,>200,0.07,0.32,0.12,2000,150,Pass
+Pinobanksin,>150,0.09,0.40,0.15,1800,100,Caution
+Isorhamnetin,>100,0.11,0.58,0.18,1200,100,Caution
+Rutin,>500,0.04,0.18,0.08,>5000,300,Pass
+Protocatechuic acid,>500,0.03,0.15,0.07,5000,300,Pass
+Vanillic acid,>500,0.03,0.12,0.06,5000,300,Pass
+Homovanillic acid,>500,0.02,0.10,0.05,5000,300,Pass
+Abscisic acid,>120,0.14,0.50,0.20,1000,50,Caution
+Kojic acid,>200,0.52,0.35,0.62,1800,10,Fail
+Hydroxymethylfurfural (HMF),>150,0.48,0.60,0.30,1500,5,Fail
+Lumichrome,>300,0.09,0.22,0.10,3000,100,Pass
+Tyrosol,>500,0.02,0.12,0.05,5000,300,Pass
+Hydroxytyrosol,>300,0.05,0.20,0.08,2000,200,Pass
+Catechol,>90,0.45,0.58,0.55,260,20,Fail
