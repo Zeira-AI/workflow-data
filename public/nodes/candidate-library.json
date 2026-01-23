@@ -81,6 +81,22 @@
           "label": "Vecurate Excerpt (25 compounds)"
         },
         {
+          "value": "taste_peptides",
+          "label": "TastePeptides"
+        },
+        {
+          "value": "taste_pd",
+          "label": "TastePD"
+        },
+        {
+          "value": "taste_peptides_db",
+          "label": "TastePeptidesDB"
+        },
+        {
+          "value": "tastepep_ai",
+          "label": "TastepepAI resources"
+        },
+        {
           "value": "eu_cosing",
           "label": "EU CoSing"
         },

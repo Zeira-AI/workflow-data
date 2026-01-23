@@ -69,6 +69,33 @@
       "accept": ".pdb",
       "tooltip": "Upload or select a PDB file."
     },
+        {
+            "key": "selectModel",
+            "type": "multiselect",
+            "label": "Select Model",
+            "options": [
+              {
+                "value": "FreeSASA",
+                "label": "FreeSASA (SASA & buried area)"
+              },
+              {
+                "value": "CASTp",
+                "label": "CASTp"
+              },
+              {
+                "value": "MaSIF-site / dMaSIF",
+                "label": "MaSIF-site / dMaSIF (surface fingerprinting / patch scores)"
+              },
+              {
+                "value": "ScanNet",
+                "label": "ScanNet (per-residue binding probability)"
+              }
+            ],
+            "tooltip": "Choose one or more databases to pull candidate structures from.",
+            "defaultValue": [
+                "vecurate"
+            ]
+        },
     {
       "key": "surface_resolution",
       "type": "number",
