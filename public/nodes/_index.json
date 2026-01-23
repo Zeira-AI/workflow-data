@@ -27,6 +27,9 @@
     "ingredient-interaction-risk-synergy-analysis",
     "electrostatic-mapping",
     "surface-mapping",
-    "md-simulation"
+    "md-simulation",
+    "energetics",
+    "ml-interpretability",
+    "mechanistic-hypothesis"
   ]
 }

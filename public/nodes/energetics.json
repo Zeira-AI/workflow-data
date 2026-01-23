@@ -1,0 +1,188 @@
+{
+  "type": "energetics",
+  "label": "Energetics / Binding Free Energy",
+  "category": "analysis",
+  "icon": "zap",
+  "color": "red",
+  "description": "Quantify binding free energy and identify per-residue energetic contributions using MMPBSA, PRODIGY, or structure-based mutation scanning.",
+  "pricing": {
+    "credits": 2000,
+    "executionTime": 30
+  },
+  "outputMockLabel": "Energy Results",
+  "defaultInputs": [
+    {
+      "id": "input_source",
+      "name": "Input Trajectory or Structure",
+      "type": "structure",
+      "required": true,
+      "tooltip": "MD trajectory (XTC) or single complex structure (PDB)."
+    },
+    {
+      "id": "topology_file",
+      "name": "Topology File",
+      "type": "string",
+      "required": false,
+      "tooltip": "Topology file (TPR/PRMTOP) required if input is a trajectory."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "mmpbsa_results_csv",
+      "name": "MMPBSA Results",
+      "type": "string",
+      "tooltip": "CSV containing binding free energy components (vdW, electrostatic, solvation)."
+    },
+    {
+      "id": "per_residue_decomp_csv",
+      "name": "Per-Residue Decomposition",
+      "type": "string",
+      "tooltip": "CSV detailing energetic contributions per residue."
+    },
+    {
+      "id": "prodigy_result_json",
+      "name": "PRODIGY Results",
+      "type": "object",
+      "tooltip": "JSON object with predicted DeltaG and Kd from PRODIGY."
+    },
+    {
+      "id": "mutation_ddg_csv",
+      "name": "Mutation DeltaDeltaG",
+      "type": "string",
+      "tooltip": "CSV containing predicted stability changes upon mutation."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "input_file_path",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Input File Path",
+      "suggestedField": ["trajectory_xtc", "complex_structure", "pdb_file"],
+      "accept": ".xtc,.pdb,.gro",
+      "tooltip": "Upload or specify the path to the input structure or trajectory."
+    },
+    {
+      "key": "topology_file_path",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Topology File Path",
+      "accept": ".tpr,.prmtop",
+      "tooltip": "Upload or specify the path to the topology file (required for trajectory analysis).",
+      "showWhen": [
+        {
+          "field": "analysis_method",
+          "in": ["gmx_MMPBSA", "MMPBSA.py"]
+        }
+      ]
+    },
+    {
+      "key": "analysis_method",
+      "type": "select",
+      "label": "Analysis Method",
+      "options": [
+        { "value": "gmx_MMPBSA", "label": "gmx_MMPBSA (GROMACS)" },
+        { "value": "MMPBSA.py", "label": "MMPBSA.py (Amber)" },
+        { "value": "PRODIGY", "label": "PRODIGY (PDB only)" },
+        { "value": "FoldX", "label": "FoldX (Mutation Scan)" },
+        { "value": "Rosetta", "label": "Rosetta (Mutation Scan)" }
+      ],
+      "defaultValue": "gmx_MMPBSA",
+      "tooltip": "Select the tool/method for energy calculation."
+    },
+    {
+      "key": "calculation_type",
+      "type": "select",
+      "label": "Calculation Type",
+      "options": [
+        { "value": "binding_energy", "label": "Binding Free Energy" },
+        { "value": "mutation_scan", "label": "Mutation Scanning (DeltaDeltaG)" }
+      ],
+      "defaultValue": "binding_energy",
+      "tooltip": "Choose between binding energy calculation or mutation scanning."
+    },
+    {
+      "key": "solvent_dielectric",
+      "type": "number",
+      "label": "Solvent Dielectric",
+      "defaultValue": 80.0,
+      "tooltip": "Dielectric constant of the solvent.",
+      "showWhen": [
+        {
+          "field": "calculation_type",
+          "in": ["binding_energy"]
+        }
+      ]
+    },
+    {
+      "key": "salt_concentration",
+      "type": "number",
+      "label": "Salt Concentration (M)",
+      "defaultValue": 0.15,
+      "tooltip": "Salt concentration in Molar.",
+      "showWhen": [
+        {
+          "field": "calculation_type",
+          "in": ["binding_energy"]
+        }
+      ]
+    },
+    {
+      "key": "frame_sampling_interval",
+      "type": "number",
+      "label": "Frame Sampling Interval",
+      "defaultValue": 10,
+      "tooltip": "Interval for sampling frames from trajectory (e.g., every 10th frame).",
+      "showWhen": [
+        {
+          "field": "input_file_path",
+          "in": [".xtc", ".trr"] 
+        }
+      ]
+    },
+    {
+      "key": "calc_per_residue_decomposition",
+      "type": "boolean",
+      "label": "Per-Residue Decomposition",
+      "defaultValue": true,
+      "tooltip": "Calculate energetic contributions per residue.",
+      "showWhen": [
+        {
+          "field": "calculation_type",
+          "in": ["binding_energy"]
+        }
+      ]
+    },
+    {
+      "key": "mutation_list",
+      "type": "textarea",
+      "label": "Mutation List",
+      "placeholder": "A123G, B456W",
+      "tooltip": "List of mutations to scan (e.g., ChainResidueNewAA).",
+      "showWhen": [
+        {
+          "field": "calculation_type",
+          "in": ["mutation_scan"]
+        }
+      ]
+    },
+    {
+      "key": "mutation_positions",
+      "type": "text",
+      "label": "Mutation Positions",
+      "placeholder": "123, 456",
+      "tooltip": "Specific positions to scan (optional).",
+      "showWhen": [
+        {
+          "field": "calculation_type",
+          "in": ["mutation_scan"]
+        }
+      ]
+    }
+  ],
+  "feedsTo": ["mechanistic-hypothesis", "experimental-design"]
+}

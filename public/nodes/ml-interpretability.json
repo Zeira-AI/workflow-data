@@ -1,0 +1,115 @@
+{
+  "type": "ml-interpretability",
+  "label": "ML Interpretability / Surface Explanations",
+  "category": "analysis",
+  "icon": "brain-circuit",
+  "color": "indigo",
+  "description": "Use geometric deep-learning models to provide interpretable evidence of shape+chemistry complementarity and identify key surface features.",
+  "pricing": {
+    "credits": 1800,
+    "executionTime": 20
+  },
+  "outputMockLabel": "ML Insights",
+  "defaultInputs": [
+    {
+      "id": "input_structure",
+      "name": "Complex Structure or Mesh",
+      "type": "structure",
+      "required": true,
+      "tooltip": "PDB structure or surface mesh for analysis."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "ml_patch_scores_csv",
+      "name": "Patch Scores",
+      "type": "string",
+      "tooltip": "CSV containing scores and descriptor vectors for surface patches."
+    },
+    {
+      "id": "residue_importance_csv",
+      "name": "Residue Importance",
+      "type": "string",
+      "tooltip": "CSV detailing per-residue importance scores."
+    },
+    {
+      "id": "descriptor_similarity_csv",
+      "name": "Descriptor Similarity",
+      "type": "string",
+      "tooltip": "CSV showing similarity scores between patches (e.g. ligand vs receptor)."
+    },
+    {
+      "id": "ml_explain_report_pdf",
+      "name": "Explainability Report",
+      "type": "string",
+      "tooltip": "PDF report with visualizations of key patches and explanations."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "pdb_input_file",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Input Structure File",
+      "suggestedField": ["complex_centroid_pdb", "pdb_file"],
+      "accept": ".pdb,.ply,.obj",
+      "tooltip": "Upload or select the input PDB or mesh file."
+    },
+    {
+      "key": "tool_model",
+      "type": "select",
+      "label": "ML Model",
+      "options": [
+        { "value": "masif_site", "label": "MaSIF-site" },
+        { "value": "scannet", "label": "ScanNet" },
+        { "value": "deepsurface", "label": "DeepSurface" }
+      ],
+      "defaultValue": "masif_site",
+      "tooltip": "Select the geometric deep learning model."
+    },
+    {
+      "key": "explainability_method",
+      "type": "select",
+      "label": "Explainability Method",
+      "options": [
+        { "value": "gradient", "label": "Gradient-based Saliency" },
+        { "value": "patch_importance", "label": "Patch Importance" }
+      ],
+      "defaultValue": "gradient",
+      "tooltip": "Method for generating explanations."
+    },
+    {
+      "key": "patch_radius",
+      "type": "number",
+      "label": "Patch Radius (Å)",
+      "defaultValue": 9.0,
+      "tooltip": "Radius for defining surface patches."
+    },
+    {
+      "key": "descriptor_dimension",
+      "type": "number",
+      "label": "Descriptor Dimension",
+      "defaultValue": 80,
+      "tooltip": "Dimensionality of the output fingerprint vectors.",
+      "advanced": true
+    },
+    {
+      "key": "score_threshold",
+      "type": "number",
+      "label": "Score Threshold",
+      "defaultValue": 0.5,
+      "tooltip": "Threshold for filtering significant patches or residues."
+    },
+    {
+      "key": "mesh_probe_resolution",
+      "type": "number",
+      "label": "Mesh Probe Resolution",
+      "defaultValue": 1.0,
+      "tooltip": "Resolution for mesh generation (if applicable).",
+      "advanced": true
+    }
+  ],
+  "feedsTo": ["mechanistic-hypothesis", "mutation-design"]
+}

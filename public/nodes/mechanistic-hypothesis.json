@@ -1,0 +1,120 @@
+{
+  "type": "mechanistic-hypothesis",
+  "label": "Integration & Hypothesis Report",
+  "category": "analysis",
+  "icon": "file-search",
+  "color": "green",
+  "description": "Combine outputs from previous modules to produce a mechanistic explanation and prioritized experimental tests.",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 5
+  },
+  "outputMockLabel": "Hypothesis Report",
+  "defaultInputs": [
+    {
+      "id": "docking_clusters",
+      "name": "Docking Clusters",
+      "type": "object",
+      "required": false,
+      "tooltip": "JSON object containing docking clusters."
+    },
+    {
+      "id": "electrostatics_report",
+      "name": "Electrostatics Report",
+      "type": "object",
+      "required": false,
+      "tooltip": "JSON report of electrostatic hotspots."
+    },
+    {
+      "id": "surface_mapping_data",
+      "name": "Surface Mapping Data",
+      "type": "string",
+      "required": false,
+      "tooltip": "CSV data from surface analysis."
+    },
+    {
+      "id": "md_contact_freq",
+      "name": "MD Contact Frequency",
+      "type": "string",
+      "required": false,
+      "tooltip": "CSV of MD contact frequencies."
+    },
+    {
+      "id": "energetics_decomp",
+      "name": "Energetics Decomposition",
+      "type": "string",
+      "required": false,
+      "tooltip": "CSV of per-residue energetic decomposition."
+    },
+    {
+      "id": "ml_fingerprints",
+      "name": "ML Fingerprints",
+      "type": "string",
+      "required": false,
+      "tooltip": "CSV of ML patch scores."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "mechanistic_hypothesis_json",
+      "name": "Hypothesis (JSON)",
+      "type": "object",
+      "tooltip": "Structured hypothesis including summary, anchors, and mechanism."
+    },
+    {
+      "id": "experimental_plan_csv",
+      "name": "Experimental Plan",
+      "type": "string",
+      "tooltip": "CSV of prioritized experimental tests."
+    },
+    {
+      "id": "figures_directory",
+      "name": "Figures",
+      "type": "string",
+      "tooltip": "Directory containing generated figures."
+    },
+    {
+      "id": "final_report",
+      "name": "Final Report",
+      "type": "string",
+      "tooltip": "Path to the final PDF or HTML report."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "evidence_weighting",
+      "type": "json",
+      "label": "Evidence Weighting",
+      "defaultValue": {
+        "electrostatics": 0.25,
+        "hydrophobic": 0.2,
+        "md_contacts": 0.25,
+        "energetics": 0.2,
+        "ml_scores": 0.1
+      },
+      "tooltip": "Weights for different data sources in the hypothesis generation."
+    },
+    {
+      "key": "hypothesis_thresholds",
+      "type": "json",
+      "label": "Hypothesis Thresholds",
+      "defaultValue": {
+        "contact_fraction": 0.5,
+        "ddG_contribution": -1.0
+      },
+      "tooltip": "Thresholds for determining significant interactions."
+    },
+    {
+      "key": "report_format",
+      "type": "multiselect",
+      "label": "Report Format",
+      "options": [
+        { "value": "pdf", "label": "PDF" },
+        { "value": "html", "label": "HTML" }
+      ],
+      "defaultValue": ["pdf"],
+      "tooltip": "Format(s) for the final report."
+    }
+  ],
+  "feedsTo": ["experimental-design"]
+}
