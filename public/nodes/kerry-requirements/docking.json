@@ -1,6 +1,6 @@
 {
   "type": "docking",
-  "label": "Molecular Docking",
+  "label": "Docking",
   "category": "analysis",
   "icon": "dna",
   "color": "purple",
@@ -9,7 +9,7 @@
     "credits": 1200,
     "executionTime": 1
   },
-  "outputMockLabel": "10 compounds",
+  "outputMockLabel": "Docking Results",
   "outputPageSize": 5,
   "defaultInputs": [
     {
@@ -83,6 +83,76 @@
         "protein_name"
       ],
       "accept": ".csv,.pdb"
+    },
+    {
+      "key": "pocket_selector",
+      "type": "pocket_selector",
+      "label": "Binding Pocket",
+      "tooltip": "Select the binding pocket for docking.",
+      "options": [
+        {
+          "value": "chainB:1",
+          "label": "Pocket 1",
+          "group": "Chain B (TAS1R2)",
+          "groupColor": "purple",
+          "filterValue": "TAS1R2 - chain B"
+        },
+        {
+          "value": "chainB:2",
+          "label": "Pocket 2",
+          "group": "Chain B (TAS1R2)",
+          "groupColor": "purple",
+          "filterValue": "TAS1R2 - chain B"
+        },
+        {
+          "value": "chainB:3",
+          "label": "Pocket 3",
+          "group": "Chain B (TAS1R2)",
+          "groupColor": "purple",
+          "filterValue": "TAS1R2 - chain B"
+        },
+        {
+          "value": "chainB:4",
+          "label": "Pocket 4",
+          "group": "Chain B (TAS1R2)",
+          "groupColor": "purple",
+          "filterValue": "TAS1R2 - chain B"
+        },
+        {
+          "value": "chainB:5",
+          "label": "Pocket 5",
+          "group": "Chain B (TAS1R2)",
+          "groupColor": "purple",
+          "filterValue": "TAS1R2 - chain B"
+        },
+        {
+          "value": "chainA:6",
+          "label": "Pocket 6",
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
+        },
+        {
+          "value": "chainA:7",
+          "label": "Pocket 7",
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
+        },
+        {
+          "value": "chainA:8",
+          "label": "Pocket 8",
+          "group": "Chain A (TAS1R3)",
+          "groupColor": "teal",
+          "filterValue": "TAS1R3 - chain A"
+        }
+      ],
+      "showWhen": [
+        {
+          "field": "protein_column",
+          "in": ["*"]
+        }
+      ]
     },
     {
       "key": "engine",

@@ -170,7 +170,8 @@
                 "file",
                 "markdown",
                 "filter",
-                "range"
+                "range",
+                "pocket_selector"
               ]
             },
             {
@@ -188,7 +189,8 @@
                   "file",
                   "markdown",
                   "filter",
-                  "range"
+                  "range",
+                  "pocket_selector"
                 ]
               },
               "minItems": 1
@@ -206,7 +208,7 @@
         },
         "options": {
           "type": "array",
-          "description": "Options for select fields",
+          "description": "Options for select and pocket_selector fields",
           "items": {
             "type": "object",
             "required": [
@@ -219,6 +221,18 @@
               },
               "label": {
                 "type": "string"
+              },
+              "group": {
+                "type": "string",
+                "description": "Group name for grouping options (used by pocket_selector)"
+              },
+              "groupColor": {
+                "type": "string",
+                "description": "Color theme for the group (e.g., 'purple', 'teal')"
+              },
+              "filterValue": {
+                "type": "string",
+                "description": "Value used to filter data when this option is selected"
               }
             }
           }
