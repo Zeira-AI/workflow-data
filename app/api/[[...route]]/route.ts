@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
 import { readFile, readdir } from 'fs/promises'
 import path from 'path'
-import { VALID_CLIENTS } from '../../constants'
+import { VALID_CLIENTS, CLIENTS } from '../../constants'
 
 // Create Hono app
 const app = new Hono().basePath('/api')
@@ -13,6 +13,11 @@ app.use('*', async (c, next) => {
     c.header('Access-Control-Allow-Origin', '*')
     c.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
     c.header('Access-Control-Allow-Headers', 'Content-Type, X-Client')
+})
+
+// GET /api/clients - List all available clients
+app.get('/clients', (c) => {
+    return c.json(CLIENTS)
 })
 
 // GET /api/data - List all CSV files for a client
