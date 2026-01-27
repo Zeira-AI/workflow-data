@@ -1,0 +1,39 @@
+Compound,SMILES
+Quercetin,C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O
+Kaempferol,C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O
+Apigenin,C1=CC(=CC=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O
+Luteolin,C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O)O
+Finasteride,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2C(=O)NC(C)(C)C)CC[C@@H]4[C@@]3(C=CC(=O)N4)C
+Hesperidin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC(=C(C=C5)OC)O)O)O)O)O)O)O)O
+Rutin,C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)OC[C@@H]2[C@H]([C@@H]([C@H]([C@@H](O2)OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC(=C(C=C5)O)O)O)O)O)O)O)O
+Ferulic acid,COC1=C(C=CC(=C1)/C=C/C(=O)O)O
+p-Coumaric acid,C1=CC(=CC=C1/C=C/C(=O)O)O
+Caffeic acid,C1=CC(=C(C=C1/C=C/C(=O)O)O)O
+Vanillic acid,COC1=C(C=CC(=C1)C(=O)O)O
+Syringic acid,COC1=CC(=CC(=C1O)OC)C(=O)O
+Minoxidil,CCN(CC)CCNC1=NC(=O)NC(=O)N1
+Caffeine,Cn1cnc2c1c(=O)n(C)c(=O)n2C
+Adenosine,Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1
+Piroctone Olamine,CC(C)(C)C1=CC=C(C=C1)C(=O)C2=NC3=CC=CC=C3O2
+Niacinamide,NC(=O)C1=CN=CC=C1
+Baicalin,CC1=C(C=C2C(=C1O)OC(=O)C3=C(O2)C=C(C=C3)O)OC4C(C(C(C(O4)CO)O)O)O
+Licochalcone A,CC1=CC(=CC=C1O)/C=C/C(=O)C2=CC=C(C=C2)OC
+Melatonin,CC(=O)NCCC1=CN2C=CC(OC)=CC2=C1
+Menthol,CC1CCC(C(C1)O)C
+EGCG,C1C(C(C2=C(C1O)C(=CC(=C2O)O)O)O)OC(=O)C3=CC(=C(C(=C3O)O)O)O
+Resveratrol,C1=CC(=CC=C1/C=C/C2=CC(=CC=C2)O)O
+Capsaicin,CC(C)NCC(=O)NC1=CC(=CC=C1OCC=C)OC
+Salicylic acid,C1=CC=C(C(=C1)O)C(=O)O
+Tryptophan,NC(Cc1c[nH]c2ccccc12)C(=O)O
+Tyrosine,NC(Cc1ccc(O)cc1)C(=O)O
+Sucralose,C(C1C(C(C(O1)Cl)O)OCl)OC(C(CO)O)Cl
+Steviol glycoside (mock),CC1(C)CCC2(C1)CCC3(C2=CC(=O)OC3O)C
+Glycine,NCC(=O)O
+Alanine,CC(N)C(=O)O
+Proline,O=C(O)C1CCCN1
+Citral,CC(=C)CCC=C(C)C=O
+Eugenol,COc1cc(CC=C)ccc1O
+Anethole,COc1ccc(/C=C/C)cc1
+Piperonal,O=CC1=CC2=C(OCO2)C=C1
+Coumarin,O=C1OC2=CC=CC=C2C1
+Hexanal,CCCCCC=O
