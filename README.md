@@ -9,14 +9,67 @@ public/
 ├── nodes/
 │   ├── _schema.json          # JSON Schema for validation
 │   ├── _index.json           # Registry of all tools
-│   ├── product-search.json   # Tool definitions
+│   ├── product-search.json   # Generic tool definitions
 │   ├── deformulate.json
+│   ├── dsm-f/                # Client-specific overrides
+│   │   └── product-search.json
+│   ├── ferrero/              # Another client folder
+│   │   └── ...
 │   └── ...
 └── mocked-data/
     ├── product-search.csv    # Mocked data for testing
     ├── deformulate.csv
     └── ...
 ```
+
+## Dynamic API & Client Overrides
+
+The application supports loading client-specific tool definitions dynamically via the API. This allows different clients (e.g., "dsm-f", "ferrero", "kerry") to have customized versions of the same tool or unique tools.
+
+### API Logic
+
+The API endpoint (`/api/nodes` and `/api/nodes/[filename]`) determines which file to serve based on the `X-Client` request header.
+
+1.  **Header Check**: The API checks for the `X-Client` header.
+    - **Default**: `dsm-f` (if header is missing).
+    - **Validation**: The client value is validated against the allowed list in `app/constants.ts`.
+
+2.  **Resolution Strategy**:
+    - **Generic Files**: Base tool definitions are located in `public/nodes/`.
+    - **Client Overrides**: Client-specific overrides are in `public/nodes/[client]/`.
+    - **Fallback**: When a specific tool definition is requested (e.g., `/api/nodes/product-search.json`):
+      1.  The API first checks for `public/nodes/[client]/product-search.json`.
+      2.  If found, it returns the client-specific version.
+      3.  If not found, it falls back to `public/nodes/product-search.json`.
+
+3.  **Discovery (List Endpoint)**:
+    - The `/api/nodes` endpoint **only lists tools that exist in the generic `public/nodes/` directory**.
+    - **Important**: To create a "unique" tool for a client, you must create a placeholder (or default version) in the generic `public/nodes/` folder. If a file exists only in `public/nodes/[client]/`, it will **not** be returned by the list API (though it can still be fetched directly by name).
+
+4.  **Response Info**: The API response includes an `X-Node-Source` header indicating whether the file was served from the `generic` or `[client]` location.
+
+### Valid Clients
+
+Current valid clients are configured in `app/constants.ts`:
+
+- DSM-F (`dsm-f`)
+- Ferrero (`ferrero`)
+- Ferrero Chocolate (`ferrero-chocolate`)
+- Kerry (`kerry`)
+- Kerry Requirements (`kerry-requirements`)
+- Croda (`croda`)
+
+### Creating a Client-Specific Override
+
+To create a customized version of a tool for a specific client (e.g., to hide certain fields or change default values):
+
+1.  **Locate the Client Folder**: Find the folder in `public/nodes/` matching the client ID (e.g., `public/nodes/dsm-f/`). Create the folder if it doesn't exist.
+2.  **Create the JSON File**: Create a JSON file with the **exact same filename** as the generic tool you want to override (e.g., `product-search.json`).
+3.  **Customize Content**: Copy the content from the generic tool and modify it as needed.
+    - **Important**: The `type` field must remain the same as the generic tool.
+4.  **No Restart Required**: The API will immediately start serving the client-specific file when a request with the matching `X-Client` header is received.
+
+**Note**: You do **not** need to update `_index.json` when adding an override for an existing tool. Only new unique tools (which must also have a generic placeholder) need to be registered in `_index.json`.
 
 ## Adding a Tool
 
@@ -26,42 +79,45 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
 
 ```json
 {
-  "type": "my-new-tool",                // Unique identifier (kebab-case, must match filename)
-  "label": "My New Tool",               // Human-readable display name
-  "category": "transform",              // Category for organizing in UI (any string)
-  "icon": "filter",                     // Icon key from constants
-  "color": "green",                     // Color key (amber, purple, blue, green, etc.)
-  "description": "Brief description",   // Optional: description of the tool's purpose
-  "defaultInputs": [],                  // Placeholder, always empty array for now
-  "defaultOutputs": [                   // Output ports
+  "type": "my-new-tool", // Unique identifier (kebab-case, must match filename)
+  "label": "My New Tool", // Human-readable display name
+  "category": "transform", // Category for organizing in UI (any string)
+  "icon": "filter", // Icon key from constants
+  "color": "green", // Color key (amber, purple, blue, green, etc.)
+  "description": "Brief description", // Optional: description of the tool's purpose
+  "defaultInputs": [], // Placeholder, always empty array for now
+  "defaultOutputs": [
+    // Output ports
     {
-      "id": "result",                   // Unique port identifier
-      "name": "Result",                 // Display name
-      "type": "array",                  // Data type: string | number | boolean | object | array
+      "id": "result", // Unique port identifier
+      "name": "Result", // Display name
+      "type": "array", // Data type: string | number | boolean | object | array
       "description": "Output description",
-      "tooltip": "Tooltip text (supports **markdown**)"  // Optional: hover tooltip
+      "tooltip": "Tooltip text (supports **markdown**)" // Optional: hover tooltip
     }
   ],
-  "configSchema": [                     // Configuration fields for the tool
+  "configSchema": [
+    // Configuration fields for the tool
     {
-      "key": "instructions",            // Markdown for inline help/instructions
+      "key": "instructions", // Markdown for inline help/instructions
       "type": "markdown",
       "label": "This tool processes data based on:\n\n- **Speed**: Fast or accurate mode\n- **Input**: File or manual entry",
-      "color": "info"                   // Optional: info | success | warning | error | default | none
+      "color": "info" // Optional: info | success | warning | error | default | none
     },
     {
-      "key": "myParameter",             // Field key (used in config object)
-      "type": "text",                   // Field type: text | number | select | multiselect | boolean | json | textarea | file | markdown
-      "label": "My Parameter",          // Display label
-      "placeholder": "Enter value...",  // Optional: placeholder text
-      "defaultValue": "",               // Optional: default value
-      "tooltip": "Help text shown on hover (supports **markdown**)"  // Optional
+      "key": "myParameter", // Field key (used in config object)
+      "type": "text", // Field type: text | number | select | multiselect | boolean | json | textarea | file | markdown
+      "label": "My Parameter", // Display label
+      "placeholder": "Enter value...", // Optional: placeholder text
+      "defaultValue": "", // Optional: default value
+      "tooltip": "Help text shown on hover (supports **markdown**)" // Optional
     },
     {
       "key": "mode",
-      "type": "select",                 // Dropdown selection
+      "type": "select", // Dropdown selection
       "label": "Mode",
-      "options": [                      // Required for select type
+      "options": [
+        // Required for select type
         { "value": "fast", "label": "Fast" },
         { "value": "accurate", "label": "Accurate" }
       ],
@@ -74,16 +130,17 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
       "label": "Threshold",
       "placeholder": "Enter value (0-100)",
       "defaultValue": 70,
-      "showWhen": [                     // Conditional visibility (AND logic between conditions)
-        { "field": "mode", "in": ["accurate"] }  // Show only when mode is "accurate"
+      "showWhen": [
+        // Conditional visibility (AND logic between conditions)
+        { "field": "mode", "in": ["accurate"] } // Show only when mode is "accurate"
       ]
     },
     {
       "key": "uploadFile",
-      "type": "file",                   // File upload input
+      "type": "file", // File upload input
       "label": "Upload File",
-      "accept": ".csv,.json",           // Optional: accepted file types
-      "multiple": false,                // Optional: allow multiple files
+      "accept": ".csv,.json", // Optional: accepted file types
+      "multiple": false, // Optional: allow multiple files
       "tooltip": "Upload a **CSV** or **JSON** file for processing"
     },
     {
@@ -91,7 +148,7 @@ Create a new file in `nodes/` directory (e.g., `nodes/my-new-tool.json`):
       "type": "boolean",
       "label": "Enable Advanced Processing",
       "defaultValue": false,
-      "advanced": true                  // Groups field in collapsible "Advanced Settings" section
+      "advanced": true // Groups field in collapsible "Advanced Settings" section
     }
   ]
 }
@@ -182,12 +239,14 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 ### Console Output Examples:
 
 **Valid tool:**
+
 ```
 ✓ Loaded tool: "product-search"
 ✓ Successfully loaded all 4 tools
 ```
 
 **Invalid tool:**
+
 ```
 ❌ Tool definition validation failed for "my-broken-tool":
    - /label: must have required property 'label'
@@ -215,17 +274,17 @@ All tool definitions are automatically validated against the JSON Schema (`_sche
 
 ## Config Field Types
 
-| Type | Description | Example |
-|------|-------------|---------|
-| `text` | Single-line text input | Name, URL, email |
-| `textarea` | Multi-line text input | Query, description, notes |
-| `number` | Numeric input | Count, limit, threshold |
-| `select` | Single dropdown selection | Requires `options` array |
-| `multiselect` | Multiple dropdown selection | Requires `options` array |
-| `boolean` | Checkbox | Enable/disable flags |
-| `json` | JSON editor | Complex structured data |
-| `file` | File upload input | Documents, images, data files |
-| `markdown` | Inline help/instructions | Info cards, usage hints |
+| Type          | Description                 | Example                       |
+| ------------- | --------------------------- | ----------------------------- |
+| `text`        | Single-line text input      | Name, URL, email              |
+| `textarea`    | Multi-line text input       | Query, description, notes     |
+| `number`      | Numeric input               | Count, limit, threshold       |
+| `select`      | Single dropdown selection   | Requires `options` array      |
+| `multiselect` | Multiple dropdown selection | Requires `options` array      |
+| `boolean`     | Checkbox                    | Enable/disable flags          |
+| `json`        | JSON editor                 | Complex structured data       |
+| `file`        | File upload input           | Documents, images, data files |
+| `markdown`    | Inline help/instructions    | Info cards, usage hints       |
 
 ## Multi-Type Fields
 
@@ -243,10 +302,12 @@ Use an array of types to let users switch between input modes:
 ```
 
 This renders a switcher allowing users to choose between:
+
 - **Text mode**: Manual input with field mapping support
 - **File mode**: File upload with drag-and-drop
 
 **Notes:**
+
 - Properties like `accept`, `placeholder`, `suggestedField` apply to their respective types
 - Switching modes clears incompatible values (e.g., text ↔ file)
 
@@ -263,6 +324,7 @@ This renders a switcher allowing users to choose between:
 ```
 
 **File field properties:**
+
 - **accept**: Accepted file types (e.g., `image/*`, `.pdf,.doc`, `application/json`)
 - **multiple**: Allow multiple file selection (`true` or `false`)
 
@@ -280,6 +342,7 @@ Use markdown fields to display inline help, instructions, or information cards:
 ```
 
 **Markdown field properties:**
+
 - **label**: The markdown content to display (supports standard markdown syntax)
 - **color**: Card theme color (`info`, `success`, `warning`, `error`, `default`, `none`)
 
@@ -292,19 +355,19 @@ Use `showWhen` to show/hide fields based on other field values:
   "key": "threshold",
   "type": "number",
   "label": "Confidence Threshold",
-  "showWhen": [
-    { "field": "mode", "in": ["accurate", "custom"] }
-  ]
+  "showWhen": [{ "field": "mode", "in": ["accurate", "custom"] }]
 }
 ```
 
 **showWhen rules:**
+
 - Array of conditions with AND logic between conditions
 - Each condition's `in` array uses OR logic
 - `field`: The key of the field to check
 - `in`: Array of values - field value must match one of these
 
 **Multi-condition example (AND logic):**
+
 ```json
 {
   "key": "toxicity_detail",
@@ -316,6 +379,7 @@ Use `showWhen` to show/hide fields based on other field values:
   ]
 }
 ```
+
 This field shows only when `model` is "chem_prop" AND `endpoint` is "toxicity".
 
 ## Advanced Settings
@@ -393,11 +457,13 @@ Use multiselect for choosing multiple options from a dropdown with checkboxes:
 ```
 
 **Multi-select field properties:**
+
 - **options**: Array of `{ value, label }` objects (required)
 - **defaultValue**: Array of strings (e.g., `["vecurate"]`) instead of single string
 - Value is stored as `string[]` in the config
 
 **UI Features:**
+
 - Searchable dropdown with checkboxes
 - Selected items displayed as removable badge tags
 - Click badge X to remove individual selections
