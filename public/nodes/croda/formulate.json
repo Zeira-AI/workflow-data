@@ -1,0 +1,75 @@
+{
+  "type": "formulate",
+  "label": "Formulate",
+  "category": "analysis",
+  "icon": "flask",
+  "color": "purple",
+  "description": "Analyze and deformulate product compositions based on specific requirements",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
+  "outputMockLabel": "15 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Component",
+      "name": "Component",
+      "type": "string",
+      "tooltip": "Name of the component ingredient."
+    },
+    {
+      "id": "percent_w_w",
+      "name": "% w/w",
+      "type": "string",
+      "tooltip": "Percentage weight/weight in the formulation."
+    },
+    {
+      "id": "Functional_role",
+      "name": "Functional role",
+      "type": "string",
+      "tooltip": "Function of the ingredient in the formulation."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredientList",
+      "type": [
+        "text",
+        "file"
+      ],
+      "label": "Ingredient List",
+      "placeholder": "Select or upload a list of ingredients...",
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci_name"
+      ],
+      "tooltip": "Select or upload a list of ingredients.\nSupported formats: **TXT**, **CSV**, **SMILES**.",
+      "accept": ".txt,.csv,.smi"
+    },
+    {
+      "key": "referenceProduct",
+      "type": "text",
+      "label": "Similar Product (Link/Name)",
+      "suggestedField": [
+        "product",
+        "name"
+      ],
+      "placeholder": "Paste product link or name here..."
+    },
+    {
+      "key": "desiredEffect",
+      "type": "text",
+      "label": "Desired Effect (Required)",
+      "placeholder": "e.g., Whitening, Anti-aging..."
+    },
+    {
+      "key": "options",
+      "type": "json",
+      "label": "Advanced Options",
+      "placeholder": "{ \"target user\": \"baby\", \"application route\": \"topical\", \"dosage form\": \"cream\" }"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Proposed Claim,Claim Type,Market,Validation Status,Claim Issue,Market-Specific Compliance Issue,Conditional Usage Rules,Suggestion
+"“Clinically proven to regrow hair”","Drug / therapeutic",US,"Conditionally valid","Requires drug-level substantiation","Allowed only under FDA OTC monograph for minoxidil","Must match FDA-approved minoxidil labeling; clinical data required","Rephrase to monograph-compliant language"
+"“Treats hair loss”","Drug / therapeutic",US,"Valid (restricted)","Therapeutic disease claim","Only acceptable as OTC drug claim","Must include Drug Facts panel and warnings","Use exact OTC wording"
+"“Stimulates hair follicle regeneration”","Drug / biological",US,"Not validated","Implies biological regeneration","Considered beyond OTC monograph scope","Avoid claims of regeneration or follicle creation","Replace with “supports hair growth”"
+"“Promotes hair growth”","Drug (OTC)",US,"Valid (restricted)","Requires drug classification","Must be tied to minoxidil active","Keep within OTC context","Acceptable with Drug Facts"
+"“Non-hormonal hair growth solution”","Cosmetic / drug-adjacent",US,"Conditionally valid","Presence of melatonin may contradict “non-hormonal”","Potential challenge due to hormone association","Ensure melatonin disclosure or remove ingredient","Clarify as “non-androgenic”"
+"“Reduces hair thinning”","Appearance-related",US,"Conditionally valid","Could imply treatment","Borderline disease implication","Use cosmetic framing","“Improves the appearance of thinning hair”"
+"“Supports the anagen phase”","Mechanism-based",US,"High risk","Mechanistic biological claim","Mechanism claims scrutinized for drug intent","Only allowed in scientific/technical materials","Avoid consumer-facing use"
+"“Improves scalp circulation”",Functional,US,"Conditionally valid","Vascular implication","Acceptable if not linked to disease","Must not imply treatment","Keep vague and cosmetic"
+"“Hair growth cream”","Product descriptor",US,Valid,"Drug classification implied","Acceptable as OTC drug","Must include OTC labeling","Acceptable in US only"
+"“Clinically proven hair growth”",Drug,EU,"Not compliant","Cosmetic products cannot claim hair growth","Minoxidil is not cosmetic in EU","Entire product reclassified as medicinal","Remove minoxidil or avoid EU"
+"“Prevents hair loss”",Medicinal,EU,"Not compliant","Disease prevention claim","Violates EC 1223/2009","Cosmetic claims must not imply prevention","Replace with appearance language"
+"“Strengthens hair roots”",Cosmetic,EU,"Conditionally valid","Metaphorical biological claim","Acceptable if non-physiological","Must avoid follicle biology references",Keep abstract
+"“Improves the appearance of hair density”",Cosmetic,EU,Valid,None,"Acceptable cosmetic appearance claim","Substantiation required (consumer test)",Recommended
+"“Supports scalp health”",Cosmetic,EU,Valid,None,"Acceptable general cosmetic claim","Use non-therapeutic wording",Recommended
+"“Cooling and refreshing scalp feel”",Sensory,"EU / US",Valid,None,"Menthol sensory claim allowed","Must avoid medical implication",Safe
+"“Helps maintain healthy-looking hair”",Cosmetic,"EU / US",Valid,None,"Standard cosmetic phrasing","Requires basic substantiation","Preferred wording"
+"“Activates Wnt/β-catenin signaling”","Scientific / mechanistic","EU / US","Not compliant (consumer)","Explicit molecular pathway claim","Considered pharmacological","Allowed only in internal or B2B materials","Remove from consumer claims"
+"“Dermatologically tested”",Safety,"EU / US",Valid,"Must be truthful","Requires actual testing","Standard cosmetic substantiation",Acceptable

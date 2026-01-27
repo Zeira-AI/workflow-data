@@ -1,0 +1,84 @@
+{
+    "type": "bioactivity-filter",
+    "label": "Bioactivity Filter",
+    "category": "analysis",
+    "icon": "activity",
+    "color": "green",
+    "description": "Filter compound bioactivity (IC50) against TAS2R14, TRPV1, and TRPA1 receptors.",
+    "pricing": {
+        "credits": 800,
+        "executionTime": 1
+    },
+    "outputMockLabel": "6 compounds",
+    "defaultInputs": [
+        {
+            "id": "compoundList",
+            "name": "Compound List",
+            "type": "array",
+            "required": true,
+            "tooltip": "Input table of compounds (IDs and SMILES) to score."
+        },
+        {
+            "id": "targetList",
+            "name": "Target List",
+            "type": "array",
+            "required": true,
+            "tooltip": "Targets or assays (EC50 / IC50) that bioactivity should be predicted against."
+        }
+    ],
+    "defaultOutputs": [
+        {
+            "id": "compound",
+            "name": "Compound",
+            "type": "string",
+            "tooltip": "Compound identifier"
+        },
+        {
+            "id": "srd5a2_ic50",
+            "name": "SRD5A2 - CHEMBL1647250 - IC50 (nM)",
+            "type": "string",
+            "tooltip": "IC50 for SRD5A2 (Assay: CHEMBL1647250)"
+        },
+        {
+            "id": "smo_ec50",
+            "name": "SMO - CHEMBL5229523 - EC50 (nM)",
+            "type": "string",
+            "tooltip": "EC50 for SMO (Assay: CHEMBL5229523)"
+        }
+    ],
+    "configSchema": [
+        {
+            "key": "dockingListText",
+            "type": "text",
+            "label": "Compound-Target Docking List",
+            "tooltip": "Input the compound-target docking for bioactivity prediction",
+            "suggestedField": [
+                "docked_structure"
+            ]
+        },
+        {
+            "key": "modelType",
+            "type": "select",
+            "label": "Available Tools",
+            "options": [
+                {
+                    "value": "dtign",
+                    "label": "DTIGN - Best for fast predictions"
+                },
+                {
+                    "value": "ligospace",
+                    "label": "Ligospace - Best for accurate predictions"
+                }
+            ],
+            "defaultValue": "Ligospace",
+            "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
+        },
+        {
+            "key": "dockingFiles",
+            "type": "file",
+            "label": "Docking Files",
+            "multiple": true,
+            "tooltip": "Optional upload of docking results."
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+  "type": "singular-compound",
+  "label": "Wet Lab Validation",
+  "category": "analysis",
+  "icon": "flask",
+  "color": "purple",
+  "description": "Generate experimental plans and validation protocols for wet lab testing.",
+  "outputMockLabel": "1 item",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Plan_id",
+      "name": "Plan ID",
+      "type": "string",
+      "tooltip": "Unique identifier for the experimental plan (e.g. \"EXP-001\")."
+    },
+    {
+      "id": "Plan Name",
+      "name": "Plan Name",
+      "type": "string",
+      "tooltip": "Name or title of the experimental plan (e.g. \"Experimental Plan (Minimal ver)\")."
+    },
+    {
+      "id": "Plan Type",
+      "name": "Plan Type",
+      "type": "string",
+      "tooltip": "Type of experimental plan document (e.g. \"Experimental Plan PDF\")."
+    },
+    {
+      "id": "Reference_URL",
+      "name": "Reference URL",
+      "type": "string",
+      "tooltip": "URL link to access or download the experimental plan document."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "query",
+      "type": ["text", "file"],
+      "label": "Experimental Requirements",
+      "placeholder": "Describe the experimental validation requirements...",
+      "tooltip": "Enter the experimental validation requirements or upload a file containing the requirements. This will be used to generate the experimental plan.",
+      "accept": ".txt,.csv"
+    }
+  ],
+  "defaultConfig": {
+    "query": ""
+  }
+}
+
