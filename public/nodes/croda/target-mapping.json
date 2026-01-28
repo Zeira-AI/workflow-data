@@ -67,6 +67,12 @@
 			"name": "ChemBL ID",
 			"type": "string",
 			"tooltip": "ChemBL database identifier for the target (e.g. \"CHEMBL1075319\")."
+		},
+		{
+			"id": "protein_structure",
+			"name": "Protein Structure",
+			"type": "structure",
+			"tooltip": "URL to the PDB structure file for the target."
 		}
 	],
 	"configSchema": [
