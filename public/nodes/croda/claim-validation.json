@@ -33,28 +33,28 @@
       "tooltip": "Overall validation result: \"VALID\" (approved), \"INVALID\" (not allowed), or \"CONDITIONALLY VALID\" (allowed with modifications)."
     },
     {
-      "id": "Claim Issue",
-      "name": "Claim Issue",
+      "id": "Regulatory Basis",
+      "name": "Regulatory Basis",
       "type": "string",
-      "tooltip": "Specific regulatory issue identified with the claim (e.g. \"Implied health benefit\", \"Evidence gap\", \"Therapeutic implication\")."
+      "tooltip": "The regulatory framework or rule that determines the claim's status."
     },
     {
-      "id": "Market-Specific Compliance Issue",
-      "name": "Market-Specific Compliance Issue",
+      "id": "Trigger Identified",
+      "name": "Trigger Identified",
       "type": "string",
-      "tooltip": "Detailed explanation of the compliance problem specific to the target market's regulations."
+      "tooltip": "Specific words or phrases in the claim that triggered the regulatory review."
     },
     {
-      "id": "Conditional Usage Rules",
-      "name": "Conditional Usage Rules",
+      "id": "Adjustment Rule Applied",
+      "name": "Adjustment Rule Applied",
       "type": "string",
-      "tooltip": "Restrictions or conditions for using the claim if conditionally valid (e.g. \"Not allowed\", \"Allowed only with formulation context\")."
+      "tooltip": "The specific rule or logic applied to adjust the claim for compliance."
     },
     {
-      "id": "Suggestion",
-      "name": "Suggestion",
+      "id": "Suggested Alternative",
+      "name": "Suggested Alternative",
       "type": "string",
-      "tooltip": "Recommended action to make the claim compliant (e.g. \"Rewrite to 'supports reduced-sugar formulations'\", \"Do not use\")."
+      "tooltip": "A compliant alternative phrasing for the claim."
     }
   ],
   "configSchema": [
@@ -104,4 +104,3 @@
     "region": "US"
   }
 }
-

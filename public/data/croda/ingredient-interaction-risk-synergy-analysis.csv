@@ -2,7 +2,7 @@ Pair,Predicted Interaction Signal,Risk Type (Dominant),Confidence,Flag
 Minoxidil – Citral,Additive vasodilation and local penetration enhancement,Local irritation / erythema,Medium,MODERATE_RISK
 Minoxidil – Eugenol,Enhanced skin penetration and sensitization potential,Contact dermatitis,Medium,MODERATE_RISK
 Minoxidil – Anethole,Weak PK interaction via skin absorption modulation,Mild local irritation,Low,SAFE
-Minoxidil – Finasteride,Complementary pharmacodynamic effect (vascular + anti-androgen),w,High,SAFE
+Minoxidil – Finasteride,Complementary pharmacodynamic effect (vascular + anti-androgen),Additive efficacy (non-adverse),High,SAFE
 Minoxidil – Citral – Eugenol (triad),Synergistic penetration enhancement,Cumulative irritation risk,Medium,MODERATE_RISK
 Finasteride – Eugenol,Potential CYP3A4 modulation (weak inhibitor),Altered finasteride clearance (theoretical),Low,LOW_RISK
 Finasteride – Anethole,No significant shared metabolic pathway,No dominant risk identified,Low,SAFE
