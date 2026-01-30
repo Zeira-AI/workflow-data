@@ -59,15 +59,6 @@
   ],
   "configSchema": [
     {
-      "key": "available_evidence",
-      "type": ["text", "file"],
-      "label": "Available Evidence",
-      "placeholder": "Upload evidence documents supporting the claims...",
-      "required": true,
-      "tooltip": "Upload evidence documents supporting the claims (e.g. in vitro studies, ex vivo penetration studies, human biomarker studies). Supported formats: PDF, Word, TXT, CSV.",
-      "accept": ".pdf,.doc,.docx,.txt,.csv"
-    },
-    {
       "key": "proposed_claim",
       "type": ["text", "file"],
       "label": "Proposed Claim",
@@ -77,14 +68,32 @@
       "accept": ".txt,.csv"
     },
     {
-      "key": "claim_type",
+      "key": "product_category",
       "type": "multiselect",
-      "label": "Claim Type",
+      "label": "Product Category",
       "options": [
-        { "value": "marketing", "label": "Marketing claim" },
-        { "value": "scientific", "label": "Scientific claim" }
+        {
+          "value": "therapeutic",
+          "label": "Therapeutic"
+        },
+        {
+          "value": "functional",
+          "label": "Functional"
+        },
+        {
+          "value": "cosmetic",
+          "label": "Cosmetic"
+        },
+        {
+          "value": "food",
+          "label": "Food"
+        },
+        {
+          "value": "clinical",
+          "label": "Clinical"
+        }
       ],
-      "tooltip": "Select one or more claim types to validate. Marketing claims are consumer-facing, while scientific claims are technical/evidence-based."
+      "tooltip": "Select the product category."
     },
     {
       "key": "region",
