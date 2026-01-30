@@ -39,14 +39,14 @@
       "type": "text",
       "label": "Ingredient Name",
       "placeholder": "Enter a ingredient name...",
-      "suggestedField": ["inci"],
+      "suggestedField": ["Component"],
       "tooltip": "Enter a ingredient name."
     },
     {
       "key": "concentration",
       "type": "text",
       "label": "Concentration",
-      "suggestedField": ["estimatedPercent"],
+      "suggestedField": ["percent_w_w"],
       "placeholder": "Enter a concentration...",
       "tooltip": "Enter a concentration."
     },
@@ -54,6 +54,7 @@
       "key": "function",
       "type": "text",
       "label": "Function",
+      "suggestedField": ["Functional_role"],
       "placeholder": "Enter a function...",
       "tooltip": "Enter a function."
     },
