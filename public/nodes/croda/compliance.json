@@ -1,10 +1,10 @@
 {
   "type": "compliance",
-  "label": "Compliance Check",
+  "label": "Compliance Check (Ingredient)",
   "category": "analysis",
   "icon": "shield-check",
   "color": "blue",
-  "description": "Check ingredient/formula compliance against global market regulations (Ferrero specific)",
+  "description": "Check ingredient compliance against global market regulations (Ferrero specific)",
   "outputMockLabel": "18 compounds",
   "pricing": {
     "credits": 0,
@@ -105,13 +105,160 @@
       "tooltip": "Enter a concentration."
     },
     {
-      "key": "referenceProduct",
-      "type": ["text", "file"],
-      "label": "Similar Product (Link/Name)",
-      "placeholder": "Paste product link or name here...",
-      "suggestedField": ["product", "name", "brand"],
-      "tooltip": "Reference product name or URL from product-search to use as a compliance benchmark or to extract ingredient information.",
-      "accept": ".txt,.csv"
+      "key": "function",
+      "type": "text",
+      "label": "Function",
+      "placeholder": "Enter a function...",
+      "tooltip": "Enter a function."
+    },
+    {
+      "key": "administration",
+      "type": "select",
+      "label": "Administration",
+      "placeholder": "Select an administration...",
+      "options": [
+        {
+          "value": "topical",
+          "label": "Topical (skin, hair, eye, mucosa)"
+        },
+        {
+          "value": "oral",
+          "label": "Oral ingestion (food, supplement, drink)"
+        },
+        {
+          "value": "inhalation",
+          "label": "Inhalation (aerosol, vapor, nasal)"
+        },
+        {
+          "value": "injection",
+          "label": "Injection / parenteral (drug, biologic)"
+        },
+        {
+          "value": "implant",
+          "label": "Implant / long-term contact"
+        }
+      ],
+      "defaultValue": "topical",
+      "tooltip": "Select an administration."
+    },
+    {
+      "key": "administration_type",
+      "type": "select",
+      "label": "Administration Type",
+      "placeholder": "Select administration type...",
+      "options": [
+        {
+          "value": "leave_on",
+          "label": "Leave-on"
+        },
+        {
+          "value": "rinse_off",
+          "label": "Rinse-off"
+        }
+      ],
+      "defaultValue": "leave_on",
+      "tooltip": "Select administration type.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["topical"]
+        }
+      ]
+    },
+    {
+      "key": "area_of_application",
+      "type": "textarea",
+      "label": "Area of Application",
+      "placeholder": "Enter area of application...",
+      "tooltip": "Enter area of application.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["topical"]
+        }
+      ]
+    },
+    {
+      "key": "daily_intake_frequency",
+      "type": "textarea",
+      "label": "Daily Intake Frequency",
+      "placeholder": "Enter daily intake frequency...",
+      "tooltip": "Enter daily intake frequency.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["oral"]
+        }
+      ]
+    },
+    {
+      "key": "serving_size",
+      "type": "textarea",
+      "label": "Serving Size",
+      "placeholder": "Enter serving size...",
+      "tooltip": "Enter serving size.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["oral"]
+        }
+      ]
+    },
+    {
+      "key": "intent",
+      "type": "multiselect",
+      "label": "Intent",
+      "placeholder": "Select intent...",
+      "options": [
+        {
+          "value": "nutritional",
+          "label": "Nutritional"
+        },
+        {
+          "value": "functional",
+          "label": "Functional"
+        },
+        {
+          "value": "therapeutic",
+          "label": "Therapeutic"
+        }
+      ],
+      "tooltip": "Select intent.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["oral"]
+        }
+      ]
+    },
+    {
+      "key": "target_population",
+      "type": "select",
+      "label": "Target Population",
+      "placeholder": "Select target population...",
+      "options": [
+        {
+          "value": "general_adult_population",
+          "label": "General adult population"
+        },
+        {
+          "value": "children_3_12_years",
+          "label": "Children (3–12 years)"
+        },
+        {
+          "value": "babies_infants_0_3_years",
+          "label": "Babies / infants (0–3 years)"
+        },
+        {
+          "value": "pregnant_or_breastfeeding_individuals",
+          "label": "Pregnant or breastfeeding individuals"
+        },
+        {
+          "value": "medical_patient_population",
+          "label": "Medical / patient population"
+        }
+      ],
+      "tooltip": "Select target population."
     },
     {
       "key": "market",
