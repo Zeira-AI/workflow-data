@@ -68,7 +68,7 @@
     },
     {
       "key": "modelType",
-      "type": "select",
+      "type": "multiselect",
       "label": "Available Tools",
       "options": [
         {

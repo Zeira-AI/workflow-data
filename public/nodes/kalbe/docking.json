@@ -1,6 +1,6 @@
 {
   "type": "docking",
-  "label": "Molecular Docking",
+  "label": "Docking",
   "category": "analysis",
   "icon": "dna",
   "color": "purple",

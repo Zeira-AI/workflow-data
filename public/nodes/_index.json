@@ -34,6 +34,7 @@
     "mechanistic-hypothesis",
     "sequence-embeddings",
     "peptide-finetune",
-    "sequence-generation"
+    "sequence-generation",
+    "pocket-identification"
   ]
 }
