@@ -67,8 +67,62 @@
       "type": ["text", "file"],
       "label": "Protein 3D structure",
       "tooltip": "3D structure of the proteins to be docked",
-      "suggestedField": ["target", "protein_name"],
+      "suggestedField": ["target", "protein_name", "pocket_pdb"],
       "accept": ".csv,.pdb"
+    },
+    {
+      "key": "pocket_selection",
+      "type": "multiselect",
+      "label": "Pocket Selection",
+      "options": [
+        {
+          "value": "pocket1",
+          "label": "Pocket 1"
+        },
+        {
+          "value": "pocket2",
+          "label": "Pocket 2"
+        },
+        {
+          "value": "pocket3",
+          "label": "Pocket 3"
+        },
+        {
+          "value": "pocket4",
+          "label": "Pocket 4"
+        },
+        {
+          "value": "pocket5",
+          "label": "Pocket 5"
+        },
+        {
+          "value": "pocket6",
+          "label": "Pocket 6"
+        },
+        {
+          "value": "pocket7",
+          "label": "Pocket 7"
+        },
+        {
+          "value": "pocket8",
+          "label": "Pocket 8"
+        },
+        {
+          "value": "pocket9",
+          "label": "Pocket 9"
+        },
+        {
+          "value": "pocket10",
+          "label": "Pocket 10"
+        }
+      ],
+      "tooltip": "Select pockets to dock",
+      "showWhen": [
+        {
+          "field": "protein_column",
+          "hasValue": true
+        }
+      ]
     },
     {
       "key": "engine",
