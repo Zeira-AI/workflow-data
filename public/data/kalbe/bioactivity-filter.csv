@@ -1,0 +1,21 @@
+Rank,Compound,DTIGN–LigoSpace Bioactivity Score,Predicted % Inhibition (0.05 µM),Confidence
+1,Quinazolinone Derivative,0.92,82%,High
+2,Pyrazolopyrimidine,0.89,78%,High
+3,Thienopyrimidine,0.87,75%,High
+4,Oxindole Derivative,0.84,71%,High
+5,Indazole Carboxamide,0.82,69%,High
+6,Pyrimidinyl Anilide,0.80,66%,Medium
+7,Imidazopyrimidine,0.77,62%,Medium
+8,Benzimidazole Urea,0.74,59%,Medium
+9,Quinoline Carboxamide,0.71,55%,Medium
+10,Pyrrolopyrimidine,0.69,52%,Medium
+11,Triazolopyridazine,0.66,48%,Medium
+12,Aminopyridine Sulfonamide,0.63,45%,Medium
+13,Isoquinolinone,0.60,41%,Low
+14,Thiazole Anilide,0.58,38%,Low
+15,Benzothiazole Urea,0.55,35%,Low
+16,Indole Sulfonamide,0.52,31%,Low
+17,Aminotriazine,0.49,28%,Low
+18,Pyrazine Amide,0.46,24%,Low
+19,Anilide Fragment,0.42,19%,Low
+20,Fragment-like Binder,0.38,15%,Low

@@ -1,0 +1,507 @@
+{
+  "type": "toxicity-filter",
+  "label": "Toxicity Filter",
+  "category": "analysis",
+  "icon": "filtericon",
+  "color": "red",
+  "description": "Filter compounds based on physicochemical properties and custom rules.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
+  "outputMockLabel": "36 compounds",
+  "defaultInputs": [
+    {
+      "id": "input-mol-data",
+      "name": "Input Compounds",
+      "type": "array",
+      "required": true,
+      "tooltip": "Table of compounds."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "Molecule",
+      "name": "Molecule",
+      "type": "string",
+      "tooltip": "Name of the molecule."
+    },
+    {
+      "id": "Canonical SMILES",
+      "name": "Canonical SMILES",
+      "type": "string",
+      "tooltip": "Canonical SMILES representation."
+    },
+    {
+      "id": "Formula",
+      "name": "Formula",
+      "type": "string",
+      "tooltip": "Chemical formula."
+    },
+    {
+      "id": "MW",
+      "name": "MW",
+      "type": "number",
+      "tooltip": "Molecular Weight."
+    },
+    {
+      "id": "Key Positives",
+      "name": "Key Positives",
+      "type": "string",
+      "tooltip": "Key positive attributes."
+    },
+    {
+      "id": "Key Flags",
+      "name": "Key Flags",
+      "type": "string",
+      "tooltip": "Key flags or warnings."
+    },
+    {
+      "id": "Overall Assessment",
+      "name": "Overall Assessment",
+      "type": "string",
+      "tooltip": "Overall assessment of the compound."
+    },
+    {
+      "id": "#Heavy atoms",
+      "name": "#Heavy atoms",
+      "type": "number",
+      "tooltip": "Number of heavy atoms."
+    },
+    {
+      "id": "#Aromatic heavy atoms",
+      "name": "#Aromatic heavy atoms",
+      "type": "number",
+      "tooltip": "Number of aromatic heavy atoms."
+    },
+    {
+      "id": "Fraction Csp3",
+      "name": "Fraction Csp3",
+      "type": "number",
+      "tooltip": "Fraction of Csp3 carbons."
+    },
+    {
+      "id": "#Rotatable bonds",
+      "name": "#Rotatable bonds",
+      "type": "number",
+      "tooltip": "Number of rotatable bonds."
+    },
+    {
+      "id": "#H-bond acceptors",
+      "name": "#H-bond acceptors",
+      "type": "number",
+      "tooltip": "Number of hydrogen bond acceptors."
+    },
+    {
+      "id": "#H-bond donors",
+      "name": "#H-bond donors",
+      "type": "number",
+      "tooltip": "Number of hydrogen bond donors."
+    },
+    {
+      "id": "MR",
+      "name": "MR",
+      "type": "number",
+      "tooltip": "Molar Refractivity."
+    },
+    {
+      "id": "TPSA",
+      "name": "TPSA",
+      "type": "number",
+      "tooltip": "Topological Polar Surface Area."
+    },
+    {
+      "id": "iLOGP",
+      "name": "iLOGP",
+      "type": "number",
+      "tooltip": "iLOGP partition coefficient."
+    },
+    {
+      "id": "XLOGP3",
+      "name": "XLOGP3",
+      "type": "number",
+      "tooltip": "XLOGP3 partition coefficient."
+    },
+    {
+      "id": "WLOGP",
+      "name": "WLOGP",
+      "type": "number",
+      "tooltip": "WLOGP partition coefficient."
+    },
+    {
+      "id": "MLOGP",
+      "name": "MLOGP",
+      "type": "number",
+      "tooltip": "MLOGP partition coefficient."
+    },
+    {
+      "id": "Silicos-IT Log P",
+      "name": "Silicos-IT Log P",
+      "type": "number",
+      "tooltip": "Silicos-IT Log P."
+    },
+    {
+      "id": "Consensus Log P",
+      "name": "Consensus Log P",
+      "type": "number",
+      "tooltip": "Consensus Log P."
+    },
+    {
+      "id": "ESOL Log S",
+      "name": "ESOL Log S",
+      "type": "number",
+      "tooltip": "ESOL Log Solubility."
+    },
+    {
+      "id": "ESOL Solubility (mg/ml)",
+      "name": "ESOL Solubility (mg/ml)",
+      "type": "number",
+      "tooltip": "ESOL Solubility in mg/ml."
+    },
+    {
+      "id": "ESOL Solubility (mol/l)",
+      "name": "ESOL Solubility (mol/l)",
+      "type": "number",
+      "tooltip": "ESOL Solubility in mol/l."
+    },
+    {
+      "id": "ESOL Class",
+      "name": "ESOL Class",
+      "type": "string",
+      "tooltip": "ESOL Solubility Class."
+    },
+    {
+      "id": "Ali Log S",
+      "name": "Ali Log S",
+      "type": "number",
+      "tooltip": "Ali Log Solubility."
+    },
+    {
+      "id": "Ali Solubility (mg/ml)",
+      "name": "Ali Solubility (mg/ml)",
+      "type": "number",
+      "tooltip": "Ali Solubility in mg/ml."
+    },
+    {
+      "id": "Ali Solubility (mol/l)",
+      "name": "Ali Solubility (mol/l)",
+      "type": "number",
+      "tooltip": "Ali Solubility in mol/l."
+    },
+    {
+      "id": "Ali Class",
+      "name": "Ali Class",
+      "type": "string",
+      "tooltip": "Ali Solubility Class."
+    },
+    {
+      "id": "Silicos-IT LogSw",
+      "name": "Silicos-IT LogSw",
+      "type": "number",
+      "tooltip": "Silicos-IT Log Solubility."
+    },
+    {
+      "id": "Silicos-IT Solubility (mg/ml)",
+      "name": "Silicos-IT Solubility (mg/ml)",
+      "type": "number",
+      "tooltip": "Silicos-IT Solubility in mg/ml."
+    },
+    {
+      "id": "Silicos-IT Solubility (mol/l)",
+      "name": "Silicos-IT Solubility (mol/l)",
+      "type": "number",
+      "tooltip": "Silicos-IT Solubility in mol/l."
+    },
+    {
+      "id": "Silicos-IT class",
+      "name": "Silicos-IT class",
+      "type": "string",
+      "tooltip": "Silicos-IT Solubility Class."
+    },
+    {
+      "id": "GI absorption",
+      "name": "GI absorption",
+      "type": "string",
+      "tooltip": "Gastrointestinal absorption."
+    },
+    {
+      "id": "BBB permeant",
+      "name": "BBB permeant",
+      "type": "string",
+      "tooltip": "Blood-Brain Barrier permeant."
+    },
+    {
+      "id": "Pgp substrate",
+      "name": "Pgp substrate",
+      "type": "string",
+      "tooltip": "P-glycoprotein substrate."
+    },
+    {
+      "id": "CYP1A2 inhibitor",
+      "name": "CYP1A2 inhibitor",
+      "type": "string",
+      "tooltip": "CYP1A2 inhibitor."
+    },
+    {
+      "id": "CYP2C19 inhibitor",
+      "name": "CYP2C19 inhibitor",
+      "type": "string",
+      "tooltip": "CYP2C19 inhibitor."
+    },
+    {
+      "id": "CYP2C9 inhibitor",
+      "name": "CYP2C9 inhibitor",
+      "type": "string",
+      "tooltip": "CYP2C9 inhibitor."
+    },
+    {
+      "id": "CYP2D6 inhibitor",
+      "name": "CYP2D6 inhibitor",
+      "type": "string",
+      "tooltip": "CYP2D6 inhibitor."
+    },
+    {
+      "id": "CYP3A4 inhibitor",
+      "name": "CYP3A4 inhibitor",
+      "type": "string",
+      "tooltip": "CYP3A4 inhibitor."
+    },
+    {
+      "id": "log Kp (cm/s)",
+      "name": "log Kp (cm/s)",
+      "type": "number",
+      "tooltip": "Skin permeation log Kp."
+    },
+    {
+      "id": "Lipinski #violations",
+      "name": "Lipinski #violations",
+      "type": "number",
+      "tooltip": "Lipinski Rule of 5 violations."
+    },
+    {
+      "id": "Ghose #violations",
+      "name": "Ghose #violations",
+      "type": "number",
+      "tooltip": "Ghose Filter violations."
+    },
+    {
+      "id": "Veber #violations",
+      "name": "Veber #violations",
+      "type": "number",
+      "tooltip": "Veber Rule violations."
+    },
+    {
+      "id": "Egan #violations",
+      "name": "Egan #violations",
+      "type": "number",
+      "tooltip": "Egan Rule violations."
+    },
+    {
+      "id": "Muegge #violations",
+      "name": "Muegge #violations",
+      "type": "number",
+      "tooltip": "Muegge Rule violations."
+    },
+    {
+      "id": "Bioavailability Score",
+      "name": "Bioavailability Score",
+      "type": "number",
+      "tooltip": "Bioavailability Score."
+    },
+    {
+      "id": "PAINS #alerts",
+      "name": "PAINS #alerts",
+      "type": "number",
+      "tooltip": "PAINS alerts."
+    },
+    {
+      "id": "Brenk #alerts",
+      "name": "Brenk #alerts",
+      "type": "number",
+      "tooltip": "Brenk alerts."
+    },
+    {
+      "id": "Leadlikeness #violations",
+      "name": "Leadlikeness #violations",
+      "type": "number",
+      "tooltip": "Leadlikeness violations."
+    },
+    {
+      "id": "Synthetic Accessibility",
+      "name": "Synthetic Accessibility",
+      "type": "number",
+      "tooltip": "Synthetic Accessibility score."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredientListText",
+      "type": ["text", "file"],
+      "label": "Compound List",
+      "tooltip": "Compounds for analysis",
+      "suggestedField": ["smiles", "name", "Compound"],
+      "accept": ".csv,.txt,.smi"
+    },
+    {
+      "key": "model",
+      "type": "select",
+      "label": "Model",
+      "options": [
+        {
+          "value": "swiss_adme",
+          "label": "SwissADME"
+        },
+        {
+          "value": "admet_ai",
+          "label": "ADMET-AI"
+        },
+        {
+          "value": "preadmet",
+          "label": "preADMET"
+        }
+      ],
+      "tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
+    },
+    {
+      "key": "mw_range",
+      "type": "range",
+      "label": "Molecular Weight Range",
+      "defaultValue": [0, 1000],
+      "tooltip": "Molecular Weight range (min - max g/mol)."
+    },
+    {
+      "key": "logp_range",
+      "type": "range",
+      "label": "Consensus Log P Range",
+      "defaultValue": [-5.0, 10.0],
+      "tooltip": "Partition coefficient range."
+    },
+    {
+      "key": "tpsa_range",
+      "type": "range",
+      "label": "TPSA Range (Å²)",
+      "defaultValue": [0, 300],
+      "tooltip": "Topological Polar Surface Area range."
+    },
+    {
+      "key": "logkp_range",
+      "type": "range",
+      "label": "log Kp (cm/s) Range",
+      "defaultValue": [-10.0, 0.0],
+      "tooltip": "Skin permeability coefficient range."
+    },
+    {
+      "key": "sa_range",
+      "type": "range",
+      "label": "Synthetic Accessibility Range",
+      "defaultValue": [1, 10],
+      "tooltip": "Synthetic Accessibility score range (1=easy, 10=hard)."
+    },
+    {
+      "key": "bioavailability_range",
+      "type": "range",
+      "label": "Bioavailability Score Range",
+      "defaultValue": [0.1, 1.0],
+      "tooltip": "Bioavailability Score range."
+    },
+    {
+      "key": "esol_class",
+      "type": "multiselect",
+      "label": "ESOL Solubility Class",
+      "options": [
+        { "value": "Very soluble", "label": "Very soluble" },
+        { "value": "Soluble", "label": "Soluble" },
+        { "value": "Moderately soluble", "label": "Moderately soluble" },
+        { "value": "Poorly soluble", "label": "Poorly soluble" },
+        { "value": "Insoluble", "label": "Insoluble" }
+      ],
+      "tooltip": "Filter by ESOL Solubility Class."
+    },
+    {
+      "key": "gi_absorption",
+      "type": "multiselect",
+      "label": "GI Absorption",
+      "options": [
+        { "value": "High", "label": "High" },
+        { "value": "Low", "label": "Low" }
+      ],
+      "tooltip": "Filter by GI absorption."
+    },
+    {
+      "key": "bbb_permeant",
+      "type": "multiselect",
+      "label": "BBB Permeant",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by BBB permeant status."
+    },
+    {
+      "key": "cyp1a2_inhibitor",
+      "type": "multiselect",
+      "label": "CYP1A2 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP1A2 inhibitor status."
+    },
+    {
+      "key": "cyp2c19_inhibitor",
+      "type": "multiselect",
+      "label": "CYP2C19 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP2C19 inhibitor status."
+    },
+    {
+      "key": "cyp2c9_inhibitor",
+      "type": "multiselect",
+      "label": "CYP2C9 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP2C9 inhibitor status."
+    },
+    {
+      "key": "cyp2d6_inhibitor",
+      "type": "multiselect",
+      "label": "CYP2D6 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP2D6 inhibitor status."
+    },
+    {
+      "key": "cyp3a4_inhibitor",
+      "type": "multiselect",
+      "label": "CYP3A4 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP3A4 inhibitor status."
+    },
+    {
+      "key": "lipinski_violations",
+      "type": "range",
+      "label": "Lipinski # Violations",
+      "defaultValue": [0, 5],
+      "tooltip": "Filter by number of Lipinski violations."
+    }
+  ],
+  "defaultConfig": {
+    "mw_range": [0, 1000],
+    "logp_range": [-5.0, 10.0],
+    "tpsa_range": [0, 300],
+    "logkp_range": [-10.0, 0.0],
+    "sa_range": [1, 10],
+    "bioavailability_range": [0.1, 1.0],
+    "lipinski_violations": [0, 5]
+  }
+}

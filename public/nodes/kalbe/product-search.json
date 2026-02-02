@@ -1,0 +1,132 @@
+{
+  "type": "product-search",
+  "label": "Product Search",
+  "category": "search",
+  "icon": "search",
+  "color": "amber",
+  "description": "Search for products in the search tool",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
+  "outputMockLabel": "8 products",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Brand",
+      "name": "Brand",
+      "type": "string",
+      "tooltip": "Brand name of the product."
+    },
+    {
+      "id": "Product",
+      "name": "Product",
+      "type": "string",
+      "tooltip": "Product name or title."
+    },
+    {
+      "id": "Ingredients",
+      "name": "Ingredients",
+      "type": "string",
+      "tooltip": "List of ingredients in the product formulation."
+    },
+    {
+      "id": "Description",
+      "name": "Description",
+      "type": "string",
+      "tooltip": "Product description explaining its purpose and benefits."
+    },
+    {
+      "id": "URL",
+      "name": "URL",
+      "type": "string",
+      "tooltip": "Product page URL link."
+    },
+    {
+      "id": "Price_usd",
+      "name": "Price (USD)",
+      "type": "number",
+      "tooltip": "Product price in US dollars."
+    },
+    {
+      "id": "Size",
+      "name": "Size",
+      "type": "string",
+      "tooltip": "Product size or volume."
+    },
+    {
+      "id": "Format",
+      "name": "Format",
+      "type": "string",
+      "tooltip": "Product format or delivery method."
+    },
+    {
+      "id": "Rating",
+      "name": "Rating",
+      "type": "number",
+      "tooltip": "Product rating score."
+    },
+    {
+      "id": "Review_count",
+      "name": "Review Count",
+      "type": "string",
+      "tooltip": "Total number of customer reviews."
+    },
+    {
+      "id": "Image_url",
+      "name": "Product Image",
+      "type": "image",
+      "tooltip": "Product image URL."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "query",
+      "type": "text",
+      "label": "Search Query",
+      "placeholder": "Enter product name, compounds, effects, or other search terms...",
+      "tooltip": "Text search query for products. You can search by product name, key compounds, desired effects, or other product attributes."
+    },
+    {
+      "key": "region",
+      "type": "select",
+      "label": "Region",
+      "options": [
+        {
+          "value": "global",
+          "label": "Global"
+        },
+        {
+          "value": "north_america",
+          "label": "North America"
+        },
+        {
+          "value": "south_america",
+          "label": "South America"
+        },
+        {
+          "value": "europe",
+          "label": "Europe"
+        },
+        {
+          "value": "asia",
+          "label": "Asia"
+        },
+        {
+          "value": "africa",
+          "label": "Africa"
+        },
+        {
+          "value": "oceania",
+          "label": "Oceania"
+        }
+      ],
+      "defaultValue": "global",
+      "tooltip": "Select the continent/region to filter product search results."
+    }
+  ],
+  "defaultConfig": {
+    "query": "",
+    "region": "global"
+  }
+}

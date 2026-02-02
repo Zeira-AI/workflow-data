@@ -1,0 +1,15 @@
+Pair / Combination,Predicted Interaction Signal,Mechanistic Rationale,Risk Type (Dominant),Confidence,Flag
+Caffeine – Taurine,Complementary CNS stimulation with neuromodulatory buffering,Taurine may dampen excitotoxic effects of caffeine while maintaining alertness,Transient overstimulation (jitteriness; anxiety in sensitive users),High,SAFE
+Caffeine – L-Carnitine,Additive effects on fatty-acid oxidation and perceived energy,Caffeine increases lipolysis; carnitine supports mitochondrial transport,Mild GI discomfort at high intake,Medium,SAFE
+Caffeine – Niacinamide,Increased metabolic turnover and vasodilation,Niacinamide supports NAD⁺ metabolism; caffeine increases metabolic demand,Headache or flushing at high dose,Medium,LOW_RISK
+Caffeine – Panthenol,No meaningful pharmacodynamic interaction expected,Distinct metabolic pathways; panthenol acts as vitamin precursor,None identified,High,SAFE
+Taurine – L-Carnitine,Synergistic mitochondrial and endurance support,Both influence cellular energy handling and osmotic balance,Electrolyte imbalance (theoretical; high dose),Low,SAFE
+Taurine – Niacinamide,Overlapping cellular energy-support roles,Both contribute indirectly to energy metabolism,Mild GI upset (rare),Low,SAFE
+Taurine – Panthenol,No significant interaction expected,Different biological roles,None identified,High,SAFE
+Niacinamide – Panthenol,Shared B-vitamin metabolic pathways,Both feed into CoA / NAD-related pathways,Flushing or warmth sensation at excessive intake,Medium,LOW_RISK
+L-Carnitine – Niacinamide,Complementary metabolic support,Fatty acid transport + redox metabolism,Mild GI discomfort,Low,SAFE
+L-Carnitine – Panthenol,No adverse interaction predicted,Independent mechanisms,None identified,High,SAFE
+Caffeine – Taurine – L-Carnitine (Triad),Synergistic enhancement of alertness and endurance,Combined CNS stimulation + mitochondrial support,Overstimulation; palpitations in sensitive users,Medium,MODERATE_RISK
+Caffeine – Niacinamide – Panthenol (Triad),Broad metabolic activation,Stimulatory + vitamin-driven metabolic flux,Flushing; headache (dose-dependent),Medium,LOW_RISK
+Taurine – L-Carnitine – Niacinamide (Triad),Sustained energy metabolism support,Mitochondrial + redox synergy,GI discomfort (rare),Low,SAFE
+All five ingredients (Full Stack),Broad-spectrum energy and metabolic support,Multi-pathway activation (CNS + metabolism + vitamins),Cumulative stimulation effects,Medium,MODERATE_RISK
