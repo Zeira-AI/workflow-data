@@ -77,10 +77,7 @@
     "pricing": {
       "type": "object",
       "description": "Pricing information for the tool execution",
-      "required": [
-        "credits",
-        "executionTime"
-      ],
+      "required": ["credits", "executionTime"],
       "properties": {
         "credits": {
           "type": "integer",
@@ -98,11 +95,7 @@
   "definitions": {
     "NodeIO": {
       "type": "object",
-      "required": [
-        "id",
-        "name",
-        "type"
-      ],
+      "required": ["id", "name", "type"],
       "properties": {
         "id": {
           "type": "string",
@@ -145,11 +138,7 @@
     },
     "ConfigField": {
       "type": "object",
-      "required": [
-        "key",
-        "type",
-        "label"
-      ],
+      "required": ["key", "type", "label"],
       "properties": {
         "key": {
           "type": "string",
@@ -211,10 +200,7 @@
           "description": "Options for select and pocket_selector fields",
           "items": {
             "type": "object",
-            "required": [
-              "value",
-              "label"
-            ],
+            "required": ["value", "label"],
             "properties": {
               "value": {
                 "type": "string"
@@ -258,13 +244,10 @@
         },
         "showWhen": {
           "type": "array",
-          "description": "Conditions for showing this field. All conditions must be satisfied (AND logic). Each condition's 'in' array uses OR logic.",
+          "description": "Conditions for showing this field. All conditions must be satisfied (AND logic). Each condition's 'in' array uses OR logic. Use 'hasValue' to check if a field has any non-empty value.",
           "items": {
             "type": "object",
-            "required": [
-              "field",
-              "in"
-            ],
+            "required": ["field"],
             "properties": {
               "field": {
                 "type": "string",
@@ -272,12 +255,24 @@
               },
               "in": {
                 "type": "array",
-                "description": "Array of values - field value must match one of these",
+                "description": "Array of values - field value must match one of these. Use this OR hasValue, not both.",
                 "items": {
                   "type": "string"
                 }
+              },
+              "hasValue": {
+                "type": "boolean",
+                "description": "If true, field is shown when the referenced field has any non-empty value. If false, field is shown when the referenced field is empty. Use this OR 'in', not both."
               }
-            }
+            },
+            "oneOf": [
+              {
+                "required": ["in"]
+              },
+              {
+                "required": ["hasValue"]
+              }
+            ]
           }
         },
         "advanced": {

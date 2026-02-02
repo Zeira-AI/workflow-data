@@ -1,6 +1,6 @@
 {
   "type": "target-mapping",
-  "label": "Target Mapping",
+  "label": "Target discovery and prioritization",
   "category": "analysis",
   "icon": "target-icon",
   "color": "blue",
@@ -9,7 +9,7 @@
     "credits": 800,
     "executionTime": 1
   },
-  "outputMockLabel": "12 targets",
+  "outputMockLabel": "5 targets",
   "defaultInputs": [
     {
       "id": "target-input",
@@ -22,33 +22,63 @@
   "defaultOutputs": [
     {
       "id": "target",
-      "name": "Target",
+      "name": "Protein target",
       "type": "string",
-      "tooltip": "Protein target name or biological process (e.g. \"KATP\", \"GSK3β\", \"Safety assays\", \"Hair follicle biology\")."
+      "tooltip": "Protein target name"
     },
     {
-      "id": "why_relevant",
-      "name": "Why Relevant",
+      "id": "organism",
+      "name": "Organism",
       "type": "string",
-      "tooltip": "Biological rationale explaining why this target is relevant to the intended effect (e.g. \"DP anagen entry trigger\", \"Wnt inhibition release\")."
+      "tooltip": "Organism"
+    },
+    {
+      "id": "biological_system",
+      "name": "Biological system",
+      "type": "string",
+      "tooltip": "Biological system"
     },
     {
       "id": "desired_modulation",
-      "name": "Desired Modulation",
+      "name": "Desired modulation",
       "type": "string",
-      "tooltip": "Required modulation type: \"activation\" or \"inhibition\" for protein targets, or \"N/A\" for non-protein assays (e.g. safety, biology, stability)."
+      "tooltip": "Desired modulation"
     },
     {
-      "id": "assay_type",
-      "name": "Assay Type",
+      "id": "assay",
+      "name": "Corresponding assay",
       "type": "string",
-      "tooltip": "Specific assay method used to measure the target or biological effect (e.g. \"patch clamp\", \"kinase ATP assay\", \"Dermal Papilla Cell Viability (MTT 72h)\")."
+      "tooltip": "Corresponding assay"
     },
     {
       "id": "metric",
-      "name": "Metric",
+      "name": "Metric used",
       "type": "string",
-      "tooltip": "Measurement unit or metric for the assay result (e.g. \"EC50\", \"IC50\", \"% viability\", \"mm\", \"MIC (µg/mL)\")."
+      "tooltip": "Metric used"
+    },
+    {
+      "id": "rationale",
+      "name": "Rationale",
+      "type": "string",
+      "tooltip": "Rationale"
+    },
+    {
+      "id": "crystallized_structure_available",
+      "name": "Crystallized structure available?",
+      "type": "string",
+      "tooltip": "Crystallized structure available?"
+    },
+    {
+      "id": "uniprot_accession",
+      "name": "UniProt accession number",
+      "type": "string",
+      "tooltip": "UniProt accession number"
+    },
+    {
+      "id": "chembl",
+      "name": "Chembl",
+      "type": "string",
+      "tooltip": "Chembl"
     }
   ],
   "configSchema": [
@@ -56,7 +86,7 @@
       "key": "manualFreetext",
       "type": "textarea",
       "label": "Target Input",
-      "placeholder": "Enter target name or biological effect (e.g., GSK3B, hair growth trigger...)",
+      "placeholder": "Enter target name or biological effect...",
       "tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
     }
   ],
@@ -64,88 +94,64 @@
     "manualFreetext": "",
     "mappingTable": [
       {
-        "target": "KATP",
-        "relevance": "DP anagen entry trigger",
-        "modulation": "activation",
-        "assay": "patch clamp",
-        "metric": "EC50"
+        "target": "CDK20",
+        "organism": "Human",
+        "biological_system": "Hepatocellular carcinoma (cell-cycle regulation)",
+        "desired_modulation": "Direct inhibition",
+        "assay": "Biochemical kinase binding assay",
+        "metric": "Kd / IC₅₀",
+        "rationale": "Strong multi-omics association with HCC; oncogenic role via CDK2 activation; kinase druggability with limited prior structural/chemical data",
+        "crystallized_structure_available": "No",
+        "uniprot_accession": "Q8IZL9",
+        "chembl": "CHEMBL3559690"
       },
       {
-        "target": "GSK3β",
-        "relevance": "Wnt inhibition release",
-        "modulation": "inhibition",
-        "assay": "kinase ATP assay",
-        "metric": "IC50"
+        "target": "CDK2",
+        "organism": "Human",
+        "biological_system": "Pan-cancer cell-cycle control",
+        "desired_modulation": "Direct inhibition",
+        "assay": "Enzymatic kinase activity assay",
+        "metric": "IC₅₀",
+        "rationale": "Well-validated CDK with strong cancer relevance; included as a reference comparator",
+        "crystallized_structure_available": "Yes",
+        "uniprot_accession": "P24941",
+        "chembl": "CHEMBL301"
       },
       {
-        "target": "PDE1A",
-        "relevance": "↑cAMP follicular signaling",
-        "modulation": "inhibition",
-        "assay": "cAMP hydrolysis assay",
-        "metric": "IC50"
+        "target": "PLK1",
+        "organism": "Human",
+        "biological_system": "Mitotic regulation in cancer",
+        "desired_modulation": "Direct inhibition",
+        "assay": "Enzymatic kinase assay",
+        "metric": "IC₅₀",
+        "rationale": "High expression in proliferative tumors; classic mitotic kinase target",
+        "crystallized_structure_available": "Yes",
+        "uniprot_accession": "P53350",
+        "chembl": "CHEMBL3024"
       },
       {
-        "target": "TGFBR1",
-        "relevance": "block catagen transition",
-        "modulation": "inhibition",
-        "assay": "Smad phosphorylation",
-        "metric": "IC50"
+        "target": "AURKA",
+        "organism": "Human",
+        "biological_system": "Mitotic spindle assembly",
+        "desired_modulation": "Direct inhibition",
+        "assay": "Cell-based proliferation assay",
+        "metric": "GI₅₀ / IC₅₀",
+        "rationale": "Strong cancer driver with abundant literature; used to anchor target ranking",
+        "crystallized_structure_available": "Yes",
+        "uniprot_accession": "O14965",
+        "chembl": "CHEMBL4722"
       },
       {
-        "target": "Safety assays",
-        "relevance": "Cytotoxicity & viability",
-        "modulation": "N/A",
-        "assay": "Dermal Papilla Cell Viability (MTT 72h)",
-        "metric": "% viability"
-      },
-      {
-        "target": "Hair follicle biology",
-        "relevance": "Ex vivo Hair Shaft Growth",
-        "modulation": "N/A",
-        "assay": "microdissected follicles 10 days",
-        "metric": "mm"
-      },
-      {
-        "target": "Inflammation",
-        "relevance": "IL-8 Suppression",
-        "modulation": "N/A",
-        "assay": "ELISA / Reporter Assay",
-        "metric": "% reduction"
-      },
-      {
-        "target": "Oxidative stress",
-        "relevance": "ROS Reduction",
-        "modulation": "N/A",
-        "assay": "DCFDA assay H2O2 challenge",
-        "metric": "% ROS inhibition"
-      },
-      {
-        "target": "Antimicrobial efficacy",
-        "relevance": "MIC vs Malassezia restricta",
-        "modulation": "N/A",
-        "assay": "In vitro culture",
-        "metric": "MIC (µg/mL)"
-      },
-      {
-        "target": "Skin penetration",
-        "relevance": "Franz Diffusion Model",
-        "modulation": "N/A",
-        "assay": "Franz cell",
-        "metric": "cumulative permeation in µg/cm²/24h"
-      },
-      {
-        "target": "Stability",
-        "relevance": "4-week accelerated stability",
-        "modulation": "N/A",
-        "assay": "40°C/75%RH",
-        "metric": "% active remaining"
-      },
-      {
-        "target": "Gene expression",
-        "relevance": "WNT/β-catenin Gene Panel",
-        "modulation": "N/A",
-        "assay": "qPCR in DP cells",
-        "metric": "fold change vs untreated"
+        "target": "TTK",
+        "organism": "Human",
+        "biological_system": "Spindle checkpoint signaling",
+        "desired_modulation": "Direct inhibition",
+        "assay": "Enzymatic kinase assay",
+        "metric": "IC₅₀",
+        "rationale": "Oncology relevance with partial structural coverage; moderate novelty",
+        "crystallized_structure_available": "Partial",
+        "uniprot_accession": "P33981",
+        "chembl": "CHEMBL3983"
       }
     ]
   }

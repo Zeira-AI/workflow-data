@@ -1,13 +1,6 @@
-target,why_relevant,desired_modulation,assay_type,metric
-KATP,DP anagen entry trigger,activation,patch clamp,EC50
-GSK3β,Wnt inhibition release,inhibition,kinase ATP assay,IC50
-PDE1A,↑cAMP follicular signaling,inhibition,cAMP hydrolysis assay,IC50
-TGFBR1,block catagen transition,inhibition,Smad phosphorylation,IC50
-Safety assays,Cytotoxicity & viability,N/A,Dermal Papilla Cell Viability (MTT 72h),% viability
-Hair follicle biology,Ex vivo Hair Shaft Growth,N/A,microdissected follicles 10 days,mm
-Inflammation,IL-8 Suppression,N/A,ELISA / Reporter Assay,% reduction
-Oxidative stress,ROS Reduction,N/A,DCFDA assay H2O2 challenge,% ROS inhibition
-Antimicrobial efficacy,MIC vs Malassezia restricta,N/A,In vitro culture,MIC (µg/mL)
-Skin penetration,Franz Diffusion Model,N/A,Franz cell,cumulative permeation in µg/cm²/24h
-Stability,4-week accelerated stability,N/A,40°C/75%RH,% active remaining
-Gene expression,WNT/β-catenin Gene Panel,N/A,qPCR in DP cells,fold change vs untreated
+Protein target,Organism,Biological system,Desired modulation,Corresponding assay,Metric used,Rationale,Crystallized structure available?,UniProt accession number,Chembl
+CDK20,Human,Hepatocellular carcinoma (cell-cycle regulation),Direct inhibition,Biochemical kinase binding assay,Kd / IC₅₀,Strong multi-omics association with HCC; oncogenic role via CDK2 activation; kinase druggability with limited prior structural/chemical data,No,Q8IZL9,CHEMBL3559690
+CDK2,Human,Pan-cancer cell-cycle control,Direct inhibition,Enzymatic kinase activity assay,IC₅₀,Well-validated CDK with strong cancer relevance; included as a reference comparator,Yes,P24941,CHEMBL301
+PLK1,Human,Mitotic regulation in cancer,Direct inhibition,Enzymatic kinase assay,IC₅₀,High expression in proliferative tumors; classic mitotic kinase target,Yes,P53350,CHEMBL3024
+AURKA,Human,Mitotic spindle assembly,Direct inhibition,Cell-based proliferation assay,GI₅₀ / IC₅₀,Strong cancer driver with abundant literature; used to anchor target ranking,Yes,O14965,CHEMBL4722
+TTK,Human,Spindle checkpoint signaling,Direct inhibition,Enzymatic kinase assay,IC₅₀,Oncology relevance with partial structural coverage; moderate novelty,Partial,P33981,CHEMBL3983
