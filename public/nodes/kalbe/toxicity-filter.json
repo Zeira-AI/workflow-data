@@ -361,15 +361,225 @@
         }
       ],
       "tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
+    },
+    {
+      "key": "mw_range",
+      "type": "range",
+      "label": "Molecular Weight Range",
+      "defaultValue": [100, 250],
+      "tooltip": "Molecular Weight range (min - max g/mol)."
+    },
+    {
+      "key": "tpsa_range",
+      "type": "range",
+      "label": "TPSA Range (Å²)",
+      "defaultValue": [40, 70],
+      "tooltip": "Topological Polar Surface Area range (min - max Å²)."
+    },
+    {
+      "key": "consensus_logp_range",
+      "type": "range",
+      "label": "Consensus Log P Range",
+      "defaultValue": [-1.0, 2.0],
+      "tooltip": "Consensus Log P partition coefficient range."
+    },
+    {
+      "key": "logkp_range",
+      "type": "range",
+      "label": "log Kp Range (cm/s)",
+      "defaultValue": [-8.0, -6.0],
+      "tooltip": "Skin permeation log Kp range."
+    },
+    {
+      "key": "sa_range",
+      "type": "range",
+      "label": "Synthetic Accessibility Range",
+      "defaultValue": [1, 4],
+      "tooltip": "Synthetic Accessibility score range (1 = easy, 10 = hard)."
+    },
+    {
+      "key": "bioavailability_range",
+      "type": "range",
+      "label": "Bioavailability Score Range",
+      "defaultValue": [0.5, 1.0],
+      "tooltip": "Bioavailability Score range."
+    },
+    {
+      "key": "lipinski_violations",
+      "type": "range",
+      "label": "Lipinski #violations Range",
+      "defaultValue": [0, 1],
+      "tooltip": "Maximum allowed Lipinski Rule of 5 violations."
+    },
+    {
+      "key": "ghose_violations",
+      "type": "range",
+      "label": "Ghose #violations Range",
+      "defaultValue": [0, 3],
+      "tooltip": "Maximum allowed Ghose Filter violations."
+    },
+    {
+      "key": "pains_alerts",
+      "type": "range",
+      "label": "PAINS #alerts Range",
+      "defaultValue": [0, 0],
+      "tooltip": "Maximum allowed PAINS alerts (0 = no alerts)."
+    },
+    {
+      "key": "brenk_alerts",
+      "type": "range",
+      "label": "Brenk #alerts Range",
+      "defaultValue": [0, 0],
+      "tooltip": "Maximum allowed Brenk alerts."
+    },
+    {
+      "key": "gi_absorption",
+      "type": "multiselect",
+      "label": "GI Absorption",
+      "options": [
+        { "value": "High", "label": "High" },
+        { "value": "Low", "label": "Low" }
+      ],
+      "tooltip": "Filter by Gastrointestinal absorption level.",
+      "defaultValue": ["High"]
+    },
+    {
+      "key": "bbb_permeant",
+      "type": "multiselect",
+      "label": "BBB Permeant",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by Blood-Brain Barrier permeability.",
+      "defaultValue": ["Yes", "No"]
+    },
+    {
+      "key": "pgp_substrate",
+      "type": "multiselect",
+      "label": "Pgp Substrate",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by P-glycoprotein substrate status.",
+      "defaultValue": ["No"]
+    },
+    {
+      "key": "cyp1a2_inhibitor",
+      "type": "multiselect",
+      "label": "CYP1A2 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP1A2 inhibitor status.",
+      "defaultValue": ["Yes", "No"]
+    },
+    {
+      "key": "cyp2c19_inhibitor",
+      "type": "multiselect",
+      "label": "CYP2C19 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP2C19 inhibitor status.",
+      "defaultValue": ["No"]
+    },
+    {
+      "key": "cyp2c9_inhibitor",
+      "type": "multiselect",
+      "label": "CYP2C9 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP2C9 inhibitor status.",
+      "defaultValue": ["No"]
+    },
+    {
+      "key": "cyp2d6_inhibitor",
+      "type": "multiselect",
+      "label": "CYP2D6 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP2D6 inhibitor status.",
+      "defaultValue": ["No"]
+    },
+    {
+      "key": "cyp3a4_inhibitor",
+      "type": "multiselect",
+      "label": "CYP3A4 Inhibitor",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ],
+      "tooltip": "Filter by CYP3A4 inhibitor status.",
+      "defaultValue": ["No"]
+    },
+    {
+      "key": "esol_class",
+      "type": "multiselect",
+      "label": "ESOL Solubility Class",
+      "options": [
+        { "value": "Very soluble", "label": "Very soluble" },
+        { "value": "Soluble", "label": "Soluble" },
+        { "value": "Moderately soluble", "label": "Moderately soluble" },
+        { "value": "Poorly soluble", "label": "Poorly soluble" }
+      ],
+      "tooltip": "Filter by ESOL Solubility Class.",
+      "defaultValue": ["Very soluble", "Soluble"]
+    },
+    {
+      "key": "ali_class",
+      "type": "multiselect",
+      "label": "Ali Solubility Class",
+      "options": [
+        { "value": "Very soluble", "label": "Very soluble" },
+        { "value": "Soluble", "label": "Soluble" },
+        { "value": "Moderately soluble", "label": "Moderately soluble" },
+        { "value": "Poorly soluble", "label": "Poorly soluble" }
+      ],
+      "tooltip": "Filter by Ali Solubility Class.",
+      "defaultValue": ["Very soluble", "Soluble"]
+    },
+    {
+      "key": "silicos_class",
+      "type": "multiselect",
+      "label": "Silicos-IT Solubility Class",
+      "options": [
+        { "value": "Soluble", "label": "Soluble" },
+        { "value": "Moderately soluble", "label": "Moderately soluble" },
+        { "value": "Poorly soluble", "label": "Poorly soluble" }
+      ],
+      "tooltip": "Filter by Silicos-IT Solubility Class.",
+      "defaultValue": ["Soluble"]
     }
   ],
   "defaultConfig": {
-    "mw_range": [0, 1000],
-    "logp_range": [-5.0, 10.0],
-    "tpsa_range": [0, 300],
-    "logkp_range": [-10.0, 0.0],
-    "sa_range": [1, 10],
-    "bioavailability_range": [0.1, 1.0],
-    "lipinski_violations": [0, 5]
+    "mw_range": [100, 250],
+    "tpsa_range": [40, 70],
+    "consensus_logp_range": [-1.0, 2.0],
+    "logkp_range": [-8.0, -6.0],
+    "sa_range": [1, 4],
+    "bioavailability_range": [0.5, 1.0],
+    "lipinski_violations": [0, 1],
+    "ghose_violations": [0, 3],
+    "pains_alerts": [0, 0],
+    "brenk_alerts": [0, 0],
+    "gi_absorption": ["High"],
+    "bbb_permeant": ["Yes", "No"],
+    "pgp_substrate": ["No"],
+    "cyp1a2_inhibitor": ["Yes", "No"],
+    "cyp2c19_inhibitor": ["No"],
+    "cyp2c9_inhibitor": ["No"],
+    "cyp2d6_inhibitor": ["No"],
+    "cyp3a4_inhibitor": ["No"],
+    "esol_class": ["Very soluble", "Soluble"],
+    "ali_class": ["Very soluble", "Soluble"],
+    "silicos_class": ["Soluble"]
   }
 }
