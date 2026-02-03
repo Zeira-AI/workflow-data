@@ -114,7 +114,8 @@
             "object",
             "array",
             "structure",
-            "image"
+            "image",
+            "smiles"
           ],
           "description": "Data type of the I/O port"
         },

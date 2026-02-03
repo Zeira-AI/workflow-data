@@ -1,21 +1,21 @@
-Rank,Compound Name,SMILES,Docking Score (kcal/mol)
-1,Quinazolinone Derivative,O=C1NC=NC2=CC=CC=C12,-10.7
-2,Pyrimidinyl Anilide,NC(=O)C1=NC=NC=C1C2=CC=CC=C2,-10.5
-3,Imidazopyridine,C1=NC2=CN=CC=C2N1,-10.4
-4,Thienopyrimidine,C1=NC2=CSC=C2N=C1,-10.2
-5,Pyrazolopyrimidine,N1N=CC2=NC=NC=C12,-10.1
-6,Indazole Carboxamide,O=C(N)C1=NN=C2C=CC=CC12,-9.9
-7,Triazolopyridazine,N1N=NC2=NN=CC=C12,-9.8
-8,Benzimidazole Urea,NC(=O)NC1=NC2=CC=CC=C2N1,-9.7
-9,Aminopyridine Sulfonamide,NS(=O)(=O)C1=CC=NC=C1N,-9.6
-10,Oxindole Derivative,O=C1NC2=CC=CC=C2C1,-9.5
-11,Imidazopyrimidine,C1=NC2=NC=CN=C2N1,-9.4
-12,Thiazole Anilide,NC(=O)C1=CSC=N1C2=CC=CC=C2,-9.3
-13,Quinoline Carboxamide,O=C(N)C1=NC2=CC=CC=C2C=C1,-9.2
-14,Pyrrolopyrimidine,C1=NC2=CN(CC)C=C2N1,-9.1
-15,Benzothiazole Urea,NC(=O)NC1=NC2=CC=CC=C2S1,-9.0
-16,Aminotriazine,NC1=NC(N)=NC(N)=N1,-8.9
-17,Indole Sulfonamide,NS(=O)(=O)C1=CC2=CC=CC=C2N1,-8.8
-18,Isoquinolinone,O=C1NC2=CC=CC=C2C=C1,-8.7
-19,Pyrazine Amide,NC(=O)C1=NC=CN=C1,-8.6
-20,Anilide Fragment,NC(=O)C1=CC=CC=C1,-8.5
+Rank,Compound Name,SMILES,Docking Score (kcal/mol),Docked Structure
+1,Quinazolinone Derivative,O=C1NC=NC2=CC=CC=C12,-10.7,https://workflow-data-2sa8.vercel.app/data/docking/Quinazolinone.pdb
+2,Pyrimidinyl Anilide,NC(=O)C1=NC=NC=C1C2=CC=CC=C2,-10.5,https://workflow-data-2sa8.vercel.app/data/docking/PyrimidinylAnilide.pdb
+3,Imidazopyridine,C1=NC2=CN=CC=C2N1,-10.4,https://workflow-data-2sa8.vercel.app/data/docking/Imidazopyridine.pdb
+4,Thienopyrimidine,C1=NC2=CSC=C2N=C1,-10.2,https://workflow-data-2sa8.vercel.app/data/docking/Thienopyrimidine.pdb
+5,Pyrazolopyrimidine,N1N=CC2=NC=NC=C12,-10.1,https://workflow-data-2sa8.vercel.app/data/docking/Pyrazolopyrimidine.pdb
+6,Indazole Carboxamide,O=C(N)C1=NN=C2C=CC=CC12,-9.9,
+7,Triazolopyridazine,N1N=NC2=NN=CC=C12,-9.8,
+8,Benzimidazole Urea,NC(=O)NC1=NC2=CC=CC=C2N1,-9.7,
+9,Aminopyridine Sulfonamide,NS(=O)(=O)C1=CC=NC=C1N,-9.6,
+10,Oxindole Derivative,O=C1NC2=CC=CC=C2C1,-9.5,
+11,Imidazopyrimidine,C1=NC2=NC=CN=C2N1,-9.4,
+12,Thiazole Anilide,NC(=O)C1=CSC=N1C2=CC=CC=C2,-9.3,
+13,Quinoline Carboxamide,O=C(N)C1=NC2=CC=CC=C2C=C1,-9.2,
+14,Pyrrolopyrimidine,C1=NC2=CN(CC)C=C2N1,-9.1,
+15,Benzothiazole Urea,NC(=O)NC1=NC2=CC=CC=C2S1,-9.0,
+16,Aminotriazine,NC1=NC(N)=NC(N)=N1,-8.9,
+17,Indole Sulfonamide,NS(=O)(=O)C1=CC2=CC=CC=C2N1,-8.8,
+18,Isoquinolinone,O=C1NC2=CC=CC=C2C=C1,-8.7,
+19,Pyrazine Amide,NC(=O)C1=NC=CN=C1,-8.6,
+20,Anilide Fragment,NC(=O)C1=CC=CC=C1,-8.5,

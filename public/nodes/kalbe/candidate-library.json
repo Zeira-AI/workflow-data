@@ -50,7 +50,7 @@
     {
       "id": "SMILES",
       "name": "SMILES",
-      "type": "string",
+      "type": "smiles",
       "tooltip": "SMILES string representing the chemical structure."
     }
   ],

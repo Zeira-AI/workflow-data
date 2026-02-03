@@ -51,6 +51,12 @@
       "name": "Docking Score (kcal/mol)",
       "type": "number",
       "tooltip": "Predicted binding free energy in kcal/mol."
+    },
+    {
+      "id": "Docked Structure",
+      "name": "Docked Structure",
+      "type": "pdb",
+      "tooltip": "3D structure of the docked ligand-protein complex."
     }
   ],
   "configSchema": [
@@ -267,6 +273,32 @@
       ],
       "advanced": true,
       "tooltip": "Advanced: switch between standard and fine‑grid scoring for SwissDock."
+    },
+    {
+      "key": "choose_best_pose",
+      "type": "boolean",
+      "label": "Choose best pose for each compound?",
+      "defaultValue": "true",
+      "tooltip": "If checked, the node will select the best pose for each compound based on the docking score."
+    },
+    {
+      "key": "screening",
+      "type": "boolean",
+      "label": "Screening?",
+      "tooltip": "If checked, the node will perform virtual screening."
+    },
+    {
+      "key": "threshold",
+      "type": "number",
+      "label": "Threshold (kcal/mol)",
+      "defaultValue": -5,
+      "showWhen": [
+        {
+          "field": "screening",
+          "in": ["true"]
+        }
+      ],
+      "tooltip": "Threshold for virtual screening."
     }
   ]
 }
