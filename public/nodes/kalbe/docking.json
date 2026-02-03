@@ -152,6 +152,10 @@
         {
           "value": "swissdock",
           "label": "SwissDock"
+        },
+        {
+          "value": "boltz-2",
+          "label": "Boltz-2"
         }
       ],
       "defaultValue": "vina",
