@@ -55,7 +55,7 @@
     {
       "id": "Docked Structure",
       "name": "Docked Structure",
-      "type": "pdb",
+      "type": "structure",
       "tooltip": "3D structure of the docked ligand-protein complex."
     }
   ],
