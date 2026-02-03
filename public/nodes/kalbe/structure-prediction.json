@@ -107,6 +107,10 @@
         {
           "value": "rosettafold",
           "label": "RoseTTAFold"
+        },
+        {
+          "value": "boltz-2",
+          "label": "Boltz-2"
         }
       ],
       "defaultValue": "alphafold",

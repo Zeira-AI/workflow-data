@@ -65,7 +65,13 @@
       "type": ["text", "file"],
       "label": "SMILES",
       "tooltip": "Smiles strings of the compounds to be docked",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "suggestedField": [
+        "smiles",
+        "SMILES",
+        "name",
+        "ingredient_name",
+        "inci_name"
+      ],
       "accept": ".csv,.txt,.smi"
     },
     {

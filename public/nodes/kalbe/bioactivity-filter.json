@@ -64,7 +64,7 @@
       "type": "text",
       "label": "Compound-Target Docking List",
       "tooltip": "Input the compound-target docking for bioactivity prediction",
-      "suggestedField": ["docked_structure"]
+      "suggestedField": ["docked_structure", "Docked Structure"]
     },
     {
       "key": "modelType",
