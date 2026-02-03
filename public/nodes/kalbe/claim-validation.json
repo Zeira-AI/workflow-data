@@ -100,6 +100,7 @@
       "type": "select",
       "label": "Region",
       "options": [
+        { "value": "Global", "label": "Global" },
         { "value": "US", "label": "US" },
         { "value": "EU", "label": "EU" },
         { "value": "Japan", "label": "Japan" },

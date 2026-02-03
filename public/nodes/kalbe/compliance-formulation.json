@@ -60,7 +60,7 @@
       "key": "concentration",
       "type": "text",
       "label": "Concentration",
-      "suggestedField": ["percent_w_w"],
+      "suggestedField": ["percent_w_w", "% w/w"],
       "placeholder": "Enter a concentration...",
       "tooltip": "Enter a concentration."
     },
@@ -68,7 +68,7 @@
       "key": "function",
       "type": "text",
       "label": "Function",
-      "suggestedField": ["Functional_role"],
+      "suggestedField": ["Functional_role", "Functional Role"],
       "placeholder": "Enter a function...",
       "tooltip": "Enter a function."
     },
