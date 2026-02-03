@@ -9,7 +9,7 @@
     "credits": 1200,
     "executionTime": 1
   },
-  "outputMockLabel": "12 compounds",
+  "outputMockLabel": "10000 compounds",
   "outputPageSize": 5,
   "defaultInputs": [
     {
