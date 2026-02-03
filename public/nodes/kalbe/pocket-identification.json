@@ -54,6 +54,23 @@
       "tooltip": "3D structure of the proteins for pocket identification",
       "suggestedField": ["structure_3d"],
       "accept": ".csv,.pdb"
+    },
+    {
+      "key": "model_selection",
+      "type": "select",
+      "label": "Model Selection",
+      "options": [
+        {
+          "value": "fpocket",
+          "label": "FPocket"
+        },
+        {
+          "value": "castp",
+          "label": "CASTp"
+        }
+      ],
+      "defaultValue": "fpocket",
+      "tooltip": "Select a docking backend:\n- **AutoDock Vina** – accurate classical docking.\n- **DiffDock** – fast ML‑based pose prediction.\n- **SwissDock** – convenient web‑style presets for quick exploration."
     }
   ]
 }

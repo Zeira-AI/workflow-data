@@ -9,7 +9,7 @@
     "credits": 800,
     "executionTime": 1
   },
-  "outputMockLabel": "CDK20",
+  "outputMockLabel": "40 compounds",
   "defaultInputs": [
     {
       "id": "compoundList",
@@ -41,7 +41,7 @@
     },
     {
       "id": "DTIGN–LigoSpace Bioactivity Score",
-      "name": "DTIGN–LigoSpace Bioactivity Score",
+      "name": "Predicted Bioactivity Score",
       "type": "number",
       "tooltip": "Combined bioactivity score from DTIGN and LigoSpace models."
     },
