@@ -1,11 +1,4 @@
-Ingredient Name,INCI / Common Name,CAS,Formula %,Market,Regulatory Status,Restriction Basis,Regulatory Maximum,Regulatory Rationale,Legal Source,Last Update,Reference
-Purified Water,Water,7732-18-5,q.s.,US,Permitted,None,Not specified,Food-grade solvent,FDA CFR Title 21 - Water as Food Ingredient,2024,FDA CFR
-Caffeine,Caffeine,58-08-2,0.03,EU,Permitted with conditions,Stimulant intake limits,~200 mg/serving (typical guidance),CNS stimulant; labeling required,EFSA Scientific Opinion on Caffeine Safety (2015),2024,EFSA Opinion
-Taurine,Taurine,107-35-7,0.40,EU,Permitted,Novel food considerations (EU),Commonly ≤1000 mg/serving,"Amino sulfonic acid; historical use",EFSA NDA Panel Opinion on Taurine,2023,EFSA NDA Panel
-L-Carnitine,Carnitine,541-15-1,0.20,US,Permitted,Upper intake guidance,~1000 mg/day (guidance),Energy metabolism support,FDA Dietary Supplement Ingredient Database,2023,FDA
-Niacinamide (Vitamin B3),Niacinamide,98-92-0,0.02,US,Permitted vitamin,Tolerable Upper Intake,~35 mg/day (adult UL),"Water-soluble vitamin; flushing risk at high intake",NIH Office of Dietary Supplements Vitamin B3 Fact Sheet,2024,NIH
-Panthenol (Pro-vitamin B5),Panthenol,81-13-0,0.01,US,Permitted,None specified,Not specified,"Vitamin precursor; safe at typical intakes",FDA GRAS Notices,2023,FDA
-Citric Acid,Citric Acid,77-92-9,0.15,US,GRAS / Permitted,GMP,GMP,"Acidulant; pH control",FDA CFR §182.3640,2024,FDA CFR
-Sodium Citrate,Sodium Citrate,68-04-2,0.05,US,GRAS / Permitted,GMP,GMP,Buffering agent,FDA CFR §184.1033,2024,FDA CFR
-Potassium Sorbate,Potassium Sorbate,24634-61-5,0.04,US / EU,Permitted preservative,Food additive limits,≤0.1% (typical),Antimicrobial preservative,FDA / EFSA,2024,FDA CFR / EFSA
-Natural Flavors,Natural Flavoring,—,0.30,US / EU,Permitted,Source-dependent,GMP,Flavoring substances,FDA / EFSA,2024,FDA CFR / EFSA
+Market,Compliance Status,Basis,Outstanding Obligations,Legal Source
+EU,Conditionally permitted (food / supplement pathway),No prohibited food ingredients identified; caffeine and botanicals within generally accepted use levels,Novel food assessment (if applicable); nutrition & health claim review; labeling compliance,European Food Safety Authority / Regulation (EC) No 178/2002
+US,Permitted (food / dietary supplement pathway),Ingredients generally recognized as safe (GRAS) or commonly used in energy drinks; caffeine below advisory limits,GRAS self-affirmation (if needed); structure/function claim substantiation; labeling compliance,Food and Drug Administration / FD&C Act
+China,Conditionally permitted,Ingredient status under GB standards and functional ingredient lists not fully verified,Ingredient inventory screening; filing or registration as health food if functional claims used,State Administration for Market Regulation / Food Safety Law of PRC

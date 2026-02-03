@@ -1,53 +1,62 @@
 {
-  "type": "formulate",
-  "label": "Formulate",
+  "type": "singular-compound",
+  "label": "Wet Lab Validation (Formulation)",
   "category": "analysis",
   "icon": "flask",
   "color": "purple",
-  "description": "Analyze and deformulate product compositions based on specific requirements",
-  "pricing": {
-    "credits": 800,
-    "executionTime": 1
-  },
-  "outputMockLabel": "12 components",
-  "outputPageSize": 20,
+  "description": "Generate experimental plans and validation protocols for wet lab testing.",
+  "outputMockLabel": "1 item",
   "defaultInputs": [],
   "defaultOutputs": [
     {
-      "id": "Component",
-      "name": "Component",
+      "id": "Plan_id",
+      "name": "Plan ID",
       "type": "string",
-      "tooltip": "Name of the component ingredient."
+      "tooltip": "Unique identifier for the experimental plan (e.g. \"EXP-001\")."
     },
     {
-      "id": "% w/w",
-      "name": "% w/w",
+      "id": "Plan Name",
+      "name": "Plan Name",
       "type": "string",
-      "tooltip": "Percentage weight/weight in the formulation."
+      "tooltip": "Name or title of the experimental plan (e.g. \"Experimental Plan (Minimal ver)\")."
     },
     {
-      "id": "Functional Role",
-      "name": "Functional Role",
+      "id": "Plan Type",
+      "name": "Plan Type",
       "type": "string",
-      "tooltip": "Function of the ingredient in the formulation."
+      "tooltip": "Type of experimental plan document (e.g. \"Experimental Plan PDF\")."
+    },
+    {
+      "id": "Reference_URL",
+      "name": "Reference URL",
+      "type": "string",
+      "tooltip": "URL link to access or download the experimental plan document."
     }
   ],
   "configSchema": [
     {
-      "key": "ingredientList",
-      "type": ["text", "file"],
-      "label": "Ingredient List",
-      "placeholder": "Select or upload a list of ingredients...",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
-      "tooltip": "Select or upload a list of ingredients.\nSupported formats: **TXT**, **CSV**, **SMILES**.",
-      "accept": ".txt,.csv,.smi"
+      "key": "ingredient_name",
+      "type": "text",
+      "label": "Ingredient Name",
+      "placeholder": "Enter a ingredient name...",
+      "suggestedField": ["Component"],
+      "tooltip": "Enter a ingredient name."
     },
     {
-      "key": "referenceProduct",
+      "key": "concentration",
       "type": "text",
-      "label": "Similar Product (Link/Name)",
-      "suggestedField": ["product", "name", "Product"],
-      "placeholder": "Paste product link or name here..."
+      "label": "Concentration",
+      "suggestedField": ["percent_w_w"],
+      "placeholder": "Enter a concentration...",
+      "tooltip": "Enter a concentration."
+    },
+    {
+      "key": "function",
+      "type": "text",
+      "label": "Function",
+      "suggestedField": ["Functional_role"],
+      "placeholder": "Enter a function...",
+      "tooltip": "Enter a function."
     },
     {
       "key": "administration",
@@ -197,6 +206,34 @@
         }
       ],
       "tooltip": "Select target population."
+    },
+    {
+      "key": "purpose_of_testing",
+      "type": "multiselect",
+      "label": "Purpose of Testing",
+      "placeholder": "Select purpose of testing...",
+      "options": [
+        {
+          "value": "close_safety_data_gap",
+          "label": "Close safety data gap"
+        },
+        {
+          "value": "support_regulatory_submission",
+          "label": "Support regulatory submission"
+        },
+        {
+          "value": "support_product_claim",
+          "label": "Support product claim"
+        },
+        {
+          "value": "de_risk_formulation_change",
+          "label": "De-risk formulation change"
+        }
+      ],
+      "tooltip": "Select purpose of testing."
     }
-  ]
+  ],
+  "defaultConfig": {
+    "query": ""
+  }
 }

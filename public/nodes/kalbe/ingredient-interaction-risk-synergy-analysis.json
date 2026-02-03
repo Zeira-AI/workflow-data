@@ -70,7 +70,8 @@
         "Compound_name",
         "Compound",
         "SMILES",
-        "smiles"
+        "smiles",
+        "ingredient_name"
       ]
     },
     {
