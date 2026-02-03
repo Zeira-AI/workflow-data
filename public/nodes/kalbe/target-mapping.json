@@ -85,8 +85,8 @@
     {
       "key": "manualFreetext",
       "type": "textarea",
-      "label": "Target Input",
-      "placeholder": "Enter target name or biological effect...",
+      "label": "Search",
+      "placeholder": "KRAS, Alzheimer disease, Modulatable, human..",
       "tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
     }
   ],
