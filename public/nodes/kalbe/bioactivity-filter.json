@@ -80,7 +80,7 @@
           "label": "Ligospace - Best for accurate predictions"
         }
       ],
-      "defaultValue": "Ligospace",
+      "defaultValue": ["ligospace"],
       "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
     },
     {
