@@ -37,7 +37,13 @@
       "type": ["text", "file"],
       "label": "Ingredient List",
       "placeholder": "Select or upload a list of ingredients...",
-      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
+      "suggestedField": [
+        "smiles",
+        "name",
+        "ingredient_name",
+        "inci_name",
+        "Pair"
+      ],
       "tooltip": "Select or upload a list of ingredients.\nSupported formats: **TXT**, **CSV**, **SMILES**.",
       "accept": ".txt,.csv,.smi"
     },

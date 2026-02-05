@@ -71,7 +71,7 @@
       "key": "compoundFile",
       "type": "file",
       "label": "Upload Compound File",
-      "accept": ".csv,.txt",
+      "accept": ".csv,.txt,.xlsx",
       "tooltip": "Upload a CSV or TXT file containing compound names and SMILES strings. Required columns: compound name/identifier and SMILES."
     },
     {
