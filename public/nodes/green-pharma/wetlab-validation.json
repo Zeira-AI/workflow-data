@@ -1,0 +1,41 @@
+{
+  "type": "wetlab-validation",
+  "label": "Wetlab Validation",
+  "category": "analysis",
+  "icon": "flask",
+  "color": "green",
+  "description": "Validation and tracking of experimental wetlab plans.",
+  "outputMockLabel": "1 plan",
+  "pricing": {
+    "credits": 0,
+    "executionTime": 1
+  },
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Plan_id",
+      "name": "Plan ID",
+      "type": "string",
+      "tooltip": "Unique identifier for the experimental plan."
+    },
+    {
+      "id": "Plan Name",
+      "name": "Plan Name",
+      "type": "string",
+      "tooltip": "Name or title of the experimental plan."
+    },
+    {
+      "id": "Plan Type",
+      "name": "Plan Type",
+      "type": "string",
+      "tooltip": "Type of experiment or validation."
+    },
+    {
+      "id": "Reference_URL",
+      "name": "Reference URL",
+      "type": "string",
+      "tooltip": "Link to the experimental plan document."
+    }
+  ],
+  "configSchema": []
+}

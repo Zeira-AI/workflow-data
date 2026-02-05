@@ -1,18 +1,18 @@
 ingredient_name,inci_name,cas_number,concentration,market,regulatory_status,restriction_type,max_allowed_concentration,reason,regulation_source,last_regulation_update,reference
-Purified Water,Aqua,7732-18-5,q.s.,EU / US,Not listed in Annex II or III,None,Not specified,Inert solvent; safety assessed at product level,Regulation (EC) No 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/details/31959
-Minoxidil,Minoxidil,38304-91-5,2.0–5.0,US,OTC drug substance,FDA OTC Monograph,≤5.0%,Approved active drug ingredient,FDA OTC Monograph,2023,https://www.accessdata.fda.gov/drugsatfda_docs/psg/PSG_018154.pdf
-Minoxidil,Minoxidil,38304-91-5,2.0–5.0,EU,Not a cosmetic ingredient,Medicinal classification,0% (cosmetic),Pharmacological action,EC 1223/2009 Art. 2,2023,https://ec.europa.eu/growth/tools-databases/cosing/details/85161
-Niacinamide,Niacinamide,98-92-0,3.0,EU / US,Not listed in Annex II or III,None,Not specified,Skin conditioning; CPSR required,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/details/35499
-Resveratrol,Resveratrol,501-36-0,0.3,EU / US,Not listed in Annex II or III,None,Not specified,Antioxidant; safety via CPSR,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/details/59126
-Licochalcone A,Licochalcone A,58749-22-7,0.1,EU / US,Not listed in Annex II or III,None,Not specified,Botanical active; safety to be demonstrated in CPSR,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Ferulic Acid,Ferulic Acid,1135-24-6,0.2,EU / US,Not listed in Annex II or III,None,Not specified,Antioxidant stabilizer; CPSR-based safety,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Melatonin,Melatonin,73-31-4,5.0,EU,Borderline / non-cosmetic,Case-by-case,Not specified,Hormonal activity; SCCS concern,SCCS Opinion,2022,https://health.ec.europa.eu/document/download/74635fa7-f577-4852-ae2e-6aa5833fee4f_en
-Menthol,Menthol,89-78-1,0.2,EU / US,Restricted (fragrance),IFRA Standard,≤0.5% (leave-on),Irritation potential,IFRA / EC 1223/2009,2023,https://ifrafragrance.org/standards-library?query=Menthol
-Propylene Glycol,Propylene Glycol,57-55-6,10.0,EU / US,Not listed in Annex II or III,None,Not specified,Solvent; CPSR required,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Ethanol,Alcohol Denat.,64-17-5,15.0,EU / US,Not listed in Annex II or III,None,Not specified,Solvent; flammability assessed,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Glycerin,Glycerin,56-81-5,3.0,EU / US,Not listed in Annex II or III,None,Not specified,Humectant; CPSR required,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Carbomer,Carbomer,9003-01-04,0.3,EU / US,Not listed in Annex II or III,None,Not specified,Thickener; CPSR required,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Triethanolamine,Triethanolamine,102-71-6,0.3,EU / US,Restricted,Annex III,≤2.5%,Nitrosamine risk,Annex III,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Phenoxyethanol,Phenoxyethanol,122-99-6,0.8,EU / US,Restricted preservative,Annex V,≤1.0%,Preservative safety,Annex V,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Ethylhexylglycerin,Ethylhexylglycerin,70445-33-9,0.2,EU / US,Not listed in Annex II or III,None,Not specified,Preservative booster,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
-Disodium EDTA,Disodium EDTA,139-33-3,0.05,EU / US,Not listed in Annex II or III,None,Not specified,Chelating agent,EC 1223/2009,2023,https://ec.europa.eu/growth/tools-databases/cosing/
+Purified Water,Aqua,7732-18-5,q.s.,EU / US,Not listed in Annex II or III,None,Not specified,Inert solvent; safety assessed at product level,Regulation (EC) No 1223/2009,2023,CosIng
+Minoxidil,Minoxidil,38304-91-5,2.0–5.0,US,OTC drug substance,FDA OTC Monograph,≤5.0%,Approved active drug ingredient,FDA OTC Monograph,2023,FDA
+Minoxidil,Minoxidil,38304-91-5,2.0–5.0,EU,Not a cosmetic ingredient,Medicinal classification,0% (cosmetic),Pharmacological action,EC 1223/2009 Art. 2,2023,CosIng
+Niacinamide,Niacinamide,98-92-0,3.0,EU / US,Not listed in Annex II or III,None,Not specified,Skin conditioning; CPSR required,EC 1223/2009,2023,CosIng
+Resveratrol,Resveratrol,501-36-0,0.3,EU / US,Not listed in Annex II or III,None,Not specified,Antioxidant; safety via CPSR,EC 1223/2009,2023,CosIng
+Licochalcone A,Licochalcone A,58749-22-7,0.1,EU / US,Not listed in Annex II or III,None,Not specified,Botanical active; safety to be demonstrated in CPSR,EC 1223/2009,2023,CosIng
+Ferulic Acid,Ferulic Acid,1135-24-6,0.2,EU / US,Not listed in Annex II or III,None,Not specified,Antioxidant stabilizer; CPSR-based safety,EC 1223/2009,2023,CosIng
+Melatonin,Melatonin,73-31-4,5.0,EU,Borderline / non-cosmetic,Case-by-case,Not specified,Hormonal activity; SCCS concern,SCCS Opinion,2022,SCCS
+Menthol,Menthol,89-78-1,0.2,EU / US,Restricted (fragrance),IFRA Standard,≤0.5% (leave-on),Irritation potential,IFRA / EC 1223/2009,2023,IFRA
+Propylene Glycol,Propylene Glycol,57-55-6,10.0,EU / US,Not listed in Annex II or III,None,Not specified,Solvent; CPSR required,EC 1223/2009,2023,CosIng
+Ethanol,Alcohol Denat.,64-17-5,15.0,EU / US,Not listed in Annex II or III,None,Not specified,Solvent; flammability assessed,EC 1223/2009,2023,CosIng
+Glycerin,Glycerin,56-81-5,3.0,EU / US,Not listed in Annex II or III,None,Not specified,Humectant; CPSR required,EC 1223/2009,2023,CosIng
+Carbomer,Carbomer,9003-01-04,0.3,EU / US,Not listed in Annex II or III,None,Not specified,Thickener; CPSR required,EC 1223/2009,2023,CosIng
+Triethanolamine,Triethanolamine,102-71-6,0.3,EU / US,Restricted,Annex III,≤2.5%,Nitrosamine risk,Annex III,2023,CosIng
+Phenoxyethanol,Phenoxyethanol,122-99-6,0.8,EU / US,Restricted preservative,Annex V,≤1.0%,Preservative safety,Annex V,2023,CosIng
+Ethylhexylglycerin,Ethylhexylglycerin,70445-33-9,0.2,EU / US,Not listed in Annex II or III,None,Not specified,Preservative booster,EC 1223/2009,2023,CosIng
+Disodium EDTA,Disodium EDTA,139-33-3,0.05,EU / US,Not listed in Annex II or III,None,Not specified,Chelating agent,EC 1223/2009,2023,CosIng

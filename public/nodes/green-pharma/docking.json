@@ -1,6 +1,6 @@
 {
   "type": "docking",
-  "label": "Molecular Docking",
+  "label": "Docking",
   "category": "analysis",
   "icon": "dna",
   "color": "purple",
@@ -10,7 +10,7 @@
     "executionTime": 1
   },
   "outputMockLabel": "12 compounds",
-  "outputPageSize": 5,
+  "outputPageSize": 4,
   "defaultInputs": [
     {
       "id": "compoundList",
@@ -56,32 +56,18 @@
   "configSchema": [
     {
       "key": "smiles_column",
-      "type": [
-        "text",
-        "file"
-      ],
+      "type": ["text", "file"],
       "label": "SMILES",
       "tooltip": "Smiles strings of the compounds to be docked",
-      "suggestedField": [
-        "smiles",
-        "name",
-        "ingredient_name",
-        "inci_name"
-      ],
+      "suggestedField": ["smiles", "name", "ingredient_name", "inci_name"],
       "accept": ".csv,.txt,.smi"
     },
     {
       "key": "protein_column",
-      "type": [
-        "text",
-        "file"
-      ],
+      "type": ["text", "file"],
       "label": "Protein 3D structure",
       "tooltip": "3D structure of the proteins to be docked",
-      "suggestedField": [
-        "target",
-        "protein_name"
-      ],
+      "suggestedField": ["target", "protein_name"],
       "accept": ".csv,.pdb"
     },
     {
@@ -114,9 +100,7 @@
       "showWhen": [
         {
           "field": "engine",
-          "in": [
-            "vina"
-          ]
+          "in": ["vina"]
         }
       ],
       "description": "Simple setting for **AutoDock Vina** controlling search thoroughness. Higher values increase accuracy but take longer."
@@ -130,9 +114,7 @@
       "showWhen": [
         {
           "field": "engine",
-          "in": [
-            "vina"
-          ]
+          "in": ["vina"]
         }
       ],
       "advanced": true,
@@ -146,10 +128,7 @@
       "showWhen": [
         {
           "field": "engine",
-          "in": [
-            "vina",
-            "swissdock"
-          ]
+          "in": ["vina", "swissdock"]
         }
       ],
       "advanced": true,
@@ -164,9 +143,7 @@
       "showWhen": [
         {
           "field": "engine",
-          "in": [
-            "diffdock"
-          ]
+          "in": ["diffdock"]
         }
       ],
       "description": "Simple setting for **DiffDock** controlling how many poses are sampled per complex. More samples = better coverage but slower."
@@ -180,9 +157,7 @@
       "showWhen": [
         {
           "field": "engine",
-          "in": [
-            "diffdock"
-          ]
+          "in": ["diffdock"]
         }
       ],
       "advanced": true,
@@ -210,9 +185,7 @@
       "showWhen": [
         {
           "field": "engine",
-          "in": [
-            "swissdock"
-          ]
+          "in": ["swissdock"]
         }
       ],
       "description": "Simple preset selector for **SwissDock** controlling the trade-off between speed and accuracy."
@@ -235,9 +208,7 @@
       "showWhen": [
         {
           "field": "engine",
-          "in": [
-            "swissdock"
-          ]
+          "in": ["swissdock"]
         }
       ],
       "advanced": true,

@@ -1,223 +1,294 @@
 {
-	"type": "toxicity-filter",
-	"label": "Toxicity Filter",
-	"category": "analysis",
-	"icon": "filtericon",
-	"color": "red",
-	"description": "Filter compounds based on physicochemical properties and custom rules.",
-	"pricing": {
-		"credits": 800,
-		"executionTime": 1
-	},
-	"outputMockLabel": "36 compounds",
-	"defaultInputs": [
-		{
-			"id": "input-mol-data",
-			"name": "Input Compounds",
-			"type": "array",
-			"required": true,
-			"tooltip": "Table of compounds."
-		}
-	],
-	"defaultOutputs": [
-		{
-			"id": "Compound",
-			"name": "Compound",
-			"type": "string",
-			"tooltip": "Name of the compound."
-		},
-		{
-			"id": "MW",
-			"name": "Molecular Weight",
-			"type": "number",
-			"tooltip": "Molecular Weight (g/mol)."
-		},
-		{
-			"id": "logP",
-			"name": "logP",
-			"type": "number",
-			"tooltip": "Partition coefficient (octanol/water)."
-		},
-		{
-			"id": "TPSA",
-			"name": "TPSA",
-			"type": "number",
-			"tooltip": "Topological Polar Surface Area (Å²)."
-		},
-		{
-			"id": "logKp",
-			"name": "logKp",
-			"type": "number",
-			"tooltip": "Skin permeability coefficient."
-		},
-		{
-			"id": "skin_retention",
-			"name": "Skin Retention",
-			"type": "string",
-			"tooltip": "Predicted skin retention level."
-		},
-		{
-			"id": "follicular_delivery",
-			"name": "Follicular Delivery",
-			"type": "string",
-			"tooltip": "Predicted delivery to hair follicles."
-		},
-		{
-			"id": "systemic_risk",
-			"name": "Systemic Risk",
-			"type": "string",
-			"tooltip": "Risk of systemic absorption and effects."
-		},
-		{
-			"id": "topical_suitability",
-			"name": "Topical Suitability",
-			"type": "string",
-			"tooltip": "Overall suitability for topical application."
-		}
-	],
-	"configSchema": [
-		{
-			"key": "ingredientListText",
-			"type": ["text", "file"],
-			"label": "Compound List",
-			"tooltip": "Compounds for analysis",
-			"suggestedField": ["smiles", "name", "Compound"],
-			"accept": ".csv,.txt,.smi"
-		},
-		{
-			"key": "model",
-			"type": "select",
-			"label": "Model",
-			"options": [
-				{
-					"value": "swiss_adme",
-					"label": "SwissADME"
-				},
-				{
-					"value": "admet_ai",
-					"label": "ADMET-AI"
-				},
-				{
-					"value": "preadmet",
-					"label": "preADMET"
-				}
-			],
-			"tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
-		},
-		{
-			"key": "mw_range",
-			"type": "range",
-			"label": "Molecular Weight Range",
-			"defaultValue": [0, 1000],
-			"tooltip": "Molecular Weight range (min - max g/mol)."
-		},
-		{
-			"key": "logp_range",
-			"type": "range",
-			"label": "logP Range",
-			"defaultValue": [-5.0, 10.0],
-			"tooltip": "Partition coefficient range (min - max)."
-		},
-		{
-			"key": "tpsa_range",
-			"type": "range",
-			"label": "TPSA Range (Å²)",
-			"defaultValue": [0, 300],
-			"tooltip": "Topological Polar Surface Area range (min - max Å²)."
-		},
-		{
-			"key": "logkp_range",
-			"type": "range",
-			"label": "logKp Range",
-			"defaultValue": [-15.0, 5.0],
-			"tooltip": "Skin permeability coefficient range (min - max)."
-		},
-		{
-			"key": "skin_retention",
-			"type": "multiselect",
-			"label": "Skin Retention",
-			"options": [
-				{
-					"value": "Very High",
-					"label": "Very High"
-				},
-				{
-					"value": "High",
-					"label": "High"
-				},
-				{
-					"value": "Medium–High",
-					"label": "Medium–High"
-				},
-				{
-					"value": "Medium",
-					"label": "Medium"
-				},
-				{
-					"value": "Low",
-					"label": "Low"
-				}
-			],
-			"tooltip": "Filter by skin retention level.",
-			"defaultValue": [
-				"Very High",
-				"High",
-				"Medium–High",
-				"Medium",
-				"Low"
-			]
-		},
-		{
-			"key": "follicular_delivery",
-			"type": "multiselect",
-			"label": "Follicular Delivery",
-			"options": [
-				{
-					"value": "High",
-					"label": "High"
-				},
-				{
-					"value": "Medium",
-					"label": "Medium"
-				},
-				{
-					"value": "Low",
-					"label": "Low"
-				}
-			],
-			"tooltip": "Filter by follicular delivery potential.",
-			"defaultValue": ["High", "Medium", "Low"]
-		},
-		{
-			"key": "systemic_risk",
-			"type": "multiselect",
-			"label": "Systemic Risk",
-			"options": [
-				{
-					"value": "Medium",
-					"label": "Medium"
-				},
-				{
-					"value": "Low",
-					"label": "Low"
-				},
-				{
-					"value": "Very Low",
-					"label": "Very Low"
-				}
-			],
-			"tooltip": "Filter by systemic risk level.",
-			"defaultValue": ["Medium", "Low", "Very Low"]
-		}
-	],
-	"defaultConfig": {
-		"mw_range": [0, 1000],
-		"logp_range": [-5.0, 10.0],
-		"tpsa_range": [0, 300],
-		"logkp_range": [-15.0, 5.0],
-		"skin_retention": ["Very High", "High", "Medium–High", "Medium", "Low"],
-		"follicular_delivery": ["High", "Medium", "Low"],
-		"systemic_risk": ["Medium", "Low", "Very Low"]
-	}
+  "type": "toxicity-filter",
+  "label": "Toxicity Filter",
+  "category": "analysis",
+  "icon": "filtericon",
+  "color": "red",
+  "description": "Filter compounds based on physicochemical properties and custom rules.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
+  "outputMockLabel": "36 compounds",
+  "defaultInputs": [
+    {
+      "id": "input-mol-data",
+      "name": "Input Compounds",
+      "type": "array",
+      "required": true,
+      "tooltip": "Table of compounds."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "Compound",
+      "name": "Compound",
+      "type": "string",
+      "tooltip": "Name of the compound."
+    },
+    {
+      "id": "MW",
+      "name": "Molecular Weight",
+      "type": "number",
+      "tooltip": "Molecular Weight (g/mol)."
+    },
+    {
+      "id": "logP",
+      "name": "logP",
+      "type": "number",
+      "tooltip": "Partition coefficient (octanol/water)."
+    },
+    {
+      "id": "TPSA",
+      "name": "TPSA",
+      "type": "number",
+      "tooltip": "Topological Polar Surface Area (Å²)."
+    },
+    {
+      "id": "logKp",
+      "name": "logKp",
+      "type": "number",
+      "tooltip": "Skin permeability coefficient."
+    },
+    {
+      "id": "skin_retention",
+      "name": "Skin Retention",
+      "type": "string",
+      "tooltip": "Predicted skin retention level."
+    },
+    {
+      "id": "follicular_delivery",
+      "name": "Follicular Delivery",
+      "type": "string",
+      "tooltip": "Predicted delivery to hair follicles."
+    },
+    {
+      "id": "systemic_risk",
+      "name": "Systemic Risk",
+      "type": "string",
+      "tooltip": "Risk of systemic absorption and effects."
+    },
+    {
+      "id": "topical_suitability",
+      "name": "Topical Suitability",
+      "type": "string",
+      "tooltip": "Overall suitability for topical application."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredientListText",
+      "type": ["text", "file"],
+      "label": "Compound List",
+      "tooltip": "Compounds for analysis",
+      "suggestedField": ["smiles", "name", "Compound"],
+      "accept": ".csv,.txt,.smi"
+    },
+    {
+      "key": "model",
+      "type": "select",
+      "label": "Model",
+      "options": [
+        {
+          "value": "swiss_adme",
+          "label": "SwissADME"
+        },
+        {
+          "value": "admet_ai",
+          "label": "ADMET-AI"
+        },
+        {
+          "value": "preadmet",
+          "label": "preADMET"
+        }
+      ],
+      "tooltip": "Choose which ADMET prediction model to use:\n\n- **SwissADME**: Best for concept-stage screening, medicinal chemistry intuition, fast triage\n- **ADMET-AI**: Best for predictive modeling, prioritization, portfolio ranking, data science pipelines\n- **preADMET**: Best for cross-checking, academic comparability, legacy workflows"
+    },
+    {
+      "key": "mw_range",
+      "type": "range",
+      "label": "Molecular Weight Range",
+      "defaultValue": [0, 1000],
+      "tooltip": "Molecular Weight range (min - max g/mol)."
+    },
+    {
+      "key": "logp_range",
+      "type": "range",
+      "label": "logP Range",
+      "defaultValue": [-5.0, 10.0],
+      "tooltip": "Partition coefficient range (min - max)."
+    },
+    {
+      "key": "tpsa_range",
+      "type": "range",
+      "label": "TPSA Range (Å²)",
+      "defaultValue": [0, 300],
+      "tooltip": "Topological Polar Surface Area range (min - max Å²)."
+    },
+    {
+      "key": "logkp_range",
+      "type": "range",
+      "label": "logKp Range",
+      "defaultValue": [-15.0, 5.0],
+      "tooltip": "Skin permeability coefficient range (min - max)."
+    },
+    {
+      "key": "skin_retention",
+      "type": "multiselect",
+      "label": "Skin Retention",
+      "options": [
+        {
+          "value": "Very High",
+          "label": "Very High"
+        },
+        {
+          "value": "High",
+          "label": "High"
+        },
+        {
+          "value": "Medium–High",
+          "label": "Medium–High"
+        },
+        {
+          "value": "Medium",
+          "label": "Medium"
+        },
+        {
+          "value": "Low",
+          "label": "Low"
+        }
+      ],
+      "tooltip": "Filter by skin retention level.",
+      "defaultValue": ["Very High", "High", "Medium–High", "Medium", "Low"]
+    },
+    {
+      "key": "follicular_delivery",
+      "type": "multiselect",
+      "label": "Follicular Delivery",
+      "options": [
+        {
+          "value": "High",
+          "label": "High"
+        },
+        {
+          "value": "Medium",
+          "label": "Medium"
+        },
+        {
+          "value": "Low",
+          "label": "Low"
+        }
+      ],
+      "tooltip": "Filter by follicular delivery potential.",
+      "defaultValue": ["High", "Medium", "Low"]
+    },
+    {
+      "key": "systemic_risk",
+      "type": "multiselect",
+      "label": "Systemic Risk",
+      "options": [
+        {
+          "value": "Medium",
+          "label": "Medium"
+        },
+        {
+          "value": "Low",
+          "label": "Low"
+        },
+        {
+          "value": "Very Low",
+          "label": "Very Low"
+        }
+      ],
+      "tooltip": "Filter by systemic risk level.",
+      "defaultValue": ["Medium", "Low", "Very Low"]
+    },
+    {
+      "key": "topical_suitability",
+      "type": "multiselect",
+      "label": "Topical Suitability",
+      "options": [
+        {
+          "value": "Excellent (benchmark)",
+          "label": "Excellent (benchmark)"
+        },
+        {
+          "value": "Excellent",
+          "label": "Excellent"
+        },
+        {
+          "value": "Excellent enhancer",
+          "label": "Excellent enhancer"
+        },
+        {
+          "value": "Very good",
+          "label": "Very good"
+        },
+        {
+          "value": "Good",
+          "label": "Good"
+        },
+        {
+          "value": "Good (barrier-friendly)",
+          "label": "Good (barrier-friendly)"
+        },
+        {
+          "value": "Good (irritation risk)",
+          "label": "Good (irritation risk)"
+        },
+        {
+          "value": "Moderate",
+          "label": "Moderate"
+        },
+        {
+          "value": "Poor",
+          "label": "Poor"
+        },
+        {
+          "value": "Poor (too polar/bulky)",
+          "label": "Poor (too polar/bulky)"
+        },
+        {
+          "value": "Poor alone (needs formulation)",
+          "label": "Poor alone (needs formulation)"
+        }
+      ],
+      "tooltip": "Filter by topical suitability.",
+      "defaultValue": [
+        "Excellent (benchmark)",
+        "Excellent",
+        "Excellent enhancer",
+        "Very good",
+        "Good",
+        "Good (barrier-friendly)",
+        "Good (irritation risk)",
+        "Moderate",
+        "Poor",
+        "Poor (too polar/bulky)",
+        "Poor alone (needs formulation)"
+      ]
+    }
+  ],
+  "defaultConfig": {
+    "mw_range": [0, 1000],
+    "logp_range": [-5.0, 10.0],
+    "tpsa_range": [0, 300],
+    "logkp_range": [-15.0, 5.0],
+    "skin_retention": ["Very High", "High", "Medium–High", "Medium", "Low"],
+    "follicular_delivery": ["High", "Medium", "Low"],
+    "systemic_risk": ["Medium", "Low", "Very Low"],
+    "topical_suitability": [
+      "Excellent (benchmark)",
+      "Excellent",
+      "Excellent enhancer",
+      "Very good",
+      "Good",
+      "Good (barrier-friendly)",
+      "Good (irritation risk)",
+      "Moderate",
+      "Poor",
+      "Poor (too polar/bulky)",
+      "Poor alone (needs formulation)"
+    ]
+  }
 }
-

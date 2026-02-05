@@ -1,90 +1,90 @@
 {
-	"type": "target-mapping",
-	"label": "Target Mapping",
-	"category": "analysis",
-	"icon": "target-icon",
-	"color": "blue",
-	"description": "Maps protein targets to biological systems and assay metrics for hair growth and anti-hair loss formulations.",
-	"pricing": {
-		"credits": 800,
-		"executionTime": 1
-	},
-	"outputMockLabel": "4 targets",
-	"defaultInputs": [
-		{
-			"id": "target-input",
-			"name": "Target/Protein Input",
-			"type": "string",
-			"required": false,
-			"tooltip": "Optional input port carrying protein names or biological descriptions from previous steps."
-		}
-	],
-	"defaultOutputs": [
-		{
-			"id": "protein_target",
-			"name": "Protein Target",
-			"type": "string",
-			"tooltip": "Protein target name (e.g. \"OR1A1\", \"TRPM8\", \"TRPV3\")."
-		},
-		{
-			"id": "biological_system",
-			"name": "Biological System",
-			"type": "string",
-			"tooltip": "The biological system involved (e.g. \"Olfactory\", \"Trigeminal\")."
-		},
-		{
-			"id": "desired_modulation",
-			"name": "Desired Modulation",
-			"type": "string",
-			"tooltip": "Required modulation type (e.g. \"Mild–moderate activation\", \"Low-level activation\", \"Sub-threshold modulation\")."
-		},
-		{
-			"id": "corresponding_assay",
-			"name": "Corresponding Assay",
-			"type": "string",
-			"tooltip": "Specific assay method used to measure the target (e.g. \"Cell-based olfactory receptor assay\", \"Calcium influx assay\")."
-		},
-		{
-			"id": "metric_used",
-			"name": "Metric Used",
-			"type": "string",
-			"tooltip": "Measurement unit for the assay result (e.g. \"EC50\", \"IC50\")."
-		},
-		{
-			"id": "rationale_for_deterrence",
-			"name": "Rationale for Deterrence",
-			"type": "string",
-			"tooltip": "Biological rationale explaining why this target is relevant to hair growth/deterrence."
-		},
-		{
-			"id": "crystalized_structure",
-			"name": "Crystalized Structure Available?",
-			"type": "string",
-			"tooltip": "Whether a crystalized structure is available for the target (e.g. \"Yes\", \"Partially\")."
-		},
-		{
-			"id": "chembl_id",
-			"name": "ChemBL ID",
-			"type": "string",
-			"tooltip": "ChemBL database identifier for the target (e.g. \"CHEMBL1075319\")."
-		},
-		{
-			"id": "protein_structure",
-			"name": "Protein Structure",
-			"type": "structure",
-			"tooltip": "URL to the PDB structure file for the target."
-		}
-	],
-	"configSchema": [
-		{
-			"key": "manualFreetext",
-			"type": "textarea",
-			"label": "Target Input",
-			"placeholder": "Enter target name or biological effect (e.g., OR1A1, TRPM8...)",
-			"tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
-		}
-	],
-	"defaultConfig": {
-		"manualFreetext": ""
-	}
+  "type": "target-mapping",
+  "label": "Target Mapping",
+  "category": "analysis",
+  "icon": "target-icon",
+  "color": "blue",
+  "description": "Maps protein targets to biological systems and assay metrics for hair growth and anti-hair loss formulations.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
+  "outputMockLabel": "4 targets",
+  "defaultInputs": [
+    {
+      "id": "target-input",
+      "name": "Target/Protein Input",
+      "type": "string",
+      "required": false,
+      "tooltip": "Optional input port carrying protein names or biological descriptions from previous steps."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "protein_target",
+      "name": "Protein Target",
+      "type": "string",
+      "tooltip": "Protein target name (e.g. \"OR1A1\", \"TRPM8\", \"TRPV3\")."
+    },
+    {
+      "id": "biological_system",
+      "name": "Biological System",
+      "type": "string",
+      "tooltip": "The biological system involved (e.g. \"Olfactory\", \"Trigeminal\")."
+    },
+    {
+      "id": "desired_modulation",
+      "name": "Desired Modulation",
+      "type": "string",
+      "tooltip": "Required modulation type (e.g. \"Mild–moderate activation\", \"Low-level activation\", \"Sub-threshold modulation\")."
+    },
+    {
+      "id": "corresponding_assay",
+      "name": "Corresponding Assay",
+      "type": "string",
+      "tooltip": "Specific assay method used to measure the target (e.g. \"Cell-based olfactory receptor assay\", \"Calcium influx assay\")."
+    },
+    {
+      "id": "metric_used",
+      "name": "Metric Used",
+      "type": "string",
+      "tooltip": "Measurement unit for the assay result (e.g. \"EC50\", \"IC50\")."
+    },
+    {
+      "id": "rationale_for_deterrence",
+      "name": "Rationale for Deterrence",
+      "type": "string",
+      "tooltip": "Biological rationale explaining why this target is relevant to hair growth/deterrence."
+    },
+    {
+      "id": "crystalized_structure",
+      "name": "Crystalized Structure Available?",
+      "type": "string",
+      "tooltip": "Whether a crystalized structure is available for the target (e.g. \"Yes\", \"Partially\")."
+    },
+    {
+      "id": "chembl_id",
+      "name": "ChemBL ID",
+      "type": "string",
+      "tooltip": "ChemBL database identifier for the target (e.g. \"CHEMBL1075319\")."
+    },
+    {
+      "id": "protein_structure",
+      "name": "Protein Structure",
+      "type": "structure",
+      "tooltip": "URL to the PDB structure file for the target."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "manualFreetext",
+      "type": "textarea",
+      "label": "Search",
+      "placeholder": "Enter target name or biological effect (e.g., OR1A1, TRPM8...)",
+      "tooltip": "Use this when you want to type a target or biological effect manually instead of wiring it from another node."
+    }
+  ],
+  "defaultConfig": {
+    "manualFreetext": ""
+  }
 }
