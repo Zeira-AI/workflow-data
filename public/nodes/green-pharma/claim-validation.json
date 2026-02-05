@@ -1,0 +1,115 @@
+{
+  "type": "claim-validation",
+  "label": "Claim Validation",
+  "category": "analysis",
+  "icon": "check-circle",
+  "color": "green",
+  "description": "Validate marketing and scientific claims against regulatory requirements across different markets.",
+  "outputMockLabel": "18 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Proposed Claim",
+      "name": "Proposed Claim",
+      "type": "string",
+      "tooltip": "The marketing or scientific claim text being validated (e.g. \"Reduces sugar intake\", \"Enables reduced-sugar formulations\")."
+    },
+    {
+      "id": "Claim Type",
+      "name": "Claim Type",
+      "type": "string",
+      "tooltip": "Type of claim: \"Marketing\" for consumer-facing claims or \"Functional\" for technical/ingredient-function claims."
+    },
+    {
+      "id": "Market",
+      "name": "Market",
+      "type": "string",
+      "tooltip": "Target market/region for validation (e.g. \"EU\", \"US\", \"Japan\", \"China\")."
+    },
+    {
+      "id": "Validation Status",
+      "name": "Validation Status",
+      "type": "string",
+      "tooltip": "Overall validation result: \"VALID\" (approved), \"INVALID\" (not allowed), or \"CONDITIONALLY VALID\" (allowed with modifications)."
+    },
+    {
+      "id": "Regulatory Basis",
+      "name": "Regulatory Basis",
+      "type": "string",
+      "tooltip": "The regulatory framework or rule that determines the claim's status."
+    },
+    {
+      "id": "Trigger Identified",
+      "name": "Trigger Identified",
+      "type": "string",
+      "tooltip": "Specific words or phrases in the claim that triggered the regulatory review."
+    },
+    {
+      "id": "Adjustment Rule Applied",
+      "name": "Adjustment Rule Applied",
+      "type": "string",
+      "tooltip": "The specific rule or logic applied to adjust the claim for compliance."
+    },
+    {
+      "id": "Suggested Alternative",
+      "name": "Suggested Alternative",
+      "type": "string",
+      "tooltip": "A compliant alternative phrasing for the claim."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "proposed_claim",
+      "type": ["text", "file"],
+      "label": "Proposed Claim",
+      "placeholder": "Enter claim text or upload a claim list...",
+      "suggestedField": ["claim", "proposed_claim"],
+      "tooltip": "Enter the marketing or scientific claim text directly (e.g. \"Promotes hair growth by strengthening scalp barrier\") or upload a file containing multiple claims.",
+      "accept": ".txt,.csv"
+    },
+    {
+      "key": "product_category",
+      "type": "multiselect",
+      "label": "Product Category",
+      "options": [
+        {
+          "value": "therapeutic",
+          "label": "Therapeutic"
+        },
+        {
+          "value": "functional",
+          "label": "Functional"
+        },
+        {
+          "value": "cosmetic",
+          "label": "Cosmetic"
+        },
+        {
+          "value": "food",
+          "label": "Food"
+        },
+        {
+          "value": "clinical",
+          "label": "Clinical"
+        }
+      ],
+      "tooltip": "Select the product category."
+    },
+    {
+      "key": "region",
+      "type": "select",
+      "label": "Region",
+      "options": [
+        { "value": "US", "label": "US" },
+        { "value": "EU", "label": "EU" },
+        { "value": "Japan", "label": "Japan" },
+        { "value": "China", "label": "China" }
+      ],
+      "tooltip": "Select the target market/region for claim validation. Different regions have varying regulatory requirements for cosmetic and therapeutic claims."
+    }
+  ],
+  "defaultConfig": {
+    "claim_type": [],
+    "region": "US"
+  }
+}

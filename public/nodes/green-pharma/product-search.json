@@ -1,0 +1,138 @@
+{
+  "type": "product-search",
+  "label": "Product Search",
+  "category": "search",
+  "icon": "search",
+  "color": "amber",
+  "description": "Search for products in the search tool",
+  "pricing": {
+    "credits": 500,
+    "executionTime": 1
+  },
+  "outputMockLabel": "7 items",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "ID",
+      "name": "ID",
+      "type": "string",
+      "tooltip": "Unique product identifier."
+    },
+    {
+      "id": "brand",
+      "name": "Brand",
+      "type": "string",
+      "tooltip": "Brand name of the product (e.g. \"Curlsmith\", \"The Ordinary\", \"Divi\")."
+    },
+    {
+      "id": "product",
+      "name": "Product",
+      "type": "string",
+      "tooltip": "Product name or title (e.g. \"Full Lengths Density Elixir\", \"Multi-Peptide Serum for Hair Density\")."
+    },
+    {
+      "id": "ingredients",
+      "name": "Ingredients",
+      "type": "string",
+      "tooltip": "Comma-separated list of ingredients in the product formulation."
+    },
+    {
+      "id": "description",
+      "name": "Description",
+      "type": "string",
+      "tooltip": "Product description explaining its purpose, benefits, and usage."
+    },
+    {
+      "id": "url",
+      "name": "URL",
+      "type": "string",
+      "tooltip": "Product page URL link."
+    },
+    {
+      "id": "price_usd",
+      "name": "Price (USD)",
+      "type": "number",
+      "tooltip": "Product price in US dollars."
+    },
+    {
+      "id": "size_ml",
+      "name": "Size (ml)",
+      "type": "number",
+      "tooltip": "Product size/volume in milliliters."
+    },
+    {
+      "id": "format",
+      "name": "Format",
+      "type": "string",
+      "tooltip": "Product format or delivery method (e.g. \"Dropper serum\", \"Nozzle serum\", \"Spray / mist\")."
+    },
+    {
+      "id": "image_url",
+      "name": "Product Image",
+      "type": "image",
+      "tooltip": "Product image URL."
+    },
+    {
+      "id": "rating",
+      "name": "Rating",
+      "type": "number",
+      "tooltip": "Product rating score (typically on a scale of 1-5)."
+    },
+    {
+      "id": "review_count",
+      "name": "Review Count",
+      "type": "number",
+      "tooltip": "Total number of customer reviews for the product."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "query",
+      "type": "text",
+      "label": "Search Query",
+      "placeholder": "Enter product name, compounds, effects, or other search terms...",
+      "tooltip": "Text search query for products. You can search by product name, key compounds, desired effects, or other product attributes."
+    },
+    {
+      "key": "region",
+      "type": "select",
+      "label": "Region",
+      "options": [
+        {
+          "value": "global",
+          "label": "Global"
+        },
+        {
+          "value": "north_america",
+          "label": "North America"
+        },
+        {
+          "value": "south_america",
+          "label": "South America"
+        },
+        {
+          "value": "europe",
+          "label": "Europe"
+        },
+        {
+          "value": "asia",
+          "label": "Asia"
+        },
+        {
+          "value": "africa",
+          "label": "Africa"
+        },
+        {
+          "value": "oceania",
+          "label": "Oceania"
+        }
+      ],
+      "defaultValue": "global",
+      "tooltip": "Select the continent/region to filter product search results."
+    }
+  ],
+  "defaultConfig": {
+    "query": "",
+    "region": "global"
+  }
+}

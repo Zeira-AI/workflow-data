@@ -1,0 +1,239 @@
+{
+  "type": "singular-compound",
+  "label": "Wet Lab Validation (Formulation)",
+  "category": "analysis",
+  "icon": "flask",
+  "color": "purple",
+  "description": "Generate experimental plans and validation protocols for wet lab testing.",
+  "outputMockLabel": "1 item",
+  "defaultInputs": [],
+  "defaultOutputs": [
+    {
+      "id": "Plan_id",
+      "name": "Plan ID",
+      "type": "string",
+      "tooltip": "Unique identifier for the experimental plan (e.g. \"EXP-001\")."
+    },
+    {
+      "id": "Plan Name",
+      "name": "Plan Name",
+      "type": "string",
+      "tooltip": "Name or title of the experimental plan (e.g. \"Experimental Plan (Minimal ver)\")."
+    },
+    {
+      "id": "Plan Type",
+      "name": "Plan Type",
+      "type": "string",
+      "tooltip": "Type of experimental plan document (e.g. \"Experimental Plan PDF\")."
+    },
+    {
+      "id": "Reference_URL",
+      "name": "Reference URL",
+      "type": "string",
+      "tooltip": "URL link to access or download the experimental plan document."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "ingredient_name",
+      "type": "text",
+      "label": "Ingredient Name",
+      "placeholder": "Enter a ingredient name...",
+      "suggestedField": ["Component"],
+      "tooltip": "Enter a ingredient name."
+    },
+    {
+      "key": "concentration",
+      "type": "text",
+      "label": "Concentration",
+      "suggestedField": ["percent_w_w"],
+      "placeholder": "Enter a concentration...",
+      "tooltip": "Enter a concentration."
+    },
+    {
+      "key": "function",
+      "type": "text",
+      "label": "Function",
+      "suggestedField": ["Functional_role"],
+      "placeholder": "Enter a function...",
+      "tooltip": "Enter a function."
+    },
+    {
+      "key": "administration",
+      "type": "select",
+      "label": "Administration",
+      "placeholder": "Select an administration...",
+      "options": [
+        {
+          "value": "topical",
+          "label": "Topical (skin, hair, eye, mucosa)"
+        },
+        {
+          "value": "oral",
+          "label": "Oral ingestion (food, supplement, drink)"
+        },
+        {
+          "value": "inhalation",
+          "label": "Inhalation (aerosol, vapor, nasal)"
+        },
+        {
+          "value": "injection",
+          "label": "Injection / parenteral (drug, biologic)"
+        },
+        {
+          "value": "implant",
+          "label": "Implant / long-term contact"
+        }
+      ],
+      "defaultValue": "topical",
+      "tooltip": "Select an administration."
+    },
+    {
+      "key": "administration_type",
+      "type": "select",
+      "label": "Administration Type",
+      "placeholder": "Select administration type...",
+      "options": [
+        {
+          "value": "leave_on",
+          "label": "Leave-on"
+        },
+        {
+          "value": "rinse_off",
+          "label": "Rinse-off"
+        }
+      ],
+      "defaultValue": "leave_on",
+      "tooltip": "Select administration type.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["topical"]
+        }
+      ]
+    },
+    {
+      "key": "area_of_application",
+      "type": "textarea",
+      "label": "Area of Application",
+      "placeholder": "Enter area of application...",
+      "tooltip": "Enter area of application.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["topical"]
+        }
+      ]
+    },
+    {
+      "key": "daily_intake_frequency",
+      "type": "textarea",
+      "label": "Daily Intake Frequency",
+      "placeholder": "Enter daily intake frequency...",
+      "tooltip": "Enter daily intake frequency.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["oral"]
+        }
+      ]
+    },
+    {
+      "key": "serving_size",
+      "type": "textarea",
+      "label": "Serving Size",
+      "placeholder": "Enter serving size...",
+      "tooltip": "Enter serving size.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["oral"]
+        }
+      ]
+    },
+    {
+      "key": "intent",
+      "type": "multiselect",
+      "label": "Intent",
+      "placeholder": "Select intent...",
+      "options": [
+        {
+          "value": "nutritional",
+          "label": "Nutritional"
+        },
+        {
+          "value": "functional",
+          "label": "Functional"
+        },
+        {
+          "value": "therapeutic",
+          "label": "Therapeutic"
+        }
+      ],
+      "tooltip": "Select intent.",
+      "showWhen": [
+        {
+          "field": "administration",
+          "in": ["oral"]
+        }
+      ]
+    },
+    {
+      "key": "target_population",
+      "type": "select",
+      "label": "Target Population",
+      "placeholder": "Select target population...",
+      "options": [
+        {
+          "value": "general_adult_population",
+          "label": "General adult population"
+        },
+        {
+          "value": "children_3_12_years",
+          "label": "Children (3–12 years)"
+        },
+        {
+          "value": "babies_infants_0_3_years",
+          "label": "Babies / infants (0–3 years)"
+        },
+        {
+          "value": "pregnant_or_breastfeeding_individuals",
+          "label": "Pregnant or breastfeeding individuals"
+        },
+        {
+          "value": "medical_patient_population",
+          "label": "Medical / patient population"
+        }
+      ],
+      "tooltip": "Select target population."
+    },
+    {
+      "key": "purpose_of_testing",
+      "type": "multiselect",
+      "label": "Purpose of Testing",
+      "placeholder": "Select purpose of testing...",
+      "options": [
+        {
+          "value": "close_safety_data_gap",
+          "label": "Close safety data gap"
+        },
+        {
+          "value": "support_regulatory_submission",
+          "label": "Support regulatory submission"
+        },
+        {
+          "value": "support_product_claim",
+          "label": "Support product claim"
+        },
+        {
+          "value": "de_risk_formulation_change",
+          "label": "De-risk formulation change"
+        }
+      ],
+      "tooltip": "Select purpose of testing."
+    }
+  ],
+  "defaultConfig": {
+    "query": ""
+  }
+}
