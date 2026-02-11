@@ -1,5 +1,5 @@
 {
-  "type": "wetlab-validation",
+  "type": "singular-compound",
   "label": "Wet Lab Validation",
   "category": "analysis",
   "icon": "flask",
@@ -47,4 +47,3 @@
     "query": ""
   }
 }
-

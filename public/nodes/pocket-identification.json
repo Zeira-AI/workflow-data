@@ -1,0 +1,76 @@
+{
+  "type": "pocket-identification",
+  "label": "Pocket Identification",
+  "category": "analysis",
+  "icon": "dna",
+  "color": "purple",
+  "description": "Identify and analyze binding pockets on protein structures.",
+  "pricing": {
+    "credits": 1200,
+    "executionTime": 1
+  },
+  "outputMockLabel": "10 pockets",
+  "outputPageSize": 5,
+  "defaultInputs": [
+    {
+      "id": "targetList",
+      "name": "Protein Target List",
+      "type": "array",
+      "required": true,
+      "tooltip": "Protein targets with prepared structures for pocket analysis."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "Pocket",
+      "name": "Pocket",
+      "type": "number",
+      "tooltip": "Pocket number identifier."
+    },
+    {
+      "id": "Score",
+      "name": "Score",
+      "type": "number",
+      "tooltip": "Druggability or binding score of the pocket."
+    },
+    {
+      "id": "Volumn",
+      "name": "Volumn",
+      "type": "number",
+      "tooltip": "Volume of the pocket."
+    },
+    {
+      "id": "pocket_pdb",
+      "name": "Pocket PDB",
+      "type": "structure",
+      "tooltip": "PDB file of the pocket."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "protein_column",
+      "type": ["text", "file"],
+      "label": "Protein 3D structure",
+      "tooltip": "3D structure of the proteins for pocket identification",
+      "suggestedField": ["structure_3d"],
+      "accept": ".csv,.pdb"
+    },
+    {
+      "key": "model_selection",
+      "type": "select",
+      "label": "Model Selection",
+      "options": [
+        {
+          "value": "fpocket",
+          "label": "FPocket"
+        },
+        {
+          "value": "castp",
+          "label": "CASTp"
+        }
+      ],
+      "defaultValue": "fpocket",
+      "tooltip": "Select a docking backend:\n- **AutoDock Vina** – accurate classical docking.\n- **DiffDock** – fast ML‑based pose prediction.\n- **SwissDock** – convenient web‑style presets for quick exploration."
+    }
+  ]
+}
