@@ -121,19 +121,6 @@
       "defaultValue": ["vecurate"]
     },
     {
-      "key": "vecurateSearch",
-      "type": "text",
-      "label": "Vecurate Search",
-      "placeholder": "Enter compound name, chemical class, or source organism",
-      "tooltip": "Search query for Vecurate database. Enter compound names, chemical classes, or source organisms to find relevant compounds.",
-      "showWhen": [
-        {
-          "field": "library_sources",
-          "in": ["vecurate"]
-        }
-      ]
-    },
-    {
       "key": "ingredientListFile",
       "type": "file",
       "label": "Or upload Compound List",

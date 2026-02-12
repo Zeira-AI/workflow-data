@@ -50,7 +50,7 @@
     },
     {
       "key": "modelType",
-      "type": "select",
+      "type": "multiselect",
       "label": "Available Tools",
       "options": [
         {
@@ -62,7 +62,7 @@
           "label": "Ligospace - Best for accurate predictions"
         }
       ],
-      "defaultValue": "Ligospace",
+      "defaultValue": ["ligospace", "dtign"],
       "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
     },
     {
