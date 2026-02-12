@@ -289,9 +289,9 @@
       "tooltip": "Advanced: switch between standard and fine‑grid scoring for SwissDock."
     },
     {
-      "key": "search_space",
+      "key": "grid_box",
       "type": "structure_viewer",
-      "label": "Define Search Space",
+      "label": "Grid Box",
       "structureUrl": "https://workflow-data-2sa8.vercel.app/data/docking/9NOU.pdb",
       "showBox": true,
       "boxCenter": [164, 167, 122],
