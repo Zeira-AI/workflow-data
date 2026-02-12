@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "brain",
   "color": "pink",
-  "description": "Fine-tune a protein language model or train a classifier on peptide embeddings for property prediction (e.g., sweetness).",
+  "description": "Optimizes peptide or protein sequences for improved target binding, stability, specificity, or functional modulation using structure-guided mutation, energy-based scoring, and machine learning–assisted sequence refinement.",
   "pricing": {
     "credits": 3000,
     "executionTime": 60
@@ -49,10 +49,7 @@
   "configSchema": [
     {
       "key": "train_data_file",
-      "type": [
-          "text",
-          "file"
-      ],
+      "type": ["text", "file"],
       "label": "Training Data File",
       "suggestedField": ["train_data", "csv_file"],
       "accept": ".csv",

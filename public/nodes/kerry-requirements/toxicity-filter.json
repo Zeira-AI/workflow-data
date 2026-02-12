@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "filtericon",
   "color": "red",
-  "description": "Filter honey compounds based on toxicity endpoints and safety thresholds.",
+  "description": "Screens compounds for predicted toxicological liabilities including hepatotoxicity, cardiotoxicity (hERG risk), mutagenicity, and general cytotoxicity using machine learning and rule-based models.",
   "pricing": {
     "credits": 800,
     "executionTime": 1

@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "file-search",
   "color": "green",
-  "description": "Combine outputs from previous modules to produce a mechanistic explanation and prioritized experimental tests.",
+  "description": "Synthesizes analysis module's results into a mechanistic interpretation and testable biological hypothesis.",
   "pricing": {
     "credits": 500,
     "executionTime": 5

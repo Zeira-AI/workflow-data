@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "dna",
   "color": "purple",
-  "description": "Perform molecular docking for ligands and proteins.",
+  "description": "Performs structure-based virtual screening to predict ligand binding poses and preliminary binding affinity within the defined binding pocket.",
   "pricing": {
     "credits": 1200,
     "executionTime": 1

@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "dna",
   "color": "violet",
-  "description": "Generate novel peptide sequences using generative models like PepGAN, PepINVENT, or ProGen.",
+  "description": "De novo designs peptide or protein sequences conditioned on structural constraints, target surface topology, or functional objectives using generative deep learning and structure-aware modeling.",
   "pricing": {
     "credits": 2500,
     "executionTime": 45

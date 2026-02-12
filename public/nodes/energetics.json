@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "zap",
   "color": "red",
-  "description": "Quantify binding free energy and identify per-residue energetic contributions using MMPBSA, PRODIGY, or structure-based mutation scanning.",
+  "description": "Estimates ligand binding free energy using post-MD calculations (e.g., MM/PBSA, MM/GBSA) and decomposes contributions by residue and energy component.",
   "pricing": {
     "credits": 2000,
     "executionTime": 30
@@ -55,10 +55,7 @@
   "configSchema": [
     {
       "key": "input_file_path",
-      "type": [
-        "text",
-        "file"
-      ],
+      "type": ["text", "file"],
       "label": "Input File Path",
       "suggestedField": ["trajectory_xtc", "complex_structure", "pdb_file"],
       "accept": ".xtc,.pdb,.gro",
@@ -66,10 +63,7 @@
     },
     {
       "key": "topology_file_path",
-      "type": [
-        "text",
-        "file"
-      ],
+      "type": ["text", "file"],
       "label": "Topology File Path",
       "accept": ".tpr,.prmtop",
       "tooltip": "Upload or specify the path to the topology file (required for trajectory analysis).",
@@ -140,7 +134,7 @@
       "showWhen": [
         {
           "field": "input_file_path",
-          "in": [".xtc", ".trr"] 
+          "in": [".xtc", ".trr"]
         }
       ]
     },

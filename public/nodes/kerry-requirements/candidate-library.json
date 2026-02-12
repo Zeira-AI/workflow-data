@@ -1,146 +1,144 @@
 {
-    "type": "candidate-library",
-    "label": "Candidate Library",
-    "category": "library",
-    "icon": "book-open-text",
-    "color": "blue",
-    "description": "Build a customized compound library of honey-derived candidates based on biological intent and selected sources.",
-    "pricing": {
-        "credits": 800,
-        "executionTime": 1
+  "type": "candidate-library",
+  "label": "Candidate Library",
+  "category": "library",
+  "icon": "book-open-text",
+  "color": "blue",
+  "description": "Defines the initial compound space for screening, including natural products, synthetic libraries, or proprietary datasets. Applies structural normalization, deduplication, and physicochemical pre-filtering.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
+  "outputMockLabel": "10000 compounds",
+  "defaultInputs": [
+    {
+      "id": "search_keyword",
+      "name": "Search Keyword",
+      "type": "string",
+      "required": true,
+      "tooltip": "Short text that anchors the search (e.g. \"honey compounds\", \"phenolics\")."
     },
-    "outputMockLabel": "10000 compounds",
-    "defaultInputs": [
+    {
+      "id": "biological_effects",
+      "name": "Biological Effects",
+      "type": "string",
+      "required": true,
+      "tooltip": "Comma‑separated desired effects (e.g. \"antioxidant, anti-inflammatory\")."
+    },
+    {
+      "id": "target_proteins",
+      "name": "Target Protein(s)",
+      "type": "string",
+      "required": false,
+      "tooltip": "Optional list of protein targets to focus the search (e.g. COX-2, 5-LOX, iNOS)."
+    },
+    {
+      "id": "scientific_description",
+      "name": "Scientific Description",
+      "type": "string",
+      "required": false,
+      "tooltip": "Free‑text background or hypotheses the library should reflect."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "compound",
+      "name": "Compound",
+      "type": "string",
+      "tooltip": "Name of the compound."
+    },
+    {
+      "id": "smiles",
+      "name": "SMILES",
+      "type": "string",
+      "tooltip": "SMILES string representing the chemical structure."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "library_sources",
+      "type": "multiselect",
+      "label": "Primary Sources",
+      "options": [
         {
-            "id": "search_keyword",
-            "name": "Search Keyword",
-            "type": "string",
-            "required": true,
-            "tooltip": "Short text that anchors the search (e.g. \"honey compounds\", \"phenolics\")."
+          "value": "vecurate",
+          "label": "Vecurate"
         },
         {
-            "id": "biological_effects",
-            "name": "Biological Effects",
-            "type": "string",
-            "required": true,
-            "tooltip": "Comma‑separated desired effects (e.g. \"antioxidant, anti-inflammatory\")."
+          "value": "vecurate_excerpt",
+          "label": "Vecurate Excerpt (25 compounds)"
         },
         {
-            "id": "target_proteins",
-            "name": "Target Protein(s)",
-            "type": "string",
-            "required": false,
-            "tooltip": "Optional list of protein targets to focus the search (e.g. COX-2, 5-LOX, iNOS)."
+          "value": "honey_db",
+          "label": "HoneyDB"
         },
         {
-            "id": "scientific_description",
-            "name": "Scientific Description",
-            "type": "string",
-            "required": false,
-            "tooltip": "Free‑text background or hypotheses the library should reflect."
+          "value": "foo_db",
+          "label": "FooDB"
+        },
+        {
+          "value": "eu_cosing",
+          "label": "EU CoSing"
+        },
+        {
+          "value": "pubchem",
+          "label": "PubChem"
+        },
+        {
+          "value": "chembl",
+          "label": "ChEMBL"
+        },
+        {
+          "value": "drugbank",
+          "label": "DrugBank"
+        },
+        {
+          "value": "drugs_com",
+          "label": "Drugs.com"
+        },
+        {
+          "value": "fda",
+          "label": "FDA"
+        },
+        {
+          "value": "nih",
+          "label": "NIH"
+        },
+        {
+          "value": "unii",
+          "label": "UNII"
+        },
+        {
+          "value": "chemspider",
+          "label": "ChemSpider"
+        },
+        {
+          "value": "cas",
+          "label": "CAS"
         }
-    ],
-    "defaultOutputs": [
+      ],
+      "tooltip": "Choose one or more databases to pull candidate structures from.",
+      "defaultValue": ["vecurate"]
+    },
+    {
+      "key": "vecurateSearch",
+      "type": "text",
+      "label": "Vecurate Search",
+      "placeholder": "Enter compound name, chemical class, or source organism",
+      "tooltip": "Search query for Vecurate database. Enter compound names, chemical classes, or source organisms to find relevant compounds.",
+      "showWhen": [
         {
-            "id": "compound",
-            "name": "Compound",
-            "type": "string",
-            "tooltip": "Name of the compound."
-        },
-        {
-            "id": "smiles",
-            "name": "SMILES",
-            "type": "string",
-            "tooltip": "SMILES string representing the chemical structure."
+          "field": "library_sources",
+          "in": ["vecurate"]
         }
-    ],
-    "configSchema": [
-        {
-            "key": "library_sources",
-            "type": "multiselect",
-            "label": "Primary Sources",
-            "options": [
-                {
-                    "value": "vecurate",
-                    "label": "Vecurate"
-                },
-                {
-                    "value": "vecurate_excerpt",
-                    "label": "Vecurate Excerpt (25 compounds)"
-                },
-                {
-                    "value": "honey_db",
-                    "label": "HoneyDB"
-                },
-                {
-                    "value": "foo_db",
-                    "label": "FooDB"
-                },
-                {
-                    "value": "eu_cosing",
-                    "label": "EU CoSing"
-                },
-                {
-                    "value": "pubchem",
-                    "label": "PubChem"
-                },
-                {
-                    "value": "chembl",
-                    "label": "ChEMBL"
-                },
-                {
-                    "value": "drugbank",
-                    "label": "DrugBank"
-                },
-                {
-                    "value": "drugs_com",
-                    "label": "Drugs.com"
-                },
-                {
-                    "value": "fda",
-                    "label": "FDA"
-                },
-                {
-                    "value": "nih",
-                    "label": "NIH"
-                },
-                {
-                    "value": "unii",
-                    "label": "UNII"
-                },
-                {
-                    "value": "chemspider",
-                    "label": "ChemSpider"
-                },
-                {
-                    "value": "cas",
-                    "label": "CAS"
-                }
-            ],
-            "tooltip": "Choose one or more databases to pull candidate structures from.",
-            "defaultValue": [
-                "vecurate"
-            ]
-        },
-        {
-            "key": "vecurateSearch",
-            "type": "text",
-            "label": "Vecurate Search",
-            "placeholder": "Enter compound name, chemical class, or source organism",
-            "tooltip": "Search query for Vecurate database. Enter compound names, chemical classes, or source organisms to find relevant compounds.",
-            "showWhen": [
-                {
-                    "field": "library_sources",
-                    "in": ["vecurate"]
-                }
-            ]
-        },
-        {
-            "key": "ingredientListFile",
-            "type": "file",
-            "label": "Or upload Compound List",
-            "accept": ".pdf,.doc,.docx,.txt,.csv",
-            "tooltip": "Upload your own compound list; parsed names/SMILES will be merged into the library."
-        }
-    ]
+      ]
+    },
+    {
+      "key": "ingredientListFile",
+      "type": "file",
+      "label": "Or upload Compound List",
+      "accept": ".pdf,.doc,.docx,.txt,.csv",
+      "tooltip": "Upload your own compound list; parsed names/SMILES will be merged into the library."
+    }
+  ]
 }

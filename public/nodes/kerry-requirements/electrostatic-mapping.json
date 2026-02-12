@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "structure-icon",
   "color": "purple",
-  "description": "Compute atomic charges/protonation and electrostatic potential maps using PDB2PQR and APBS.",
+  "description": "Evaluates electrostatic complementarity between ligand and binding pocket using continuum electrostatics models (e.g., Poisson–Boltzmann or Generalized Born).",
   "pricing": {
     "credits": 1500,
     "executionTime": 10

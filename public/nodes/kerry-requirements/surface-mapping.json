@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "structure-icon",
   "color": "teal",
-  "description": "Map hydrophobic/hydrophilic patches, pocket geometry, and compute ML surface fingerprints to identify interaction-prone areas using FreeSASA, fpocket, and MaSIF.",
+  "description": "Identifies and quantifies residue-level contacts including hydrogen bonds, hydrophobic contacts, π–π stacking, salt bridges, and water-mediated interactions.",
   "pricing": {
     "credits": 1500,
     "executionTime": 10

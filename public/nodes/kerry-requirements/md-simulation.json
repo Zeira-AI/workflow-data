@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "activity",
   "color": "orange",
-  "description": "Simulate dynamics of complex to check stability of binding and sample conformational changes using GROMACS or OpenMM.",
+  "description": "Simulates time-resolved receptor–ligand behavior in explicit solvent to assess binding stability, conformational adaptability, and pocket dynamics.",
   "pricing": {
     "credits": 2500,
     "executionTime": 60

@@ -4,7 +4,7 @@
   "category": "analysis",
   "icon": "activity",
   "color": "green",
-  "description": "Filter compound bioactivity (EC50) against TAS1R2 and TAS1R3 receptors.",
+  "description": "Applies AI-based bioactivity prediction models to estimate ligand–target interaction probability and functional relevance. Integrates deep target–interaction graph networks (DTIGN) and ligand embedding space similarity (LigoSpace).",
   "pricing": {
     "credits": 800,
     "executionTime": 1
