@@ -1,9 +1,6 @@
-compound,tas1r2_ec50,tas1r3_ec50
-D-Glucose,14.7,No docking pose
-D-Fructose,13.1,No docking pose
-Pinocembrin,9.0,No docking pose
-Quercetin,13.1,No docking pose
-Rutin,9.0,No docking pose
-Benzaldehyde,No docking pose,32.2
-Hydroxytyrosol,No docking pose,16.4
-Tyrosol,No docking pose,10.5
+compound,chembl3720901_ec50
+D-Glucose,12.5 mM
+D-Fructose,5.5 mM
+Pinocembrin,105 µM
+Quercetin,25.5 µM
+Rutin,155 µM

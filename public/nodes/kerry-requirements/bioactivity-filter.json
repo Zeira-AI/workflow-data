@@ -1,84 +1,76 @@
 {
-    "type": "bioactivity-filter",
-    "label": "Bioactivity Filter",
-    "category": "analysis",
-    "icon": "activity",
-    "color": "green",
-    "description": "Filter compound bioactivity (EC50) against TAS1R2 and TAS1R3 receptors.",
-    "pricing": {
-        "credits": 800,
-        "executionTime": 1
+  "type": "bioactivity-filter",
+  "label": "Bioactivity Filter",
+  "category": "analysis",
+  "icon": "activity",
+  "color": "green",
+  "description": "Filter compound bioactivity (EC50) against TAS1R2 and TAS1R3 receptors.",
+  "pricing": {
+    "credits": 800,
+    "executionTime": 1
+  },
+  "outputMockLabel": "5 compounds",
+  "defaultInputs": [
+    {
+      "id": "compoundList",
+      "name": "Compound List",
+      "type": "array",
+      "required": true,
+      "tooltip": "Input table of compounds (IDs and SMILES) to score."
     },
-    "outputMockLabel": "5 compounds",
-    "defaultInputs": [
+    {
+      "id": "targetList",
+      "name": "Target List",
+      "type": "array",
+      "required": true,
+      "tooltip": "Targets or assays (EC50 / IC50) that bioactivity should be predicted against."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "compound",
+      "name": "Compound",
+      "type": "string",
+      "tooltip": "Compound identifier"
+    },
+    {
+      "id": "chembl3720901_ec50",
+      "name": "CHEMBL3720901- EC50",
+      "type": "string",
+      "tooltip": "CHEMBL3720901- EC50 value (e.g. 12.5 mM, 105 µM)"
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "dockingListText",
+      "type": "text",
+      "label": "Compound-Target Docking List",
+      "tooltip": "Input the compound-target docking for bioactivity prediction",
+      "suggestedField": ["docked_structure"]
+    },
+    {
+      "key": "modelType",
+      "type": "select",
+      "label": "Available Tools",
+      "options": [
         {
-            "id": "compoundList",
-            "name": "Compound List",
-            "type": "array",
-            "required": true,
-            "tooltip": "Input table of compounds (IDs and SMILES) to score."
+          "value": "dtign",
+          "label": "DTIGN - Best for fast predictions"
         },
         {
-            "id": "targetList",
-            "name": "Target List",
-            "type": "array",
-            "required": true,
-            "tooltip": "Targets or assays (EC50 / IC50) that bioactivity should be predicted against."
+          "value": "ligospace",
+          "label": "Ligospace - Best for accurate predictions"
         }
-    ],
-    "defaultOutputs": [
-        {
-            "id": "compound",
-            "name": "Compound",
-            "type": "string",
-            "tooltip": "Compound identifier"
-        },
-        {
-            "id": "tas1r2_ec50",
-            "name": "TAS1R2 - EC50 (nM)",
-            "type": "string",
-            "tooltip": "TAS1R2 - CHEMBL3720901- EC50"
-        },
-        {
-            "id": "tas1r3_ec50",
-            "name": "TAS1R3 - EC50 (nM)",
-            "type": "string",
-            "tooltip": "TAS1R3 - CHEMBL4628173 - EC50"
-        }
-    ],
-    "configSchema": [
-        {
-            "key": "dockingListText",
-            "type": "text",
-            "label": "Compound-Target Docking List",
-            "tooltip": "Input the compound-target docking for bioactivity prediction",
-            "suggestedField": [
-                "docked_structure"
-            ]
-        },
-        {
-            "key": "modelType",
-            "type": "select",
-            "label": "Available Tools",
-            "options": [
-                {
-                    "value": "dtign",
-                    "label": "DTIGN - Best for fast predictions"
-                },
-                {
-                    "value": "ligospace",
-                    "label": "Ligospace - Best for accurate predictions"
-                }
-            ],
-            "defaultValue": "Ligospace",
-            "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
-        },
-        {
-            "key": "dockingFiles",
-            "type": "file",
-            "label": "Docking Files",
-            "multiple": true,
-            "tooltip": "Optional upload of docking results."
-        }
-    ]
+      ],
+      "defaultValue": "Ligospace",
+      "tooltip": "Select the bioactivity engine: **DTIGN** for speed, **Ligospace** for higher accuracy."
+    },
+    {
+      "key": "dockingFiles",
+      "type": "file",
+      "label": "Docking Files",
+      "multiple": true,
+      "tooltip": "Optional upload of docking results."
+    }
+  ]
 }
