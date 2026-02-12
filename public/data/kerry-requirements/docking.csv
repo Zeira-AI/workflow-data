@@ -1,9 +1,6 @@
 docked_structure,compound,target,delta_g
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainB_D-Glucose.pdb,D-Glucose,TAS1R2 - chain B,-7.8
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainB_D-Fructose.pdb,D-Fructose,TAS1R2 - chain B,-7.2
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainB_Pinocembrin.pdb,Pinocembrin,TAS1R2 - chain B,-7.4
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainB_Quercetin.pdb,Quercetin,TAS1R2 - chain B,-5.6
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainB_Rutin.pdb,Rutin,TAS1R2 - chain B,-6.3
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainA_Benzaldehyde.pdb,Benzaldehyde,TAS1R3 - chain A,-6.9
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainA_Hydroxytyrosol.pdb,Hydroxytyrosol,TAS1R3 - chain A,-5.2
-https://workflow-data-2sa8.vercel.app/data/docking/9NOW_chainA_Tyrosol.pdb,Tyrosol,TAS1R3 - chain A,-7.0
+https://workflow-data-2sa8.vercel.app/data/docking/9NOU-Glucose.pdb,D-Glucose,TAS1R2,-5.347
+https://workflow-data-2sa8.vercel.app/data/docking/9NOU-Fructose.pdb,D-Fructose,TAS1R2,-5.585
+https://workflow-data-2sa8.vercel.app/data/docking/9NOU-Pinocembrin.pdb,Pinocembrin,TAS1R2,-8.414
+https://workflow-data-2sa8.vercel.app/data/docking/9NOU-Quercetin.pdb,Quercetin,TAS1R2,-9.081
+https://workflow-data-2sa8.vercel.app/data/docking/9NOU-Rutin.pdb,Rutin,TAS1R2,-9.562
