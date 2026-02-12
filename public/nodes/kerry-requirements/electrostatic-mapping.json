@@ -1,0 +1,204 @@
+{
+  "type": "electrostatic-mapping",
+  "label": "Electrostatic Mapping",
+  "category": "analysis",
+  "icon": "structure-icon",
+  "color": "purple",
+  "description": "Compute atomic charges/protonation and electrostatic potential maps using PDB2PQR and APBS.",
+  "pricing": {
+    "credits": 1500,
+    "executionTime": 10
+  },
+  "outputMockLabel": "Electrostatic Map",
+  "defaultInputs": [
+    {
+      "id": "complex_model",
+      "name": "Complex Model",
+      "type": "structure",
+      "required": false,
+      "tooltip": "PDB file of the complex."
+    },
+    {
+      "id": "receptor_clean",
+      "name": "Receptor Clean",
+      "type": "structure",
+      "required": false,
+      "tooltip": "Cleaned receptor PDB structure."
+    },
+    {
+      "id": "peptide_clean",
+      "name": "Peptide Clean",
+      "type": "structure",
+      "required": false,
+      "tooltip": "Cleaned peptide PDB structure."
+    }
+  ],
+  "defaultOutputs": [
+    {
+      "id": "complex_pqr",
+      "name": "Complex PQR",
+      "type": "structure",
+      "tooltip": "PQR file with assigned charges and radii."
+    },
+    {
+      "id": "complex_dx",
+      "name": "Complex DX",
+      "type": "string",
+      "tooltip": "Electrostatic potential map (APBS output)."
+    },
+    {
+      "id": "per_atom_potential_csv",
+      "name": "Per-atom Potential",
+      "type": "string",
+      "tooltip": "CSV containing potentials per atom."
+    },
+    {
+      "id": "electrostatic_visualization",
+      "name": "Visualization",
+      "type": "image",
+      "tooltip": "Electrostatic visualization (PNG/DX)."
+    },
+    {
+      "id": "electrostatics_report",
+      "name": "Report",
+      "type": "object",
+      "tooltip": "JSON report containing hotspot analysis."
+    }
+  ],
+  "configSchema": [
+    {
+      "key": "input_mode",
+      "type": "select",
+      "label": "Input Mode",
+      "options": [
+        { "value": "complex", "label": "Complex Model (Single PDB)" },
+        { "value": "components", "label": "Receptor + Peptide (Separate)" }
+      ],
+      "defaultValue": "complex",
+      "tooltip": "Select the input structure mode."
+    },
+    {
+      "key": "complex_model_file",
+      "type": ["text", "file"],
+      "label": "Complex PDB File",
+      "suggestedField": ["complex_model", "pdb_file"],
+      "accept": ".pdb",
+      "tooltip": "Upload or select a PDB file for the complex.",
+      "showWhen": [
+        {
+          "field": "input_mode",
+          "in": ["complex"]
+        }
+      ]
+    },
+    {
+      "key": "receptor_clean_file",
+      "type": ["text", "file"],
+      "label": "Receptor PDB File",
+      "suggestedField": ["receptor_clean", "receptor_pdb"],
+      "accept": ".pdb",
+      "tooltip": "Upload or select a PDB file for the receptor.",
+      "showWhen": [
+        {
+          "field": "input_mode",
+          "in": ["components"]
+        }
+      ]
+    },
+    {
+      "key": "peptide_clean_file",
+      "type": ["text", "file"],
+      "label": "Peptide PDB File",
+      "suggestedField": ["peptide_clean", "peptide_pdb"],
+      "accept": ".pdb",
+      "tooltip": "Upload or select a PDB file for the peptide.",
+      "showWhen": [
+        {
+          "field": "input_mode",
+          "in": ["components"]
+        }
+      ]
+    },
+    {
+      "key": "structure_selection",
+      "type": "select",
+      "label": "Structure Selection",
+      "options": [
+        { "value": "centroid", "label": "Centroid" },
+        { "value": "ensemble", "label": "Ensemble" }
+      ],
+      "defaultValue": "centroid",
+      "tooltip": "For ensemble inputs, select whether to use the centroid or the full ensemble."
+    },
+    {
+      "key": "protonation_pH",
+      "type": "number",
+      "label": "Protonation pH",
+      "defaultValue": 7.4,
+      "placeholder": "7.4",
+      "tooltip": "pH value for protonation state assignment."
+    },
+    {
+      "key": "forcefield",
+      "type": "select",
+      "label": "Forcefield",
+      "options": [
+        { "value": "amber", "label": "AMBER" },
+        { "value": "charmm", "label": "CHARMM" },
+        { "value": "parse", "label": "PARSE" },
+        { "value": "tyl06", "label": "TYL06" }
+      ],
+      "defaultValue": "amber",
+      "tooltip": "Forcefield to use for parameterization."
+    },
+    {
+      "key": "ionic_strength",
+      "type": "number",
+      "label": "Ionic Strength (M)",
+      "defaultValue": 0.15,
+      "placeholder": "0.15",
+      "tooltip": "Ionic strength of the solvent (Molar)."
+    },
+    {
+      "key": "temperature",
+      "type": "number",
+      "label": "Temperature (K)",
+      "defaultValue": 298.15,
+      "placeholder": "298.15",
+      "tooltip": "Temperature in Kelvin."
+    },
+    {
+      "key": "grid_spacing",
+      "type": "number",
+      "label": "Grid Spacing (Å)",
+      "defaultValue": 0.5,
+      "tooltip": "Grid spacing for APBS calculation.",
+      "advanced": true
+    },
+    {
+      "key": "box_margin",
+      "type": "number",
+      "label": "Box Margin (Å)",
+      "defaultValue": 20.0,
+      "tooltip": "Margin to add to the biomolecule dimensions for the grid box.",
+      "advanced": true
+    },
+    {
+      "key": "dielectric_solute",
+      "type": "number",
+      "label": "Dielectric (Solute)",
+      "defaultValue": 2.0,
+      "tooltip": "Dielectric constant of the solute (protein).",
+      "advanced": true
+    },
+    {
+      "key": "dielectric_solvent",
+      "type": "number",
+      "label": "Dielectric (Solvent)",
+      "defaultValue": 78.54,
+      "tooltip": "Dielectric constant of the solvent (water).",
+      "advanced": true
+    }
+  ],
+  "feedsTo": ["mechanistic-hypothesis", "md-simulation"]
+}

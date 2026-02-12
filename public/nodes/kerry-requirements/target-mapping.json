@@ -9,7 +9,7 @@
     "credits": 800,
     "executionTime": 1
   },
-  "outputMockLabel": "2 targets",
+  "outputMockLabel": "1 target",
   "defaultInputs": [
     {
       "id": "target-input",
@@ -79,12 +79,6 @@
       "name": "",
       "type": "structure",
       "tooltip": "URL to the second PDB structure file."
-    },
-    {
-      "id": "pdb_3",
-      "name": "",
-      "type": "structure",
-      "tooltip": "URL to the third PDB structure file."
     }
   ],
   "configSchema": [
@@ -100,30 +94,16 @@
     "manualFreetext": "",
     "mappingTable": [
       {
-        "protein_target": "TAS1R2",
-        "biological_system": "Human sweet taste receptor (GPCR), heterodimerized with TAS1R3 in the VFT domain; expressed in taste receptor cells and heterologous systems (e.g., HEK293)",
-        "desired_modulation": "Agonism or partial agonism (sweet perception activation)",
-        "corresponding_assay": "Cell-based calcium flux assay (co-expression of TAS1R2/TAS1R3 with Gα16 or Gαgustducin); alternatively cAMP or IP₃ reporter assays",
-        "metric_used": "EC₅₀, Emax (relative to reference sweetener)",
-        "rationale": "TAS1R2 contains the primary orthosteric binding determinants for many sweet ligands; agonist-induced activation correlates with perceived sweetness intensity",
-        "crystallized_structure": "Yes (PDB: 9NOW, 9NOS..)",
-        "chembl_id": "CHEMBL2363059",
-        "pdb_1": "https://workflow-data-2sa8.vercel.app/data/docking/9NOR.pdb",
-        "pdb_2": "https://workflow-data-2sa8.vercel.app/data/docking/9NOS.pdb",
-        "pdb_3": "https://workflow-data-2sa8.vercel.app/data/docking/9NOW.pdb"
-      },
-      {
-        "protein_target": "TAS1R3",
-        "biological_system": "Human sweet taste receptor co-receptor; obligate heterodimer partner of TAS1R2",
-        "desired_modulation": "Positive modulation / co-agonism; structural stabilization of active heterodimer",
-        "corresponding_assay": "Same calcium flux or reporter assay as above; optional mutagenesis-assisted functional assays",
-        "metric_used": "EC₅₀ shift, Emax modulation, Δresponse vs TAS1R2 alone",
-        "rationale": "TAS1R3 is required for receptor assembly, signaling competence, and ligand-dependent conformational change; modulation enhances or enables TAS1R2-driven activation",
-        "crystallized_structure": "Yes (PDB: 9NOW, 9NOS..)",
-        "chembl_id": "CHEMBL2363060",
-        "pdb_1": "https://workflow-data-2sa8.vercel.app/data/docking/9NOR.pdb",
-        "pdb_2": "https://workflow-data-2sa8.vercel.app/data/docking/9NOS.pdb",
-        "pdb_3": "https://workflow-data-2sa8.vercel.app/data/docking/9NOW.pdb"
+        "protein_target": "TAS1R2 – TAS1R3 heterodimer (VFT domain)",
+        "biological_system": "Human sweet taste receptor (Class C GPCR heterodimer) expressed in taste receptor cells and heterologous systems (e.g., HEK293)",
+        "desired_modulation": "Agonism, partial agonism, or modulation of sweet perception",
+        "corresponding_assay": "Cell-based calcium flux assay (co-expression of TAS1R2/TAS1R3 with Gα16, Gαgustducin, or chimeric G proteins); optional IP₃ or cAMP reporter assays",
+        "metric_used": "EC₅₀, Emax, response shift vs reference sweetener",
+        "rationale": "TAS1R2 provides the primary orthosteric binding site for most sweet ligands within the VFT domain, while TAS1R3 functions as an obligate co-receptor enabling receptor assembly, conformational signaling, and stabilization of the active state; effective sweet taste signaling requires the intact heterodimer",
+        "crystallized_structure": "Yes (VFT-domain structures of the heterodimer available; e.g., PDB 9NOW, 9NOS)",
+        "chembl_id": "CHEMBL2363059 (TAS1R2), CHEMBL2363060 (TAS1R3)",
+        "pdb_1": "https://workflow-data-2sa8.vercel.app/data/docking/9NOU.pdb",
+        "pdb_2": "https://workflow-data-2sa8.vercel.app/data/docking/9NOR.pdb"
       }
     ]
   }

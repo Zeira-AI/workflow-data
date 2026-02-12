@@ -71,6 +71,29 @@
       "accept": ".csv,.pdb"
     },
     {
+      "key": "choose_pdb",
+      "type": "select",
+      "label": "Choose PDB",
+      "tooltip": "Select PDB file for docking.",
+      "options": [
+        {
+          "value": "9nou",
+          "label": "9NOU"
+        },
+        {
+          "value": "9nor",
+          "label": "9NOR"
+        }
+      ],
+      "defaultValue": "9nou",
+      "showWhen": [
+        {
+          "field": "protein_column",
+          "in": ["*"]
+        }
+      ]
+    },
+    {
       "key": "engine",
       "type": "select",
       "label": "Docking Engine",
@@ -123,20 +146,6 @@
       ],
       "advanced": true,
       "tooltip": "Advanced: number of binding poses Vina should generate per ligand."
-    },
-    {
-      "key": "gridBox",
-      "type": "json",
-      "label": "Grid Box Definition (Advanced)",
-      "placeholder": "{ \"center_x\":0, \"center_y\":0, \"center_z\":0, \"size_x\":20, \"size_y\":20, \"size_z\":20 }",
-      "showWhen": [
-        {
-          "field": "engine",
-          "in": ["vina", "swissdock", "haddock"]
-        }
-      ],
-      "advanced": true,
-      "tooltip": "Advanced: JSON definition of the docking search box centre and dimensions (Å)."
     },
     {
       "key": "diffdock_samples",
@@ -225,7 +234,13 @@
       "structureUrl": "https://workflow-data-2sa8.vercel.app/data/docking/9NOU.pdb",
       "showBox": true,
       "boxCenter": [164, 167, 122],
-      "boxSize": [26, 27, 26]
+      "boxSize": [26, 27, 26],
+      "showWhen": [
+        {
+          "field": "choose_pdb",
+          "in": ["9nou", "9nor"]
+        }
+      ]
     }
   ]
 }
