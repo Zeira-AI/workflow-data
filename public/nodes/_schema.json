@@ -161,7 +161,8 @@
                 "markdown",
                 "filter",
                 "range",
-                "pocket_selector"
+                "pocket_selector",
+                "structure_viewer"
               ]
             },
             {
@@ -180,7 +181,8 @@
                   "markdown",
                   "filter",
                   "range",
-                  "pocket_selector"
+                  "pocket_selector",
+                  "structure_viewer"
                 ]
               },
               "minItems": 1
@@ -302,6 +304,28 @@
           "items": {
             "type": "string"
           }
+        },
+        "structureUrl": {
+          "type": "string",
+          "description": "For structure_viewer fields: path to PDB file relative to workflow-data public dir (e.g., 'data/docking/CDK20.pdb')"
+        },
+        "showBox": {
+          "type": "boolean",
+          "description": "For structure_viewer fields: whether to show interactive 3D box controls (default: false)"
+        },
+        "boxCenter": {
+          "type": "array",
+          "description": "For structure_viewer fields: default box center [x, y, z] in Angstroms",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "boxSize": {
+          "type": "array",
+          "description": "For structure_viewer fields: default box size [x, y, z] in Angstroms",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3
         }
       }
     }
